@@ -1,0 +1,22 @@
+---
+import Burger from "./Burger.astro";
+
+const menuItems = [
+  { label: "Inicio", url: "/" },
+  { label: "¿Quiénes Somos?", url: "/quienes-somos" },
+  { label: "Contacto", url: "/contacto" },
+];
+---
+
+<header>
+  <div class="logo">Logo</div>
+  <div class="main-menu">
+    <Burger />
+    <nav class="main-nav">
+      <ul>
+        {menuItems.map((item) => <a href={item.url}>{item.label}</a>)}
+      </ul>
+    </nav>
+  </div>
+  <div class="social-menu">Menú Redes Sociales</div>
+</header>
