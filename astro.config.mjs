@@ -1,26 +1,29 @@
 // @ts-check
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig, fontProviders } from "astro/config";
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-   integrations: [icon()],
+  integrations: [icon()],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
   experimental: {
-            fonts: [{
-            provider: fontProviders.fontsource(),
-            name: "Poppins",
-            cssVariable: "--font-headings",
-            weights:[500, 700]
-        },{
-            provider: fontProviders.fontsource(),
-            name: "Lato",
-            cssVariable: "--font-body",
-            weights:[400]
-        }]
-  }
+    fonts: [
+      {
+        provider: fontProviders.fontsource(),
+        name: "Poppins",
+        cssVariable: "--font-headings",
+        weights: [500, 700],
+      },
+      {
+        provider: fontProviders.fontsource(),
+        name: "Lato",
+        cssVariable: "--font-body",
+        weights: [400],
+      },
+    ],
+  },
 });

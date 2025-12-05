@@ -1,18 +1,17 @@
 @import "tailwindcss";
 
-
 @theme inline {
-    --font-body: var(--font-body);
-    --font-headings: var(--font-headings);
+  --font-body: var(--font-body);
+  --font-headings: var(--font-headings);
 }
-
 
 @layer base {
-    h1, h2, h3, h4, h5, h6 {
-       font-family: var(--font-headings);
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-headings);
+  }
 }
-    
-
-
-
