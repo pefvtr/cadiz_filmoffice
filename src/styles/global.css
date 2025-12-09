@@ -1,8 +1,38 @@
 @import "tailwindcss";
 
+:root {
+  /* Colores */
+  --color-primary: #f68214;
+  --color-primary-dark: #ca6304;
+  --color-primary-rgb: 246, 130, 20;
+}
+
 @theme inline {
   --font-body: var(--font-body);
   --font-headings: var(--font-headings);
+  --header-height: 4.5rem;
+  --ease: cubic-bezier(0.83, 0, 0.17, 1);
+  --ease-elastic-smooth: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --ease-elastic-smoother: cubic-bezier(0.7, -0.4, 0.3, 1.4);
+  --ease-elastic: cubic-bezier(0.7, -0.8, 0.3, 1.7);
+  --header-bar-height: 0.25rem;
+  --header-bar-width: 10rem;
+  --header-bar-top: 95%;
+
+  /* Colores */
+  --color-primary: #f68214;
+  --color-primary-dark: #ca6304;
+  --color-primary-rgb: 246, 130, 20;
+
+  /* Tamaño fuente */
+
+  --fs-100: clamp(0.88rem, calc(0.96rem + -0.09vw), 0.94rem);
+  --fs-200: clamp(1rem, calc(0.93rem + 0.33vw), 1.105rem);
+  --fs-300: clamp(1.105rem, calc(1.05rem + 0.63vw), 1.28rem);
+  --fs-400: clamp(1.62rem, calc(1.31rem + 1.53vw), 2.5rem);
+  --fs-500: clamp(1.94rem, calc(1.39rem + 2.77vw), 3.53rem);
+  --fs-600: clamp(2.33rem, calc(1.41rem + 4.63vw), 5rem);
+  --fs-700: clamp(3rem, calc(2rem + 5vw), 5.6rem);
 }
 
 @layer base {
@@ -12,6 +42,22 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-headings);
+    @apply font-headings leading-[1.2] font-light text-balance;
+  }
+
+  h1 {
+    @apply [font-size:var(--fs-600)];
+  }
+  h2 {
+    @apply [font-size:var(--fs-500)];
+  }
+  h3 {
+    @apply [font-size:var(--fs-400)];
+  }
+  h4 {
+    @apply [font-size:var(--fs-300)];
+  }
+  h5 {
+    @apply [font-size:var(--fs-200)];
   }
 }
