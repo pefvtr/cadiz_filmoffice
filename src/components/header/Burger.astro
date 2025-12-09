@@ -1,4 +1,12 @@
-<div class="burger-icon">
+---
+interface Props {
+  classNames?: string;
+}
+
+const { classNames = "" } = Astro.props;
+---
+
+<div class:list={["burger-icon", classNames]}>
   <span></span>
   <span></span>
   <span></span>
@@ -13,25 +21,26 @@
     height: 30px; /* Más alto para acomodar 3px de grosor y separación */
     position: relative;
     cursor: pointer;
-    /* background-color: red; */
-  }
-
-  .burger-icon span {
-    display: block;
-    position: absolute;
-    height: 3px; /* Grosor de 3px */
-    width: 50%;
-    background: #d3531a;
-    opacity: 1;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.25s ease-in-out;
-    -moz-transition: 0.25s ease-in-out;
-    -o-transition: 0.25s ease-in-out;
-    transition: 0.25s ease-in-out;
-    border-radius: 1.5px;
+    & span {
+      display: block;
+      position: absolute;
+      height: 3px; /* Grosor de 3px */
+      width: 50%;
+      background: var(--color-primary);
+      opacity: 1;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+      border-radius: 1.5px;
+    }
+    &:hover span {
+      background: var(--color-primary-dark);
+    }
   }
 
   .burger-icon span:nth-child(even) {
