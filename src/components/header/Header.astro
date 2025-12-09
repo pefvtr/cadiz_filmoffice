@@ -1,5 +1,6 @@
 ---
 import Burger from "./Burger.astro";
+import { Icon } from "astro-icon/components";
 
 const menuItems = [
   { label: "Inicio", url: "/" },
@@ -8,15 +9,34 @@ const menuItems = [
 ];
 ---
 
-<header>
-  <div class="logo">Logo</div>
-  <div class="main-menu">
-    <Burger />
-    <nav class="main-nav">
-      <ul>
-        {menuItems.map((item) => <a href={item.url}>{item.label}</a>)}
-      </ul>
-    </nav>
+<header
+  class="fixed top-2 left-1/2 z-50 flex h-(--header-height) w-full max-w-7xl -translate-x-1/2 items-center justify-center gap-2 rounded-3xl bg-white/75 shadow-lg backdrop-blur-sm"
+>
+  <div class="flex w-full items-center justify-between px-2">
+    <Burger classNames="sm:hidden" />
+    <div class="logo text-center max-sm:flex-1">Logo</div>
+    <div class="main-menu">
+      <nav class="main-nav max-sm:hidden">
+        <ul>
+          {
+            menuItems.map((item) => (
+              <a class="" href={item.url}>
+                {item.label}
+              </a>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+    <h1 class="social-menu flex items-center justify-center">
+      <Icon
+        name="in"
+        class="text-primary hover:text-primary-dark transition-color flex h-6 w-6 items-center justify-center duration-300"
+      />
+      <Icon
+        name="x"
+        class="text-primary hover:text-primary-dark transition-color flex h-6 w-6 items-center justify-center duration-300"
+      />
+    </h1>
   </div>
-  <div class="social-menu">Menú Redes Sociales</div>
 </header>
