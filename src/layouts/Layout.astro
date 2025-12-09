@@ -46,3 +46,45 @@ const {
     height: 100%;
   }
 </style>
+
+<script>
+  import Lenis from "lenis";
+
+  document.addEventListener("astro:page-load", () => {
+    type State = "animate-up" | "animate-down";
+    const lenis = new Lenis();
+    const header = document.querySelector("#main-header");
+
+    lenis.on("scroll", (e) => {
+      if (!header) return;
+
+      const position = e.animatedScroll;
+      const direction = e.direction;
+      if (position > 0 && direction > 0) {
+        header.classList.remove("animate-down");
+        header.classList.add("animate-up");
+      } else {
+        header.classList.remove("animate-up");
+        header.classList.add("animate-down");
+      }
+    });
+
+    function updateState(state: State) {
+      const states = ["animate-up", "animate-down"] as const;
+      states.forEach((stateClass) => header?.classList.remove(stateClass));
+      header?.classList.add(state);
+    }
+
+    header?.addEventListener("mouseenter", () => {
+      // console.log('enter header')
+      updateState("animate-down");
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
+</script>

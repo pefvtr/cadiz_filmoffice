@@ -61,3 +61,36 @@
     @apply [font-size:var(--fs-200)];
   }
 }
+
+/* En tu global.css, agrega: */
+@layer components {
+  /* Estas clases serán globales */
+  .animate-up {
+    backdrop-filter: blur(0);
+    background-color: white;
+    transform: translateY(calc(var(--header-bar-top) * -1));
+    transition: all 500ms;
+    animation-timing-function: var(--ease);
+  }
+
+  .animate-up .header-bar {
+    box-shadow: rgba(8, 47, 73, 0.85) 0px 0px 0px 10px inset;
+    width: 8%;
+  }
+
+  .animate-down {
+    transform: translateY(0);
+    transition: all 500ms;
+    animation-timing-function: var(--ease);
+  }
+
+  .animate-down .header-bar {
+    box-shadow: rgba(8, 47, 73, 0.25) 0px 0px 0px 1px inset;
+    width: var(--header-bar-width);
+  }
+
+  .header-bar {
+    box-shadow: rgba(8, 47, 73, 0.25) 0px 0px 0px 1px inset;
+    width: var(--header-bar-width);
+  }
+}
