@@ -1,0 +1,18 @@
+---
+import LogoSVG from "@/assets/logo-ifef.png";
+import { Image } from "astro:assets";
+
+interface Props {
+  classNames?: string;
+}
+
+const { classNames = "" } = Astro.props;
+---
+
+<div class="logo text-center max-sm:flex-1">
+  <Image
+    src={LogoSVG}
+    alt="Logo Cádiz Film Office"
+    class:list={["mx-auto", classNames]}
+  />
+</div>
