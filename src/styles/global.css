@@ -17,7 +17,7 @@
   --ease-elastic: cubic-bezier(0.7, -0.8, 0.3, 1.7);
   --header-bar-height: 0.25rem;
   --header-bar-width: 10rem;
-  --header-bar-top: 95%;
+  --header-bar-top: 85%;
 
   /* Colores */
   --color-primary: #f68214;
@@ -92,5 +92,9 @@
   .header-bar {
     box-shadow: rgba(8, 47, 73, 0.25) 0px 0px 0px 1px inset;
     width: var(--header-bar-width);
+  }
+
+  .no-scroll {
+    overflow: hidden;
   }
 }

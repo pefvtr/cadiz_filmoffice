@@ -50,9 +50,20 @@ const {
 <script>
   import Lenis from "lenis";
 
+  declare global {
+    interface Window {
+      lenis?: Lenis;
+    }
+  }
+
   document.addEventListener("astro:page-load", () => {
     type State = "animate-up" | "animate-down";
     const lenis = new Lenis();
+    // Guardar instancia en window para acceso global
+    if (typeof window !== "undefined") {
+      // Usar type assertion para evitar el error de TypeScript
+      window.lenis = lenis;
+    }
     const header = document.querySelector("#main-header");
 
     lenis.on("scroll", (e) => {

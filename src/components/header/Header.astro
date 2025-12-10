@@ -1,6 +1,6 @@
 ---
-import Logo from "../Logo.astro";
-import Burger from "./Burger.astro";
+import Logo from "@/components/Logo.astro";
+import Burger from "@/components/header/Burger.astro";
 import { Icon } from "astro-icon/components";
 
 const menuItems = [
@@ -12,10 +12,26 @@ const menuItems = [
 
 <header
   id="main-header"
-  class="fixed top-2 left-1/2 z-50 flex h-(--header-height) w-full max-w-7xl -translate-x-1/2 items-center justify-center gap-2 rounded-3xl bg-white/75 shadow-lg backdrop-blur-sm"
+  class="fixed top-0 left-1/2 z-50 flex h-(--header-height) w-full max-w-7xl -translate-x-1/2 items-center justify-center gap-2 rounded-md bg-white/50 shadow-lg backdrop-blur-sm"
 >
-  <div class="flex w-full items-center justify-between px-2 md:px-4">
-    <Burger classNames="sm:hidden" />
+  <div class="flex w-full max-w-7xl items-center justify-between px-2 md:px-4">
+    <nav
+      class="mobile-nav absolute top-(--header-height) left-0 flex h-[calc(100dvh-var(--header-height))] w-full flex-col items-center justify-center bg-white opacity-0 transition-opacity duration-300"
+    >
+      <ul class="flex flex-col items-center justify-center gap-4">
+        {
+          menuItems.map((item) => (
+            <a
+              class="hover:text-primary px-2 transition-colors"
+              href={item.url}
+            >
+              {item.label}
+            </a>
+          ))
+        }
+      </ul>
+    </nav>
+    <Burger classNames="sm:hidden burger" />
     <Logo classNames="w-28 sm:w-32" />
     <div class="main-menu">
       <nav class="main-nav max-sm:hidden">
@@ -46,29 +62,43 @@ const menuItems = [
   </div>
 </header>
 
-<!-- <style>
-  .active {
-    @apply pointer-events-none;
+<style>
+  .nav-active {
+    opacity: 1;
+    visibility: visible;
   }
-  .active span {
-    color: var(--color-primary);
+  .header-active {
+    background-color: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(0px);
   }
-  .header-bar {
-    box-shadow: rgba(8, 47, 73, 0.25) 0px 0px 0px 1px inset;
-    width: var(--header-bar-width);
-  }
-  .animate-up {
-    @apply backdrop-blur-0 -translate-y-(--header-bar-top) bg-white transition-all duration-1000 ease-(--ease);
-    .header-bar {
-      box-shadow: rgba(8, 47, 73, 0.85) 0px 0px 0px 10px inset;
-      width: 8%;
-    }
-  }
-  .animate-down {
-    @apply translate-y-0 transition-all duration-1000 ease-(--ease);
-    .header-bar {
-      box-shadow: rgba(8, 47, 73, 0.25) 0px 0px 0px 1px inset;
-      width: var(--header-bar-width);
-    }
-  }
-</style> -->
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const mainHeader = document.getElementById("main-header") as HTMLElement;
+    const mobileNav = mainHeader.querySelector(".mobile-nav") as HTMLElement;
+    const burger = mainHeader.querySelector(".burger") as HTMLElement;
+
+    burger.addEventListener("click", () => {
+      mobileNav.classList.toggle("nav-active");
+      mainHeader.classList.toggle("header-active");
+      document.body.classList.toggle("no-scroll");
+      document.documentElement.classList.toggle("no-scroll");
+
+      const isOpen = mobileNav.classList.contains("nav-active");
+      // Acceder a lenis con type assertion
+      const lenis = window.lenis;
+
+      console.log("isOpen:", isOpen);
+      console.log("Lenis:", lenis);
+
+      if (lenis) {
+        if (isOpen) {
+          lenis.stop();
+        } else {
+          lenis.start();
+        }
+      }
+    });
+  });
+</script>
