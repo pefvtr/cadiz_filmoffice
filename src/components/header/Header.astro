@@ -14,9 +14,13 @@ const menuItems = [
   id="main-header"
   class="fixed top-0 left-1/2 z-50 flex h-(--header-height) w-full max-w-7xl -translate-x-1/2 items-center justify-center gap-2 rounded-md bg-white/50 shadow-lg backdrop-blur-sm"
 >
+  <div
+    class="horizontal-bar-menu bg-primary absolute bottom-1 h-0.5 w-[min(35%,200px)] cursor-pointer rounded-full transition-all duration-300"
+  >
+  </div>
   <div class="flex w-full max-w-7xl items-center justify-between px-2 md:px-4">
     <nav
-      class="mobile-nav absolute top-(--header-height) left-0 flex h-[calc(100dvh-var(--header-height))] w-full flex-col items-center justify-center bg-white opacity-0 transition-opacity duration-300"
+      class="mobile-nav invisible absolute top-(--header-height) left-0 flex h-[calc(100dvh-var(--header-height))] w-full flex-col items-center justify-center bg-white opacity-0 transition-opacity duration-300"
     >
       <ul class="flex flex-col items-center justify-center gap-4">
         {
@@ -71,6 +75,14 @@ const menuItems = [
     background-color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(0px);
   }
+
+  .header-active .horizontal-bar-menu {
+    opacity: 0;
+  }
+
+  .animate-up .horizontal-bar-menu {
+    width: 80px;
+  }
 </style>
 
 <script>
@@ -78,6 +90,9 @@ const menuItems = [
     const mainHeader = document.getElementById("main-header") as HTMLElement;
     const mobileNav = mainHeader.querySelector(".mobile-nav") as HTMLElement;
     const burger = mainHeader.querySelector(".burger") as HTMLElement;
+    const horizontalBarMenu = mainHeader.querySelector(
+      ".horizontal-bar-menu",
+    ) as HTMLDivElement;
 
     burger.addEventListener("click", () => {
       mobileNav.classList.toggle("nav-active");
@@ -85,12 +100,16 @@ const menuItems = [
       document.body.classList.toggle("no-scroll");
       document.documentElement.classList.toggle("no-scroll");
 
+      // Se comprueba si el menú móvil está abierto
       const isOpen = mobileNav.classList.contains("nav-active");
-      // Acceder a lenis con type assertion
+
+      isOpen
+        ? horizontalBarMenu.classList.add("horizontal-bar-active")
+        : horizontalBarMenu.classList.remove("horizontal-bar-active");
+
       const lenis = window.lenis;
 
       console.log("isOpen:", isOpen);
-      console.log("Lenis:", lenis);
 
       if (lenis) {
         if (isOpen) {
