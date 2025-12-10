@@ -65,7 +65,6 @@ const {
       window.lenis = lenis;
     }
     const header = document.querySelector("#main-header");
-
     lenis.on("scroll", (e) => {
       if (!header) return;
 
@@ -87,8 +86,13 @@ const {
     }
 
     header?.addEventListener("mouseenter", () => {
-      // console.log('enter header')
+      console.log("enter header");
       updateState("animate-down");
+    });
+
+    header?.addEventListener("mouseleave", () => {
+      console.log("leave header");
+      // updateState("animate-down");
     });
 
     function raf(time: number) {
