@@ -8,6 +8,8 @@ const menuItems = [
   { label: "¿Quiénes Somos?", url: "/quienes-somos" },
   { label: "Contacto", url: "/contacto" },
 ];
+
+const currentPath = Astro.url.pathname;
 ---
 
 <header
@@ -26,7 +28,13 @@ const menuItems = [
         {
           menuItems.map((item) => (
             <a
-              class="hover:text-primary px-2 transition-colors"
+              class:list={[
+                "hover:text-primary px-2 transition-all hover:[text-shadow:1px_0_0_currentColor]",
+                {
+                  "text-primary pointer-events-none [text-shadow:1px_0_0_currentColor]":
+                    currentPath === item.url,
+                },
+              ]}
               href={item.url}
             >
               {item.label}
@@ -35,10 +43,41 @@ const menuItems = [
         }
       </ul>
     </nav>
-    <Burger classNames="sm:hidden burger" />
+    <!-- <div class="menu-overlay">
+      <div class="menu-content">
+        <div class="menu-col">
+          <p>Codegrid</p>
+          <p>Shoreline Drive</p>
+          <p>Oslo</p>
+          <br />
+          <p>Edition</p>
+          <p>Vol. 03</p>
+          <br />
+          <p>Contact</p>
+          <p>hello@mail.com</p>
+          <br />
+          <p>Direct</p>
+          <p>+47 123 45 678</p>
+        </div>
+        <div class="menu-col">
+          <p>Instagram</p>
+          <p>LinkedIn</p>
+          <p>Twitter</p>
+          <br />
+          <br />
+          <p>Language</p>
+          <p>Norwegian</p>
+          <br />
+          <br />
+          <p>Credit</p>
+          <p>Design by John Doe</p>
+        </div>
+      </div>
+    </div> -->
     <Logo classNames="w-28 sm:w-32" />
-    <div class="main-menu">
-      <nav class="main-nav max-sm:hidden">
+    <Burger classNames="sm:hidden burger" />
+    <div class="main-menu max-sm:hidden">
+      <nav class="main-nav">
         <ul class="">
           {
             menuItems.map((item) => (
@@ -53,7 +92,7 @@ const menuItems = [
         </ul>
       </nav>
     </div>
-    <h1 class="social-menu flex items-center justify-center">
+    <!-- <div class="social-menu flex items-center justify-center">
       <Icon
         name="in"
         class="text-primary hover:text-primary-dark flex h-6 w-6 items-center justify-center transition-colors duration-300"
@@ -62,7 +101,7 @@ const menuItems = [
         name="x"
         class="text-primary hover:text-primary-dark flex h-6 w-6 items-center justify-center transition-colors duration-300"
       />
-    </h1>
+    </div> -->
   </div>
 </header>
 
