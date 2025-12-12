@@ -86,13 +86,13 @@ const {
     }
 
     header?.addEventListener("mouseenter", () => {
-      console.log("enter header");
+      // console.log("enter header");
       updateState("animate-down");
     });
 
     header?.addEventListener("mouseleave", () => {
-      console.log("leave header");
-      // updateState("animate-down");
+      // console.log("leave header");
+      updateState("animate-down");
     });
 
     function raf(time: number) {
