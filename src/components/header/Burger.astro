@@ -6,9 +6,13 @@ interface Props {
 const { classNames = "" } = Astro.props;
 ---
 
-<div>
-  <div>menu</div>
-  <div>cerrar</div>
+<div class="text relative">
+  <div class="menu-text absolute">menu</div>
+  <div
+    class="close-text invisible absolute translate-y-[25%] rotate-[7deg] opacity-0"
+  >
+    cerrar
+  </div>
 </div>
 <div class:list={["burger-icon", classNames]}>
   <span></span>
@@ -119,12 +123,113 @@ const { classNames = "" } = Astro.props;
 </style>
 
 <script>
+  import { gsap } from "gsap";
+
   document.addEventListener("astro:page-load", () => {
     const burgerIcon = document.querySelector(".burger-icon") as HTMLDivElement;
+    const menuText = document.querySelector(".menu-text") as HTMLDivElement;
+    const closeText = document.querySelector(".close-text") as HTMLDivElement;
+    const text = document.querySelector(".text") as HTMLDivElement;
+    let tl = gsap.timeline();
+    let isOpen = false;
 
     burgerIcon.addEventListener("click", (e) => {
       const target = e.currentTarget as HTMLDivElement;
       target.classList.toggle("open");
+
+      isOpen = target.classList.contains("open");
+
+      // Limpiar/controlar la timeline
+      tl.clear(); // Limpia animaciones anteriores
+      tl.kill(); // Mata la animación actual si está en progreso
+
+      // Reiniciar timeline
+      tl = gsap.timeline();
+
+      if (isOpen) {
+        // Para OCULTAR: anima DESDE el estado visible HACIA oculto
+        tl.to(menuText, {
+          duration: 1,
+          y: "-25%",
+          rotate: "-7deg",
+          autoAlpha: 0,
+        }).to(
+          closeText,
+          {
+            duration: 1,
+            y: "0%",
+            rotate: "0deg",
+            autoAlpha: 1,
+          },
+          "-=0.5", // Superponer la animación de mostrar con la de ocultar
+        );
+      } else {
+        // Para MOSTRAR: primero hacer visible, luego animar
+        tl.to(
+          closeText,
+          {
+            duration: 1,
+            y: "25%",
+            rotate: "7deg",
+            autoAlpha: 0,
+          }, // Superponer la animación de ocultar con la de mostrar
+        ).to(
+          menuText,
+          {
+            duration: 1,
+            y: "0%",
+            rotate: "0deg",
+            autoAlpha: 1,
+          },
+          "-=0.5",
+        );
+      }
     });
+
+    // burgerIcon.addEventListener("click", (e) => {
+    //   const target = e.currentTarget as HTMLDivElement;
+    //   target.classList.toggle("open");
+
+    //   isOpen = target.classList.contains("open");
+
+    //   if (isOpen) {
+    //     console.log("Abriendo menú");
+
+    //     tl.fromTo(
+    //       menuText,
+    //       {
+    //         y: "0%",
+    //         rotate: "0deg",
+    //         opacity: 1,
+    //         visibility: "visible",
+    //       },
+    //       {
+    //         duration: 1,
+    //         y: "-25%",
+    //         rotate: "-7deg",
+    //         opacity: 0,
+    //         visibility: "hidden",
+    //       },
+    //     );
+    //   } else {
+    //     console.log("Cerrando menú");
+    //     tl.fromTo(
+    //       menuText,
+    //       {
+    //         y: "-25%",
+    //         rotate: "-7deg",
+    //         opacity: 0,
+    //         visibility: "hidden",
+    //       },
+    //       {
+    //         duration: 1,
+    //         y: "0%",
+    //         rotate: "0deg",
+    //         opacity: 1,
+    //         visibility: "visible",
+    //       },
+    //     );
+    //   }
+    // });
   });
 </script>
