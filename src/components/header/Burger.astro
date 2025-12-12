@@ -6,21 +6,23 @@ interface Props {
 const { classNames = "" } = Astro.props;
 ---
 
-<div class="text relative">
-  <div class="menu-text absolute">menu</div>
-  <div
-    class="close-text invisible absolute translate-y-[25%] rotate-[7deg] opacity-0"
-  >
-    cerrar
+<div class="relative top-0 right-0 flex items-center gap-3">
+  <div class="text relative">
+    <div class="menu-text text-sm">Menu</div>
+    <div
+      class="close-text invisible absolute top-0 left-0 translate-y-[25%] rotate-[7deg] text-sm opacity-0"
+    >
+      Cerrar
+    </div>
   </div>
-</div>
-<div class:list={["burger-icon", classNames]}>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
+  <div class:list={["burger-icon", classNames]}>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
 
 <style>
@@ -149,14 +151,16 @@ const { classNames = "" } = Astro.props;
       if (isOpen) {
         // Para OCULTAR: anima DESDE el estado visible HACIA oculto
         tl.to(menuText, {
-          duration: 1,
+          duration: 0.9,
+          ease: "expo.out",
           y: "-25%",
           rotate: "-7deg",
           autoAlpha: 0,
         }).to(
           closeText,
           {
-            duration: 1,
+            duration: 0.9,
+            ease: "expo.out",
             y: "0%",
             rotate: "0deg",
             autoAlpha: 1,
@@ -168,7 +172,8 @@ const { classNames = "" } = Astro.props;
         tl.to(
           closeText,
           {
-            duration: 1,
+            duration: 0.9,
+            ease: "expo.out",
             y: "25%",
             rotate: "7deg",
             autoAlpha: 0,
@@ -176,7 +181,8 @@ const { classNames = "" } = Astro.props;
         ).to(
           menuText,
           {
-            duration: 1,
+            duration: 0.9,
+            ease: "expo.out",
             y: "0%",
             rotate: "0deg",
             autoAlpha: 1,
@@ -185,51 +191,5 @@ const { classNames = "" } = Astro.props;
         );
       }
     });
-
-    // burgerIcon.addEventListener("click", (e) => {
-    //   const target = e.currentTarget as HTMLDivElement;
-    //   target.classList.toggle("open");
-
-    //   isOpen = target.classList.contains("open");
-
-    //   if (isOpen) {
-    //     console.log("Abriendo menú");
-
-    //     tl.fromTo(
-    //       menuText,
-    //       {
-    //         y: "0%",
-    //         rotate: "0deg",
-    //         opacity: 1,
-    //         visibility: "visible",
-    //       },
-    //       {
-    //         duration: 1,
-    //         y: "-25%",
-    //         rotate: "-7deg",
-    //         opacity: 0,
-    //         visibility: "hidden",
-    //       },
-    //     );
-    //   } else {
-    //     console.log("Cerrando menú");
-    //     tl.fromTo(
-    //       menuText,
-    //       {
-    //         y: "-25%",
-    //         rotate: "-7deg",
-    //         opacity: 0,
-    //         visibility: "hidden",
-    //       },
-    //       {
-    //         duration: 1,
-    //         y: "0%",
-    //         rotate: "0deg",
-    //         opacity: 1,
-    //         visibility: "visible",
-    //       },
-    //     );
-    //   }
-    // });
   });
 </script>
