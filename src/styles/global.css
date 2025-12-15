@@ -5,6 +5,14 @@
   --color-primary: #f68214;
   --color-primary-dark: #ca6304;
   --color-primary-rgb: 246, 130, 20;
+
+  --fs-100: clamp(0.88rem, calc(0.96rem + -0.09vw), 0.94rem);
+  --fs-200: clamp(1rem, calc(0.93rem + 0.33vw), 1.105rem);
+  --fs-300: clamp(1.105rem, calc(1.05rem + 0.63vw), 1.28rem);
+  --fs-400: clamp(1.62rem, calc(1.31rem + 1.53vw), 2.5rem);
+  --fs-500: clamp(1.94rem, calc(1.39rem + 2.77vw), 3.53rem);
+  --fs-600: clamp(2.33rem, calc(1.41rem + 4.63vw), 5rem);
+  --fs-700: clamp(3rem, calc(2rem + 5vw), 5.6rem);
 }
 
 @theme inline {
