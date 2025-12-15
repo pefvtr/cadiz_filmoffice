@@ -28,7 +28,40 @@ const currentPath = Astro.url.pathname;
     <span></span>
   </div>
 </div>
-<nav
+<div class="menu-overlay">
+  <div class="menu-content">
+    <div class="menu-items">
+      <div class="col-lg">imagen</div>
+      <div class="col-sm">
+        <div class="menu-links">
+          {
+            menuItems.map((item) => (
+              <a
+                class:list={[
+                  "hover:text-primary px-2 transition-all hover:[text-shadow:1px_0_0_currentColor]",
+                  {
+                    "text-primary pointer-events-none [text-shadow:1px_0_0_currentColor]":
+                      currentPath === item.url,
+                  },
+                ]}
+                href={item.url}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </div>
+        <div class="menu-socials">
+          <div>Twitter</div>
+          <div>Instagram</div>
+          <div>LinkedIn</div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-footer"></div>
+  </div>
+</div>
+<!-- <nav
   class="mobile-nav invisible fixed top-(--header-height) left-0 flex h-[calc(100dvh-var(--header-height))] w-full flex-col items-center justify-center bg-white opacity-0 transition-opacity duration-300"
 >
   <ul class="flex flex-col items-center justify-center gap-4">
@@ -49,7 +82,7 @@ const currentPath = Astro.url.pathname;
       ))
     }
   </ul>
-</nav>
+</nav> -->
 
 <style>
   .nav-active {
@@ -176,42 +209,26 @@ const currentPath = Astro.url.pathname;
     ) as HTMLDivElement;
     const text = document.querySelector(".text") as HTMLDivElement;
 
-    // let tl = gsap.timeline();
-
     let isOpen = false;
     let isAnimating = false;
 
     burgerIcon.addEventListener("click", (e) => {
-      document.body.classList.toggle("no-scroll");
-      document.documentElement.classList.toggle("no-scroll");
-
       const lenis = window.lenis;
-
-      // console.log("isOpen:", isOpen);
-
-      if (lenis) {
-        if (isOpen) {
-          lenis.stop();
-        } else {
-          lenis.start();
-        }
-      }
 
       const target = e.currentTarget as HTMLDivElement;
       target.classList.toggle("open");
 
-      if (!isOpen) {
-        mobileNav.classList.add("nav-active");
-        horizontalBarMenu.classList.add("horizontal-bar-active");
-        openMenu();
-      } else {
-        mobileNav.classList.remove("nav-active");
-        horizontalBarMenu.classList.remove("horizontal-bar-active");
-        closeMenu();
+      if (lenis) {
+        if (!isOpen) {
+          lenis.stop();
+          openMenu();
+        } else {
+          lenis.start();
+          closeMenu();
+        }
       }
 
       function animateMenuText(isOpening: boolean) {
-        console.log({ isOpen });
         gsap.to(isOpening ? menuText : closeText, {
           y: isOpening ? "-25%" : "25%",
           rotate: isOpening ? "-7deg" : "7deg",
@@ -232,11 +249,13 @@ const currentPath = Astro.url.pathname;
 
       function openMenu() {
         if (isAnimating || isOpen) return;
+        // horizontalBarMenu.classList.toggle("disable")
         isAnimating = true;
         // Aquí puedes agregar la lógica para abrir el menú
         animateMenuText(true);
-        gsap.to(menuText, {
-          color: "yellow",
+        gsap.to(horizontalBarMenu, {
+          width: 0,
+          opacity: 0,
           onComplete: () => {
             isAnimating = false;
             isOpen = true;
@@ -249,64 +268,15 @@ const currentPath = Astro.url.pathname;
         isAnimating = true;
         // Aquí puedes agregar la lógica para cerrar el menú
         animateMenuText(false);
-        gsap.to(menuText, {
-          color: "red",
+        gsap.to(horizontalBarMenu, {
+          width: "min(35%,200px)",
+          opacity: 1,
           onComplete: () => {
             isAnimating = false;
             isOpen = false;
           },
         });
       }
-
-      // Limpiar/controlar la timeline
-      // tl.clear(); // Limpia animaciones anteriores
-      // tl.kill(); // Mata la animación actual si está en progreso
-
-      // Reiniciar timeline
-      // tl = gsap.timeline();
-
-      // if (isOpen) {
-      //   // Para OCULTAR: anima DESDE el estado visible HACIA oculto
-      //   tl.to(menuText, {
-      //     duration: 0.8,
-      //     ease: "power4.inOut",
-      //     y: "-25%",
-      //     rotate: "-7deg",
-      //     autoAlpha: 0,
-      //   }).to(
-      //     closeText,
-      //     {
-      //       duration: 0.8,
-      //       ease: "power4.inOut",
-      //       y: "0%",
-      //       rotate: "0deg",
-      //       autoAlpha: 1,
-      //     },
-      //     "-=0.5", // Superponer la animación de mostrar con la de ocultar
-      //   );
-      // } else {
-      //   // Para MOSTRAR: primero hacer visible, luego animar
-      //   tl.to(
-      //     closeText,
-      //     {
-      //       duration: 0.8,
-      //       ease: "power4.inOut",
-      //       y: "25%",
-      //       rotate: "7deg",
-      //       autoAlpha: 0,
-      //     }, // Superponer la animación de ocultar con la de mostrar
-      //   ).to(
-      //     menuText,
-      //     {
-      //       duration: 0.8,
-      //       ease: "power4.inOut",
-      //       y: "0%",
-      //       rotate: "0deg",
-      //       autoAlpha: 1,
-      //     },
-      //     "-=0.5",
-      //   );
-      // }
     });
   });
 </script>

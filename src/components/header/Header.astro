@@ -17,7 +17,7 @@ const currentPath = Astro.url.pathname;
   class="fixed top-0 left-1/2 z-50 flex h-(--header-height) w-full max-w-7xl -translate-x-1/2 items-center justify-center gap-2 rounded-md bg-white/50 shadow-lg backdrop-blur-sm"
 >
   <div
-    class="horizontal-bar-menu bg-primary absolute bottom-1 h-[3px] w-[min(35%,200px)] cursor-pointer rounded-full transition-all duration-300"
+    class="horizontal-bar-menu bg-primary absolute bottom-1 h-[3px] w-[min(35%,200px)] cursor-pointer rounded-full transition-all duration-800"
   >
   </div>
   <div class="flex w-full max-w-7xl items-center justify-between px-2 md:px-4">
@@ -73,7 +73,12 @@ const currentPath = Astro.url.pathname;
   </div>
 </header>
 
-<style></style>
+<style>
+  .horizontal-bar-menu.disable {
+    width: 0px;
+    opacity: 0;
+  }
+</style>
 
 <script>
   document.addEventListener("astro:page-load", () => {
