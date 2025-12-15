@@ -14,7 +14,7 @@ export default defineConfig({
     fonts: [
       {
         provider: fontProviders.fontsource(),
-        name: "Poppins",
+        name: "Urbanist",
         cssVariable: "--font-headings",
         weights: [500, 700],
       },
