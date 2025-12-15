@@ -28,17 +28,21 @@ const currentPath = Astro.url.pathname;
     <span></span>
   </div>
 </div>
-<div class="menu-overlay">
-  <div class="menu-content">
-    <div class="menu-items">
+Urbanist<div
+  class="menu-overlay fixed top-0 left-0 h-screen w-full bg-[#0f0f0f] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)]"
+>
+  <div
+    class="menu-content transform:[translateX(-100px)] transform:[translateY(-100px)] relative flex h-full w-full origin-bottom-left scale-150 rotate-[-15deg] flex-col items-center justify-center"
+  >
+    <div class="menu-items flex flex-1 flex-col items-center justify-center">
       <div class="col-lg">imagen</div>
       <div class="col-sm">
-        <div class="menu-links">
+        <div class="menu-links flex flex-col">
           {
             menuItems.map((item) => (
               <a
                 class:list={[
-                  "hover:text-primary px-2 transition-all hover:[text-shadow:1px_0_0_currentColor]",
+                  "hover:text-primary font-headings translate-y-[120%] px-2 text-white transition-all hover:[text-shadow:1px_0_0_currentColor]",
                   {
                     "text-primary pointer-events-none [text-shadow:1px_0_0_currentColor]":
                       currentPath === item.url,
@@ -46,43 +50,22 @@ const currentPath = Astro.url.pathname;
                 ]}
                 href={item.url}
               >
-                {item.label}
+                <h2>{item.label}</h2>
               </a>
             ))
           }
         </div>
-        <div class="menu-socials">
-          <div>Twitter</div>
-          <div>Instagram</div>
-          <div>LinkedIn</div>
-        </div>
       </div>
     </div>
-    <div class="menu-footer"></div>
+    <div class="menu-footer">
+      <div class="menu-socials flex gap-2">
+        <div class="text-white">Twitter</div>
+        <div class="text-white">Instagram</div>
+        <div class="text-white">LinkedIn</div>
+      </div>
+    </div>
   </div>
 </div>
-<!-- <nav
-  class="mobile-nav invisible fixed top-(--header-height) left-0 flex h-[calc(100dvh-var(--header-height))] w-full flex-col items-center justify-center bg-white opacity-0 transition-opacity duration-300"
->
-  <ul class="flex flex-col items-center justify-center gap-4">
-    {
-      menuItems.map((item) => (
-        <a
-          class:list={[
-            "hover:text-primary px-2 transition-all hover:[text-shadow:1px_0_0_currentColor]",
-            {
-              "text-primary pointer-events-none [text-shadow:1px_0_0_currentColor]":
-                currentPath === item.url,
-            },
-          ]}
-          href={item.url}
-        >
-          {item.label}
-        </a>
-      ))
-    }
-  </ul>
-</nav> -->
 
 <style>
   .nav-active {
@@ -208,6 +191,10 @@ const currentPath = Astro.url.pathname;
       ".horizontal-bar-menu",
     ) as HTMLDivElement;
     const text = document.querySelector(".text") as HTMLDivElement;
+    const container = document.querySelector(".container") as HTMLDivElement;
+    const menuContent = document.querySelector(
+      ".menu-content",
+    ) as HTMLDivElement;
 
     let isOpen = false;
     let isAnimating = false;
@@ -252,10 +239,44 @@ const currentPath = Astro.url.pathname;
         // horizontalBarMenu.classList.toggle("disable")
         isAnimating = true;
         // Aquí puedes agregar la lógica para abrir el menú
-        animateMenuText(true);
         gsap.to(horizontalBarMenu, {
           width: 0,
           opacity: 0,
+        });
+
+        gsap.to(container, {
+          rotation: 10,
+          x: -300,
+          y: 1000,
+          scale: 1.5,
+          duration: 1.25,
+          ease: "power4.inOut",
+        });
+        animateMenuText(true);
+
+        gsap.to(menuContent, {
+          x: 0,
+          y: 0,
+          scale: 1,
+          rotation: 0,
+          opacity: 1,
+          duration: 1.25,
+          ease: "power4.inOut",
+        });
+
+        gsap.to(".menu-links a", {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: 0.75,
+          stagger: 0.1,
+          ease: "power3.inOut",
+        });
+
+        gsap.to(".menu-overlay", {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 175%, 0% 100%)",
+          duration: 1.25,
+          ease: "power4.inOut",
           onComplete: () => {
             isAnimating = false;
             isOpen = true;
