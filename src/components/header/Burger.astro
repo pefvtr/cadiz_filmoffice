@@ -9,6 +9,26 @@ interface Props {
 const { classNames = "" } = Astro.props;
 
 const currentPath = Astro.url.pathname;
+
+const phrases = [
+  {
+    id: 1,
+    text: "La ciudad que posa para la eternidad",
+  },
+  {
+    id: 2,
+    text: "Donde cada rincón cuenta una historia",
+  },
+  {
+    id: 3,
+    text: "Un decorado vivo de mil historias",
+  },
+
+  {
+    id: 4,
+    text: "El alma de Cádiz, en cada fotograma",
+  },
+];
 ---
 
 <div
@@ -82,7 +102,22 @@ const currentPath = Astro.url.pathname;
         </div>
       </div>
     </div>
-    <div class="menu-footer pb-2 text-white">Menu Footer</div>
+    <div class="menu-footer relative w-full pb-12">
+      {
+        phrases.map((phrase) => (
+          <h4
+            class:list={[
+              "text-center text-sm text-white",
+              {
+                "absolute top-0 left-0 w-full opacity-0": phrase.id !== 1,
+              },
+            ]}
+          >
+            {phrase.text}
+          </h4>
+        ))
+      }
+    </div>
   </div>
 </div>
 
@@ -367,12 +402,8 @@ const currentPath = Astro.url.pathname;
 
         gsap.to(socialIcons, {
           opacity: 0,
-          duration: 0.5,
-          scale: 1.5,
+          duration: 1.25,
           ease: "power4.inOut",
-          onComplete: () => {
-            gsap.set(socialIcons, { scale: 1 });
-          },
         });
 
         /* Animación para los enlaces del menu principal */
