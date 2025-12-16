@@ -33,73 +33,75 @@ const {
   <body>
     <Header />
     <main>
-      <slot />
+      <div class="main-container">
+        <slot />
+      </div>
     </main>
   </body>
-</html>
 
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
-
-<script>
-  import Lenis from "lenis";
-
-  declare global {
-    interface Window {
-      lenis?: Lenis;
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
     }
-  }
+  </style>
 
-  document.addEventListener("astro:page-load", () => {
-    type State = "animate-up" | "animate-down";
-    const lenis = new Lenis();
-    // Guardar instancia en window para acceso global
-    if (typeof window !== "undefined") {
-      // Usar type assertion para evitar el error de TypeScript
-      window.lenis = lenis;
-    }
-    const header = document.querySelector("#main-header");
-    lenis.on("scroll", (e) => {
-      if (!header) return;
+  <script>
+    import Lenis from "lenis";
 
-      const position = e.animatedScroll;
-      const direction = e.direction;
-      if (position > 0 && direction > 0) {
-        header.classList.remove("animate-down");
-        header.classList.add("animate-up");
-      } else {
-        header.classList.remove("animate-up");
-        header.classList.add("animate-down");
+    declare global {
+      interface Window {
+        lenis?: Lenis;
       }
-    });
-
-    function updateState(state: State) {
-      const states = ["animate-up", "animate-down"] as const;
-      states.forEach((stateClass) => header?.classList.remove(stateClass));
-      header?.classList.add(state);
     }
 
-    header?.addEventListener("mouseenter", () => {
-      // console.log("enter header");
-      updateState("animate-down");
-    });
+    document.addEventListener("astro:page-load", () => {
+      type State = "animate-up" | "animate-down";
+      const lenis = new Lenis();
+      // Guardar instancia en window para acceso global
+      if (typeof window !== "undefined") {
+        // Usar type assertion para evitar el error de TypeScript
+        window.lenis = lenis;
+      }
+      const header = document.querySelector("#main-header");
+      lenis.on("scroll", (e) => {
+        if (!header) return;
 
-    header?.addEventListener("mouseleave", () => {
-      // console.log("leave header");
-      updateState("animate-down");
-    });
+        const position = e.animatedScroll;
+        const direction = e.direction;
+        if (position > 0 && direction > 0) {
+          header.classList.remove("animate-down");
+          header.classList.add("animate-up");
+        } else {
+          header.classList.remove("animate-up");
+          header.classList.add("animate-down");
+        }
+      });
 
-    function raf(time: number) {
-      lenis.raf(time);
+      function updateState(state: State) {
+        const states = ["animate-up", "animate-down"] as const;
+        states.forEach((stateClass) => header?.classList.remove(stateClass));
+        header?.classList.add(state);
+      }
+
+      header?.addEventListener("mouseenter", () => {
+        // console.log("enter header");
+        updateState("animate-down");
+      });
+
+      header?.addEventListener("mouseleave", () => {
+        // console.log("leave header");
+        updateState("animate-down");
+      });
+
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
       requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  });
-</script>
+    });
+  </script>
+</html>
