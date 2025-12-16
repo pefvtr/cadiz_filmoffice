@@ -10,9 +10,9 @@ const { classNames = "" } = Astro.props;
 const currentPath = Astro.url.pathname;
 ---
 
-<div class="relative top-0 right-0 flex items-center gap-3">
+<div class="relative top-0 right-0 z-50 flex items-center gap-3">
   <div class="text relative">
-    <div class="menu-text text-sm">Menu</div>
+    <div class="menu-text text-primary text-sm">Menu</div>
     <div
       class="close-text invisible absolute top-0 left-0 translate-y-[25%] rotate-[7deg] text-sm opacity-0"
     >
@@ -28,7 +28,7 @@ const currentPath = Astro.url.pathname;
     <span></span>
   </div>
 </div>
-Urbanist<div
+<div
   class="menu-overlay fixed top-0 left-0 h-screen w-full bg-[#0f0f0f] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)]"
 >
   <div
@@ -42,7 +42,7 @@ Urbanist<div
             menuItems.map((item) => (
               <a
                 class:list={[
-                  "hover:text-primary font-headings translate-y-[120%] px-2 text-white transition-all hover:[text-shadow:1px_0_0_currentColor]",
+                  "hover:text-primary font-headings overflow-hidden px-2 opacity-0 hover:[text-shadow:1px_0_0_currentColor]",
                   {
                     "text-primary pointer-events-none [text-shadow:1px_0_0_currentColor]":
                       currentPath === item.url,
@@ -50,7 +50,7 @@ Urbanist<div
                 ]}
                 href={item.url}
               >
-                <h2>{item.label}</h2>
+                <h2 class="translate-y-[120%] text-white">{item.label}</h2>
               </a>
             ))
           }
@@ -177,6 +177,10 @@ Urbanist<div
     opacity: 0;
     width: 0%;
   }
+
+  .burger-icon.open span {
+    background-color: white;
+  }
 </style>
 
 <script>
@@ -191,7 +195,9 @@ Urbanist<div
       ".horizontal-bar-menu",
     ) as HTMLDivElement;
     const text = document.querySelector(".text") as HTMLDivElement;
-    const container = document.querySelector(".container") as HTMLDivElement;
+    const mainContainer = document.querySelector(
+      ".main-container",
+    ) as HTMLDivElement;
     const menuContent = document.querySelector(
       ".menu-content",
     ) as HTMLDivElement;
@@ -203,13 +209,14 @@ Urbanist<div
       const lenis = window.lenis;
 
       const target = e.currentTarget as HTMLDivElement;
-      target.classList.toggle("open");
 
       if (lenis) {
         if (!isOpen) {
+          target.classList.add("open");
           lenis.stop();
           openMenu();
         } else {
+          target.classList.remove("open");
           lenis.start();
           closeMenu();
         }
@@ -244,7 +251,8 @@ Urbanist<div
           opacity: 0,
         });
 
-        gsap.to(container, {
+        /* Este es el contenido de la pagina */
+        gsap.to(mainContainer, {
           rotation: 10,
           x: -300,
           y: 1000,
@@ -252,8 +260,10 @@ Urbanist<div
           duration: 1.25,
           ease: "power4.inOut",
         });
+
         animateMenuText(true);
 
+        /* Este es el contenido del menu */
         gsap.to(menuContent, {
           x: 0,
           y: 0,
@@ -264,7 +274,13 @@ Urbanist<div
           ease: "power4.inOut",
         });
 
-        gsap.to(".menu-links a", {
+        gsap.to(closeText, {
+          color: "#fff",
+          duration: 0.8,
+          ease: "power4.inOut",
+        });
+
+        gsap.to(".menu-links h2", {
           y: 0,
           opacity: 1,
           duration: 1,
@@ -289,6 +305,11 @@ Urbanist<div
         isAnimating = true;
         // Aquí puedes agregar la lógica para cerrar el menú
         animateMenuText(false);
+        gsap.to(menuText, {
+          color: "var(--color-primary)",
+          duration: 0.8,
+          ease: "power4.inOut",
+        });
         gsap.to(horizontalBarMenu, {
           width: "min(35%,200px)",
           opacity: 1,
