@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import { menuItems } from "./Header.astro";
 
 interface Props {
@@ -10,7 +11,12 @@ const { classNames = "" } = Astro.props;
 const currentPath = Astro.url.pathname;
 ---
 
-<div class="relative top-0 right-0 z-50 flex items-center gap-3">
+<div
+  class:list={[
+    "relative top-0 right-2 z-50 flex items-center gap-3 sm:right-4 sm:hidden",
+    classNames,
+  ]}
+>
   <div class="text relative">
     <div class="menu-text text-primary text-sm">Menu</div>
     <div
@@ -19,7 +25,7 @@ const currentPath = Astro.url.pathname;
       Cerrar
     </div>
   </div>
-  <div class:list={["burger-icon", classNames]}>
+  <div class="burger-icon">
     <span></span>
     <span></span>
     <span></span>
@@ -34,6 +40,16 @@ const currentPath = Astro.url.pathname;
   <div
     class="menu-content transform:[translateX(-100px)] transform:[translateY(-100px)] relative flex h-full w-full origin-bottom-left scale-150 rotate-[-15deg] flex-col items-center justify-center"
   >
+    <div
+      class="menu-socials absolute top-9 left-2 flex -translate-y-[50%] gap-2 sm:left-4"
+    >
+      <div class="social-icon text-white opacity-0">
+        <Icon name="in" class="h-6 w-6" />
+      </div>
+      <div class="social-icon text-white opacity-0">
+        <Icon name="x" class="h-6 w-6" />
+      </div>
+    </div>
     <div class="menu-items flex flex-1 flex-col items-center justify-center">
       <div class="col-lg">imagen</div>
       <div class="col-sm">
@@ -66,13 +82,7 @@ const currentPath = Astro.url.pathname;
         </div>
       </div>
     </div>
-    <div class="menu-footer">
-      <div class="menu-socials flex gap-2">
-        <div class="text-white">Twitter</div>
-        <div class="text-white">Instagram</div>
-        <div class="text-white">LinkedIn</div>
-      </div>
-    </div>
+    <div class="menu-footer pb-2 text-white">Menu Footer</div>
   </div>
 </div>
 
@@ -197,7 +207,9 @@ const currentPath = Astro.url.pathname;
 
   document.addEventListener("astro:page-load", () => {
     const burgerIcon = document.querySelector(".burger-icon") as HTMLDivElement;
-    const mobileNav = document.querySelector(".mobile-nav") as HTMLElement;
+    const socialIcons = document.querySelectorAll(
+      ".social-icon",
+    ) as NodeListOf<HTMLDivElement>;
     const menuText = document.querySelector(".menu-text") as HTMLDivElement;
     const closeText = document.querySelector(".close-text") as HTMLDivElement;
     const horizontalBarMenu = document.querySelector(
@@ -261,6 +273,16 @@ const currentPath = Astro.url.pathname;
           duration: 0.35,
         });
 
+        gsap.to(socialIcons, {
+          opacity: 1,
+          duration: 1.5,
+          ease: "power4.inOut",
+          stagger: {
+            each: 0.2,
+          },
+          delay: 0.5,
+        });
+
         /* Este es el contenido de la pagina */
         gsap.to(mainContainer, {
           rotation: 10,
@@ -291,16 +313,6 @@ const currentPath = Astro.url.pathname;
           ease: "power4.inOut",
         });
 
-        /* Animación para los enlaces del menu principal */
-        // gsap.to(".menu-links h2", {
-        //   y: 0,
-        //   opacity: 1,
-        //   duration: 2,
-        //   delay: 0.15,
-        //   stagger: 0.2,
-        //   ease: "power4.inOut",
-        // });
-
         gsap.fromTo(
           ".menu-links h2",
           {
@@ -311,7 +323,7 @@ const currentPath = Astro.url.pathname;
             y: "0%",
             opacity: 1,
             duration: 2,
-            delay: 0.15,
+            // delay: 0.15,
             stagger: 0.2,
             ease: "power4.inOut",
           },
@@ -353,12 +365,30 @@ const currentPath = Astro.url.pathname;
           ease: "power4.inOut",
         });
 
-        // transform:[translateX(-100px)] transform:[translateY(-100px)] relative flex h-full w-full origin-bottom-left scale-150 rotate-[-15deg] flex-col items-center justify-center
+        gsap.to(socialIcons, {
+          opacity: 0,
+          duration: 0.5,
+          scale: 1.5,
+          ease: "power4.inOut",
+          onComplete: () => {
+            gsap.set(socialIcons, { scale: 1 });
+          },
+        });
 
         /* Animación para los enlaces del menu principal */
         gsap.to(".menu-links h2", {
           opacity: 0,
           duration: 2,
+          ease: "power4.inOut",
+        });
+
+        /* Este es el contenido de la pagina */
+        gsap.to(mainContainer, {
+          rotation: 0,
+          x: 0,
+          y: 0,
+          scale: 1,
+          duration: 1.25,
           ease: "power4.inOut",
         });
 

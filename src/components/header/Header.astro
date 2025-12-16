@@ -14,45 +14,14 @@ const currentPath = Astro.url.pathname;
 
 <header
   id="main-header"
-  class="fixed top-0 left-1/2 z-50 flex h-(--header-height) w-full max-w-7xl -translate-x-1/2 items-center justify-center gap-2 rounded-md bg-white/50 shadow-lg backdrop-blur-sm"
+  class="fixed top-0 left-1/2 z-50 flex h-(--header-height) w-full max-w-7xl -translate-x-1/2 items-center justify-center gap-2 rounded-md bg-white/70 shadow-lg backdrop-blur-sm"
 >
   <div
     class="horizontal-bar-menu bg-primary absolute bottom-1 h-[3px] w-[min(35%,200px)] cursor-pointer rounded-full transition-all duration-800"
   >
   </div>
   <div class="flex w-full max-w-7xl items-center justify-between px-2 md:px-4">
-    <!-- <div class="menu-overlay">
-      <div class="menu-content">
-        <div class="menu-col">
-          <p>Codegrid</p>
-          <p>Shoreline Drive</p>
-          <p>Oslo</p>
-          <br />
-          <p>Edition</p>
-          <p>Vol. 03</p>
-          <br />
-          <p>Contact</p>
-          <p>hello@mail.com</p>
-          <br />
-          <p>Direct</p>
-          <p>+47 123 45 678</p>
-        </div>
-        <div class="menu-col">
-          <p>Instagram</p>
-          <p>LinkedIn</p>
-          <p>Twitter</p>
-          <br />
-          <br />
-          <p>Language</p>
-          <p>Norwegian</p>
-          <br />
-          <br />
-          <p>Credit</p>
-          <p>Design by John Doe</p>
-        </div>
-      </div>
-    </div> -->
-    <Logo classNames="w-28 sm:w-32" />
+    <Logo classNames="w-28 sm:w-32 pl-2 sm:pl-4" />
     <Burger classNames="sm:hidden burger" />
     <div class="main-menu max-sm:hidden">
       <nav class="main-nav">

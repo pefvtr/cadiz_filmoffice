@@ -9,10 +9,6 @@ interface Props {
 const { classNames = "" } = Astro.props;
 ---
 
-<div class="logo">
-  <Image
-    src={LogoSVG}
-    alt="Logo Cádiz Film Office"
-    class:list={["mx-auto", classNames]}
-  />
+<div class:list={["", classNames]}>
+  <Image src={LogoSVG} alt="Logo Cádiz Film Office" />
 </div>
