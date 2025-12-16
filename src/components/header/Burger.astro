@@ -42,15 +42,24 @@ const currentPath = Astro.url.pathname;
             menuItems.map((item) => (
               <a
                 class:list={[
-                  "hover:text-primary font-headings overflow-hidden px-2 opacity-0 hover:[text-shadow:1px_0_0_currentColor]",
+                  "overflow-hidden",
                   {
-                    "text-primary pointer-events-none [text-shadow:1px_0_0_currentColor]":
-                      currentPath === item.url,
+                    "pointer-events-none": currentPath === item.url,
                   },
                 ]}
                 href={item.url}
               >
-                <h2 class="translate-y-[120%] text-white">{item.label}</h2>
+                <h2
+                  class:list={[
+                    "hover:text-primary font-headings hover: translate-y-[120%] px-2 opacity-0 transition-colors duration-300",
+                    {
+                      "text-primary": currentPath === item.url,
+                      "text-white": currentPath !== item.url,
+                    },
+                  ]}
+                >
+                  {item.label}
+                </h2>
               </a>
             ))
           }
@@ -245,6 +254,7 @@ const currentPath = Astro.url.pathname;
         if (isAnimating || isOpen) return;
         // horizontalBarMenu.classList.toggle("disable")
         isAnimating = true;
+
         // Aquí puedes agregar la lógica para abrir el menú
         gsap.to(horizontalBarMenu, {
           width: 0,
@@ -274,21 +284,24 @@ const currentPath = Astro.url.pathname;
           ease: "power4.inOut",
         });
 
+        /* Animación para el texto del burger */
         gsap.to(closeText, {
           color: "#fff",
           duration: 0.8,
           ease: "power4.inOut",
         });
 
+        /* Animación para los enlaces del menu principal */
         gsap.to(".menu-links h2", {
           y: 0,
           opacity: 1,
           duration: 1,
-          delay: 0.75,
+          delay: 0.5,
           stagger: 0.1,
           ease: "power3.inOut",
         });
 
+        /* Animación para el overlay del menú principal */
         gsap.to(".menu-overlay", {
           clipPath: "polygon(0% 0%, 100% 0%, 100% 175%, 0% 100%)",
           duration: 1.25,
@@ -303,13 +316,18 @@ const currentPath = Astro.url.pathname;
       function closeMenu() {
         if (isAnimating || !isOpen) return;
         isAnimating = true;
+
         // Aquí puedes agregar la lógica para cerrar el menú
         animateMenuText(false);
+
+        /* Animación para el texto del burger */
         gsap.to(menuText, {
           color: "var(--color-primary)",
           duration: 0.8,
           ease: "power4.inOut",
         });
+
+        /* Animación para la línea de la barra del header */
         gsap.to(horizontalBarMenu, {
           width: "min(35%,200px)",
           opacity: 1,
