@@ -255,10 +255,10 @@ const currentPath = Astro.url.pathname;
         // horizontalBarMenu.classList.toggle("disable")
         isAnimating = true;
 
-        // Aquí puedes agregar la lógica para abrir el menú
         gsap.to(horizontalBarMenu, {
           width: 0,
           opacity: 0,
+          duration: 0.35,
         });
 
         /* Este es el contenido de la pagina */
@@ -292,18 +292,34 @@ const currentPath = Astro.url.pathname;
         });
 
         /* Animación para los enlaces del menu principal */
-        gsap.to(".menu-links h2", {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          delay: 0.5,
-          stagger: 0.1,
-          ease: "power3.inOut",
-        });
+        // gsap.to(".menu-links h2", {
+        //   y: 0,
+        //   opacity: 1,
+        //   duration: 2,
+        //   delay: 0.15,
+        //   stagger: 0.2,
+        //   ease: "power4.inOut",
+        // });
+
+        gsap.fromTo(
+          ".menu-links h2",
+          {
+            y: "120%",
+            opacity: 0,
+          },
+          {
+            y: "0%",
+            opacity: 1,
+            duration: 2,
+            delay: 0.15,
+            stagger: 0.2,
+            ease: "power4.inOut",
+          },
+        );
 
         /* Animación para el overlay del menú principal */
         gsap.to(".menu-overlay", {
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 175%, 0% 100%)",
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 115%, 0% 100%)",
           duration: 1.25,
           ease: "power4.inOut",
           onComplete: () => {
@@ -327,14 +343,41 @@ const currentPath = Astro.url.pathname;
           ease: "power4.inOut",
         });
 
-        /* Animación para la línea de la barra del header */
-        gsap.to(horizontalBarMenu, {
-          width: "min(35%,200px)",
-          opacity: 1,
+        /* Este es el contenido del menu */
+        gsap.to(menuContent, {
+          x: -100,
+          y: -100,
+          scale: 1.5,
+          rotation: -15,
+          duration: 1.25,
+          ease: "power4.inOut",
+        });
+
+        // transform:[translateX(-100px)] transform:[translateY(-100px)] relative flex h-full w-full origin-bottom-left scale-150 rotate-[-15deg] flex-col items-center justify-center
+
+        /* Animación para los enlaces del menu principal */
+        gsap.to(".menu-links h2", {
+          opacity: 0,
+          duration: 2,
+          ease: "power4.inOut",
+        });
+
+        /* Animación para el overlay del menú principal */
+        gsap.to(".menu-overlay", {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+          duration: 1.25,
+          ease: "power4.inOut",
           onComplete: () => {
             isAnimating = false;
             isOpen = false;
           },
+        });
+
+        /* Animación para la línea de la barra del header */
+        gsap.to(horizontalBarMenu, {
+          width: "min(35%,200px)",
+          opacity: 1,
+          delay: 0.35,
         });
       }
     });
