@@ -102,7 +102,7 @@ const phrases = [
         </div>
       </div>
     </div>
-    <div class="menu-footer relative w-full overflow-hidden pb-12">
+    <div class="menu-footer relative w-full overflow-hidden pb-12 opacity-0">
       {
         phrases.map((phrase) => (
           <h3
@@ -238,7 +238,6 @@ const phrases = [
 </style>
 
 <script>
-  import { set } from "astro:schema";
   import { gsap } from "gsap";
 
   document.addEventListener("astro:page-load", () => {
@@ -251,7 +250,6 @@ const phrases = [
     const horizontalBarMenu = document.querySelector(
       ".horizontal-bar-menu",
     ) as HTMLDivElement;
-    const text = document.querySelector(".text") as HTMLDivElement;
     const mainContainer = document.querySelector(
       ".main-container",
     ) as HTMLDivElement;
@@ -261,6 +259,7 @@ const phrases = [
     const phrases = document.querySelectorAll(
       ".menu-footer h3",
     ) as NodeListOf<HTMLHeadingElement>;
+    const menuFooter = document.querySelector(".menu-footer") as HTMLDivElement;
 
     let isOpen = false;
     let isAnimating = false;
@@ -306,8 +305,20 @@ const phrases = [
         if (isAnimating || isOpen) return;
         // horizontalBarMenu.classList.toggle("disable")
         isAnimating = true;
-
         tl = gsap.timeline({ repeat: -1 });
+
+        gsap.fromTo(
+          menuFooter,
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+            duration: 1.5,
+            ease: "power4.inOut",
+            delay: 0.5,
+          },
+        );
 
         phrases.forEach((phrase) => {
           tl?.fromTo(
