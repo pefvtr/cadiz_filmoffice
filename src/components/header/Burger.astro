@@ -63,25 +63,27 @@ const phrases = [
     <div
       class="menu-socials absolute top-9 left-2 flex -translate-y-[50%] gap-2 lg:left-4"
     >
-      <div class="social-icon text-white opacity-0">
+      <div
+        class="social-icon hover:text-primary text-white opacity-0 transition-colors duration-300"
+      >
         <Icon name="in" class="h-6 w-6" />
       </div>
-      <div class="social-icon text-white opacity-0">
+      <div
+        class="social-icon hover:text-primary text-white opacity-0 transition-colors duration-300"
+      >
         <Icon name="x" class="h-6 w-6" />
       </div>
     </div>
     <div class="menu-items flex flex-1 flex-col items-center justify-center">
-      <div class="col-lg">imagen</div>
-      <div class="col-sm">
-        <div class="menu-links flex flex-col">
+      <div class="col-image">imagen</div>
+      <div class="col-nav">
+        <nav class="menu-links flex flex-col">
           {
             menuItems.map((item) => (
               <a
                 class:list={[
                   "overflow-hidden",
-                  {
-                    "pointer-events-none": currentPath === item.url,
-                  },
+                  { "pointer-events-none": currentPath === item.url },
                 ]}
                 href={item.url}
               >
@@ -99,7 +101,7 @@ const phrases = [
               </a>
             ))
           }
-        </div>
+        </nav>
       </div>
     </div>
     <div
@@ -311,9 +313,7 @@ const phrases = [
           repeat: -1,
         });
 
-        gsap.set(phrases, { y: "100%" });
-
-        phrases.forEach((phrase, i) => {
+        phrases.forEach((phrase) => {
           tl?.to(phrase, {
             y: 0,
           })
@@ -324,6 +324,8 @@ const phrases = [
               y: "-105%",
             });
         });
+
+        gsap.set(phrases, { y: "100%" });
 
         gsap.fromTo(
           menuFooter,

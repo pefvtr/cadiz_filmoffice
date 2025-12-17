@@ -29,7 +29,14 @@ const currentPath = Astro.url.pathname;
           {
             menuItems.map((item) => (
               <a
-                class="hover:text-primary px-2 transition-colors"
+                class:list={[
+                  "hover:text-primary px-2 transition-colors",
+                  {
+                    "text-primary pointer-events-none":
+                      currentPath === item.url,
+                    "text-black": currentPath !== item.url,
+                  },
+                ]}
                 href={item.url}
               >
                 {item.label}
