@@ -33,7 +33,7 @@ const phrases = [
 
 <div
   class:list={[
-    "relative top-0 right-2 z-50 flex items-center gap-3 sm:right-4 sm:hidden",
+    "relative top-0 right-2 z-50 flex items-center gap-3 lg:right-4 lg:hidden",
     classNames,
   ]}
 >
@@ -61,7 +61,7 @@ const phrases = [
     class="menu-content transform:[translateX(-100px)] transform:[translateY(-100px)] relative flex h-full w-full origin-bottom-left scale-150 rotate-[-15deg] flex-col items-center justify-center"
   >
     <div
-      class="menu-socials absolute top-9 left-2 flex -translate-y-[50%] gap-2 sm:left-4"
+      class="menu-socials absolute top-9 left-2 flex -translate-y-[50%] gap-2 lg:left-4"
     >
       <div class="social-icon text-white opacity-0">
         <Icon name="in" class="h-6 w-6" />
@@ -102,14 +102,17 @@ const phrases = [
         </div>
       </div>
     </div>
-    <div class="menu-footer relative w-full overflow-hidden pb-12 opacity-0">
+    <div
+      class="menu-footer relative mb-12 w-full overflow-hidden leading-none opacity-0"
+    >
       {
         phrases.map((phrase) => (
           <h3
             class:list={[
-              "text-center text-base text-white",
+              "text-center text-base text-white sm:text-lg",
               {
-                "absolute top-0 left-0 w-full opacity-0": phrase.id !== 1,
+                "absolute top-0 left-0 w-full translate-y-[105%]":
+                  phrase.id !== 1,
               },
             ]}
           >
@@ -305,7 +308,12 @@ const phrases = [
         if (isAnimating || isOpen) return;
         // horizontalBarMenu.classList.toggle("disable")
         isAnimating = true;
-        tl = gsap.timeline({ repeat: -1 });
+        tl = gsap.timeline({
+          repeat: -1,
+          onRepeat: () => {
+            gsap.set(phrases, { y: "100%" });
+          },
+        });
 
         gsap.fromTo(
           menuFooter,
@@ -320,27 +328,39 @@ const phrases = [
           },
         );
 
-        phrases.forEach((phrase) => {
-          tl?.fromTo(
-            phrase,
-            {
-              opacity: 0,
-              y: 10,
-            },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.5,
-            },
-          )
+        gsap.set(phrases, { y: "100%" });
+
+        phrases.forEach((phrase, i) => {
+          tl?.to(phrase, {
+            y: 0,
+          })
             .to(phrase, {
-              opacity: 1,
               duration: 3,
             })
             .to(phrase, {
-              opacity: 0,
-              y: -10,
+              y: "-105%",
             });
+
+          // tl?.fromTo(
+          //   phrase,
+          //   {
+          //     opacity: 0,
+          //     y: 10,
+          //   },
+          //   {
+          //     opacity: 1,
+          //     y: 0,
+          //     duration: 0.5,
+          //   },
+          // )
+          //   .to(phrase, {
+          //     opacity: 1,
+          //     duration: 3,
+          //   })
+          //   .to(phrase, {
+          //     opacity: 0,
+          //     y: -10,
+          //   });
         });
 
         gsap.to(horizontalBarMenu, {
@@ -422,7 +442,7 @@ const phrases = [
         isAnimating = true;
 
         // Limpiamos la animación
-        tl?.clear();
+        tl?.kill();
 
         // Aquí puedes agregar la lógica para cerrar el menú
         animateMenuText(false);
