@@ -102,19 +102,19 @@ const phrases = [
         </div>
       </div>
     </div>
-    <div class="menu-footer relative w-full pb-12">
+    <div class="menu-footer relative w-full overflow-hidden pb-12">
       {
         phrases.map((phrase) => (
-          <h4
+          <h3
             class:list={[
-              "text-center text-sm text-white",
+              "text-center text-base text-white",
               {
                 "absolute top-0 left-0 w-full opacity-0": phrase.id !== 1,
               },
             ]}
           >
             {phrase.text}
-          </h4>
+          </h3>
         ))
       }
     </div>
@@ -238,6 +238,7 @@ const phrases = [
 </style>
 
 <script>
+  import { set } from "astro:schema";
   import { gsap } from "gsap";
 
   document.addEventListener("astro:page-load", () => {
@@ -257,9 +258,13 @@ const phrases = [
     const menuContent = document.querySelector(
       ".menu-content",
     ) as HTMLDivElement;
+    const phrases = document.querySelectorAll(
+      ".menu-footer h3",
+    ) as NodeListOf<HTMLHeadingElement>;
 
     let isOpen = false;
     let isAnimating = false;
+    let tl: gsap.core.Timeline | null = null;
 
     burgerIcon.addEventListener("click", (e) => {
       const lenis = window.lenis;
@@ -301,6 +306,31 @@ const phrases = [
         if (isAnimating || isOpen) return;
         // horizontalBarMenu.classList.toggle("disable")
         isAnimating = true;
+
+        tl = gsap.timeline({ repeat: -1 });
+
+        phrases.forEach((phrase) => {
+          tl?.fromTo(
+            phrase,
+            {
+              opacity: 0,
+              y: 10,
+            },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.5,
+            },
+          )
+            .to(phrase, {
+              opacity: 1,
+              duration: 3,
+            })
+            .to(phrase, {
+              opacity: 0,
+              y: -10,
+            });
+        });
 
         gsap.to(horizontalBarMenu, {
           width: 0,
@@ -379,6 +409,9 @@ const phrases = [
       function closeMenu() {
         if (isAnimating || !isOpen) return;
         isAnimating = true;
+
+        // Limpiamos la animación
+        tl?.clear();
 
         // Aquí puedes agregar la lógica para cerrar el menú
         animateMenuText(false);
