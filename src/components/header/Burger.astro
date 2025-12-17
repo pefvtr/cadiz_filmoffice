@@ -306,13 +306,23 @@ const phrases = [
 
       function openMenu() {
         if (isAnimating || isOpen) return;
-        // horizontalBarMenu.classList.toggle("disable")
         isAnimating = true;
         tl = gsap.timeline({
           repeat: -1,
-          onRepeat: () => {
-            gsap.set(phrases, { y: "100%" });
-          },
+        });
+
+        gsap.set(phrases, { y: "100%" });
+
+        phrases.forEach((phrase, i) => {
+          tl?.to(phrase, {
+            y: 0,
+          })
+            .to(phrase, {
+              duration: 3,
+            })
+            .to(phrase, {
+              y: "-105%",
+            });
         });
 
         gsap.fromTo(
@@ -327,41 +337,6 @@ const phrases = [
             delay: 0.5,
           },
         );
-
-        gsap.set(phrases, { y: "100%" });
-
-        phrases.forEach((phrase, i) => {
-          tl?.to(phrase, {
-            y: 0,
-          })
-            .to(phrase, {
-              duration: 3,
-            })
-            .to(phrase, {
-              y: "-105%",
-            });
-
-          // tl?.fromTo(
-          //   phrase,
-          //   {
-          //     opacity: 0,
-          //     y: 10,
-          //   },
-          //   {
-          //     opacity: 1,
-          //     y: 0,
-          //     duration: 0.5,
-          //   },
-          // )
-          //   .to(phrase, {
-          //     opacity: 1,
-          //     duration: 3,
-          //   })
-          //   .to(phrase, {
-          //     opacity: 0,
-          //     y: -10,
-          //   });
-        });
 
         gsap.to(horizontalBarMenu, {
           width: 0,
