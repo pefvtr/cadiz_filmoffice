@@ -55,7 +55,7 @@ const phrases = [
   </div>
 </div>
 <div
-  class="menu-overlay fixed top-0 left-0 h-screen w-full bg-[#0f0f0f] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)]"
+  class="menu-overlay fixed top-0 left-0 h-screen w-full overflow-hidden bg-[#0f0f0f] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)]"
 >
   <div
     class="menu-content transform:[translateX(-100px)] transform:[translateY(-100px)] relative flex h-full w-full origin-bottom-left scale-150 rotate-[-15deg] flex-col items-center justify-center"
@@ -134,14 +134,6 @@ const phrases = [
   .header-active {
     background-color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(0px);
-  }
-
-  .header-active .horizontal-bar-menu {
-    opacity: 0;
-  }
-
-  .animate-up .horizontal-bar-menu {
-    width: 80px;
   }
 
   .burger-icon {
@@ -308,6 +300,7 @@ const phrases = [
 
       function openMenu() {
         if (isAnimating || isOpen) return;
+
         isAnimating = true;
         tl = gsap.timeline({
           repeat: -1,
@@ -327,6 +320,11 @@ const phrases = [
 
         gsap.set(phrases, { y: "100%" });
 
+        gsap.to(horizontalBarMenu, {
+          opacity: 0,
+          duration: 0.35,
+        });
+
         gsap.fromTo(
           menuFooter,
           {
@@ -340,12 +338,6 @@ const phrases = [
           },
         );
 
-        gsap.to(horizontalBarMenu, {
-          width: 0,
-          opacity: 0,
-          duration: 0.35,
-        });
-
         gsap.to(socialIcons, {
           opacity: 1,
           duration: 1.5,
@@ -358,7 +350,7 @@ const phrases = [
 
         /* Este es el contenido de la pagina */
         gsap.to(mainContainer, {
-          rotation: 10,
+          rotation: 15,
           x: -300,
           y: 1000,
           scale: 1.5,
@@ -414,8 +406,11 @@ const phrases = [
       }
 
       function closeMenu() {
+        window.scrollTo(0, 0);
         if (isAnimating || !isOpen) return;
         isAnimating = true;
+
+        horizontalBarMenu.classList.remove("hidden");
 
         // Limpiamos la animación
         tl?.kill();
@@ -474,11 +469,10 @@ const phrases = [
           },
         });
 
-        /* Animación para la línea de la barra del header */
         gsap.to(horizontalBarMenu, {
-          width: "min(35%,200px)",
           opacity: 1,
-          delay: 0.35,
+          delay: 1,
+          duration: 1,
         });
       }
     });
