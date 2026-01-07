@@ -50,6 +50,7 @@ const {
 
   <script>
     import Lenis from "lenis";
+    import { gsap } from "gsap";
 
     declare global {
       interface Window {
@@ -58,6 +59,11 @@ const {
     }
 
     document.addEventListener("astro:page-load", () => {
+      let isHeaderHovered = false;
+
+      const horizontalBarMenu = document.querySelector(
+        ".horizontal-bar-menu",
+      ) as HTMLDivElement;
       type State = "animate-up" | "animate-down";
       const lenis = new Lenis();
       // Guardar instancia en window para acceso global
@@ -68,15 +74,27 @@ const {
       const header = document.querySelector("#main-header");
       lenis.on("scroll", (e) => {
         if (!header) return;
+        if (isHeaderHovered) return;
 
         const position = e.animatedScroll;
         const direction = e.direction;
+
+        gsap.killTweensOf(horizontalBarMenu);
+
         if (position > 0 && direction > 0) {
-          header.classList.remove("animate-down");
-          header.classList.add("animate-up");
+          gsap.to(horizontalBarMenu, {
+            width: 80,
+            duration: 0.5,
+          });
+          updateState("animate-up");
         } else {
-          header.classList.remove("animate-up");
-          header.classList.add("animate-down");
+          const targetWidth = Math.min(window.innerWidth * 0.35, 200);
+
+          gsap.to(horizontalBarMenu, {
+            width: targetWidth,
+            duration: 0.5,
+          });
+          updateState("animate-down");
         }
       });
 
@@ -87,13 +105,21 @@ const {
       }
 
       header?.addEventListener("mouseenter", () => {
-        // console.log("enter header");
+        isHeaderHovered = true;
+
+        gsap.killTweensOf(horizontalBarMenu);
+
         updateState("animate-down");
+        const targetWidth = Math.min(window.innerWidth * 0.35, 200);
+
+        gsap.to(horizontalBarMenu, {
+          width: targetWidth,
+          duration: 0.5,
+        });
       });
 
       header?.addEventListener("mouseleave", () => {
-        // console.log("leave header");
-        updateState("animate-down");
+        isHeaderHovered = false;
       });
 
       function raf(time: number) {
