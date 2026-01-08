@@ -1,0 +1,28 @@
+---
+import { menuItems } from "@/components/header/data";
+
+const currentPath = Astro.url.pathname;
+---
+
+<div class="main-menu max-lg:hidden">
+  <nav class="main-nav">
+    <ul class="">
+      {
+        menuItems.map((item) => (
+          <a
+            class:list={[
+              "hover:text-primary px-2 transition-colors",
+              {
+                "text-primary pointer-events-none": currentPath === item.url,
+                "text-black": currentPath !== item.url,
+              },
+            ]}
+            href={item.url}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </ul>
+  </nav>
+</div>

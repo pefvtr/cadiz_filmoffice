@@ -1,14 +1,7 @@
 ---
 import Logo from "@/components/Logo.astro";
-import Burger from "@/components/header/Burger.astro";
-
-export const menuItems = [
-  { label: "Inicio", url: "/" },
-  { label: "¿Quiénes Somos?", url: "/quienes-somos" },
-  { label: "Contacto", url: "/contacto" },
-];
-
-const currentPath = Astro.url.pathname;
+import MobileNavigation from "@/components/header/MobileNavigation.astro";
+import DesktopNavigation from "@/components/header/DesktopNavigation.astro";
 ---
 
 <header
@@ -21,40 +14,7 @@ const currentPath = Astro.url.pathname;
   </div>
   <div class="flex w-full max-w-7xl items-center justify-between px-2 md:px-4">
     <Logo classNames="w-28 sm:w-32 pl-2 sm:pl-4" />
-    <Burger classNames="lg:hidden burger" />
-    <div class="main-menu max-lg:hidden">
-      <nav class="main-nav">
-        <ul class="">
-          {
-            menuItems.map((item) => (
-              <a
-                class:list={[
-                  "hover:text-primary px-2 transition-colors",
-                  {
-                    "text-primary pointer-events-none":
-                      currentPath === item.url,
-                    "text-black": currentPath !== item.url,
-                  },
-                ]}
-                href={item.url}
-              >
-                {item.label}
-              </a>
-            ))
-          }
-        </ul>
-      </nav>
-    </div>
+    <MobileNavigation classNames="lg:hidden" />
+    <DesktopNavigation />
   </div>
 </header>
-
-<!-- <script>
-  document.addEventListener("astro:page-load", () => {
-    const mainHeader = document.getElementById("main-header") as HTMLElement;
-    const burger = mainHeader.querySelector(".burger") as HTMLElement;
-
-    burger.addEventListener("click", () => {
-      mainHeader.classList.toggle("header-active");
-    });
-  });
-</script> -->

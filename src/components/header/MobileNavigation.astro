@@ -1,129 +1,16 @@
 ---
-import { Icon } from "astro-icon/components";
-import { menuItems } from "./Header.astro";
+import BurgerIcon from "@/components/header/BurgerIcon.astro";
+import MobileMenu from "@/components/header/MobileMenu.astro";
 
 interface Props {
   classNames?: string;
 }
-
-const { classNames = "" } = Astro.props;
-
-const currentPath = Astro.url.pathname;
-
-const phrases = [
-  {
-    id: 1,
-    text: "La ciudad que posa para la eternidad",
-  },
-  {
-    id: 2,
-    text: "Donde cada rincón cuenta una historia",
-  },
-  {
-    id: 3,
-    text: "Un decorado vivo de mil historias",
-  },
-
-  {
-    id: 4,
-    text: "El alma de Cádiz, en cada fotograma",
-  },
-];
+const { classNames } = Astro.props;
 ---
 
-<div
-  class:list={[
-    "relative top-0 right-2 z-50 flex items-center gap-3 lg:right-4 lg:hidden",
-    classNames,
-  ]}
->
-  <div class="text relative">
-    <div class="menu-text text-primary text-sm">Menu</div>
-    <div
-      class="close-text invisible absolute top-0 left-0 translate-y-[25%] rotate-[7deg] text-sm opacity-0"
-    >
-      Cerrar
-    </div>
-  </div>
-  <div class="burger-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<div
-  class="menu-overlay fixed top-0 left-0 h-screen w-full overflow-hidden bg-[#0f0f0f] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)]"
->
-  <div
-    class="menu-content transform:[translateX(-100px)] transform:[translateY(-100px)] relative flex h-full w-full origin-bottom-left scale-150 rotate-[-15deg] flex-col items-center justify-center"
-  >
-    <div
-      class="menu-socials absolute top-9 left-2 flex -translate-y-[50%] gap-2 lg:left-4"
-    >
-      <div
-        class="social-icon hover:text-primary text-white opacity-0 transition-colors duration-300"
-      >
-        <Icon name="in" class="h-6 w-6" />
-      </div>
-      <div
-        class="social-icon hover:text-primary text-white opacity-0 transition-colors duration-300"
-      >
-        <Icon name="x" class="h-6 w-6" />
-      </div>
-    </div>
-    <div class="menu-items flex flex-1 flex-col items-center justify-center">
-      <div class="col-image">imagen</div>
-      <div class="col-nav">
-        <nav class="menu-links flex flex-col">
-          {
-            menuItems.map((item) => (
-              <a
-                class:list={[
-                  "overflow-hidden",
-                  { "pointer-events-none": currentPath === item.url },
-                ]}
-                href={item.url}
-              >
-                <h2
-                  class:list={[
-                    "hover:text-primary font-headings hover: translate-y-[120%] px-2 opacity-0 transition-colors duration-300",
-                    {
-                      "text-primary": currentPath === item.url,
-                      "text-white": currentPath !== item.url,
-                    },
-                  ]}
-                >
-                  {item.label}
-                </h2>
-              </a>
-            ))
-          }
-        </nav>
-      </div>
-    </div>
-    <div
-      class="menu-footer relative mb-12 w-full overflow-hidden leading-none opacity-0"
-    >
-      {
-        phrases.map((phrase) => (
-          <h3
-            class:list={[
-              "text-center text-base text-white sm:text-lg",
-              {
-                "absolute top-0 left-0 w-full translate-y-[105%]":
-                  phrase.id !== 1,
-              },
-            ]}
-          >
-            {phrase.text}
-          </h3>
-        ))
-      }
-    </div>
-  </div>
+<div class:list={["", classNames]}>
+  <BurgerIcon classNames="burger" />
+  <MobileMenu />
 </div>
 
 <style>
@@ -135,105 +22,7 @@ const phrases = [
     background-color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(0px);
   }
-
-  .burger-icon {
-    width: 20px; /* Reducido de 35px a 20px */
-    height: 17.14px; /* 30px * (20/35) ≈ 17.14px */
-    position: relative;
-    cursor: pointer;
-    transform: rotate(0deg);
-    transition: transform 0.35s ease-out; /* Añade esta línea */
-    & span {
-      display: block;
-      position: absolute;
-      height: 1.71px; /* 3px * (20/35) ≈ 1.71px */
-      width: 50%;
-      background: var(--color-primary);
-      opacity: 1;
-
-      transform: rotate(0deg);
-
-      transition: 0.8s ease-in-out;
-      border-radius: 0.86px; /* 1.5px * (20/35) ≈ 0.86px */
-    }
-
-    &:hover span {
-      background: var(--color-primary-dark);
-    }
-  }
-
-  .burger-icon:hover:not(.open) {
-    transform: rotate(90deg);
-  }
-
-  .burger-icon.open:hover {
-    transform: rotate(90deg);
-  }
-
-  .burger-icon span:nth-child(even) {
-    left: 50%;
-    border-radius: 0 1.71px 1.71px 0; /* 3px * (20/35) ≈ 1.71px */
-  }
-
-  .burger-icon span:nth-child(odd) {
-    left: 0px;
-    border-radius: 1.71px 0 0 1.71px; /* 3px * (20/35) ≈ 1.71px */
-  }
-
-  /* SEPARACIÓN EQUIDISTANTE - recalculada proporcionalmente */
-  .burger-icon span:nth-child(1),
-  .burger-icon span:nth-child(2) {
-    top: 3.43px; /* 6px * (20/35) ≈ 3.43px */
-  }
-
-  .burger-icon span:nth-child(3),
-  .burger-icon span:nth-child(4) {
-    top: 8.57px; /* 15px * (20/35) ≈ 8.57px */
-  }
-
-  .burger-icon span:nth-child(5),
-  .burger-icon span:nth-child(6) {
-    top: 13.71px; /* 24px * (20/35) ≈ 13.71px */
-  }
-
-  /* TRANSFORMACIÓN PARA FORMAR UNA SOLA X - recalculado */
-  .burger-icon.open span:nth-child(1) {
-    top: 8.57px; /* Centro exacto (15px * (20/35) ≈ 8.57px) */
-    left: 0px;
-    width: 100%;
-    transform: rotate(45deg);
-  }
-
-  .burger-icon.open span:nth-child(2) {
-    top: 8.57px; /* Mismo centro */
-    left: 0px;
-    width: 100%;
-    transform: rotate(-45deg);
-  }
-
-  /* Barras del medio desaparecen hacia los lados */
-  .burger-icon.open span:nth-child(3) {
-    left: -50%;
-    opacity: 0;
-  }
-
-  .burger-icon.open span:nth-child(4) {
-    left: 100%;
-    opacity: 0;
-  }
-
-  /* Barras inferiores desaparecen */
-  .burger-icon.open span:nth-child(5),
-  .burger-icon.open span:nth-child(6) {
-    opacity: 0;
-    width: 0%;
-  }
-
-  .burger-icon.open span {
-    background-color: white;
-  }
 </style>
-
 <script>
   import { gsap } from "gsap";
 
@@ -261,6 +50,42 @@ const phrases = [
     let isOpen = false;
     let isAnimating = false;
     let tl: gsap.core.Timeline | null = null;
+
+    // Detector de cambio de tamaño de ventana
+    let resizeTimer: ReturnType<typeof setTimeout>;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (window.innerWidth >= 768 && isOpen) {
+          // Resetear todo sin animaciones
+          gsap.killTweensOf("*");
+          tl?.kill();
+
+          burgerIcon.classList.remove("open");
+
+          gsap.set(
+            [
+              mainContainer,
+              menuContent,
+              ".menu-overlay",
+              menuText,
+              closeText,
+              socialIcons,
+              ".menu-links h2",
+              menuFooter,
+              phrases,
+              horizontalBarMenu,
+            ],
+            { clearProps: "all" },
+          );
+
+          isOpen = false;
+          isAnimating = false;
+
+          if (window.lenis) window.lenis.start();
+        }
+      }, 250);
+    });
 
     burgerIcon.addEventListener("click", (e) => {
       const lenis = window.lenis;

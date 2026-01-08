@@ -71,7 +71,9 @@ const {
         // Usar type assertion para evitar el error de TypeScript
         window.lenis = lenis;
       }
+
       const header = document.querySelector("#main-header");
+
       lenis.on("scroll", (e) => {
         if (!header) return;
         if (isHeaderHovered) return;
