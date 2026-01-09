@@ -2,9 +2,14 @@
 import { menuItems } from "@/components/header/data";
 
 const currentPath = Astro.url.pathname;
+
+interface Props {
+  classNames?: string;
+}
+const { classNames } = Astro.props;
 ---
 
-<div class="main-menu max-lg:hidden">
+<div class:list={["main-menu", classNames]}>
   <nav class="main-nav">
     <ul class="">
       {
