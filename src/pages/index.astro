@@ -1,6 +1,8 @@
 ---
-import Layout from "@/layouts/Layout.astro";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+import Layout from "@/layouts/Layout.astro";
 import Hero from "@/assets/hero.jpg";
 ---
 
@@ -8,40 +10,76 @@ import Hero from "@/assets/hero.jpg";
   <section class="hero">
     <div class="hero-img"><Image src={Hero} alt="" /></div>
   </section>
-  <section class="-mt-[100%] mb-20">
+  <section class="mx-[8.3vw] -mt-[100%] mb-20">
     <div class="hero-container">
       <div class="hero-text-top">
         <p class="hero-description">
           <div class="text-mask">
-            <div class="text-line text-balance">
+            <div
+              class="text-line text-[4.8vw] text-balance text-white lg:text-[1.67vw]"
+            >
               Global digital design studio partnering with
             </div>
           </div>
           <div class="text-mask">
-            <div class="text-line text-balance">
-              brands and businesses that create exceptional
+            <div
+              class="text-line text-[4.8vw] text-balance text-white lg:text-[1.67vw]"
+            >
+              brands and businesses that create
             </div>
           </div>
           <div class="text-mask">
-            <div class="text-line text-balance">
-              experiences where people live, work, and unwind.
+            <div
+              class="text-line text-[4.8vw] text-balance text-white lg:text-[1.67vw]"
+            >
+              exceptional experiences where people
+            </div>
+          </div>
+          <div class="text-mask">
+            <div
+              class="text-line text-[4.8vw] text-balance text-white lg:text-[1.67vw]"
+            >
+              live, work, and unwind.
             </div>
           </div>
         </p>
-        <h1 class="hero-title">
-          <div class="title-mask"><div class="title-line">Digital</div></div>
-          <div class="title-mask"><div class="title-line">Design</div></div>
-          <div class="title-mask"><div class="title-line">Experience</div></div>
+        <h1 class="hero-title my-8 text-white">
+          <div class="title-mask overflow-hidden leading-[1.22]">
+            <div class="title-line text-[10vw] leading-[1.22]">Digital</div>
+          </div>
+          <div class="title-mask overflow-hidden leading-[1.22]">
+            <div class="title-line text-[10vw] leading-[1.22]">Design</div>
+          </div>
+          <div class="title-mask overflow-hidden leading-[1.22]">
+            <div class="title-line text-[10vw] leading-[1.22]">Experience</div>
+          </div>
         </h1>
       </div>
-      <div class="hero-text-bottom">
-        <p class="hero-body text-pretty">
-          We help experience-driven companies thrive by making their audience
-          feel the refined intricacies of their brand and product in the digital
-          space. Unforgettable journeys start with a click.
-        </p>
-        <a href="#" target="_blank" class="hero-link">IFEF</a>
-        <ul>
+      <div class="hero-text-bottom flex">
+        <div class="w-[40%]">
+          <p
+            class="hero-body text-[4.8vw] text-pretty text-white lg:text-[1.67vw]"
+          >
+            We help experience-driven companies thrive by making their audience
+            feel the refined intricacies of their brand and product in the
+            digital space. Unforgettable journeys start with a click.
+          </p>
+          <div class="link-ifef mt-8">
+            <span
+              class="link-ifef-circle flex items-center justify-center overflow-hidden"
+            >
+              <Icon name="left-arrow" class="left-arrow text-normal -ml-12" />
+            </span>
+            <a
+              href="#"
+              target="_blank"
+              class="link-ifef-text text-sm text-white"
+            >
+              IFEF</a
+            >
+          </div>
+        </div>
+        <ul class="flex w-[60%] flex-col items-end text-white">
           <li>Contact</li>
           <li>Studio</li>
           <li>Work</li>
@@ -116,3 +154,52 @@ import Hero from "@/assets/hero.jpg";
     voluptatibus, nobis impedit magni vel id necessitatibus.
   </section>
 </Layout>
+
+<style>
+  .link-ifef {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: -44px;
+    &:hover .link-ifef-circle {
+      transform: scale(1);
+      transition-delay: 0.15s;
+    }
+    &:hover .left-arrow {
+      margin-left: 0;
+      transition-delay: 0.15s;
+    }
+  }
+  .link-ifef-text {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: white;
+      transform-origin: right;
+      transform: scaleX(1);
+      transition: transform 0.3s ease;
+    }
+    &:hover:after {
+      transform: scaleX(0);
+    }
+  }
+  .link-ifef-circle {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+  .left-arrow {
+    transition: margin-left 0.3s ease;
+  }
+</style>
