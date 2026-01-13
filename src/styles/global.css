@@ -13,6 +13,12 @@
   --fs-500: clamp(1.94rem, calc(1.39rem + 2.77vw), 3.53rem);
   --fs-600: clamp(2.33rem, calc(1.41rem + 4.63vw), 5rem);
   --fs-700: clamp(3rem, calc(2rem + 5vw), 5.6rem);
+
+  --bg: #0f0f0f;
+  --fg: #fff;
+  --card-1: #b2b2b2;
+  --card-2: #ce2017;
+  --card-3: #2f2f2f;
 }
 
 @theme inline {

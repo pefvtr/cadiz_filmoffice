@@ -7,10 +7,242 @@ import Hero from "@/assets/hero.jpg";
 ---
 
 <Layout title="Inicio">
-  <section class="hero">
-    <div class="hero-img"><Image src={Hero} alt="" /></div>
+  <section class="intro">
+    <h1>Every idea begins as a single image</h1>
   </section>
-  <section class="mx-[8.3vw] -mt-[100%] mb-20">
+
+  <section class="sticky" id="sticky">
+    <div class="sticky-header">
+      <h1>Three pillars with one purpose</h1>
+    </div>
+
+    <div class="card-container">
+      <div class="card" id="card-1">
+        <div class="card-front">
+          <img
+            src="https://i.ibb.co/4wShfg0B/image-part-001.jpg"
+            alt="image part 001"
+          />
+        </div>
+        <div class="card-back">
+          <span>01</span>
+          <p>Interactive Web Experiences</p>
+        </div>
+      </div>
+
+      <div class="card" id="card-2">
+        <div class="card-front">
+          <img
+            src="https://i.ibb.co/Y4MSmLXB/image-part-002.jpg"
+            alt="image part 002"
+          />
+        </div>
+        <div class="card-back">
+          <span>02</span>
+          <p>Thoughtful Design Language</p>
+        </div>
+      </div>
+
+      <div class="card" id="card-3">
+        <div class="card-front">
+          <img
+            src="https://i.ibb.co/NkrBdsq/image-part-003.jpg"
+            alt="image part 003"
+          />
+        </div>
+        <div class="card-back">
+          <span>03</span>
+          <p>Visual Design Systems</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="outro">
+    <h1>Every transition leaves a trace</h1>
+  </section>
+</Layout>
+
+<style>
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  section {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    padding: 2rem;
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  .intro,
+  .outro {
+    text-align: center;
+    align-content: center;
+  }
+
+  .sticky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sticky-header {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sticky-header h1 {
+    position: relative;
+    text-align: center;
+    will-change: transform, opacity;
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  .card-container {
+    position: relative;
+    width: 75%;
+    display: flex;
+    perspective: 1000px;
+    transform: translateY(40px);
+    will-change: width;
+  }
+
+  .card {
+    position: relative;
+    flex: 1;
+    aspect-ratio: 5 / 7;
+    transform-style: preserve-3d;
+    transform-origin: top;
+  }
+
+  #card-1 {
+    border-radius: 20px 0 0 20px;
+  }
+
+  #card-3 {
+    border-radius: 0 20px 20px 0;
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: inherit;
+    overflow: hidden;
+  }
+
+  .card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotateY(180deg);
+    padding: 2rem;
+    border-radius: 3.59281% / 2.58621%;
+  }
+
+  .card-back span {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    opacity: 0.4;
+    font-size: 2rem;
+  }
+
+  #card-1 .card-back {
+    background: linear-gradient(
+      165.825deg,
+      rgb(199, 199, 199) 0%,
+      rgb(131, 131, 131) 100%
+    );
+    color: var(--bg);
+  }
+
+  #card-2 .card-back {
+    background: linear-gradient(
+      177deg,
+      rgb(250, 76, 45) -18%,
+      rgb(191, 24, 21) 31%,
+      rgb(74, 10, 8) 100%
+    );
+  }
+
+  #card-3 .card-back {
+    background: linear-gradient(rgb(31, 31, 31) 0%, rgb(22, 22, 22) 100%);
+  }
+
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    .intro h1,
+    .outro h1 {
+      width: 100%;
+    }
+
+    .sticky {
+      height: max-content;
+      padding: 4rem 2rem;
+      flex-direction: column;
+    }
+
+    .sticky-header {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      margin-bottom: 4rem;
+    }
+
+    .sticky-header h1 {
+      opacity: 1;
+    }
+
+    .card-container {
+      width: 100%;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      border-radius: 20px !important;
+    }
+
+    #card-1,
+    #card-2,
+    #card-3,
+    .card-back {
+      transform: none;
+    }
+  }
+</style>
+
+<!-- 
+<Layout title="Inicio">
+  <section class="hero min-h-[calc(100dvh+var(--header-height))]">
+    <div class="hero-img">
+      <Image
+        class="h-[calc(100dvh+var(--header-height))] object-cover"
+        src={Hero}
+        alt=""
+      />
+    </div>
+  </section>
+  <section class="mx-[8.3vw] -mt-[100%] mb-20 min-h-screen">
     <div class="hero-container">
       <div class="hero-text-top">
         <p class="hero-description">
@@ -45,13 +277,13 @@ import Hero from "@/assets/hero.jpg";
         </p>
         <h1 class="hero-title my-8 text-white">
           <div class="title-mask overflow-hidden leading-[1.22]">
-            <div class="title-line text-[10vw] leading-[1.22]">Digital</div>
+            <div class="title-line text-[16vw] leading-[1.22]">Digital</div>
           </div>
           <div class="title-mask overflow-hidden leading-[1.22]">
-            <div class="title-line text-[10vw] leading-[1.22]">Design</div>
+            <div class="title-line text-[16vw] leading-[1.22]">Design</div>
           </div>
           <div class="title-mask overflow-hidden leading-[1.22]">
-            <div class="title-line text-[10vw] leading-[1.22]">Experience</div>
+            <div class="title-line text-[16vw] leading-[1.22]">Experience</div>
           </div>
         </h1>
       </div>
@@ -226,4 +458,4 @@ import Hero from "@/assets/hero.jpg";
       }
     }
   }
-</style>
+</style> -->
