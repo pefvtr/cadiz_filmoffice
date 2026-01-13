@@ -25,6 +25,7 @@ const { classNames } = Astro.props;
 </style>
 <script>
   import { gsap } from "gsap";
+  import { isMenuOpenStore, setMenuOpen, setMenuClosed } from "@/stores/menu";
 
   document.addEventListener("astro:page-load", () => {
     const burgerIcon = document.querySelector(".burger-icon") as HTMLDivElement;

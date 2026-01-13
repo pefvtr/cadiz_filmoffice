@@ -1,9 +1,5 @@
 ---
-import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
-
 import Layout from "@/layouts/Layout.astro";
-import Hero from "@/assets/hero.jpg";
 ---
 
 <Layout title="Inicio">
@@ -93,6 +89,7 @@ import Hero from "@/assets/hero.jpg";
 
   .sticky-header {
     position: absolute;
+    width: 100%;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -230,6 +227,78 @@ import Hero from "@/assets/hero.jpg";
     }
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Solo para pantallas grandes
+  const mm = gsap.matchMedia();
+
+  mm.add("(min-width: 1000px)", () => {
+    // Una sola timeline maestra que controla todo
+    const masterTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".sticky",
+        start: "top top",
+        end: "+=400%",
+        scrub: 1,
+        pin: true,
+        markers: false,
+      },
+    });
+
+    // Secuencia completa de animaciones
+    masterTl
+      // Fase 1: Aparecer título y reducir ancho (0-35%)
+      .fromTo(
+        ".sticky-header h1",
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.25 },
+        0.1,
+      )
+      .to(".card-container", { width: "60%", duration: 0.35 }, 0)
+
+      // Fase 2: Separar tarjetas (45%)
+      .to(".card-container", { gap: 30, duration: 0.1 }, 0.45)
+      .to("#card-1", { x: -30, borderRadius: "20px", duration: 0.1 }, 0.45)
+      .to("#card-3", { x: 30, borderRadius: "20px", duration: 0.1 }, 0.45)
+      .to("#card-2", { borderRadius: "20px", duration: 0.1 }, 0.45)
+
+      // Fase 3: Voltear tarjetas (70%)
+      .to(
+        ".card",
+        {
+          rotationY: 180,
+          duration: 0.15,
+          stagger: 0.03,
+          ease: "power2.inOut",
+        },
+        0.7,
+      )
+      .to(
+        ["#card-1", "#card-3"],
+        {
+          y: 30,
+          rotationZ: (i: number) => (i === 0 ? -15 : 15),
+          duration: 0.15,
+          ease: "power2.inOut",
+        },
+        0.7,
+      );
+  });
+
+  // Reiniciar en resize (debounced)
+  let resizeTimer: number;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 220);
+  });
+</script>
 
 <!-- 
 <Layout title="Inicio">
