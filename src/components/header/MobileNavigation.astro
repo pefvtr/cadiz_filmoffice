@@ -37,9 +37,6 @@ const { classNames } = Astro.props;
     const horizontalBarMenu = document.querySelector(
       ".horizontal-bar-menu",
     ) as HTMLDivElement;
-    // const mainContainer = document.querySelector(
-    //   ".main-container",
-    // ) as HTMLDivElement;
     const menuContent = document.querySelector(
       ".menu-content",
     ) as HTMLDivElement;
@@ -174,16 +171,6 @@ const { classNames } = Astro.props;
           delay: 0.5,
         });
 
-        /* Este es el contenido de la pagina */
-        // gsap.to(mainContainer, {
-        //    rotation: 15,
-        //    x: -300,
-        //   y: 1000,
-        //   scale: 1.5,
-        //   duration: 1.25,
-        //   ease: "power4.inOut",
-        // });
-
         animateMenuText(true);
 
         /* Este es el contenido del menu */
@@ -273,16 +260,6 @@ const { classNames } = Astro.props;
           duration: 2,
           ease: "power4.inOut",
         });
-
-        /* Este es el contenido de la pagina */
-        // gsap.to(mainContainer, {
-        //   rotation: 0,
-        //   x: 0,
-        //   y: 0,
-        //   scale: 1,
-        //   duration: 1.25,
-        //   ease: "power4.inOut",
-        // });
 
         /* Animación para el overlay del menú principal */
         gsap.to(".menu-overlay", {
