@@ -1,8 +1,10 @@
 ---
+import Slider from "@/components/slider/Slider.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="Inicio">
+  <Slider />
   <section class="intro">
     <h1>Every idea begins as a single image</h1>
   </section>
@@ -12,7 +14,7 @@ import Layout from "@/layouts/Layout.astro";
       <h1>Three pillars with one purpose</h1>
     </div>
 
-    <div class="card-container">
+    <div class="card-container max-[1000px]:space-y-4">
       <div class="card" id="card-1">
         <div class="card-front">
           <img
@@ -209,7 +211,7 @@ import Layout from "@/layouts/Layout.astro";
     .card-container {
       width: 100%;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem !important;
     }
 
     .card {
