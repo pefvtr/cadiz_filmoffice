@@ -13,19 +13,8 @@ const { classNames } = Astro.props;
   <MobileMenu />
 </div>
 
-<style>
-  .nav-active {
-    opacity: 1;
-    visibility: visible;
-  }
-  .header-active {
-    background-color: rgba(255, 255, 255, 1);
-    backdrop-filter: blur(0px);
-  }
-</style>
 <script>
   import { gsap } from "gsap";
-  import { isMenuOpenStore } from "@/stores/menu";
 
   document.addEventListener("astro:page-load", () => {
     const burgerIcon = document.querySelector(".burger-icon") as HTMLDivElement;
