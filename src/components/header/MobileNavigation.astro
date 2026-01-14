@@ -25,7 +25,7 @@ const { classNames } = Astro.props;
 </style>
 <script>
   import { gsap } from "gsap";
-  import { isMenuOpenStore, setMenuOpen, setMenuClosed } from "@/stores/menu";
+  import { isMenuOpenStore } from "@/stores/menu";
 
   document.addEventListener("astro:page-load", () => {
     const burgerIcon = document.querySelector(".burger-icon") as HTMLDivElement;
@@ -37,9 +37,9 @@ const { classNames } = Astro.props;
     const horizontalBarMenu = document.querySelector(
       ".horizontal-bar-menu",
     ) as HTMLDivElement;
-    const mainContainer = document.querySelector(
-      ".main-container",
-    ) as HTMLDivElement;
+    // const mainContainer = document.querySelector(
+    //   ".main-container",
+    // ) as HTMLDivElement;
     const menuContent = document.querySelector(
       ".menu-content",
     ) as HTMLDivElement;
@@ -64,21 +64,21 @@ const { classNames } = Astro.props;
 
           burgerIcon.classList.remove("open");
 
-          gsap.set(
-            [
-              mainContainer,
-              menuContent,
-              ".menu-overlay",
-              menuText,
-              closeText,
-              socialIcons,
-              ".menu-links h2",
-              menuFooter,
-              phrases,
-              horizontalBarMenu,
-            ],
-            { clearProps: "all" },
-          );
+          // gsap.set(
+          //   [
+          //     mainContainer,
+          //     menuContent,
+          //     ".menu-overlay",
+          //     menuText,
+          //     closeText,
+          //     socialIcons,
+          //     ".menu-links h2",
+          //     menuFooter,
+          //     phrases,
+          //     horizontalBarMenu,
+          //   ],
+          //   { clearProps: "all" },
+          // );
 
           isOpen = false;
           isAnimating = false;
@@ -175,14 +175,14 @@ const { classNames } = Astro.props;
         });
 
         /* Este es el contenido de la pagina */
-        gsap.to(mainContainer, {
-          rotation: 15,
-          x: -300,
-          y: 1000,
-          scale: 1.5,
-          duration: 1.25,
-          ease: "power4.inOut",
-        });
+        // gsap.to(mainContainer, {
+        //    rotation: 15,
+        //    x: -300,
+        //   y: 1000,
+        //   scale: 1.5,
+        //   duration: 1.25,
+        //   ease: "power4.inOut",
+        // });
 
         animateMenuText(true);
 
@@ -275,14 +275,14 @@ const { classNames } = Astro.props;
         });
 
         /* Este es el contenido de la pagina */
-        gsap.to(mainContainer, {
-          rotation: 0,
-          x: 0,
-          y: 0,
-          scale: 1,
-          duration: 1.25,
-          ease: "power4.inOut",
-        });
+        // gsap.to(mainContainer, {
+        //   rotation: 0,
+        //   x: 0,
+        //   y: 0,
+        //   scale: 1,
+        //   duration: 1.25,
+        //   ease: "power4.inOut",
+        // });
 
         /* Animación para el overlay del menú principal */
         gsap.to(".menu-overlay", {
