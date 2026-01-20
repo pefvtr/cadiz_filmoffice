@@ -1,5 +1,5 @@
 ---
-
+// Carousel.astro
 ---
 
 <section>
@@ -25,7 +25,7 @@
         src="https://images.unsplash.com/photo-1631142260228-305ccb610dba?q=50&w=1600"
       />
       <h2>Full commitment</h2>
-      <h5>Is what I'm thikning of</h5>
+      <h5>Is what I'm thinking of</h5>
     </div>
 
     <div class="carousel-slide">
@@ -75,3 +75,587 @@
     <div>1/8</div>
   </nav>
 </section>
+
+<style>
+  section {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+  }
+
+  .carousel {
+    width: 100vw;
+    height: 70vh;
+    gap: 5px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-slide {
+    position: relative;
+    flex: 0 0 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    scroll-snap-align: center;
+    overflow: hidden;
+    @media (width > 768px) {
+      flex: 0 0 55%;
+    }
+  }
+
+  .carousel-slide img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  .carousel-slide h2,
+  .carousel-slide h5 {
+    position: relative;
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    padding: 0;
+  }
+
+  .carousel-slide h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .carousel-slide h5 {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: 300;
+  }
+
+  .carousel-nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+
+  .carousel-nav button {
+    cursor: pointer;
+    border: none;
+    font-size: 3rem;
+    position: absolute;
+    aspect-ratio: 1.5;
+    width: 7vw;
+    max-width: 75px;
+    height: auto;
+    max-height: 3.7vh;
+    background-color: transparent;
+    background-size: cover;
+    overflow: visible;
+    background-image: url("data:image/svg+xml,%3Csvg stroke='%23fff' fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 1 22 15'%3E%3Cpath d='M2,11 11,2 20,11'/%3E%3C/svg%3E");
+  }
+
+  .prev {
+    transform: translateY(-50%) rotate(-90deg);
+  }
+
+  .next {
+    transform: translateY(-50%) rotate(90deg);
+    right: 0;
+  }
+
+  .carousel-nav div {
+    position: absolute;
+    top: 36vh;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: 200;
+    opacity: 0.5;
+    letter-spacing: 0.25rem;
+    font-size: clamp(22px, 3.9vw, 44px);
+  }
+
+  ::-webkit-scrollbar {
+    height: 13px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-top: 6px solid #000;
+    background: #555;
+    width: 50%;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+  }
+</style>
+
+<script>
+  import gsap from "gsap";
+  import { Draggable } from "gsap/Draggable";
+  import { InertiaPlugin } from "gsap/InertiaPlugin";
+
+  gsap.registerPlugin(Draggable, InertiaPlugin);
+
+  interface CustomTimeline extends gsap.core.Timeline {
+    toIndex: (
+      index: number,
+      vars?: gsap.TweenVars,
+    ) => gsap.core.Timeline | gsap.core.Tween;
+    closestIndex: (setCurrent?: boolean) => number;
+    current: () => number;
+    next: (vars?: gsap.TweenVars) => gsap.core.Timeline | gsap.core.Tween;
+    previous: (vars?: gsap.TweenVars) => gsap.core.Timeline | gsap.core.Tween;
+    times: number[];
+    draggable?: any;
+  }
+
+  document.addEventListener("astro:page-load", () => {
+    const slides = gsap.utils.toArray<HTMLElement>(".carousel-slide");
+    const prev = document.querySelector<HTMLButtonElement>(".prev")!;
+    const next = document.querySelector<HTMLButtonElement>(".next")!;
+    let activeSlide: HTMLElement | null = null;
+    let firstRun = true;
+
+    // Override CSS to prevent native scrolling
+    gsap.set(".carousel", { overflow: "visible", scrollSnapType: "none" });
+
+    // Display the prev/next buttons
+    gsap.set(".carousel-nav", { display: "block" });
+
+    // Image parallax helper
+    function slideImgUpdate() {
+      slides.forEach((slide) => {
+        const rect = slide.getBoundingClientRect();
+        const prog = gsap.utils.mapRange(-rect.width, innerWidth, 0, 1, rect.x);
+        const val = gsap.utils.clamp(0, 1, prog);
+        const img = slide.querySelector<HTMLImageElement>("img");
+        if (img) {
+          gsap.set(img, {
+            xPercent: gsap.utils.interpolate(-10, 10, val),
+          });
+        }
+      });
+    }
+
+    // Prev/next button behavior
+    function arrowBtnOver(e: Event) {
+      gsap.to(e.target as HTMLElement, { opacity: 0.4 });
+    }
+
+    function arrowBtnOut(e: Event) {
+      gsap.to(e.target as HTMLElement, { opacity: 1 });
+    }
+
+    interface HorizontalLoopConfig {
+      paused?: boolean;
+      paddingRight?: number;
+      center?: boolean;
+      draggable?: boolean;
+      speed?: number;
+      snap?: number | false;
+      repeat?: number;
+      reversed?: boolean;
+      onChange?: (slide: HTMLElement, index: number) => void;
+    }
+
+    function horizontalLoop(
+      items: HTMLElement[],
+      config: HorizontalLoopConfig,
+    ): CustomTimeline {
+      items = gsap.utils.toArray<HTMLElement>(items);
+      config = config || {};
+
+      const onChange = config.onChange;
+      let lastIndex = 0;
+      let tl: CustomTimeline;
+
+      tl = gsap.timeline({
+        repeat: config.repeat,
+        paused: config.paused,
+        defaults: { ease: "none" },
+        onUpdate: onChange
+          ? function () {
+              slideImgUpdate();
+              const i = tl.closestIndex();
+              if (lastIndex !== i) {
+                lastIndex = i;
+                onChange(items[i], i);
+              }
+            }
+          : slideImgUpdate,
+        onReverseComplete: () => {
+          tl.totalTime(
+            (tl.rawTime() as number) + (tl.duration() as number) * 100,
+          );
+        },
+      }) as CustomTimeline;
+
+      const length = items.length;
+      const startX = items[0].offsetLeft;
+      const times: number[] = [];
+      const widths: number[] = [];
+      const spaceBefore: number[] = [];
+      const xPercents: number[] = [];
+      let curIndex = 0;
+      let indexIsDirty = false;
+      const center = config.center;
+      const pixelsPerSecond = (config.speed || 1) * 100;
+      const snap =
+        config.snap === false
+          ? (v: number) => v
+          : gsap.utils.snap(config.snap || 1);
+      const container =
+        center === true
+          ? (items[0].parentNode as HTMLElement)
+          : gsap.utils.toArray<HTMLElement>(center as any)[0] ||
+            (items[0].parentNode as HTMLElement);
+      let totalWidth: number;
+      let timeOffset = 0;
+      let timeWrap: (t: number) => number;
+      let proxy: HTMLElement;
+
+      const getTotalWidth = () => {
+        const lastItem = items[length - 1];
+        const scaleX = gsap.getProperty(lastItem, "scaleX") as number;
+        const paddingRight = parseFloat(config.paddingRight as any) || 0;
+        return (
+          lastItem.offsetLeft +
+          (xPercents[length - 1] / 100) * widths[length - 1] -
+          startX +
+          spaceBefore[0] +
+          lastItem.offsetWidth * scaleX +
+          paddingRight
+        );
+      };
+
+      const populateWidths = () => {
+        let b1 = container.getBoundingClientRect();
+        let b2: DOMRect;
+        items.forEach((el, i) => {
+          widths[i] = parseFloat(gsap.getProperty(el, "width", "px") as string);
+          const xPx = parseFloat(gsap.getProperty(el, "x", "px") as string);
+          const currentXPercent = gsap.getProperty(el, "xPercent") as number;
+          xPercents[i] = snap((xPx / widths[i]) * 100 + currentXPercent);
+          b2 = el.getBoundingClientRect();
+          spaceBefore[i] = b2.left - (i ? b1.right : b1.left);
+          b1 = b2;
+        });
+        gsap.set(items, { xPercent: (i: number) => xPercents[i] });
+        totalWidth = getTotalWidth();
+      };
+
+      const populateOffsets = () => {
+        const duration = tl.duration() as number;
+        timeOffset = center
+          ? (duration * (container.offsetWidth / 2)) / totalWidth
+          : 0;
+        if (times.length) {
+          times.forEach((t, i) => {
+            times[i] = timeWrap(
+              (tl.labels["label" + i] as number) +
+                (duration * widths[i]) / 2 / totalWidth -
+                timeOffset,
+            );
+          });
+        }
+      };
+
+      const getClosest = (values: number[], value: number, wrap: number) => {
+        let i = values.length;
+        let closest = 1e10;
+        let index = 0;
+        let d: number;
+        while (i--) {
+          d = Math.abs(values[i] - value);
+          if (d > wrap / 2) d = wrap - d;
+          if (d < closest) {
+            closest = d;
+            index = i;
+          }
+        }
+        return index;
+      };
+
+      const populateTimeline = () => {
+        let curX: number;
+        let distanceToStart: number;
+        let distanceToLoop: number;
+        tl.clear();
+
+        for (let i = 0; i < length; i++) {
+          const item = items[i];
+          curX = (xPercents[i] / 100) * widths[i];
+          distanceToStart = item.offsetLeft + curX - startX + spaceBefore[0];
+          const scaleX = gsap.getProperty(item, "scaleX") as number;
+          distanceToLoop = distanceToStart + widths[i] * scaleX;
+
+          tl.to(
+            item,
+            {
+              xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
+              duration: distanceToLoop / pixelsPerSecond,
+            },
+            0,
+          )
+            .fromTo(
+              item,
+              {
+                xPercent: snap(
+                  ((curX - distanceToLoop + totalWidth) / widths[i]) * 100,
+                ),
+              },
+              {
+                xPercent: xPercents[i],
+                duration:
+                  (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
+                immediateRender: false,
+              },
+              distanceToLoop / pixelsPerSecond,
+            )
+            .add("label" + i, distanceToStart / pixelsPerSecond);
+
+          times[i] = distanceToStart / pixelsPerSecond;
+        }
+        timeWrap = gsap.utils.wrap(0, tl.duration() as number);
+      };
+
+      const refresh = (deep?: boolean) => {
+        const progress = tl.progress();
+        tl.progress(0, true);
+        populateWidths();
+        if (deep) populateTimeline();
+        populateOffsets();
+        if (deep && tl.draggable && tl.paused()) {
+          tl.time(times[curIndex], true);
+        } else {
+          tl.progress(progress, true);
+        }
+      };
+
+      const onResize = () => refresh(true);
+
+      gsap.set(items, { x: 0 });
+      populateWidths();
+      populateTimeline();
+      populateOffsets();
+      window.addEventListener("resize", onResize);
+
+      const toIndex = (
+        index: number,
+        vars?: gsap.TweenVars,
+      ): gsap.core.Timeline | gsap.core.Tween => {
+        vars = vars || {};
+        if (Math.abs(index - curIndex) > length / 2) {
+          index += index > curIndex ? -length : length;
+        }
+        const newIndex = gsap.utils.wrap(0, length, index);
+        let time = times[newIndex];
+        const currentTime = tl.time() as number;
+        const duration = tl.duration() as number;
+
+        if (time > currentTime !== index > curIndex && index !== curIndex) {
+          time += duration * (index > curIndex ? 1 : -1);
+        }
+        if (time < 0 || time > duration) {
+          vars.modifiers = { time: timeWrap };
+        }
+        curIndex = newIndex;
+        vars.overwrite = true;
+        gsap.killTweensOf(proxy);
+        return vars.duration === 0
+          ? (tl.time(timeWrap(time)) as gsap.core.Timeline)
+          : tl.tweenTo(time, vars);
+      };
+
+      tl.toIndex = toIndex;
+      tl.closestIndex = (setCurrent?: boolean) => {
+        const index = getClosest(
+          times,
+          tl.time() as number,
+          tl.duration() as number,
+        );
+        if (setCurrent) {
+          curIndex = index;
+          indexIsDirty = false;
+        }
+        return index;
+      };
+      tl.current = () => (indexIsDirty ? tl.closestIndex(true) : curIndex);
+      tl.next = (vars?: gsap.TweenVars) => toIndex(tl.current() + 1, vars);
+      tl.previous = (vars?: gsap.TweenVars) => toIndex(tl.current() - 1, vars);
+      tl.times = times;
+      tl.progress(1, true).progress(0, true);
+
+      if (config.reversed) {
+        tl.reverse();
+      }
+
+      if (config.draggable && typeof Draggable === "function") {
+        proxy = document.createElement("div");
+        const wrap = gsap.utils.wrap(0, 1);
+        let ratio: number;
+        let startProgress: number;
+        let draggable: any;
+        let lastSnap: number;
+        let initChangeX: number;
+        let wasPlaying: boolean;
+
+        const align = () => {
+          tl.progress(
+            wrap(startProgress + (draggable.startX - draggable.x) * ratio),
+          );
+        };
+        const syncIndex = () => {
+          tl.closestIndex(true);
+        };
+
+        draggable = Draggable.create(proxy, {
+          trigger: items[0].parentNode as HTMLElement,
+          type: "x",
+          onPressInit() {
+            const x = this.x;
+            gsap.killTweensOf(tl);
+            wasPlaying = !tl.paused();
+            tl.pause();
+            startProgress = tl.progress();
+            refresh();
+            ratio = 1 / totalWidth;
+            initChangeX = startProgress / -ratio - x;
+            gsap.set(proxy, { x: startProgress / -ratio });
+          },
+          onDrag: align,
+          onThrowUpdate: align,
+          overshootTolerance: 0,
+          inertia: true,
+          snap(value: number) {
+            if (Math.abs(startProgress / -ratio - this.x) < 10) {
+              return lastSnap + initChangeX;
+            }
+            const duration = tl.duration() as number;
+            const time = -(value * ratio) * duration;
+            const wrappedTime = timeWrap(time);
+            const snapTime = times[getClosest(times, wrappedTime, duration)];
+            let dif = snapTime - wrappedTime;
+            if (Math.abs(dif) > duration / 2) {
+              dif += dif < 0 ? duration : -duration;
+            }
+            lastSnap = (time + dif) / duration / -ratio;
+            return lastSnap;
+          },
+          onRelease() {
+            syncIndex();
+            if (draggable.isThrowing) indexIsDirty = true;
+          },
+          onThrowComplete() {
+            syncIndex();
+            if (wasPlaying) tl.play();
+          },
+        })[0];
+
+        tl.draggable = draggable;
+      }
+
+      tl.closestIndex(true);
+      lastIndex = curIndex;
+      if (onChange) onChange(items[curIndex], curIndex);
+
+      return tl;
+    }
+
+    // Create seamless horizontal loop
+    const loop = horizontalLoop(slides, {
+      paused: true,
+      paddingRight: 5,
+      center: true,
+      draggable: true,
+      onChange: (slide, index) => {
+        if (activeSlide) {
+          gsap.to(".carousel h2, .carousel h5", {
+            overwrite: true,
+            opacity: 0,
+            ease: "power3",
+          });
+          gsap.to(".active", { opacity: 0.3 });
+          activeSlide.classList.remove("active");
+        }
+        slide.classList.add("active");
+        activeSlide = slide;
+
+        // Intro animation for new active slide
+        gsap
+          .timeline({ defaults: { ease: "power1.inOut" } })
+          .to(".active", { opacity: 1, ease: "power2.inOut" }, 0)
+          .to(
+            ".carousel-nav div",
+            { duration: 0.2, opacity: 0, ease: "power1.in" },
+            0,
+          )
+          .set(
+            ".carousel-nav div",
+            { innerText: `${index + 1}/${slides.length}` },
+            0.2,
+          )
+          .to(
+            ".carousel-nav div",
+            { duration: 0.4, opacity: 0.5, ease: "power1.inOut" },
+            0.2,
+          )
+          .to(
+            ".active h2, .active h5",
+            { opacity: 1, ease: "power1.inOut" },
+            0.3,
+          )
+          .fromTo(
+            ".active h2, .active h5",
+            { y: (i: number) => [40, 60][i] },
+            { duration: 1.5, y: 0, ease: "expo" },
+            0.3,
+          )
+          .progress(firstRun ? 1 : 0);
+      },
+    });
+
+    next.addEventListener("pointerover", arrowBtnOver);
+    next.addEventListener("pointerout", arrowBtnOut);
+    next.addEventListener("click", () =>
+      loop.next({ duration: 1, ease: "expo" }),
+    );
+
+    prev.addEventListener("pointerover", arrowBtnOver);
+    prev.addEventListener("pointerout", arrowBtnOut);
+    prev.addEventListener("click", () =>
+      loop.previous({ duration: 1, ease: "expo" }),
+    );
+
+    slides.forEach((slide, i) => {
+      slide.addEventListener("click", () =>
+        loop.toIndex(i, { duration: 1, ease: "expo" }),
+      );
+    });
+
+    // Set initial opacity for slides
+    gsap.set(".carousel-slide", { opacity: (i) => (i === 0 ? 1 : 0.3) });
+    gsap.set(".carousel-slide h2", { opacity: (i) => (i === 0 ? 1 : 0) });
+    gsap.set(".carousel-slide h5", { opacity: (i) => (i === 0 ? 1 : 0) });
+
+    // Center on initial slide
+    loop.toIndex(0, { duration: 0 });
+    firstRun = false;
+  });
+</script>
