@@ -102,6 +102,7 @@ const currentPath = Astro.url.pathname;
 
 <script>
   import gsap from "gsap";
+  import { isMenuOpenStore } from "@/stores/menu";
 
   document.addEventListener("astro:page-load", () => {
     const parents = document.querySelectorAll(
@@ -110,6 +111,19 @@ const currentPath = Astro.url.pathname;
 
     parents.forEach((parent) => {
       const clip = parent.querySelector(".clip") as HTMLElement;
+
+      isMenuOpenStore.subscribe((value) => {
+        if (value) {
+          // Abrir menú: desactivar puntero
+          console.log("Menu opened - enabling pointer events");
+          parent.style.pointerEvents = "auto";
+        } else {
+          console.log("Menu closed - disabling pointer events");
+
+          // Cerrar menú: activar puntero
+          parent.style.pointerEvents = "none";
+        }
+      });
 
       parent.addEventListener("mouseenter", () => {
         // gsap.killTweensOf(clip);

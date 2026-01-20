@@ -177,6 +177,9 @@ const { classNames } = Astro.props;
             duration: 2,
             stagger: 0.2,
             ease: "power4.inOut",
+            onComplete: () => {
+              isMenuOpenStore.set(true);
+            },
           },
         );
 
@@ -188,7 +191,6 @@ const { classNames } = Astro.props;
           onComplete: () => {
             isAnimating = false;
             isOpen = true;
-            isMenuOpenStore.set(true);
           },
         });
       }
