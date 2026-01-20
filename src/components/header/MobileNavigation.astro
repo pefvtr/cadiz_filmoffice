@@ -14,6 +14,7 @@ const { classNames } = Astro.props;
 </div>
 
 <script>
+  import { isMenuOpenStore } from "@/stores/menu";
   import { gsap } from "gsap";
 
   document.addEventListener("astro:page-load", () => {
@@ -187,6 +188,7 @@ const { classNames } = Astro.props;
           onComplete: () => {
             isAnimating = false;
             isOpen = true;
+            isMenuOpenStore.set(true);
           },
         });
       }
@@ -242,6 +244,7 @@ const { classNames } = Astro.props;
           onComplete: () => {
             isAnimating = false;
             isOpen = false;
+            isMenuOpenStore.set(false);
           },
         });
 

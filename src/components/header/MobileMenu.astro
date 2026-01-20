@@ -33,23 +33,38 @@ const currentPath = Astro.url.pathname;
             menuItems.map((item) => (
               <a
                 class:list={[
-                  "overflow-hidden",
+                  "parent relative overflow-hidden",
                   { "pointer-events-none": currentPath === item.url },
                 ]}
                 href={item.url}
               >
-                <h2
-                  class:list={[
-                    "hover:text-primary font-headings hover: translate-y-[120%] px-2 opacity-0 transition-colors duration-300",
-                    {
-                      "text-primary": currentPath === item.url,
-                      "text-white": currentPath !== item.url,
-                    },
-                  ]}
-                >
+                <h2 class="text-primary clip font-headings relative z-10 px-2">
+                  {item.label}
+                </h2>
+                <h2 class="font-headings absolute top-0 left-0 px-2 text-white">
                   {item.label}
                 </h2>
               </a>
+
+              // <a
+              //   class:list={[
+              //     "overflow-hidden",
+              //     { "pointer-events-none": currentPath === item.url },
+              //   ]}
+              //   href={item.url}
+              // >
+              //   <h2
+              //     class:list={[
+              //       "hover:text-primary font-headings hover: translate-y-[120%] px-2 opacity-0 transition-colors duration-300",
+              //       {
+              //         "text-primary": currentPath === item.url,
+              //         "text-white": currentPath !== item.url,
+              //       },
+              //     ]}
+              //   >
+              //     {item.label}
+              //   </h2>
+              // </a>
             ))
           }
         </nav>
@@ -76,3 +91,55 @@ const currentPath = Astro.url.pathname;
     </div>
   </div>
 </div>
+
+<style>
+  .clip {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    will-change: clip-path;
+    pointer-events: none; /* MUY IMPORTANTE */
+  }
+</style>
+
+<script>
+  import gsap from "gsap";
+
+  document.addEventListener("astro:page-load", () => {
+    const parents = document.querySelectorAll(
+      ".parent",
+    ) as NodeListOf<HTMLElement>;
+
+    parents.forEach((parent) => {
+      const clip = parent.querySelector(".clip") as HTMLElement;
+
+      parent.addEventListener("mouseenter", () => {
+        // gsap.killTweensOf(clip);
+        gsap.fromTo(
+          clip,
+          {
+            clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
+            duration: 0.4,
+            ease: "power2.out",
+          },
+          {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          },
+        );
+      });
+
+      parent.addEventListener("mouseleave", () => {
+        // gsap.killTweensOf(clip);
+        gsap.fromTo(
+          clip,
+          {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            duration: 0.4,
+            ease: "power2.in",
+          },
+          {
+            clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
+          },
+        );
+      });
+    });
+  });
+</script>
