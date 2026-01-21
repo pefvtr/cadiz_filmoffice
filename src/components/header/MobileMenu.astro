@@ -34,7 +34,7 @@ const currentPath = Astro.url.pathname;
               <a
                 class:list={[
                   "parent relative overflow-hidden",
-                  { "!pointer-events-none": currentPath === item.url },
+                  { "pointer-events-none!": currentPath === item.url },
                 ]}
                 href={item.url}
               >
