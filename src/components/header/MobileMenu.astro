@@ -28,17 +28,24 @@ const currentPath = Astro.url.pathname;
     <div class="menu-items flex flex-1 flex-col items-center justify-center">
       <div class="col-image">imagen</div>
       <div class="col-nav">
-        <nav class="menu-links flex flex-col">
+        <nav class="menu-links-mobile flex flex-col">
           {
             menuItems.map((item) => (
               <a
                 class:list={[
-                  "parent relative overflow-hidden",
+                  "parent-link-mobile menu-link-mobile relative overflow-hidden",
                   { "pointer-events-none!": currentPath === item.url },
                 ]}
                 href={item.url}
               >
-                <h2 class="text-primary clip font-headings relative z-10 px-2">
+                <h2
+                  class:list={[
+                    "text-primary clip font-headings relative z-10 px-2",
+                    {
+                      "is-active pointer-events-none": currentPath === item.url,
+                    },
+                  ]}
+                >
                   {item.label}
                 </h2>
                 <h2 class="font-headings absolute top-0 left-0 px-2 text-white">
@@ -78,6 +85,10 @@ const currentPath = Astro.url.pathname;
     will-change: clip-path;
     pointer-events: none; /* MUY IMPORTANTE */
   }
+
+  .is-active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 </style>
 
 <script>
@@ -86,7 +97,7 @@ const currentPath = Astro.url.pathname;
 
   document.addEventListener("astro:page-load", () => {
     const parents = document.querySelectorAll(
-      ".parent",
+      ".parent-link-mobile",
     ) as NodeListOf<HTMLElement>;
 
     parents.forEach((parent) => {

@@ -9,25 +9,86 @@ interface Props {
 const { classNames } = Astro.props;
 ---
 
-<div class:list={["main-menu", classNames]}>
-  <nav class="main-nav">
-    <ul class="">
-      {
-        menuItems.map((item) => (
-          <a
+<div class:list={["main-menu block", classNames]}>
+  <nav class="main-nav flex items-center gap-3">
+    {
+      menuItems.map((item) => (
+        <a
+          class:list={[
+            "parent-link-desktop relative block overflow-hidden text-sm",
+            { "pointer-events-none": currentPath === item.url },
+          ]}
+          href={item.url}
+        >
+          <h2
             class:list={[
-              "hover:text-primary px-2 transition-colors",
-              {
-                "text-primary pointer-events-none": currentPath === item.url,
-                "text-black": currentPath !== item.url,
-              },
+              "text-primary clip font-headings relative z-10 px-2",
+              { "is-active pointer-events-none": currentPath === item.url },
             ]}
-            href={item.url}
           >
             {item.label}
-          </a>
-        ))
-      }
-    </ul>
+          </h2>
+          <h2 class="font-headings absolute top-0 left-0 h-full w-full px-2 text-black">
+            {item.label}
+          </h2>
+        </a>
+      ))
+    }
   </nav>
 </div>
+
+<style>
+  .clip {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    will-change: clip-path;
+    pointer-events: none; /* MUY IMPORTANTE */
+  }
+  .is-active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+</style>
+
+<script>
+  import gsap from "gsap";
+
+  document.addEventListener("astro:page-load", () => {
+    const parents = document.querySelectorAll(
+      ".parent-link-desktop",
+    ) as NodeListOf<HTMLElement>;
+
+    parents.forEach((parent) => {
+      console.log({ parent });
+      const clip = parent.querySelector(".clip") as HTMLElement;
+
+      parent.addEventListener("mouseenter", () => {
+        // gsap.killTweensOf(clip);
+        gsap.fromTo(
+          clip,
+          {
+            clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
+            duration: 0.4,
+            ease: "power2.out",
+          },
+          {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          },
+        );
+      });
+
+      parent.addEventListener("mouseleave", () => {
+        // gsap.killTweensOf(clip);
+        gsap.fromTo(
+          clip,
+          {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            duration: 0.4,
+            ease: "power2.in",
+          },
+          {
+            clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
+          },
+        );
+      });
+    });
+  });
+</script>
