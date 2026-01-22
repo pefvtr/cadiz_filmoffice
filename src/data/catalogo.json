@@ -1,0 +1,5392 @@
+[
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Olivaloló",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "María Oliva López",
+      "email": "info@olivalolo.com",
+      "direccion": "Acacias, 10 dup 11007 Cádiz",
+      "poblacion": "Cádiz",
+      "telefonos": "634428334",
+      "redesSociales": "@olivalolo_",
+      "web": "olivalolo.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Compás",
+        "tipo": "Documental",
+        "cargo": "Dirección y producción",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://studio.youtube.com/video/xvXKQsUjygg/edit"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Los padrinos classic",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Diego Saavedra Martín",
+      "email": "clasicosenjerez@gmail.com",
+      "direccion": "Urb. La Venencia 1422, jerez de la Frontera, 11408, Cádiz",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "667457136 - 665124392",
+      "redesSociales": "Instagram, Facebook",
+      "web": "www.lospadrinosclassic.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Pathan",
+        "tipo": "Película cine",
+        "cargo": "Encargado vehículos escenas",
+        "pais": "India",
+        "anio": 2022,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "The crown",
+        "tipo": "Serie",
+        "cargo": "Encargado vehículos escenas",
+        "pais": "Reino Unido",
+        "anio": "2019 -2022",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "I.P. RIMADA,S.L.",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "José Aparicio Cacheiro",
+      "email": "papeleria@rimada.net",
+      "direccion": "Avda. San Severiano 47 - local 3",
+      "poblacion": "Cádiz",
+      "telefonos": "615124130 - 956211581",
+      "redesSociales": "Facebook: Rimada Imprenta  Papeleria",
+      "web": "www.rimada.net"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "El Amor de Andrea",
+        "tipo": "Film, pelicula",
+        "cargo": "Gerencia",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "We Look, You Shoot. Locations & Permits Agency",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Constante Bueno",
+      "email": "hello@welookyoushoot.com",
+      "direccion": "Avda. Bahia Blanca Nº 8, 4º piso. 11007, Cádiz",
+      "poblacion": "Cádiz",
+      "telefonos": "609776305 - 680461779",
+      "redesSociales": "",
+      "web": "www.welookyuoshoot.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Hackett London, Pepe Jeans, Scalpers, Massimo Dutti",
+        "tipo": "Shooting de Moda",
+        "cargo": "Location Manager",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Dresses2Kill",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Floren Campos",
+      "email": "floren@dresses2kill.com",
+      "direccion": "C/ Hospital de mujeres 30 local 11002 Cádiz",
+      "poblacion": "Cádiz",
+      "telefonos": "699813750 - 633413311",
+      "redesSociales": "@dresses2kill",
+      "web": "https://www.dresses2kill.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Comparsa El Joyero COAC 2024",
+        "tipo": "Teatro/espectáculos",
+        "cargo": "Diseño y confección",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Maestros de la costura",
+        "tipo": "TV",
+        "cargo": "Patronista",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Dresses2Kill",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Floren Campos",
+      "email": "camposm.floren@gmail.com",
+      "direccion": "C/ Hospital de mujeres 30 local",
+      "poblacion": "Cádiz",
+      "telefonos": "699813750 - 633413311",
+      "redesSociales": "@dresses2kill",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Maestros de la costura",
+        "tipo": "TV",
+        "cargo": "Patronista",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Frederik",
+        "tipo": "Cortometraje",
+        "cargo": "Ayudante de producción / Foto fija",
+        "pais": "España",
+        "anio": 2019,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Imprenta Nueva",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Patricia Gómez Rivero",
+      "email": "info@imprentanueva.es",
+      "direccion": "C/ Dr. Jose Manuel Pascual y Pascual, 3 local",
+      "poblacion": "Cádiz",
+      "telefonos": "956 212 212",
+      "redesSociales": "@imprentanuevaonline",
+      "web": "www.imprentanueva.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "x",
+        "tipo": "x",
+        "cargo": "x",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Pablo Magallanes Camón",
+      "email": "pablo.magallanescamon@gmail.com",
+      "direccion": "c/ Santa Inés 6",
+      "poblacion": "Cadiz",
+      "telefonos": "639546706",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Yo también",
+        "tipo": "Largometraje",
+        "cargo": "Auxiliar de producción",
+        "pais": "España",
+        "anio": 2007,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "SPOTCADIZ PRODUCCION AUDIOVISUAL",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "JOSE ANTONIO BARRO DAZA",
+      "email": "spotcadiz@spotcadiz.es",
+      "direccion": "AVDA DE LA MARINA 3 -5ºC - 11100 SAN FERNANDO (CADIZ)",
+      "poblacion": "SAN FERNANDO",
+      "telefonos": "609571591",
+      "redesSociales": "Facebook - Instagram - X - Youtube - LinkedIn",
+      "web": "wwww.spotcadiz.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Construcción Nuevo Puente de Cadiz",
+        "tipo": "Video Corporativo",
+        "cargo": "Realizador",
+        "pais": "España",
+        "anio": "2008-2015",
+        "urlTrailer": "https://www.youtube.com/watch?v=QFtWyTSartw"
+      },
+      {
+        "titulo": "Video Corporativo Coconovo-Moet",
+        "tipo": "Video Corporativo",
+        "cargo": "Realizador",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://www.youtube.com/watch?v=dCYKxMcJoj4"
+      },
+      {
+        "titulo": "Resumen Concert Music 2021",
+        "tipo": "Video Corporativo",
+        "cargo": "Realizador",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://www.youtube.com/watch?v=5vyFSwVAA4I"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "La Fonda Film Service",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Sergio Ceballos de la Torre",
+      "email": "info@lafondaservice.com",
+      "direccion": "Oficina P10, EDIFICIO MELKART, Recinto Interior Zona Franca, Piso 1, 11011 Cádiz",
+      "poblacion": "Cádiz",
+      "telefonos": "657684645 - 685770363",
+      "redesSociales": "Instagram: @lafondaservice - Facebook: La Fonda Film Service",
+      "web": "www.lafondaservice.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "¿Preparados para el Tsunami?",
+        "tipo": "Documental",
+        "cargo": "Service (servicios de producción)",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=kkYU1TwRVNA"
+      },
+      {
+        "titulo": "Chef´s table - Capítulo sobre Ángel León",
+        "tipo": "Capítulo de serie documental de Netflix",
+        "cargo": "Producción local (service)",
+        "pais": "Estados Unidos",
+        "anio": 2023,
+        "urlTrailer": "Todavía no hay"
+      },
+      {
+        "titulo": "Entrevista Fernando Alonso en El Hormiguero",
+        "tipo": "Televisión",
+        "cargo": "Producción local (service)",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "No hay"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Innova Films",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Irene De Juan-Aracil Parra",
+      "email": "info@innovafilms.com",
+      "direccion": "EDIFICIO MELKART, Oficina P-10 del, Recinto Interior Zona Franca, 11011 Cádiz",
+      "poblacion": "Cádiz",
+      "telefonos": "685 77 03 63 - 653 44 88 75",
+      "redesSociales": "Instagram: @innovafilms_ - Facebook: Innova Films - Linkedin: innovafilms",
+      "web": "www.innovafilms.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Paco Loco: viva el noise",
+        "tipo": "Largometraje documental",
+        "cargo": "Producción",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": "https://vimeo.com/464916618"
+      },
+      {
+        "titulo": "Cádiz, destino MICE",
+        "tipo": "Spot promocional de turismo empresarial de la provincia de Cádiz",
+        "cargo": "Producción, guionización, dirección, realización y edición",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://vimeo.com/622496595"
+      },
+      {
+        "titulo": "Jerez 100% Lola 100% Flores",
+        "tipo": "Vídeo promocional de turismo de Jerez",
+        "cargo": "Producción, guionización, dirección, realización y edición",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://vimeo.com/789910436"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Sincro Media Music",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "DIego Gallego Pedreño",
+      "email": "info@sincromediamusic.com",
+      "direccion": "Camino del Negro 14, 11.130 Chiclana de la Frontera",
+      "poblacion": "Chiclana De la Frontera",
+      "telefonos": "652880270",
+      "redesSociales": "https://www.instagram.com/diegogallegomusic/",
+      "web": "https://sincromediamusic.com/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "\"YO SÉ COSITAS\" - ZAMORANO Z9",
+        "tipo": "Cortometraje",
+        "cargo": "Compositor -Post producción sonido",
+        "pais": "ESPAÑA",
+        "anio": 2018,
+        "urlTrailer": "https://www.youtube.com/watch?v=K0wRTO5eyK8&t=583s"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "IntuitivoFilms",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Silvestre García Ortega",
+      "email": "silvestregarciaortega@gmail.com",
+      "direccion": "Camino Islas Cies nº2",
+      "poblacion": "Cclana de la Frontera",
+      "telefonos": "685823786",
+      "redesSociales": "https://www.instagram.com/intuitivofilms/",
+      "web": "www.intuitivofilms.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "\"Enemigos\" La película",
+        "tipo": "Largometraje (Atípica Films y Amazon Prime)",
+        "cargo": "Making Of",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "\"La Janda. Sumérgete en nuestra cultura\"",
+        "tipo": "Spot",
+        "cargo": "Realizador y guionista",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://vimeo.com/656688673"
+      },
+      {
+        "titulo": "\"Así fue\" (LA Tourné)",
+        "tipo": "Videoclip",
+        "cargo": "Realizador y guionista",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": "https://vimeo.com/351598583"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Auxiliar Dirección",
+      "Ayudante Dirección/Script",
+      "Ayudante de Realización TV",
+      "Dirección/Realización TV",
+      "Dirección de Casting"
+    ],
+    "contacto": {
+      "nombre": "Ana Belén García Vaca",
+      "email": "anabelen.garcia.vaca@gmail.com",
+      "direccion": "Calle Los Gallardos n8",
+      "poblacion": "El Puerto de Santa Maria, Cadiz",
+      "telefonos": "652713028",
+      "redesSociales": "@anabelengarciav",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Canal Sur televisión",
+        "tipo": "RTVA",
+        "cargo": "Ayudante de realización",
+        "pais": "España",
+        "anio": "2023/24",
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "La caza Guadiana",
+        "tipo": "Serie",
+        "cargo": "Auxiliar de producción",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://youtu.be/NnbStRdM2-c?si=ZJaKZNbBZadbytJu"
+      },
+      {
+        "titulo": "Te estoy amando locamente",
+        "tipo": "Película",
+        "cargo": "Auxiliar de producción",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://youtu.be/zR3Df2PbROk?si=PeciFDymFnMKKbgN"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Francisco Rodríguez García",
+      "email": "pacodocus@gmail.com",
+      "direccion": "Calle Juan de Austria 35",
+      "poblacion": "San Fernando",
+      "telefonos": "649127838",
+      "redesSociales": "@pacodocus",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Campaña Elige Cádiz",
+        "tipo": "Publicidad",
+        "cargo": "Producción y realización",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": "https://youtu.be/JKl3MtEbcwA?si=45D-HvNehmY55U5-"
+      },
+      {
+        "titulo": "Soy edutuber",
+        "tipo": "Documental",
+        "cargo": "Producción y realización",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": "https://youtu.be/aw1NQgnSYX0?si=WRf2GIo8vtZKDsYc"
+      },
+      {
+        "titulo": "Sunshinetour",
+        "tipo": "Promoción redes sociales",
+        "cargo": "Realización",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": "https://youtu.be/O5IpqR2BaXU?si=xbkN6EVt1vw6IcJb"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "ROSA GARCÍA BELTRÁN",
+      "email": "rosagbeltran@gmail.com",
+      "direccion": "C/ Sociedad, 1 - 6ºF - 11008 - CÁDIZ",
+      "poblacion": "CÁDIZ",
+      "telefonos": "647567864",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Héroes de Barrio",
+        "tipo": "Cine",
+        "cargo": "Coordinación de producción y logística",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "El Zorro",
+        "tipo": "Serie",
+        "cargo": "Coordinación de logística y producción",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Alerta Policías",
+        "tipo": "Porgrama entretenimiento / Actualidad",
+        "cargo": "Coordinación logística y producción",
+        "pais": "España",
+        "anio": "Varias temporadas - Desde 2017",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Autonomo",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Javier Céspedes Tobalina",
+      "email": "javi.cespedes.tobalina@gmail.com",
+      "direccion": "Paseo Maritimo 8, 10G Cadiz",
+      "poblacion": "Cádiz",
+      "telefonos": "670296897",
+      "redesSociales": "Instagram: javiceuta",
+      "web": "www.javicespedes.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Modelo 77",
+        "tipo": "Pelicula",
+        "cargo": "Electrico",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=Lp-AtB0ny3k"
+      },
+      {
+        "titulo": "Mentiras Pasajeras",
+        "tipo": "Pelicula",
+        "cargo": "Electrico",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=E812OoNiTNk"
+      },
+      {
+        "titulo": "Un Pais para Escucharlo (T4)",
+        "tipo": "Programa Televisión",
+        "cargo": "Operador Cámara",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=E812OoNiTNk"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "LA MAR DE VIDEOS",
+    "categoriaEmpresa": [
+      "Ayudante de Realización TV"
+    ],
+    "contacto": {
+      "nombre": "MAR ORTIZ SÁINZ",
+      "email": "mar@lamardevideos.com",
+      "direccion": "CALLE SIRENAS 2 // CP.11011",
+      "poblacion": "CÁDIZ",
+      "telefonos": "611618544",
+      "redesSociales": "https://www.instagram.com/marortizsainz/",
+      "web": "www.lamardevideos.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "CORAJE",
+        "tipo": "PELÍCULA",
+        "cargo": "DIT",
+        "pais": "ESPAÑA",
+        "anio": 2024,
+        "urlTrailer": "EN ESTADO DE POSTPRODUCCIÓN"
+      },
+      {
+        "titulo": "Maritime Innovation in Miniature 2",
+        "tipo": "BEHIND THE SCENE",
+        "cargo": "EDICIÓN Y POSTPRODUCCIÓN",
+        "pais": "INGLATERRA",
+        "anio": 2023,
+        "urlTrailer": "https://www.lamardevideos.com/org_mar_int"
+      },
+      {
+        "titulo": "DIOR. FASHION SHOW CRUISE 2023",
+        "tipo": "PUBLICIDAD",
+        "cargo": "EDITORA DE VIDEO",
+        "pais": "ESPAÑA",
+        "anio": 2022,
+        "urlTrailer": "https://www.lamardevideos.com/dior-crucero2023/"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Auxiliar Dirección"
+    ],
+    "contacto": {
+      "nombre": "Lucía Piñero",
+      "email": "lucpinero@gmail.com",
+      "direccion": "San Fernando",
+      "poblacion": "San Fernando",
+      "telefonos": "675351501",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Descolgadas",
+        "tipo": "Webserie",
+        "cargo": "Primera Ayudante de Dirección y Script",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "El Berrido de los Silencios",
+        "tipo": "Largometraje",
+        "cargo": "Ayudante de Producción y Community Manager",
+        "pais": "España",
+        "anio": "2017/2018",
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Prácticas realización, operadora de cámara y edición en 7 Tv Cádiz",
+        "tipo": "Televisión",
+        "cargo": "Prácticas/Estudiante",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Music Komite",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Francisco Ramírez Calderón",
+      "email": "musickomite@gmail.com",
+      "direccion": "Obispo Urquinaona 3, 4º 11005 Cádiz",
+      "poblacion": "Cádiz",
+      "telefonos": "677710238",
+      "redesSociales": "https://www.instagram.com/calderamirez/",
+      "web": "www.musickomite.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "XXVI gala de los premios Max de las Artes Escénicas",
+        "tipo": "gala de los premios Max",
+        "cargo": "Creador Contenido visual",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.musickomite.com/portfolio/xxvi-premios-max/"
+      },
+      {
+        "titulo": "Teoría del valor",
+        "tipo": "Espectáculo Sonoro-visual",
+        "cargo": "Composición musical y creador de contenido visual",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.musickomite.com/portfolio/teoria-del-valor/"
+      },
+      {
+        "titulo": "Sierra sur visuales",
+        "tipo": "espectáculo sonoro visual sobre lago",
+        "cargo": "Composición musical y creador de contenido visual",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": "https://www.musickomite.com/portfolio/proyeccion-sobre-agua-festival-sierra-sur/"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Romantic People",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Hugo Fernández",
+      "email": "hugo@romanticpeople.es",
+      "direccion": "Paseo Marítimo 5, 8ºA",
+      "poblacion": "Cádiz",
+      "telefonos": "0034 662188522 - 0052 5537952107",
+      "redesSociales": "IG: @hugofernandezfilm  /  Facebook: @hugofernandezfilm  /  Youtube: @romanticpeoplefilms",
+      "web": "romanticpeople.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Josefina y el cofre de los Pargo",
+        "tipo": "Campaña Promoción Turística",
+        "cargo": "Dirección, Guion, Edición, Producción",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=VrGGLkdb24I"
+      },
+      {
+        "titulo": "Mantis",
+        "tipo": "Cortometraje",
+        "cargo": "Dirección, Guion, Edición, Producción",
+        "pais": "México",
+        "anio": 2020,
+        "urlTrailer": "https://www.youtube.com/watch?v=FkF5gCx1_qc"
+      },
+      {
+        "titulo": "Re_Set, Manifiesto",
+        "tipo": "Publicidad",
+        "cargo": "Dirección, Guion",
+        "pais": "México",
+        "anio": 2020,
+        "urlTrailer": "https://www.youtube.com/watch?v=xFubkDx8MWI"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Telma Host González",
+      "email": "telmahgonz@gmail.com",
+      "direccion": "Avenida Cayetano del toro 6",
+      "poblacion": "Cádiz",
+      "telefonos": "633203004",
+      "redesSociales": "",
+      "web": "https://www.linkedin.com/in/telma-hosta-gonz%C3%A1lez-aa60ba271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "1992: La serie (Netflix)",
+        "tipo": "Serie",
+        "cargo": "Meritoria de arte",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Anatema (Sony Pictures)",
+        "tipo": "Largometraje",
+        "cargo": "Meritoria de arte",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "La Caja - Clan TVE",
+        "tipo": "Programa televisivo",
+        "cargo": "Atrezzista de avance",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Romain Manteau",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Romain Manteau",
+      "email": "romain.nuages@gmail.com",
+      "direccion": "Olivar de las cuevas",
+      "poblacion": "El Bosque",
+      "telefonos": "600267107",
+      "redesSociales": "",
+      "web": "www.romainmanteau.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "NEGRO LIMBO",
+        "tipo": "DOCUMENTAL",
+        "cargo": "POSTPRODUCCION SONIDO, DISEÑO SONORO, MUSICA ORIGINAL",
+        "pais": "ESPAÑA",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "CORAJE",
+        "tipo": "FICCION",
+        "cargo": "JEFE DE SONIDO DIRECTO",
+        "pais": "ESPAÑA",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "SOLA",
+        "tipo": "FICCION",
+        "cargo": "MICROFONISTA",
+        "pais": "ESPAÑA",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=ZKVfTHiFLIo"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Maria del Rosario Ramirez Camas",
+      "email": "marittaram@hotmail.com",
+      "direccion": "Pintor Zuloaga 2 bj A 11010 Cádoz",
+      "poblacion": "Cádiz",
+      "telefonos": "636236474",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La templanza",
+        "tipo": "serie tv A3 media/Boomerang",
+        "cargo": "Auxiliar de Peluqueria",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://www.youtube.com/watch?v=fBO5xsCo-HU"
+      },
+      {
+        "titulo": "Las de la ultima fila",
+        "tipo": "Serie tv Netflix",
+        "cargo": "Auxiliar de peluqueria",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=IJ7fPZJnfQc"
+      },
+      {
+        "titulo": "Entre tierras",
+        "tipo": "serie tv amazon prime",
+        "cargo": "Depertamento de vehiculos",
+        "pais": "españa",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=9MAGNwHYVbM"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "isabel ramirez camas",
+      "email": "isaramca@gmail.com",
+      "direccion": "pintor zuloaga 2 bajo a",
+      "poblacion": "cádiz",
+      "telefonos": "696016708",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "la templanza",
+        "tipo": "serie tv",
+        "cargo": "Auxiliar de peluqueria",
+        "pais": "españa",
+        "anio": 2021,
+        "urlTrailer": "https://www.youtube.com/watch?v=fBO5xsCo-HU"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Ayudante Dirección/Script"
+    ],
+    "contacto": {
+      "nombre": "José Manuel Otero Ramírez",
+      "email": "maneoteroramirez@hotmail.com",
+      "direccion": "C/ bulería n°3 bajo.   A.",
+      "poblacion": "Cádiz",
+      "telefonos": "622146640",
+      "redesSociales": "@mane_maquillador",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La aventura",
+        "tipo": "Videoclip",
+        "cargo": "Aydt de produccion, Peluquería y maquillaje",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Bam Bam pinto wahim",
+        "tipo": "Videoclip",
+        "cargo": "Aydt producción,  vestuario, maquillaje y peluquería",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "TMK Estudios",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Alejandro Junquero Castro",
+      "email": "tmkrecords.info@gmail.com",
+      "direccion": "Calle San Telmo, 3, 2°A",
+      "poblacion": "Jerez de la frontera",
+      "telefonos": "634062357",
+      "redesSociales": "",
+      "web": "www.tmkestudios.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Jesucristo Flamenco",
+        "tipo": "Documental",
+        "cargo": "Jefe Sonido Directo",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://youtu.be/2qOq--6dOiU?feature=shared"
+      },
+      {
+        "titulo": "El verano que vivimos",
+        "tipo": "Largometraje",
+        "cargo": "Técnico grabación Foleys",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": "https://youtu.be/RbMhZMU4RTA?si=GI2fDUfv5XyCtJS9"
+      },
+      {
+        "titulo": "Sevillanas de Brooklyn",
+        "tipo": "Largometraje",
+        "cargo": "Microfonista",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": "https://youtu.be/zHzTWqdS3n8?si=9XSvx9dpRPMaJLGp"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "ElOjoFilms",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección"
+    ],
+    "contacto": {
+      "nombre": "Javier Salazar Mateo",
+      "email": "elojofilms@gmail.com",
+      "direccion": "c/Médicos Sin Fronteras, 18,",
+      "poblacion": "Los Barrios",
+      "telefonos": "647486588",
+      "redesSociales": "www.instagram.com/elojofilms",
+      "web": "www.elojofilms.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Camarón Flamenco y Revolución",
+        "tipo": "Largometraje documental",
+        "cargo": "Documentalista y Ayudante de montaje",
+        "pais": "España",
+        "anio": 2018,
+        "urlTrailer": "https://youtu.be/a25U8gnw9bQ?si=P3vdGgwpKi6ECCrw"
+      },
+      {
+        "titulo": "El Camino Más Largo",
+        "tipo": "Largometraje documental",
+        "cargo": "Ayudante de montaje",
+        "pais": "España",
+        "anio": 2016,
+        "urlTrailer": "https://youtu.be/iZy0XTH6SYU?si=_E0h5lQkHQ-_6KzM"
+      },
+      {
+        "titulo": "Libertador",
+        "tipo": "Largometraje",
+        "cargo": "Coordinador de Figuración",
+        "pais": "España - Venezuela",
+        "anio": 2012,
+        "urlTrailer": "https://youtu.be/Ws0xmkOYYVk?si=qtGtqfTG-gJn-n3Y"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Profesional autónomo",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Auxiliar Dirección",
+      "Ayudante de Realización TV",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Gabriel Gascó Gavilán",
+      "email": "gabrigasco@gmail.com",
+      "direccion": "Avenida Sudamerica 4, Edificio Ecuador, 4ºA",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "654963102",
+      "redesSociales": "www.linkedin.com/in/gabrielgasco",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La Trinchera Infinita",
+        "tipo": "Largometraje",
+        "cargo": "Operador de camara making of",
+        "pais": "España",
+        "anio": 2018,
+        "urlTrailer": "https://youtu.be/p_-_MPVg968?si=9PMBDvNKsoOWKSFR"
+      },
+      {
+        "titulo": "The Crown Season 5",
+        "tipo": "Serie de Tv",
+        "cargo": "Auxiliar de producción/ conductor",
+        "pais": "Inglaterra",
+        "anio": 2021,
+        "urlTrailer": "https://youtu.be/Ej0vb8xhvbw?si=8sreYUy0UA2VF4zD"
+      },
+      {
+        "titulo": "Christian Dior - South of Spain Ad filming",
+        "tipo": "Campaña publicitaria",
+        "cargo": "Auxiliar de producción/ driver",
+        "pais": "Francia",
+        "anio": 2022,
+        "urlTrailer": "https://youtu.be/WeCawu4q6Ws?si=_a6-8sBAnKG2Zif6"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "LAS NIÑAS DE CÁDIZ SL",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "ALEJANDRA LÓPEZ SEGOVIA",
+      "email": "lasninasdecadiz@gmail.com",
+      "direccion": "PLAZA CRUZ VERDE, Nº9, 1º IZQUIERDA. CP: 11002 CÁDIZ",
+      "poblacion": "CADIZ",
+      "telefonos": "636800266",
+      "redesSociales": "",
+      "web": "www.lasniñasdecadiz.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "LAS NIÑAS DE CÁDIZ",
+        "tipo": "TEATRO",
+        "cargo": "ACTRIZ",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "CADIGRAFIA PUBLICIDAD Y COMUNICACIÓN S.L.",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Ignacio González Dorao",
+      "email": "buzon@cadigrafia.com",
+      "direccion": "C/Ronda de Vigilancia s/n - Edificio Tartessos, local 1-1ª planta. 11011 Cádiz",
+      "poblacion": "Cádiz",
+      "telefonos": "956252611 - 617476903",
+      "redesSociales": "Facebook, Instagram, Twiter",
+      "web": "www.cadigrafia.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "El amor de Andrea",
+        "tipo": "Photocall y moqueta",
+        "cargo": "Productora",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Tablao Carnaval Fundacion Unicaja",
+        "tipo": "Vinilado de paneles",
+        "cargo": "",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Exposiciones",
+        "tipo": "Impresión piezas varias",
+        "cargo": "",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección/Realización TV",
+      "Dirección de Casting"
+    ],
+    "contacto": {
+      "nombre": "Antonio Labajo Altamirano",
+      "email": "antonio_labajo_altamirano@hotmail.com",
+      "direccion": "Beato Diego de Cádiz num 3 piso 4°",
+      "poblacion": "Cádiz",
+      "telefonos": "676707480",
+      "redesSociales": "@a_labajo",
+      "web": "www.antoniolabajo.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "The Day of the Jackal",
+        "tipo": "Serie tv",
+        "cargo": "Coach actores",
+        "pais": "Reino Unido",
+        "anio": "En producción",
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Pídeme lo que quieras",
+        "tipo": "Película",
+        "cargo": "Coach actores",
+        "pais": "España",
+        "anio": "En producción",
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Mi gran despedida",
+        "tipo": "Película",
+        "cargo": "Actor,  Localización,  ayudante casting",
+        "pais": "España",
+        "anio": 2019,
+        "urlTrailer": "https://youtu.be/TVgJNEz4eYg?si=cZc4EY9XV-hcF9qm"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "David Jiménez Díaz",
+      "email": "escribe@davidjimenezdiaz.com",
+      "direccion": "C/ Amargura 7 - 21",
+      "poblacion": "Puerto Real",
+      "telefonos": "660447405",
+      "redesSociales": "",
+      "web": "https://www.davidjimenezdiaz.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "ENTRE DOS AGUAS, de Isaki Lacuesta",
+        "tipo": "Largometraje",
+        "cargo": "Director de Arte",
+        "pais": "España",
+        "anio": null,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "PALOMARES, dirigido por Álvaro Ron",
+        "tipo": "Serie para Movistar+",
+        "cargo": "Director de Arte",
+        "pais": "España",
+        "anio": null,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "TOP BOY",
+        "tipo": "Serie para Netflix",
+        "cargo": "PROPERTY MASTER",
+        "pais": "Reino Undo",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Antonio Morenilla",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Antonio Morenilla Diaz",
+      "email": "moreh@byantoniomorenilla.com",
+      "direccion": "campanilleros, 26K",
+      "poblacion": "San Fernando",
+      "telefonos": "647864915",
+      "redesSociales": "https://www.instagram.com/byantoniomorenilla/",
+      "web": "https://www.byantoniomorenilla.com/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "El Carnaval de lo invisible",
+        "tipo": "Documental",
+        "cargo": "Director de fotografía",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Hecho a Mano",
+        "tipo": "Documentales",
+        "cargo": "Dirección de Fotografía",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Ángeles Reiné",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Ángeles Reiné",
+      "email": "angelesreine@gmail.com",
+      "direccion": "Felipe Abarzuza 2, 2º",
+      "poblacion": "Cádiz",
+      "telefonos": "607834659",
+      "redesSociales": "https://vimeo.com/angelesreine https://www.linkedin.com/in/ángeles-reiné-893a1015/\nhttps://www.imdb.com/name/nm3345058/?ref_=nv_sr_1\n@angelesreine",
+      "web": "www.angelesreine.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "\"Héroes de Barrio\"",
+        "tipo": "Largometraje",
+        "cargo": "Directora y guionista",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://vimeo.com/757268399"
+      },
+      {
+        "titulo": "Salir del Ropero",
+        "tipo": "Largometraje",
+        "cargo": "Directora y Guionista",
+        "pais": "España y Portugal",
+        "anio": 2020,
+        "urlTrailer": "https://vimeo.com/361083861"
+      },
+      {
+        "titulo": "Ready to Talk",
+        "tipo": "Mediometraje",
+        "cargo": "Directora, guionista y productora",
+        "pais": "USA",
+        "anio": 2014,
+        "urlTrailer": "https://vimeo.com/79378461"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "MAR SEVILLA",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Maria del Mar Sevilla Albarran",
+      "email": "m.sevilla.albarran@gmail.com",
+      "direccion": "C/CRUZ N13",
+      "poblacion": "CADIZ",
+      "telefonos": "669510727 - 956213774",
+      "redesSociales": "INSTAGRAN",
+      "web": "NO TENGO"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "LA MAQUINA DE HUMO",
+        "tipo": "Spot-T",
+        "cargo": "Maquilladora",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Romanticpeople",
+        "tipo": "Publicidad,spot,cortometraje",
+        "cargo": "Maquilladora -vestuario.peluqueria",
+        "pais": "España",
+        "anio": "2023,2022,2021",
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Onda cadíz",
+        "tipo": "Programas tv,informativos,Carnavales.",
+        "cargo": "MAquillaje y peluqueria",
+        "pais": "España",
+        "anio": "2007-2012",
+        "urlTrailer": "ondacadiztv"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Warm Film Studio",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Cristian López Fernández",
+      "email": "warm.contacto@gmail.com",
+      "direccion": "Calle Ermita de San Blas 7. 11405 Jerez de la Frontera",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "605930336",
+      "redesSociales": "instagram: @warmfilmstudio",
+      "web": "www.warmfilmstudio.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "El Pacto con Eduardo Noriega y Elena Sánchez",
+        "tipo": "Publicidad",
+        "cargo": "Dirección y Realización",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": "https://vimeo.com/548784418"
+      },
+      {
+        "titulo": "SFDK - Un Pobre Con Dinero",
+        "tipo": "Videoclip",
+        "cargo": "Dirección y Realización",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": "https://www.youtube.com/watch?v=mmjpqOhBVKE"
+      },
+      {
+        "titulo": "Abocajarro • No hemos vuelto",
+        "tipo": "Videoclip",
+        "cargo": "Dirección y Realización",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=pplIeI3PonM"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "José María Piulestán Romero",
+      "email": "josemaryapiulestan@gmail.com",
+      "direccion": "Camino de trevelez",
+      "poblacion": "Chiclana (Cádiz)",
+      "telefonos": "666992976",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Piu_graphic",
+        "tipo": "Publicidad",
+        "cargo": "Editor gráfico",
+        "pais": "Suiza",
+        "anio": 2016,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Imagenfactory",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Wenceslao Scyzoryk",
+      "email": "info@imagenfactory.es",
+      "direccion": "Avda. de Fuentebravía 32-34",
+      "poblacion": "El Puerto de Santa María",
+      "telefonos": "686802579 - 630206467",
+      "redesSociales": "@wenceslao_scyzoryk",
+      "web": "www.imagenfactory.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "EN DIRECTO",
+        "tipo": "Ficción",
+        "cargo": "Guionista, director y productor",
+        "pais": "España",
+        "anio": 2014,
+        "urlTrailer": "https://vimeo.com/imagenfactory/endirecto"
+      },
+      {
+        "titulo": "112",
+        "tipo": "Ficción",
+        "cargo": "Guionista, director y productor",
+        "pais": "España",
+        "anio": 2016,
+        "urlTrailer": "https://vimeo.com/271089102"
+      },
+      {
+        "titulo": "EL SUBMARINÉ",
+        "tipo": "Documental",
+        "cargo": "Guionista, director y productor",
+        "pais": "España",
+        "anio": 2016,
+        "urlTrailer": "https://vimeo.com/271089110"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "CLAVE COMUNICACION Y PRODUCCIONES",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Auxiliar Dirección",
+      "Dirección/Realización TV",
+      "Dirección de Casting"
+    ],
+    "contacto": {
+      "nombre": "JESUS MURCIANO",
+      "email": "jmurciano@clavecomunicacion.com",
+      "direccion": "AURORA 11 OF 10 PLANTA 2",
+      "poblacion": "EL PUERTO DE SANTA MARIA",
+      "telefonos": "629708540",
+      "redesSociales": "",
+      "web": "www.clavecomunicacion.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "LAS CRONICAS DE LA PEPA",
+        "tipo": "ANIMACION",
+        "cargo": "DIRECTOR /GUIONISTA",
+        "pais": "ESPAÑA",
+        "anio": 2012,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Espectáculos Vértigo",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Espectáculos Vértigo",
+      "email": "contacto@espectaculosvertigo.com",
+      "direccion": "Avenida Virgen del Carmen, 77, 1, A - 11202 Algeciras (Cádiz)",
+      "poblacion": "Algeciras",
+      "telefonos": "956092965",
+      "redesSociales": "",
+      "web": "https://www.EspectaculosVertigo.com/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Gestión de Eventos Municipales en España",
+        "tipo": "Eventos",
+        "cargo": "Eventos",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Ayudante Dirección/Script"
+    ],
+    "contacto": {
+      "nombre": "Isabel Chica Pérez",
+      "email": "isabelchica1@gmail.com",
+      "direccion": "C/ Tamarindos 9-11 1ºE 11007 Cádiz",
+      "poblacion": "Cádiz",
+      "telefonos": "622180135",
+      "redesSociales": "www.flickr.com/photos/isabelchica www.instagram.com/_isabelchica_",
+      "web": "www.linkedin.com/in/isabelchicaperez"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Coraje",
+        "tipo": "Largometraje",
+        "cargo": "Script",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "El test",
+        "tipo": "Cortometraje",
+        "cargo": "Script",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://vimeo.com/890697583/a85dc09449"
+      },
+      {
+        "titulo": "Detective Pérez: Algunas coincidencias",
+        "tipo": "Piloto de serie",
+        "cargo": "Directora de fotografía, guionista, directora",
+        "pais": "España",
+        "anio": 2018,
+        "urlTrailer": "https://www.youtube.com/watch?v=9FdYrIZDZMY"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Simprisa Producciones: Especialistas en Animación 2D",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "David Ibernia Etayo",
+      "email": "davidibernia@gmail.com",
+      "direccion": "Plaza de Bécquer 3, escalera centro, 3A. 11010 - Cádiz-",
+      "poblacion": "Cádiz",
+      "telefonos": "652332655",
+      "redesSociales": "https://www.instagram.com/david_ibernia/ https://www.facebook.com/david.ibernia/",
+      "web": "http://www.davidibernia.com/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Némesis",
+        "tipo": "Cortometraje de animación independiente.",
+        "cargo": "Animador Independiente",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=0E54hROMYZc"
+      },
+      {
+        "titulo": "Pajaritos",
+        "tipo": "Cortometraje de animación independiente",
+        "cargo": "Animador Independiente",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://www.youtube.com/watch?v=46z59u7hE9c"
+      },
+      {
+        "titulo": "APP de Conciertos QConciertos.es (Agenda y buscador) especializada.",
+        "tipo": "Vídeo promocional",
+        "cargo": "Animador independiente.",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=gJYEaq1Qwew"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "INMEDIATEC LIVE, SLU",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "ALBERTO RUIZ CURRAL",
+      "email": "comercial@inmediatec.com",
+      "direccion": "POL. IND. EL PORTAL - C/ TOGO, 21",
+      "poblacion": "JEREZ DE LA FRONTERA",
+      "telefonos": "635808248 - 657869934",
+      "redesSociales": "Facebook e Instagram",
+      "web": "www.inmediatec.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "TEATROS",
+        "tipo": "SONORIZACIÓN, ILUMINACIÓN, VIDEO, ATREZZO",
+        "cargo": "TÉCNICOS",
+        "pais": "España",
+        "anio": null,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "FESTIVALES",
+        "tipo": "SONORIZACIÓN, ILUMINACIÓN, VIDEO Y PRODUCCIÓN",
+        "cargo": "TÉCNICOS",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "CONCIERTOS",
+        "tipo": "SONORIZACIÓN, ILUMINACIÓN, VIDEO Y PRODUCCIÓN",
+        "cargo": "TÉCNICOS",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "D´ARTE GRUPO, EVENTOS Y AUDIOVISUALES, S.L",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "ALBERTO RUIZ CURRAL",
+      "email": "produccion@d-arte.org",
+      "direccion": "POL. IND. EL PORTAL - C/ TOGO, 21",
+      "poblacion": "JEREZ DE LA FRONTERA",
+      "telefonos": "635808248 - 657869934",
+      "redesSociales": "Facebook e Instagram",
+      "web": "www.d-arte.org"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "TEATROS",
+        "tipo": "SONORIZACIÓN, ILUMINACIÓN, VIDEO, ATREZZO",
+        "cargo": "TÉCNICOS",
+        "pais": "ESPAÑA",
+        "anio": null,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "CONCIERTOS Y FESTIVALES",
+        "tipo": "SONORIZACIÓN, ILUMINACIÓN, VIDEO, PRODUCCIÓN TÉCNICA",
+        "cargo": "TÉCNICOS",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "CORPORATIVOS",
+        "tipo": "SONORIZACIÓN, VIDEO E ILUMINACIÓN",
+        "cargo": "TÉCNICOS",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Sala46 Films",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Alejandro Cano Escribano",
+      "email": "films@sala46.com",
+      "direccion": "Residencial Valdespino 1, portal 1, piso 3, 11403 Jerez de la Frontera",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "630950440",
+      "redesSociales": "",
+      "web": "https://www.sala46films.com/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Mi última condena",
+        "tipo": "Largometraje documental",
+        "cargo": "Producción y distribución",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://youtu.be/D5w6WJCzDQQ"
+      },
+      {
+        "titulo": "¡Dolores Guapa!",
+        "tipo": "Largometraje documental",
+        "cargo": "Producción y distribución",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://youtu.be/Tq-JH8ntcdc"
+      },
+      {
+        "titulo": "Tres Seis Cinco",
+        "tipo": "Largometraje Ficción",
+        "cargo": "Producción y distribución",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": "https://www.youtube.com/watch?v=UXsWwASDhHE&t=4s"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "AUDIOVISUALES El Sur",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Marcos Antonio Conde Ruiz",
+      "email": "elsur@elsuraudiovisuales.es",
+      "direccion": "Polígono industrial Pelagatos. Avenida Bahía de Cádiz nave 43",
+      "poblacion": "Chiclana de la Frontera",
+      "telefonos": "630 584 796",
+      "redesSociales": "Facebook, Instagram, WhatsApp",
+      "web": "Www.elsuraudiovisuales.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Congreso Cardiorrenal",
+        "tipo": "Congresos médicos",
+        "cargo": "Jefe producción",
+        "pais": "España",
+        "anio": 2007,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Amanda Román Buitrago",
+      "email": "amanda.azulcobalto@gmail.com",
+      "direccion": "Barriada de Nuestra Señora de las viñas bloque 15, 1ºA 11406",
+      "poblacion": "Jerez de la Frontera Cádiz",
+      "telefonos": "645557248",
+      "redesSociales": "Instagram",
+      "web": "Blog : amandaroman.blogspot.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Techo y Comida",
+        "tipo": "Película",
+        "cargo": "Directora de arte",
+        "pais": "España",
+        "anio": 2015,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Mi gran despedida",
+        "tipo": "Película",
+        "cargo": "Directora de arte",
+        "pais": "España",
+        "anio": 2019,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Rita",
+        "tipo": "Película",
+        "cargo": "Directora de arte",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "PCM BROADCAST SERVICES",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Miguel Ángel Ramírez Tocón",
+      "email": "produccion@pcmproducciones.com",
+      "direccion": "Calle San Francisco de Paula, 8",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "616155208",
+      "redesSociales": "Facebook, X e Instagram",
+      "web": "www.pcmproducciones.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Premios Carmen",
+        "tipo": "Realización",
+        "cargo": "Cabeza caliente",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://youtu.be/JIlzEx9CryM?si=kmzxJrDbPFx4kegn"
+      },
+      {
+        "titulo": "Calor",
+        "tipo": "Videoclip",
+        "cargo": "Cabeza caliente",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://youtu.be/B6bDkrFLi64?si=Qk6Q-U7IU_W4CP5Q"
+      },
+      {
+        "titulo": "Carnavales de Cádiz",
+        "tipo": "Retransmisión",
+        "cargo": "Cabeza caliente",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/live/vuUdxAgC708?si=0kHvCqMIrovKwmBr"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "MECANOGRAFICA GADITANA S.L.",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "JESUS GARCIA BERMEJO",
+      "email": "info@megasl.net",
+      "direccion": "C/ BEATO DIEGO J. DE CADIZ, 1 DPDO. LOCAL",
+      "poblacion": "CADIZ",
+      "telefonos": "956227415 - 667715600",
+      "redesSociales": "https://www.facebook.com/meganetcadiz",
+      "web": "https://informaticacadiz.com/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "NINGUNA",
+        "tipo": "-",
+        "cargo": "-",
+        "pais": "-",
+        "anio": "-",
+        "urlTrailer": "-"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "RAS ARTESANOS DE CÁDIZ,SL",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Ricardo Lores Suárez",
+      "email": "rasartesanos@gmail.com",
+      "direccion": "CL. SAN MARTÍN DEL TESORILLO, NAVE.6",
+      "poblacion": "CÁDIZ",
+      "telefonos": "606821413",
+      "redesSociales": "@rasecenografia",
+      "web": "www.rasescenografias.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "LOBO FEROZ",
+        "tipo": "Construcción y suministro de elementos del decorado",
+        "cargo": "Construcción y suministro de elementos del decorado",
+        "pais": "ESPAÑA",
+        "anio": 2021,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "JEDAL ALQUILERES SLU",
+    "categoriaEmpresa": [
+      "Ayudante Producción"
+    ],
+    "contacto": {
+      "nombre": "José Manuel Leira Domínguez",
+      "email": "jedalquileres@hotmail.com",
+      "direccion": "C/Geminis, 10.",
+      "poblacion": "JEREZ DE LA FRONTERA",
+      "telefonos": "615057400 - 956396675",
+      "redesSociales": "Instagram, Facebook, whatsapp, TikTok.",
+      "web": "www.alquilermesascadiz.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "JEDAL ALQUILERES slu TODO PARA SUS Eventos alquileres",
+        "tipo": "Todo tipo",
+        "cargo": "Dueño de la empresa",
+        "pais": "España",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Eventos La Oca",
+    "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción"
+    ],
+    "contacto": {
+      "nombre": "Jesús Antonio García Silva",
+      "email": "info@eventoslaoca.es",
+      "direccion": "Avda. Alcalde Cantos Ropero, 101",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "654928271",
+      "redesSociales": "https://www.facebook.com/www.eventoslaoca.es/",
+      "web": "www.eventoslaoca.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "-",
+        "tipo": "-",
+        "cargo": "CEO empresa",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Horrorstudiofx",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección de Casting"
+    ],
+    "contacto": {
+      "nombre": "Joaquín lavilla",
+      "email": "dazzlingfx@gmail.com\ninfo@horrorstudiofx.es",
+      "direccion": "Calle Murillo 17",
+      "poblacion": "San Fernando",
+      "telefonos": "676298296",
+      "redesSociales": "Instagram/LinkedIn",
+      "web": "www.horrorstudiofx.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Umbra",
+        "tipo": "Corto",
+        "cargo": "Direccion maquillaje fx",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Mi gran despedida",
+        "tipo": "Largometraje",
+        "cargo": "Ayudante atrezzo",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Turno de noche",
+        "tipo": "Corto",
+        "cargo": "Direccion maquillaje/actor figuracion",
+        "pais": "Españañ",
+        "anio": 2018,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Susana Rosado García",
+      "email": "soyllorona@gmail.com",
+      "direccion": "Avda. Constitución, 20-5°A",
+      "poblacion": "San Fernando",
+      "telefonos": "649003632",
+      "redesSociales": "Facebook: Zusi Rosado\nInstagram: Zusirosado",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Gala premios Max 2023 (CÁDIZ)",
+        "tipo": "TEATRO",
+        "cargo": "ACTRIZ",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=hFgRNQQlLh4&t=13s&pp=ygUWcHJlbWlvcyBtYXggMjAyMyBjYWRpeg%3D%3D"
+      },
+      {
+        "titulo": "YOGUR",
+        "tipo": "Audiovisual",
+        "cargo": "ACTRIZ",
+        "pais": "ESPAÑA",
+        "anio": 2022,
+        "urlTrailer": "https://youtu.be/ORexst_gOro"
+      },
+      {
+        "titulo": "GOMA DE BORRAR",
+        "tipo": "AUDIOVISUAL",
+        "cargo": "ACTRIZ",
+        "pais": "ESPAÑA",
+        "anio": 2018,
+        "urlTrailer": "https://youtu.be/lQDN6DG2pqU"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "ROBOTS CAN CRY S.L",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Javier Coronilla Bohorquez",
+      "email": "office@robotscancry.com",
+      "direccion": "Avda  Las Marismas BLoque 1 Local 5",
+      "poblacion": "San Fernando",
+      "telefonos": "0034649018161",
+      "redesSociales": "https://www.instagram.com/robots_can_cry/",
+      "web": "www.robotscancry.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Star Wars The Force Awakens, The last jedi and The Rise of Skywalker",
+        "tipo": "Movies",
+        "cargo": "Animatronic designer for the creature Dept.",
+        "pais": "UK",
+        "anio": null,
+        "urlTrailer": "https://www.youtube.com/watch?v=8Qn_spdM5Zg"
+      },
+      {
+        "titulo": "Dark Crystal: Age of Resistance",
+        "tipo": "TV series",
+        "cargo": "Senior Animatronic designer",
+        "pais": "UK",
+        "anio": 2018,
+        "urlTrailer": "https://www.youtube.com/watch?v=a3_owZfYVR8"
+      },
+      {
+        "titulo": "A monster calls",
+        "tipo": "Movie",
+        "cargo": "Senior animatronic designer",
+        "pais": "Spain",
+        "anio": 2014,
+        "urlTrailer": "https://www.youtube.com/watch?v=WMgm20Di9Wg"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "EMPRESAS",
+    "empresa": "Cruceros Sancti Petri,S.L. (albarco.com)",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Eva Burgos Muñoz",
+      "email": "comercial@albarco.com",
+      "direccion": "Calle Santa Maria de Mar 6A 2º izquierda 11008 Cadiz",
+      "poblacion": "Cadiz",
+      "telefonos": "617378894 - 667511006",
+      "redesSociales": "Instagram, Facebook",
+      "web": "https://www.albarco.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Serie Jack Ryan",
+        "tipo": "Servimos con una de nuestras embarcaciones para escenas de accion",
+        "cargo": "Contrataron nuestros servicios con el patron de la embarcacion",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "ACRON",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "RAFAEL GONZALEZ TIERNO",
+      "email": "info@acron.es",
+      "direccion": "AVDA PORTUGAL 6",
+      "poblacion": "CÁDIZ",
+      "telefonos": "670404361 - 601301032",
+      "redesSociales": "FACEBOOK",
+      "web": "ACRON.ES"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "PEDIATRIA HOSPITAL PUERTA DEL MAR",
+        "tipo": "VINILOS IMPRESO TROQUELADO",
+        "cargo": "GERENTE",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Rocío Sepúlveda",
+      "email": "rociosepulveda.cine@gmail.com",
+      "direccion": "C/ Churruca N5 piso 2ºA",
+      "poblacion": "Cádiz",
+      "telefonos": "677308971",
+      "redesSociales": "https://www.instagram.com/rocio_sepulvedaa_/",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "TREMENDAS (Pecado Films)",
+        "tipo": "Largometraje",
+        "cargo": "Guion y dirección.",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "En desarrollo"
+      },
+      {
+        "titulo": "BARRIO ASUNCIÓN (Magnetika Films)",
+        "tipo": "Serie de ficción",
+        "cargo": "Guion y dirección",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "En búsqueda de financiación."
+      },
+      {
+        "titulo": "YOGUR (Agudeza visual)",
+        "tipo": "Cortometraje",
+        "cargo": "Guion y dirección",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=qEQRa89DNIM&t=39s"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Womackgroup",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "BORJA PÉREZ RODRÍGUEZ",
+      "email": "loading.8119@gmail.com",
+      "direccion": "Juan de arratia n32",
+      "poblacion": "Sanlúcar de Barrameda",
+      "telefonos": "633428161",
+      "redesSociales": "",
+      "web": "https://vimeo.com/user17110828"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Paco de Lucia Legacy",
+        "tipo": "Edición de video",
+        "cargo": "Editor de videl",
+        "pais": "España/usa",
+        "anio": 2024,
+        "urlTrailer": "https://www.instagram.com/reel/C4-IvUVNA2U/?igsh=bjkwcHZ6ZGs4dHFz"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Bodasdream",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección"
+    ],
+    "contacto": {
+      "nombre": "Álvaro Manzano González",
+      "email": "alvaroxtudio@gmail.com",
+      "direccion": "C\\ Caraza nº6 - Centro Comercial Plaza 1ª Plt. Local 32",
+      "poblacion": "Chiclana de la Frontera",
+      "telefonos": "699 381 496",
+      "redesSociales": "https://www.facebook.com/bodasdream - https://www.instagram.com/bodasdreamvideos - https://www.vimeo.com/bodasdream",
+      "web": "www.bodasdream.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "¿PREPARADOS PARA EL TSUNAMI?",
+        "tipo": "Documental para Movistar",
+        "cargo": "Auxiliar de Cámara",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.movistarplus.es/documental/preparados-para-el-tsunami/ficha?tipo=E&id=2209434"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Miguel Ángel Castaño Mateo",
+      "email": "miguelangelcastanomateo@gmail.com",
+      "direccion": "Avenida de la Bahía 25 duplicado, 2C",
+      "poblacion": "Cádiz",
+      "telefonos": "679557855",
+      "redesSociales": "@migueldeangelactor",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "TELEVISIÓN\nALGUIEN TIENE QUE MORIR. Manolo Caro. Netflix.\nANTIDISTURBIOS. Rodrigo Sorogoyen. Movistar+.\nAMAR ES PARA SIEMPRE. Eduardo Casanova. A3 Media.\nTEATRO\nLA PAZ… O NO. Silvana Navas. La Farranda.\n¿Y AHORA QUÉ? Israel Moyano. Teatro en Camino.\nNOCHE DE REYES. Nicolás Pérez Costa. La Sala.\nRETRATO INCOMPLETO, ADAPTANDO A POE. Israel Moyano. Teatro en Camino\nSELFIE. Cristian Morales. Cristian Morales.\nVERMELHA, UNA COMEDIA SANGRIENTA. Ramón Quesada.\nBAJO LA LLUVIA AJENA. Claudio Sierra.\nLA COMUNIDAD. María Castillo. MBT Producciones.",
+        "tipo": "Televisión y teatro",
+        "cargo": "Actor",
+        "pais": "España",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Look Art Studio",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Francisco Martín San Sabas",
+      "email": "lookartstudiocadiz@gmail.com",
+      "direccion": "Avenida Portugal, Nº13, Bajo Local",
+      "poblacion": "Cádiz",
+      "telefonos": "635015460 - 856178338",
+      "redesSociales": "lookartstudio",
+      "web": "www.lookartstudio.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La Bella Escondida",
+        "tipo": "Largometraje",
+        "cargo": "Dirección Maquillaje, Peluquería y Vestuario",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://www.imdb.com/title/tt24246310/?language=es-es"
+      },
+      {
+        "titulo": "Crímenes del Carnaval",
+        "tipo": "Cortometraje",
+        "cargo": "Dirección Maquillaje, Peluquería, Atrezzo y Vestuario",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.imdb.com/title/tt24229288/?ref_=nm_flmg_t_1_act"
+      },
+      {
+        "titulo": "Aires de Cádiz",
+        "tipo": "Serie de Televisión",
+        "cargo": "Dirección Maquillaje y Peluquería",
+        "pais": "España",
+        "anio": 2017,
+        "urlTrailer": "https://canalcocina.es/programa/aires-de-cadiz"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Flowings",
+    "categoriaEmpresa": [
+      "Dirección de Casting"
+    ],
+    "contacto": {
+      "nombre": "Diego García Moreno",
+      "email": "superdiegogm@gmail.com",
+      "direccion": "C/ Valdés núm 40 dcha",
+      "poblacion": "El Puerto de Santa Maria",
+      "telefonos": "610879267",
+      "redesSociales": "Facebook, Instagram, you tube, tiktok, X,",
+      "web": "www.flowings.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Antes de la quema",
+        "tipo": "Pelicula",
+        "cargo": "Jefe localización",
+        "pais": "España",
+        "anio": 2019,
+        "urlTrailer": "https://youtu.be/A--n0igT7K4?si=_Q3L-9dnsUu2WvZU"
+      },
+      {
+        "titulo": "Ron capitán Morgan",
+        "tipo": "Spot plublicitario",
+        "cargo": "Producción",
+        "pais": "España",
+        "anio": 2019,
+        "urlTrailer": "https://youtu.be/XdpGBO_ZpMM?si=NVlYM3FQ0tXUNPd1"
+      },
+      {
+        "titulo": "El tomate cantante",
+        "tipo": "Vídeo musical",
+        "cargo": "Producción y localización, making of",
+        "pais": "España",
+        "anio": 2019,
+        "urlTrailer": "https://youtu.be/vBPTWBRoxOw?si=VN_ho46YXwJ94OBR"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Autonoma",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección"
+    ],
+    "contacto": {
+      "nombre": "Sarah Witt Garcia",
+      "email": "sarahwittgarcia@gmail.com",
+      "direccion": "avd rio Barbate 41, 2",
+      "poblacion": "Cadiz",
+      "telefonos": "671877109",
+      "redesSociales": "@swittgarcia",
+      "web": "www.sarahwitt.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Festival de Cine Africano de Tarifa // Festival Generamma // Festival de Cine Iberoamericano de Sevilla //",
+        "tipo": "Festivales de Cine // Festivales de Musica // Realitys shows // Largometrajes // Documentales etc...",
+        "cargo": "Producer in situ// Coordinadora de produccion // Ayudante de Direccion// Presentadora// Reportera etc...",
+        "pais": "Espa;a",
+        "anio": "2000 al 2024",
+        "urlTrailer": "www.sarahwitt.es"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Ayudante Dirección/Script",
+      "Ayudante de Realización TV",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Sofía Blanco Villén",
+      "email": "sofiablancov83@gmail.com",
+      "direccion": "Paseo de las Delicias 6, Bajo A",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "675928021",
+      "redesSociales": "@la.galeria.de.sofocada",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Mujer con Arte",
+        "tipo": "Cortometraje",
+        "cargo": "Operadora de cámara, iluminación y montaje",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "REBECA POQUET RAMIREZ",
+      "email": "REBECAPOQUET.MAKEUP@GMAIL.COM",
+      "direccion": "CALLE MOLINO 11, PUERTA 1",
+      "poblacion": "EL TORNO, JEREZ DE LA FRONTERA",
+      "telefonos": "646013728",
+      "redesSociales": "INSTAGRAM: @rebeca_poquet_make_up\nFACEBOOK: www.facebook.com/rebecapoquet.makeup",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "INTERSEX",
+        "tipo": "LARGOMETRAJE",
+        "cargo": "MAQUILLAJE",
+        "pais": "ESPAÑA",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=Uqjc5P8vNIg&t=2s"
+      },
+      {
+        "titulo": "AL AMPARO DE LA NOCHE",
+        "tipo": "CORTOMETRAJE",
+        "cargo": "MAQUILLAJE",
+        "pais": "ESPAÑA",
+        "anio": 2022,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "SOL BEMOL MAYOR",
+        "tipo": "LARGOMETAJE",
+        "cargo": "MAQUILLAJE",
+        "pais": "",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "DISEÑO WEB EN CÁDIZ",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Jesús González",
+      "email": "solinf2000@gmail.com",
+      "direccion": "solinf2000@gmail.com",
+      "poblacion": "Cádiz",
+      "telefonos": "619722349",
+      "redesSociales": "",
+      "web": "www.xn--diseowebencadiz-1qb.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Diseño de páginas web",
+        "tipo": "Diseño de páginas web",
+        "cargo": "Gestor del Grupo",
+        "pais": "España",
+        "anio": 2000,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Pablo Moya",
+      "email": "pablomoyacam@gmail.com",
+      "direccion": "Conil de la frontera (Cádiz)",
+      "poblacion": "Conil",
+      "telefonos": "606669823",
+      "redesSociales": "Instagram pablomoyacam",
+      "web": "imdb.me/pablomoyacam"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Entrevias",
+        "tipo": "Serie",
+        "cargo": "Segundo operador",
+        "pais": "España",
+        "anio": "2023-2024",
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Express",
+        "tipo": "Serie",
+        "cargo": "Segundo operador",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Amor platónico",
+        "tipo": "Película",
+        "cargo": "Segundo operador",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "UNSHINY PICTURES",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "MARIA GARCIA GARCIA",
+      "email": "financial@leonstudio.tv",
+      "direccion": "CARRETERA DE LA CARRACA NAVE 60",
+      "poblacion": "SAN FERNANDO",
+      "telefonos": "671085278 - 687901050",
+      "redesSociales": "leonstudio",
+      "web": "www.leonstudio.tv"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "the crown",
+        "tipo": "titulos de credito",
+        "cargo": "socia",
+        "pais": "Inglaterra",
+        "anio": 2017,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "anuncio Tiffany",
+        "tipo": "anuncio publicitario",
+        "cargo": "socia",
+        "pais": "USA",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección",
+      "Ayudante Dirección/Script",
+      "Ayudante de Realización TV",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Mariló Capita Mengíbar",
+      "email": "marilocapita842@hotmail.com",
+      "direccion": "C/ Guatemala, 2, portal 5. 1G,",
+      "poblacion": "Río San Pedro, Puerto Real",
+      "telefonos": "661683477",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Mi Carnaval no me Falla",
+        "tipo": "Publicidad",
+        "cargo": "Jefa de Producción",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://youtu.be/omLNbOdOWw8?si=7FrC43ShSXeCFOhi"
+      },
+      {
+        "titulo": "Toda la noche, Andy y Lucas",
+        "tipo": "Videoclip",
+        "cargo": "Jefa Producción",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": "https://youtu.be/xV9LB8vuhmA?si=SsPk7TCQt2AuNVWT"
+      },
+      {
+        "titulo": "Mala Mía, Indara, Borja Rubio, Keen Levy",
+        "tipo": "Videoclip",
+        "cargo": "Jefa Producción",
+        "pais": "",
+        "anio": 2020,
+        "urlTrailer": "https://youtu.be/g2K06A2lAGA?si=3LHRVL8DjJp3YSlM"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Elena Almaraz Ruiz",
+      "email": "elenalmarr@gmail.com",
+      "direccion": "Calle San Sebastián, Nº 36, Piso 3, O2",
+      "poblacion": "Tarifa, Cádiz 11380",
+      "telefonos": "633509622",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La hora del té",
+        "tipo": "Corto",
+        "cargo": "Pértiga, auxiliar sonido",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": "https://www.youtube.com/watch?v=TJZIbhV8Jrc"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Juan Bautista Cuacarella Huerta",
+      "email": "jbcucarella@hotmail.com",
+      "direccion": "C/ Camino De Coripe, N⁰ 1",
+      "poblacion": "Chiclana De La Frontera 11130, Cádiz",
+      "telefonos": "+34623049879",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Los Abrazos Rotos, El embrujo de Shanghay, Quítate tu pa ponerme yo, Perdona bonita pero Lucas me quería a mí, The Kingdong Of Heaven, El Comisario, Mas que Amigos, Alaska y Mario Reality, Audi, Jazztel, etc...",
+        "tipo": "Películas, series, publicidad, promoción, etc...",
+        "cargo": "Maquillaje, Peluquería, actor",
+        "pais": "España",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "n/a",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Maria Alicia Moore (Mayorga)",
+      "email": "mooremedinasidonia@gmail.com",
+      "direccion": "Calle Doctor Thebussem 9",
+      "poblacion": "Medina Sidonia",
+      "telefonos": "669870 13",
+      "redesSociales": "Maria Mayorga Facebook",
+      "web": "www.nr9medinasidonia.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "n/a",
+        "tipo": "n/a",
+        "cargo": "n/a",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Auxiliar Dirección",
+      "Ayudante Dirección/Script"
+    ],
+    "contacto": {
+      "nombre": "Sofía Navarro",
+      "email": "losadalatorraca@gmail.com",
+      "direccion": "URB. EL MIRADOR 34 (11.408, Jerez de la Frontera)",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "626 870 643",
+      "redesSociales": "https://www.instagram.com/sofianavarro_ig/",
+      "web": "https://losadalatorraca.com/interprete/sofia-navarro/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "CORAJE",
+        "tipo": "Largometraje",
+        "cargo": "Actriz de reparto",
+        "pais": "ESPAÑA",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "CARRUSEL",
+        "tipo": "Cortometraje",
+        "cargo": "Guionista/Dirección/Actriz de reparto",
+        "pais": "ESPAÑA",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=oLSNJKobQ3c&ab_channel=CarruselFilm"
+      },
+      {
+        "titulo": "NUBES",
+        "tipo": "Cortometraje",
+        "cargo": "Ayudante de Dirección",
+        "pais": "ESPAÑA",
+        "anio": 2024,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Profesional Autónomo",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Antonio Jesús García de Quirós Rodríguez",
+      "email": "antoniogarciadquiros@gmail.com",
+      "direccion": "C/ Ciudad de Nules 21 Rota (Cádiz) 11520",
+      "poblacion": "Rota",
+      "telefonos": "654229063",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Memoria Viva",
+        "tipo": "Largometraje Documental",
+        "cargo": "Dirección/ Guión",
+        "pais": "España",
+        "anio": 2014,
+        "urlTrailer": "https://youtu.be/ObV5LGRGmW8?feature=shared"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Joaquín Pachón Sonido",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Joaquín Pachón",
+      "email": "info@joaquinpachon.com",
+      "direccion": "Héroes del Baleares",
+      "poblacion": "San Fernando",
+      "telefonos": "617926056",
+      "redesSociales": "https://www.instagram.com/jjoaquinpachon",
+      "web": "www.joaquinpachon.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "SECADEROS",
+        "tipo": "Largometraje",
+        "cargo": "Jefe de sonido",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://youtu.be/j12EczGepLM?si=F7JoG0WPBl7YxP2K"
+      },
+      {
+        "titulo": "LA HOJARASCA",
+        "tipo": "Largometraje",
+        "cargo": "Jefe de sonido",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://youtu.be/SCOW8YfaH0g?si=lskX40sW87fyUhjw"
+      },
+      {
+        "titulo": "Blanco en blanco",
+        "tipo": "Largometraje",
+        "cargo": "Jefe de sonido",
+        "pais": "España - Chile",
+        "anio": 2020,
+        "urlTrailer": "https://youtu.be/tPZpr2-Ergc?si=8N8wo5EkNHo2EtSD"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "ILUNION Hotels",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Carmen García",
+      "email": "cgarciaru@ilunionhotels.com",
+      "direccion": "Urb. Cabo Roche, s/n, 11140 Conil de la Frontera, Cádiz\nCarretera de la Loma, s/n, 11139 Chiclana de la Frontera, Cádiz",
+      "poblacion": "Sancti Petri y Conil",
+      "telefonos": "+34 687 875 467",
+      "redesSociales": "Instagram: https://www.instagram.com/ilunionhotels/\nFacebook: https://www.facebook.com/ilunionhotels/\nTikTok: https://www.tiktok.com/@ilunionhotels\nTwitter (X): https://twitter.com/ilunion\nLinkedIn: https://www.linkedin.com/company/1603033/admin/feed/posts/\nYouTube: https://www.youtube.com/@Ilunionhotels",
+      "web": "WWW.ILUNIONHOTELS.COM"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "NINGUNA DE MOMENTO",
+        "tipo": "NINGUNA DE MOMENTO",
+        "cargo": "NINGUNA DE MOMENTO",
+        "pais": "NINGUNA DE MOMENTO",
+        "anio": "NINGUNA DE MOMENTO",
+        "urlTrailer": "NINGUNA DE MOMENTO"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Aida Santos-Allely Cía",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Aida Santos-Allely",
+      "email": "infoaidas.a@gmail.com",
+      "direccion": "Avda Andalucía 83",
+      "poblacion": "Cadiz",
+      "telefonos": "649 104 863",
+      "redesSociales": "@aidasanallely_actriz (instagram) Aida Santos-Allely, actriz (pag. facebook) https://m.imdb.com/name/nm3937272/ (imdb)",
+      "web": "www.aidasantos-allely.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La Pícara de Cervantes",
+        "tipo": "teatro de pequeño formato",
+        "cargo": "directora, idea e interprete",
+        "pais": "España",
+        "anio": "Desde el 2022 en gira",
+        "urlTrailer": "https://youtu.be/WlXDKYh6938?si=hL85eebn4pqFQpBa"
+      },
+      {
+        "titulo": "Bar Adentro",
+        "tipo": "pequeño formato",
+        "cargo": "dirección e Interpretación",
+        "pais": "España",
+        "anio": "2018 y en actualidad",
+        "urlTrailer": "https://youtu.be/fjk05BwJMUw?si=xwDinE0YCjIAgGdr"
+      },
+      {
+        "titulo": "Mamacruz, Techo y comida",
+        "tipo": "pequeña",
+        "cargo": "actriz",
+        "pais": "España (Sevilla y Jerez)",
+        "anio": "2022/ 2016",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección",
+      "Ayudante de Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Elena Gil Escudier",
+      "email": "egilescudier@gmail.com",
+      "direccion": "Calle Obusera 2, San Fernando (Cádiz)",
+      "poblacion": "San Fernando",
+      "telefonos": "652645844",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "The Rhythm Section",
+        "tipo": "Cinematográfica Internacional",
+        "cargo": "Auxiliar de Producción",
+        "pais": "Estados Unidos/Reino Unido",
+        "anio": 2020,
+        "urlTrailer": "https://www.youtube.com/watch?v=0Uq_5bYGYoY"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Contacto Visual Films",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Javier Fénix Real",
+      "email": "",
+      "direccion": "Calle Orquidea 5 casa 5",
+      "poblacion": "Costa Ballena - Rota",
+      "telefonos": "+34 626060260",
+      "redesSociales": "Instagram - Facebook - Youtube",
+      "web": "En construccion"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "COCODRILAS",
+        "tipo": "Video de Inspiración.",
+        "cargo": "Dirección.",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://vimeo.com/512014039"
+      },
+      {
+        "titulo": "Almude Grandes. Pleamar de la palabra.",
+        "tipo": "Documental",
+        "cargo": "Dirección.",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://vimeo.com/741142232"
+      },
+      {
+        "titulo": "Antoñito Molina",
+        "tipo": "Documental",
+        "cargo": "Dirección",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=27fRHY8uu5k"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "HOOLISTIC MARKETING Y WEB S.L.",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "JUAN ANTONIO DE LA LUZ ZAMORANO",
+      "email": "juan.delaluz@hoolistic.es",
+      "direccion": "Pl. San Agustín, 2, 11005 Cádiz",
+      "poblacion": "CÁDIZ",
+      "telefonos": "607784704 - 611505223",
+      "redesSociales": "https://www.linkedin.com/company/hoolistic/",
+      "web": "https://hoolisticagency.com/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Gestión de marketing plataforma de documentales NOFICCIÓN",
+        "tipo": "Gestión de la comunicación",
+        "cargo": "Director de comunicación",
+        "pais": "ESPAÑA",
+        "anio": 2021,
+        "urlTrailer": "https://www.noficcion.com/"
+      },
+      {
+        "titulo": "Comunicación campaña 25 aniversario SEGIB",
+        "tipo": "Comunicación y gestión de presencia digital",
+        "cargo": "Director de marketing",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Arreglos y confección a medida Mercedes Mayone",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Mercedes Mayone Torbaño",
+      "email": "Arreglosmayone@yahoo.es",
+      "direccion": "Avd.Maria Auxiliadora N6 local 5",
+      "poblacion": "Cadiz",
+      "telefonos": "611645195 - 687983166",
+      "redesSociales": "Facebook, Instagram",
+      "web": "mercedesmayone.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Vive la pepa 2012 (manolo carrasco)",
+        "tipo": "Vestuario completo",
+        "cargo": "Direccion",
+        "pais": "España",
+        "anio": 2012,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Vestuario carnaval Cádiz coros,comparsas, etc",
+        "tipo": "Vestuario",
+        "cargo": "Direccion",
+        "pais": "España",
+        "anio": "2010 al 2021",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Sandra Pérez Aguilar",
+      "email": "Sandra.ccca@gmail.com",
+      "direccion": "C/Laganes 1 bj D",
+      "poblacion": "Alcala de los Gazules, Cádiz",
+      "telefonos": "627148184",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La vida sin ti",
+        "tipo": "Largometraje",
+        "cargo": "Jefa de caracterización",
+        "pais": "Cadiz",
+        "anio": 2019,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Olivaloló",
+    "categoriaEmpresa": [
+      "Ayudante de Realización TV",
+      "Dirección/Realización TV",
+      "Dirección de Casting"
+    ],
+    "contacto": {
+      "nombre": "María Oliva López López",
+      "email": "olivapublicidad.ol@gmail.com",
+      "direccion": "Avenida Consejo de Europa, edifico Atlas, nº6",
+      "poblacion": "Cádiz",
+      "telefonos": "634428334",
+      "redesSociales": "@olivalolo_",
+      "web": "olivalolo.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Compás",
+        "tipo": "Documental",
+        "cargo": "Dirección",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://youtu.be/goiEMPeDFw0"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Auxiliar Dirección",
+      "Ayudante Dirección/Script",
+      "Ayudante de Realización TV",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Adrián Prian Rueda",
+      "email": "adrianprianrueda@gmail.com",
+      "direccion": "Argantonio n°11 1 izquierda",
+      "poblacion": "Cadiz",
+      "telefonos": "601144823",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La cria de la liebre",
+        "tipo": "Cortometraje",
+        "cargo": "Director, Guionista y Editor",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://www.youtube.com/watch?v=1wM5uVj64rs"
+      },
+      {
+        "titulo": "Helio",
+        "tipo": "Cortometraje",
+        "cargo": "Director, Camarógrafo,",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=4iA5Oj8k_dY"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección",
+      "Ayudante Dirección/Script",
+      "Ayudante de Realización TV",
+      "Dirección/Realización TV",
+      "Dirección de Casting"
+    ],
+    "contacto": {
+      "nombre": "Sara Fernández Lozano",
+      "email": "readeproysfl@outlook.com",
+      "direccion": "Calle Almenas 38",
+      "poblacion": "Espera",
+      "telefonos": "656612881",
+      "redesSociales": "https://www.linkedin.com/in/sara-fern%C3%A1ndez-lozano-574b14233/",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "El inconveniente",
+        "tipo": "Largometraje de ficción",
+        "cargo": "Ayudante de producción",
+        "pais": "España",
+        "anio": 2019,
+        "urlTrailer": "https://www.youtube.com/watch?v=pLClwmbBlIE"
+      },
+      {
+        "titulo": "Operación Barrio Inglés",
+        "tipo": "Serie TV",
+        "cargo": "Ayudante de casting",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=WJIH0DJQ-O4"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Paracon Producciones",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "José Manuel Rebollo Preciados",
+      "email": "produccionesparacon@gmail.com",
+      "direccion": "Calle Almirante Chacón, Bloque 10B, 1D.",
+      "poblacion": "El puerto de Santa María (Cádiz)",
+      "telefonos": "675 67 64 71",
+      "redesSociales": "https://www.instagram.com/paraconproducciones/",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Sola",
+        "tipo": "Largometraje",
+        "cargo": "Productor,  guionista, director",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=ZKVfTHiFLIo"
+      },
+      {
+        "titulo": "Coraje",
+        "tipo": "Largometraje",
+        "cargo": "Productor, guionista, director",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "José Manuel Rebollo Preciados",
+      "email": "produccionesparacon@gmail.com",
+      "direccion": "Calle Almirante Chacón, Bloque 10B, 1D",
+      "poblacion": "El Puerto de Santa María",
+      "telefonos": "675 67 64 71",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Sola",
+        "tipo": "Largometraje",
+        "cargo": "Productor, guionista, director",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=ZKVfTHiFLIo"
+      },
+      {
+        "titulo": "Tú",
+        "tipo": "Cortometraje",
+        "cargo": "Director, guionista, productor.",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://www.youtube.com/watch?v=ANUewwDlmwU"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Migue \"Melele\" Sánchez Gutiérrez",
+      "email": "melelesanchez@gmail.com",
+      "direccion": "Calle Margarita Salas, 22, 11407 Jerez de la Frontera",
+      "poblacion": "Jerez de la Fra.",
+      "telefonos": "667238893",
+      "redesSociales": "https://www.imdb.com/name/nm2137563/?ref_=nv_sr_srsg_0_tt_5_nm_3_q_melele",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "El pacto",
+        "tipo": "Largometraje dirigido por Guy Ritchie",
+        "cargo": "UPM (Jefe de producció)",
+        "pais": "España",
+        "anio": "2021/2022",
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Jack Ryan",
+        "tipo": "Serie de tv para Amazon Prime",
+        "cargo": "UPM",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "DESTINO AGENCIA CREATIVA 25 SLU",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "ANTONIO JIMÉNEZ APARICIO",
+      "email": "hola@destinoestudio.com",
+      "direccion": "C/ GENERAL GARCÍA DE LA HERRÁN, Nº5, PRIMERA PLANTA - OFICINA Nº2",
+      "poblacion": "San Fernando (Cádiz)",
+      "telefonos": "661 866 267",
+      "redesSociales": "",
+      "web": "destinoestudio.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Hummel",
+        "tipo": "Anuncio publicidad",
+        "cargo": "Diseño y producción Audiovisual",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Faly Vila Trabajos Verticales",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Rafael Vila Naranjo",
+      "email": "fv-47@hotmail.com",
+      "direccion": "Calle Sacramento, 16 - 1º dcha",
+      "poblacion": "Cádiz",
+      "telefonos": "640815847",
+      "redesSociales": "https://www.facebook.com/falivila.pinturas",
+      "web": "falivila.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Kaos",
+        "tipo": "Serie TV",
+        "cargo": "Retirada decorado",
+        "pais": "Reino Unido",
+        "anio": 2022,
+        "urlTrailer": "https://www.netflix.com/es/title/80997258"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "La Santa Streetwear S.L",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "David Freire González",
+      "email": "Lasantasw@gmail.com",
+      "direccion": "Calle Ancha 11",
+      "poblacion": "Cadiz",
+      "telefonos": "660181556",
+      "redesSociales": "Www.instagram.com/lasantastreetwear www.instagram.com/lasantaartgallery",
+      "web": "Www.lasantastreetwear.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Jerez tattoo convention",
+        "tipo": "Gestión y montaje de galería de arte",
+        "cargo": "Logística, montaje y producción.",
+        "pais": "España",
+        "anio": "W014",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "SAN RAFAEL IMPRESION SL",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "CARMELO GARCIA MUÑOZ",
+      "email": "copisteriasanrafael@yahoo.es",
+      "direccion": "BENJUMEDA 36",
+      "poblacion": "CADIZ",
+      "telefonos": "667575426 - 956 22 06 06",
+      "redesSociales": "COPISTERIA SAN RAFAEL",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "LATIN GRAMMY",
+        "tipo": "Carteleria",
+        "cargo": "carteleria",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Jose Cruz Guerrero",
+      "email": "josecruzguererro@icloud.com",
+      "direccion": "Calle San Rafael, 21",
+      "poblacion": "Benalup-Casas Viejas",
+      "telefonos": "628716930",
+      "redesSociales": "Losamigosdelanovia",
+      "web": "www.losamigosdelanovia.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La Ley Del Mar (Netflix)",
+        "tipo": "Ficción",
+        "cargo": "Ayudante de decoración,",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://youtu.be/SJHuU6g5MZo?si=IIPLl2uWoTUGL98E"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "PEPA BANDERA",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "MARIA JOSE GRANDE BRIHUEGA",
+      "email": "mariajose@pepabandera.es",
+      "direccion": "CUESTA DE LAS CALESAS 37, MODULO 7, CÁDIZ (IFEF)",
+      "poblacion": "CÁDIZ",
+      "telefonos": "659925165 - 606395186",
+      "redesSociales": "@soypepabandera (IG)",
+      "web": "www.pepabandera.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "WARNER",
+        "tipo": "CINEMATOGRÁFICA",
+        "cargo": "LOCALIZADOR EMPLAZAMIENTOS, SERVICIOS DE RESTAURACIÓN, ALOJAMIENTO Y ORGANIZACIÓN DE EVENTOS Y EXPERIENCIAS DE SEGMENTO LUJO Y PREMIUM",
+        "pais": "EEUU",
+        "anio": 2024,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Alicia Monzo Romero",
+      "email": "aliciamonzo14@gmail.com",
+      "direccion": "Calle Segismundo Moret n2",
+      "poblacion": "Cádiz",
+      "telefonos": "688300174",
+      "redesSociales": "Instagram: aliciamonzo01 Facebook: Alicia Monzo Romero",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "He realizado varios cortometrajes, adjunto videobook",
+        "tipo": "Cortometraje",
+        "cargo": "Actriz",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": "https://youtu.be/ey8q5D4xhA4?si=Pq8EI2Zem4hvkMAd"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Ayudante Dirección/Script",
+      "Ayudante de Realización TV",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Ezequiel González Macías",
+      "email": "ezequielgonmac@gmail.com",
+      "direccion": "Calle Plus Ultra N°7 / 8C",
+      "poblacion": "Cádiz",
+      "telefonos": "722332727",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Realización de Proyectos Audiovisuales y Espectáculos",
+        "tipo": "Eh! Chaval",
+        "cargo": "Iluminación",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Jose Cruz Guerrero",
+      "email": "josecruzguerrero@icloud.com",
+      "direccion": "San Rafael,21",
+      "poblacion": "Benalup-Casas Viejas",
+      "telefonos": "628716930",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La Ley Del Mar (Netflix)",
+        "tipo": "Ficción",
+        "cargo": "Ayudante de decoración, regiduria",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Catering Momento Andaluz",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Augusto Martínez Ruiz",
+      "email": "Info@momentoandaluz.com",
+      "direccion": "Camino lago Ladoga, Finca El Sotillo s/n",
+      "poblacion": "Chiclana de la Fra",
+      "telefonos": "608179303 - 956230159",
+      "redesSociales": "",
+      "web": "Www.momentoandaluz.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Mi casa es la tuya",
+        "tipo": "Programa de televisión",
+        "cargo": "Catering",
+        "pais": "España",
+        "anio": "2018-2020",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Ana Salas",
+      "email": "Anasalas86@gmail.com",
+      "direccion": "Costa del sol 4 Jerez de la Frontera",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "623406595 - 629604444",
+      "redesSociales": "",
+      "web": "Www.anasalasactriz.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Actriz reparto serie 4 estrellas RTVE",
+        "tipo": "Toboggan Studios C.",
+        "cargo": "Actriz",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Actriz reparto Largometraje Coraje",
+        "tipo": "Paracon Producciones",
+        "cargo": "Actriz",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Actriz secundaria “La más fuerte”",
+        "tipo": "El espejo producciones",
+        "cargo": "Actriz",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Auxiliar Dirección",
+      "Ayudante Dirección/Script",
+      "Ayudante de Realización TV",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Álvaro Aguilera Herrera",
+      "email": "alvaro14042000@gmail.com",
+      "direccion": "Calle La Rioja, 14",
+      "poblacion": "Medina Sidonia",
+      "telefonos": "678 89 18 44",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Operaicon:Barrio Inglés",
+        "tipo": "Serie TV",
+        "cargo": "Becario de Produccion",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=WJIH0DJQ-O4"
+      },
+      {
+        "titulo": "Festival de Cine Europeo Sevilla 2022",
+        "tipo": "Festivales y eventos",
+        "cargo": "Regidor de sala y acomodador",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Jérez Televisión",
+        "tipo": "TV",
+        "cargo": "Operador de Cámara",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Q Hotels",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Juan Manuel Sánchez Velarde",
+      "email": "jmsanchez@qhotels.es",
+      "direccion": "Glorieta Ana Orantes, 5 - 11010 (Cádiz)",
+      "poblacion": "Cadiz",
+      "telefonos": "659865998 - 954257325",
+      "redesSociales": "Facebook, You tube, Pinterest, Instagram, Linkedin. Tik Tok.",
+      "web": "www.qhotels.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La últimas de la fila. Productora: Atípica Films . Netflix.",
+        "tipo": "Serie",
+        "cargo": "Direccion",
+        "pais": "España.",
+        "anio": 2021,
+        "urlTrailer": "https://www.netflix.com/es/title/81189100"
+      },
+      {
+        "titulo": "La lista de los deseos",
+        "tipo": "Pelicula",
+        "cargo": "",
+        "pais": "España",
+        "anio": 2019,
+        "urlTrailer": "https://youtu.be/Wjw-ciaDZsc"
+      },
+      {
+        "titulo": "Little Birds",
+        "tipo": "Película",
+        "cargo": "",
+        "pais": "EEUU",
+        "anio": 2019,
+        "urlTrailer": "https://www.bing.com/videos/riverview/relatedvideo?q=trailer+little+birds&mid=6D49C33CFE6CCE0000F26D49C33CFE6CCE0000F2&FORM=VIRE"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Autonomo",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "León Sánchez Martín",
+      "email": "leonsanchezmartin94@gmail.com",
+      "direccion": "Avda. Marconi n10º 3ºB ,Cádiz 11009",
+      "poblacion": "Cádiz",
+      "telefonos": "622362862",
+      "redesSociales": "@leonsanchezmartin",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La noche dentro",
+        "tipo": "Cortometraje",
+        "cargo": "Gaffer/Jefe de eléctricos",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Honor",
+        "tipo": "Serie de televisión",
+        "cargo": "Eléctrico",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Andalusian Crush",
+        "tipo": "Spot publicitario",
+        "cargo": "Eléctrico",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "ANTONIO MORENILLA",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "ANTONIO FRANCISCO MORENILLA DIAZ",
+      "email": "morehh@gmail.com",
+      "direccion": "CAMPANILLEROS, 26 K",
+      "poblacion": "SAN FERNANDO",
+      "telefonos": "+34 647864915",
+      "redesSociales": "@byantoniomorenilla (IG)",
+      "web": "www.byantoniomorenilla.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "El carnaval de los Invisible",
+        "tipo": "Documental",
+        "cargo": "Director de fotografia/camara",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://youtu.be/mzPUSbNJTd8?si=5Ty-C33fnRk0zCVq"
+      },
+      {
+        "titulo": "Making of / BTS",
+        "tipo": "Publicidad",
+        "cargo": "Director",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://youtu.be/sNiaSRDkyVQ?si=V2fx91xWRKG7Lay4"
+      },
+      {
+        "titulo": "Publicidad",
+        "tipo": "Publicidad",
+        "cargo": "Director de fotografia",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://youtu.be/9cN9i0hbF4Y?si=uXlsjNQ2QpA7gINf"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Andrea Ganfornina García",
+      "email": "andreaganforninaguion@gmail.com",
+      "direccion": "C/ Joaquín Turina Número 1",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "655072318",
+      "redesSociales": "Instagram: andreaganfornina",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Quejío de loba",
+        "tipo": "Cortometraje",
+        "cargo": "Guionista, directora",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "La más fuerte",
+        "tipo": "Mediometraje",
+        "cargo": "Script",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Sexo débil",
+        "tipo": "Obra teatral",
+        "cargo": "Actriz",
+        "pais": "España",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "BLUEDRONE",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "JOSE DIAZ OROZCO",
+      "email": "info@grupobluedrone.com",
+      "direccion": "Calle Navio San Juan Nepomuceno, 31",
+      "poblacion": "San Fernando",
+      "telefonos": "633 50 78 41",
+      "redesSociales": "SI",
+      "web": "SI"
+    },
+    "trabajosDestacados": []
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección",
+      "Ayudante de Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Rosa Santander Pérez",
+      "email": "santanderrosa3@gmail.com",
+      "direccion": "Hospital de Mujeres 69,2ºD",
+      "poblacion": "Cádiz",
+      "telefonos": "605279528",
+      "redesSociales": "instagram: santanderosa",
+      "web": "no tiene experiencia"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "iluminación, captación y tratamiento de imagen",
+        "tipo": "técnico superior",
+        "cargo": "estudios",
+        "pais": "España",
+        "anio": "2023-24",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "María José Martín López",
+      "email": "merijmartin@gmail.com",
+      "direccion": "Camino de la noria, 10B",
+      "poblacion": "Chiclana de la Frontera",
+      "telefonos": "630384878",
+      "redesSociales": "@hellomerijmartin @merijmartin",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Jack Ryan S4",
+        "tipo": "Superproducción, Amazon",
+        "cargo": "Ayudante de producción, driver",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://youtu.be/Khev0mSFK7k?si=JExhSSEVtotjxKdx"
+      },
+      {
+        "titulo": "Lioness: Special Ops",
+        "tipo": "Superproducción, Paramount",
+        "cargo": "Ayudante de producción, unit set",
+        "pais": "España",
+        "anio": "2022-2023",
+        "urlTrailer": "https://youtu.be/2sJTSw2qWnQ?si=Imhx-pPlN-Ht0Iq5"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Gadesdron",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Jesús del Real Pasquin",
+      "email": "contacto@gadesdron.es",
+      "direccion": "Avda Cayetano del Toro 19 4B",
+      "poblacion": "Cadiz",
+      "telefonos": "634530791",
+      "redesSociales": "En proceso",
+      "web": "En proceso"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Bodas",
+        "tipo": "Reportaje fotográfico y video",
+        "cargo": "Piloto, cámara y CEO",
+        "pais": "España",
+        "anio": 2018,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "MAPACHE PRODUCCIONES SL",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "ANA MARIA GALLARDO VALLE",
+      "email": "info@mapacheproductions.com",
+      "direccion": "C/   LEVANTE  30  ,  11500",
+      "poblacion": "EL PUERTO DE SANTA MARIA",
+      "telefonos": "639884806",
+      "redesSociales": "",
+      "web": "http://www.mapacheproductions.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "\"LOVE ISLAND\"",
+        "tipo": "RTL    REALITY SHOW",
+        "cargo": "JEFA DE PRODUCCION",
+        "pais": "ESPAÑA + HOLANDA",
+        "anio": 2022,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "\"THE PIG\"",
+        "tipo": "FILM",
+        "cargo": "UNIT MANAGER",
+        "pais": "SPAIN",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "TRAVEL SHOW",
+        "tipo": "UFA  SHOW   &  FACTUAL",
+        "cargo": "JEFA DE LOCALIZACIONES/UNIT MANAGER",
+        "pais": "ESPAÑA / ALEMANIA",
+        "anio": 2020,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Ayudante de Realización TV"
+    ],
+    "contacto": {
+      "nombre": "ANA GALLARDO",
+      "email": "ana@mapacheproductions.com",
+      "direccion": "LEVANTE  30",
+      "poblacion": "EL PUERTO DE SANTA MARIA",
+      "telefonos": "639884806",
+      "redesSociales": "https://www.linkedin.com/in/ana-gallardo-8b80b966",
+      "web": "http://www.mapacheproductions.com/#About"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "THE PIG",
+        "tipo": "FILM",
+        "cargo": "UNIT MANAGER",
+        "pais": "ESPAÑA",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "NARHANI",
+        "tipo": "FILM",
+        "cargo": "JEFA DE LOCALIZACIONES / UNIT MANAGER",
+        "pais": "ESPAÑA / ALEMANIA",
+        "anio": 2022,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "DROOM VAN DE JEUGD",
+        "tipo": "FILM   TOPKAPFILMS NL",
+        "cargo": "JEFA DE LOCALIZACIONES",
+        "pais": "ESPAÑA  /  HOLANDA",
+        "anio": 2022,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Macanaz joyeros artesanos y Antigüedades Macanaz",
+    "categoriaEmpresa": [
+      "Ayudante Producción"
+    ],
+    "contacto": {
+      "nombre": "Maria Teresa Sanchez Duarte",
+      "email": "peju1310@gmail.com",
+      "direccion": "Canovas del Castillo 9",
+      "poblacion": "Cadiz",
+      "telefonos": "652923986 - 601226856",
+      "redesSociales": "Facebook Macanaz artesanos, y Antigüedades Macanaz Cadiz\ninstagram joyeria Macanaz",
+      "web": "Macanazjoyeros.com ( en remodelación)"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Ninguno",
+        "tipo": "Ninguno",
+        "cargo": "Ninguno",
+        "pais": "",
+        "anio": 2024,
+        "urlTrailer": "Ninguno"
+      },
+      {
+        "titulo": "knith and Day",
+        "tipo": "",
+        "cargo": "",
+        "pais": "",
+        "anio": null,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Auxiliar Dirección",
+      "Ayudante Dirección/Script"
+    ],
+    "contacto": {
+      "nombre": "Mesa de Teatro de participación ciudadana de Cádiz",
+      "email": "mesadeteatrocadiz@gmail.com",
+      "direccion": "Avda. De la Constitución n°21 2°A",
+      "poblacion": "Càdiz",
+      "telefonos": "659023331",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Varias",
+        "tipo": "Teatro y corto",
+        "cargo": "Todas las relacionadas con la actividad dentro de las artes escénicas",
+        "pais": "España",
+        "anio": "2018-2024",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Ana Oliva Ariza",
+      "email": "aolivaariza@gmail.com",
+      "direccion": "Calle Antonio Gala, 27",
+      "poblacion": "Puerto Real",
+      "telefonos": "692569519",
+      "redesSociales": "anaolar23",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Tierra de Nadie",
+        "tipo": "Largometraje",
+        "cargo": "Meritoria de cámara",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "We Were The Lucky Ones",
+        "tipo": "Serie",
+        "cargo": "Camera Trainee",
+        "pais": "Rumanía",
+        "anio": 2023,
+        "urlTrailer": "https://youtu.be/hOOn7Wb8sNw?si=8YOO9kLlvRPQkfSY"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Ayudante Dirección/Script"
+    ],
+    "contacto": {
+      "nombre": "Juan Antonio Polo Vallejo",
+      "email": "japolov11@gmail.com",
+      "direccion": "C/ Arquitecto Torcuato Cayón 9-4º-B",
+      "poblacion": "San Fernando",
+      "telefonos": "627243145",
+      "redesSociales": "https://www.facebook.com/juanantonio.polovallejo\nhttps://www.instagram.com/juan_polo_v/",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "3 días de enero",
+        "tipo": "cortometraje",
+        "cargo": "guionista/ actor",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://youtu.be/NGJ-fK5vypg?si=TtGPPfPW98-3jHal"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Elisa Cortés actriz",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Elisa Cortés",
+      "email": "elisacortesactriz@gmail.com",
+      "direccion": "Dr. José Manuel Pascual y Pascual",
+      "poblacion": "Cádiz",
+      "telefonos": "677612430",
+      "redesSociales": "elisa_cinco",
+      "web": "https://elisacortes.weebly.com/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Mi gran despedida",
+        "tipo": "Largometraje",
+        "cargo": "Actriz",
+        "pais": "",
+        "anio": 2019,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Autónoma",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Anna Melià Zarroca",
+      "email": "nana.melzar@gmail.com",
+      "direccion": "Enrique de las Marinas, 26",
+      "poblacion": "Cádiz",
+      "telefonos": "678917738",
+      "redesSociales": "",
+      "web": "https://www.linkedin.com/in/anna-melia-zarroca/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Festival Iberoamericano de Teatro de Cádiz",
+        "tipo": "Festivals de artes escénicas",
+        "cargo": "Técnica de producción, participación y mediación",
+        "pais": "",
+        "anio": "2021/22/23",
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Producción IX Congreso Internacional de la Lengua Española",
+        "tipo": "Congreso internacional",
+        "cargo": "Coordinacion de espacios y equipos profesionales técnicos y de asistencia",
+        "pais": "",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Barcelona Acció Musical - Cultura Viva",
+        "tipo": "Espacio de programación de actividades culturales",
+        "cargo": "Técnica de producción. Coordinación de equipos",
+        "pais": "",
+        "anio": "2017/18/19/20",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Iosune Onraita",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección de Casting"
+    ],
+    "contacto": {
+      "nombre": "Iosune Onraita",
+      "email": "iosune.es@gmail.com",
+      "direccion": "Vea Murguia 40",
+      "poblacion": "Cádiz",
+      "telefonos": "+34 659738998",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "1000 Lines",
+        "tipo": "Largometraje. Fresco Film SL, Warner Bros, Ufafiction y Feine Filme",
+        "cargo": "Coordinadora vehículos escena",
+        "pais": "Alemania",
+        "anio": 2021,
+        "urlTrailer": "https://www.youtube.com/watch?v=XCiXmtEeluo"
+      },
+      {
+        "titulo": "Top Boy",
+        "tipo": "Serie TV. NETFLIX Internacional. Fresco Film SL",
+        "cargo": "Coordinadora vehículos escena",
+        "pais": "Inglaterra",
+        "anio": 2021,
+        "urlTrailer": "https://www.youtube.com/watch?v=h9MSHl40z-g"
+      },
+      {
+        "titulo": "La voz Dormida",
+        "tipo": "Largometraje",
+        "cargo": "Actriz. Pequeña parte",
+        "pais": "España",
+        "anio": 2011,
+        "urlTrailer": "https://www.youtube.com/watch?v=jBCrSolMDyw"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección"
+    ],
+    "contacto": {
+      "nombre": "Rosana Muñoz Valiente",
+      "email": "rosanamv7303@gmail.com",
+      "direccion": "Avda. Cayetano del Toro, 44-4-E - 11010 Cádiz",
+      "poblacion": "Cádiz",
+      "telefonos": "687485766 - 696072075",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "F.I.T. de Cádiz",
+        "tipo": "Festival Iberoamericano de Teatro",
+        "cargo": "Ayte. Gerente Fundación Mun. Cultura Cádiz",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Veles e Venta - Xarxa Teatre",
+        "tipo": "Teatro de calle gran formato",
+        "cargo": "Ayte. Producción",
+        "pais": "España",
+        "anio": 1994,
+        "urlTrailer": "xarxateatre.com/veles-e-vents/"
+      },
+      {
+        "titulo": "Deus o Bèsties - Xarxa Teatre",
+        "tipo": "Teatro de calle gran formato",
+        "cargo": "Productora Ejecutiva",
+        "pais": "España",
+        "anio": 2000,
+        "urlTrailer": "youtube.com/watch?v=mjQOAvZTVHY&t=130s&b_channel=LesJoiesdeBenissa"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección",
+      "Ayudante de Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Ana Belén García Castro",
+      "email": "condesmesura@gmail.com",
+      "direccion": "c/ Rafael de la Viesca 14 bajo izquierda",
+      "poblacion": "Cádiz",
+      "telefonos": "644369511",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "This city is ours",
+        "tipo": "Serie de la BBC",
+        "cargo": "Figurante",
+        "pais": "",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "La invasión del elefante",
+        "tipo": "Teatro",
+        "cargo": "Actriz",
+        "pais": "",
+        "anio": 2022,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Sitios, lugares para ser",
+        "tipo": "Teatro",
+        "cargo": "Actriz",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Particular (actriz)",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Susana Cruz Garcia",
+      "email": "susanacr.g@hotmail.com",
+      "direccion": "C/ Bélgica 89, Urb. Roche. Conil (Cádiz)",
+      "poblacion": "Conil (Cádiz)",
+      "telefonos": "646406614",
+      "redesSociales": "Instagram: @susanacr.g      facebook: Susana Cruz García",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "El amor de Andrea",
+        "tipo": "Largometraje",
+        "cargo": "Actriz de pequeñas partes",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Memoria",
+        "tipo": "Cortometraje",
+        "cargo": "Actriz",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://youtu.be/D5jBpqwoRyo?si=1hHqv0ghP1QZnreM"
+      },
+      {
+        "titulo": "La plegaria del pájaro",
+        "tipo": "Cortometraje",
+        "cargo": "Actriz",
+        "pais": "ESPAÑA",
+        "anio": 2022,
+        "urlTrailer": "https://youtu.be/0lQJso1MUuE?si=O7wTmfMmPuO6U08W"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "albarco.com",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Javier Ramirez Guillon",
+      "email": "info@albarco.com",
+      "direccion": "Avenida del Puerto 1 local 5",
+      "poblacion": "Cadiz",
+      "telefonos": "617378884 - 667511006",
+      "redesSociales": "@albarco",
+      "web": "www.albarco.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Rodajes a bordo",
+        "tipo": "Cine, anuncios, etc",
+        "cargo": "Comercial",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Jonatan Pantoja Garrido",
+      "email": "johnpantoja.cdz@gmail.com",
+      "direccion": "Calle Pintor Clemente de Torres 2, 2ºC",
+      "poblacion": "Cádiz",
+      "telefonos": "609502962",
+      "redesSociales": "Facebook: johnpantoja.actor, instagram: john_pantoja_",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "LA BELLA ESCONDIDA",
+        "tipo": "LARGOMETRAJE",
+        "cargo": "Actor",
+        "pais": "España",
+        "anio": 2018,
+        "urlTrailer": "https://www.youtube.com/watch?v=HZjzIP_msF8&list=PLN-pVh4Mx6DqLdIB1g8FE10rAbB-xdow9&index=4&ab_channel=ErytheiaProducciones"
+      },
+      {
+        "titulo": "Mitomaniac",
+        "tipo": "Largometraje",
+        "cargo": "Actor",
+        "pais": "España",
+        "anio": 2018,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Serie en streaming \"Your name here\"",
+        "tipo": "Cortometraje",
+        "cargo": "Actor",
+        "pais": "España",
+        "anio": "2018 - 2019",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Jonatan Pantoja Garrido",
+      "email": "johnpantoja.cdz@gmail.com",
+      "direccion": "Pintor Clemente de Torres 2, 2ºC",
+      "poblacion": "Cádiz",
+      "telefonos": "609502962",
+      "redesSociales": "https://www.facebook.com/johnpantoja.actor/ ;  https://www.instagram.com/john_pantoja_/ ;",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Anuncio cerveza Cruzcampo",
+        "tipo": "Anuncio de televisión.",
+        "cargo": "Actor figurante",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=taufzT5vfXo&ab_channel=cruzcampoTV"
+      },
+      {
+        "titulo": "El Cuervo",
+        "tipo": "Serie en Streaming",
+        "cargo": "Actor",
+        "pais": "España",
+        "anio": 2018,
+        "urlTrailer": "https://www.imdb.com/title/tt24295222/?language=es-es"
+      },
+      {
+        "titulo": "La Bella Escondida",
+        "tipo": "Largometraje",
+        "cargo": "Actor",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://www.imdb.com/title/tt24246310/?ref_=nv_sr_srsg_0_tt_2_nm_0_in_0_q_La%2520bella%2520escondida"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Jonatan Pantoja Garrido",
+      "email": "johnpantoja.cdz@gmail.com",
+      "direccion": "Calle Pintor Clemente de Torres 2, 2ºC",
+      "poblacion": "Cádiz",
+      "telefonos": "609502962",
+      "redesSociales": "https://www.facebook.com/johnpantoja.actor/ ; https://www.instagram.com/john_pantoja_/",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Capítulo 1, Versículo 8",
+        "tipo": "Cortometraje",
+        "cargo": "Actor",
+        "pais": "España",
+        "anio": 2017,
+        "urlTrailer": "https://www.imdb.com/title/tt24505888/?ref_=ttco_ov_i"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Lisa Ann Hernandez",
+      "email": "lisa@lisahernandez.com",
+      "direccion": "Calle Canarias 2, 11100 San Fernando Cádiz",
+      "poblacion": "San Fernando",
+      "telefonos": "655987621",
+      "redesSociales": "Instagram y Facebook @lisahernandezmakeup",
+      "web": "LisaHernandez.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Game of Thrones (Juego de Tronos)",
+        "tipo": "Serie (HBO)",
+        "cargo": "Maquillaje",
+        "pais": "España y Irlanda",
+        "anio": "2014-2018",
+        "urlTrailer": "http://www.imdb.me/lisahernandez"
+      },
+      {
+        "titulo": "Foundation",
+        "tipo": "Serie (Apple TV)",
+        "cargo": "Maquillaje",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "http://www.imdb.me/lisahernandez"
+      },
+      {
+        "titulo": "We Were The Lucky Ones",
+        "tipo": "Serie (Disney+ Hulu)",
+        "cargo": "Maquillaje",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "http://www.imdb.me/lisahernandez"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador"
+    ],
+    "contacto": {
+      "nombre": "Lucía Jiménez Moreno",
+      "email": "ljm2505@gmail.com",
+      "direccion": "Urb. La Rotonda Bloq 1 2C",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "690145757",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "CUANDO SE ACARICIAN LAS ESPINAS",
+        "tipo": "CORTOMETRAJE",
+        "cargo": "DIRECTORA DE ARTE",
+        "pais": "",
+        "anio": 2024,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "VIDEODANZA JUST ASKING",
+        "tipo": "VIDEODANZA",
+        "cargo": "DIRECTORA DE ARTE",
+        "pais": "",
+        "anio": 2023,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "MARÍA MANRIQUE “LA GRAN CAPITANA”",
+        "tipo": "DOCUMENTAL",
+        "cargo": "AYUDANTE DE PRODUCCIÓN",
+        "pais": "",
+        "anio": 2021,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Benson Señora Producciones",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Ignacio Sacaluga Rodriguez",
+      "email": "isacaluga@gmail.com",
+      "direccion": "Calle Santa Cruz de Tenerife, 11. Bj. Izq.",
+      "poblacion": "Cádiz",
+      "telefonos": "607149159",
+      "redesSociales": "@NSacaluga/@nacho_sacaluga",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Palabra de Capitán",
+        "tipo": "Documental",
+        "cargo": "Director y guionista",
+        "pais": "España",
+        "anio": 2020,
+        "urlTrailer": "https://youtu.be/dQgsmUhBaXo?si=EKgtP-9EYRrHJGT_"
+      },
+      {
+        "titulo": "La Noche del Mundo",
+        "tipo": "Documental",
+        "cargo": "Director y guionista",
+        "pais": "España",
+        "anio": 2016,
+        "urlTrailer": "https://youtu.be/o9Kl5ZtVfbE?si=V0Hlm2khud4XYflp"
+      },
+      {
+        "titulo": "Febrero, cuando la vida es carnaval",
+        "tipo": "Documental",
+        "cargo": "Director y guionista",
+        "pais": "España",
+        "anio": 2009,
+        "urlTrailer": "https://youtu.be/xtSeW4FRHEY?si=b5GSHAjHlAxjW9Pm"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Guaino Produce SL",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Paco Sepúlveda",
+      "email": "info@guainotproduce.com",
+      "direccion": "Calle Urbión 8, Las Rozas, Madrid",
+      "poblacion": "Madrid",
+      "telefonos": "663227975",
+      "redesSociales": "@pacosepulveda @guainotproduce",
+      "web": "www.guainotproduce.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "El juego",
+        "tipo": "Largomeraje de ficción",
+        "cargo": "Productor / director / guionista",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=S9x8qnaGc0M&t=8s&ab_channel=Vertice360Spain"
+      },
+      {
+        "titulo": "Historias",
+        "tipo": "Largometraje de ficción",
+        "cargo": "Productor. / director /guionista",
+        "pais": "España / Uruguay",
+        "anio": 2024,
+        "urlTrailer": "https://www.youtube.com/watch?v=01ACPCwY0sk&t=5s&ab_channel=Cinecon%C3%91"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Auxiliar Dirección",
+      "Ayudante Dirección/Script"
+    ],
+    "contacto": {
+      "nombre": "Guillermo Rodríguez Durán",
+      "email": "guillermago@gmail.com",
+      "direccion": "Calle Arcos nº 3 Junta de los Ríos",
+      "poblacion": "Arcos de la Frontera",
+      "telefonos": "622 43 78 42",
+      "redesSociales": "@guillermorodur",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Todas las sábanas de la Tierra",
+        "tipo": "Producción de bajo presupuesto",
+        "cargo": "Guionista, Director y Montador",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://www.youtube.com/watch?v=5bmefMyHzes&t=8s"
+      },
+      {
+        "titulo": "Cucurucho",
+        "tipo": "Regulada. Asalariado.",
+        "cargo": "Script y Coach de Interpretación Infantil",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://www.youtube.com/watch?v=-01GwFis65A"
+      },
+      {
+        "titulo": "Azul Royale",
+        "tipo": "Producción propia. Autofinanciación.",
+        "cargo": "Guion, Producción y Dirección",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "Pendiente de estreno."
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección de Casting"
+    ],
+    "contacto": {
+      "nombre": "Mabel Carrión Roncero",
+      "email": "mabelcarrionroncero@gmail.com",
+      "direccion": "Avda Santa María del Mar 15, bloque 15b 1a",
+      "poblacion": "El Puerto de Santa María",
+      "telefonos": "616538157",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "SOLA",
+        "tipo": "LARGOMETRAJE",
+        "cargo": "ACTRIZ",
+        "pais": "ESPAÑA",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=ZKVfTHiFLIo"
+      },
+      {
+        "titulo": "LOCAS",
+        "tipo": "TEATRO",
+        "cargo": "ACTRIZ",
+        "pais": "ESPAÑA",
+        "anio": 2022,
+        "urlTrailer": "https://www.instagram.com/p/Cj-eD4mDHft/"
+      },
+      {
+        "titulo": "EN UN VASO DE AGUA",
+        "tipo": "CORTOMETRAJE",
+        "cargo": "DIRECCIÓN GUIONISTA ACTRIZ",
+        "pais": "ESPAÑA",
+        "anio": 2024,
+        "urlTrailer": "https://youtu.be/g3zcxF0cvpg"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Ayudante de Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Emilia Ortiz",
+      "email": "emilia14260@gmail.com",
+      "direccion": "Trebujena",
+      "poblacion": "Trebujena",
+      "telefonos": "649320551",
+      "redesSociales": "http://linkedin.com/in/emilia-ortiz-744627239",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "“30 Monedas”T2",
+        "tipo": "Serie",
+        "cargo": "Auxiliar de localizaciones",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://m.youtube.com/watch?v=t_9LcSjf1zg&pp=ygUWMzAgbW9uZWRhcyB0ZW1wb3JhZGEgMg%3D%3D"
+      },
+      {
+        "titulo": "“The Head” T2",
+        "tipo": "Serie",
+        "cargo": "Data wrangler",
+        "pais": "España, internacional",
+        "anio": 2022,
+        "urlTrailer": "https://m.youtube.com/watch?v=50jiUGlsj6A&t=7s&pp=ygUKVGhlIGhlYWQgMg%3D%3D"
+      },
+      {
+        "titulo": "Spot Tezenis Spring 2023",
+        "tipo": "Publicidad",
+        "cargo": "Auxiliar de localizaciones",
+        "pais": "España, internacional",
+        "anio": 2023,
+        "urlTrailer": "https://m.youtube.com/watch?v=Dii6hqZJDds"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Jaime García Torres",
+      "email": "jaylatirana@gmail.com",
+      "direccion": "C/ Sacramento 65",
+      "poblacion": "Cádiz",
+      "telefonos": "600337288",
+      "redesSociales": "https://www.youtube.com/@JayGarc%C3%ADaActor",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La maniobra de la tortuga",
+        "tipo": "Cine",
+        "cargo": "Actor",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Cosmicomicas Teatro",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Pilar García-Órihuel",
+      "email": "pilargarciaorihuel@gmail.com",
+      "direccion": "C/ Carrascal, 3, 22 D",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "692998663",
+      "redesSociales": "Instagram @pilargarciaorihuel\nFacebook\nTik tok",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "ARRAYÁN",
+        "tipo": "TV CANAL SUR",
+        "cargo": "Actriz personajes principales",
+        "pais": "España",
+        "anio": "2007-2008",
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "EL ULTIMO TRAGO",
+        "tipo": "Cortometraje",
+        "cargo": "Actriz protagonista",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://youtu.be/H9Ew-gFQu54?si=ztXvBN1053lsUdie"
+      },
+      {
+        "titulo": "LUNARIA",
+        "tipo": "TEATRAL",
+        "cargo": "Actriz",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": "https://www.instagram.com/share/reel/BAB42njlP4"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Prime Colada Gades",
+    "categoriaEmpresa": [
+      "Ayudante Producción"
+    ],
+    "contacto": {
+      "nombre": "Vicente Jarana García",
+      "email": "primecoladagades@gmail.com",
+      "direccion": "C/Granja San Ildefonso 10",
+      "poblacion": "Cádiz",
+      "telefonos": "614124520 - 614102617",
+      "redesSociales": "",
+      "web": "Www.primecoladagades.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Lavandería Autoservicio Prime Colada Gades",
+        "tipo": "Lavanderia",
+        "cargo": "Lavanderia",
+        "pais": "",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Prime Colada Gades. Lavanderia autoservicio",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Vicente Jarana García",
+      "email": "primecoladagades@gmail.com",
+      "direccion": "C/ Granja San Ildefonso 10",
+      "poblacion": "Cadiz",
+      "telefonos": "614124520 - 614102617",
+      "redesSociales": "",
+      "web": "www.primecoladagades.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Prime Colada Gades",
+        "tipo": "Lavanderia autoservicio",
+        "cargo": "Lavanderia autoservicio servicio a Domicilio",
+        "pais": "",
+        "anio": 2023,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Cádiz Time Apartments",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "María Fernández",
+      "email": "reservas@cadiztime.es",
+      "direccion": "Calle Argantonio 10 - Oficina 1",
+      "poblacion": "Cádiz",
+      "telefonos": "656561858",
+      "redesSociales": "https://www.instagram.com/apartmentsgroup.es/",
+      "web": "https://apartmentsgroup.es/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": ".",
+        "tipo": ".",
+        "cargo": ".",
+        "pais": "",
+        "anio": ".",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "La Lectora",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Loly Corral Pérez",
+      "email": "Hola@lalectora.com",
+      "direccion": "C/Ancha 32",
+      "poblacion": "Cadiz",
+      "telefonos": "629572567",
+      "redesSociales": "La lectora Instagram facebook tik tok",
+      "web": "La lectora"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "No hay",
+        "tipo": "Ninguna",
+        "cargo": "Nada",
+        "pais": "",
+        "anio": "Ninguno",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Hotel Las Cortes de Cádiz",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Alberto Lozano Bernier",
+      "email": "alberto@hotellascortes.com",
+      "direccion": "C/SAN FRANCISCO 9",
+      "poblacion": "CÁDIZ",
+      "telefonos": "+34660138086 - +34956220489",
+      "redesSociales": "@hotellascortes (Facebook, instagram, tik tok, X)",
+      "web": "www.hotellascortes.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "LAS SOLES - UNA VEZ MAS",
+        "tipo": "VIDEOCLIP",
+        "cargo": "REVENUE MANAGER",
+        "pais": "ESPAÑA",
+        "anio": 2020,
+        "urlTrailer": "https://youtu.be/ejd35jYSplg"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Look Art Studio SL",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Francisco Martín San Sabas",
+      "email": "lookartstudiocadiz@gmail.com",
+      "direccion": "Avenida de Portugal, 13, Local",
+      "poblacion": "Cádiz",
+      "telefonos": "856178338 - 635015460",
+      "redesSociales": "https://www.instagram.com/lookartstudio/?hl=es ; https://www.youtube.com/channel/UCdeZCNOsashdyM3KbXDtE3w",
+      "web": "www.lookartstudio.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La bella escondida",
+        "tipo": "Largometraje",
+        "cargo": "Dirección de maquillaje, peluquería y vestuario",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": "https://www.imdb.com/es/title/tt24246310/"
+      },
+      {
+        "titulo": "Crimenes de carnaval",
+        "tipo": "Cortometraje",
+        "cargo": "Dirección de maquillaje y efectos especiales",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=2OcC2n0a_Qk&ab_channel=%C3%81lvaroGanazaDirector"
+      },
+      {
+        "titulo": "Aires de Cadiz",
+        "tipo": "Programa Canal Cocina",
+        "cargo": "Dirección de maquillaje y peluqueria",
+        "pais": "España",
+        "anio": 2016,
+        "urlTrailer": "https://www.youtube.com/watch?v=fmwX7fM2-a8&ab_channel=TurismoprovinciadeC%C3%A1diz%2FCadizturismo"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "The Talent Sea",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "marta Cejas Sánchez",
+      "email": "info@thetalentsea.com",
+      "direccion": "C/ Paseo General Lobo, 13; 11100 San Fernando, Cádiz",
+      "poblacion": "San Fernando, Cádiz",
+      "telefonos": "(+34) 650749546",
+      "redesSociales": "Marta Cejas Sánchez | LinkedIn\nhttps://www.linkedin.com/in/marta-cejas-s%C3%A1nchez-707749b3/\nThe Talent Sea\nhttps://www.linkedin.com/company/90891884/admin/dashboard/\n\n@thetalentsea - Instagram",
+      "web": "thetalentsea.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "-",
+        "tipo": "-",
+        "cargo": "-",
+        "pais": "",
+        "anio": "-",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Alba Lorenzo Boutique",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Alba María Lorenzo Dominguez",
+      "email": "lorenzo89.ald@gmail.com",
+      "direccion": "C/ Sagasta 8",
+      "poblacion": "Cadiz",
+      "telefonos": "635322212",
+      "redesSociales": "Instagram",
+      "web": "https://instagram.com/alegriadevestir23"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Alba Lorenzo boutique",
+        "tipo": "Tienda de ropa",
+        "cargo": "Dueña",
+        "pais": "",
+        "anio": 2024,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "The Talent Sea",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "marta Cejas Sánchez",
+      "email": "info@thetalentsea.com",
+      "direccion": "C/Paseo General Lobo 13, 11100 San Fernando, Cádiz",
+      "poblacion": "San Fernando, Cádiz",
+      "telefonos": "650749546",
+      "redesSociales": "Marta Cejas Sánchez | LinkedIn\nhttps://www.linkedin.com/in/marta-cejas-s%C3%A1nchez-707749b3/\nThe Talent Sea\nhttps://www.linkedin.com/company/90891884/admin/dashboard/\nInstagram\nhttps://www.instagram.com/thetalentsea/",
+      "web": "thetalentsea.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Proyecto AETC-Asociación de Empresas Turísticas de Cádiz - CÁDIZ DE CINE",
+        "tipo": "Proyecto AETC-Asociación de Empresas Turísticas de Cádiz - CÁDIZ DE CINE",
+        "cargo": "Grupo de trabajo de AETC - CÁDIZ DE CINE",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Hotel Casa Palacio María Luisa ****GL",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Cayetano Gómez Fernández",
+      "email": "cayetano.gomez@kaizenhoteles.com",
+      "direccion": "C. Tornería, 22, 11403 Jerez de la Frontera, Cádiz",
+      "poblacion": "Jerez de la Frontera",
+      "telefonos": "956 92 62 63 - 638  98 69 73",
+      "redesSociales": "https://www.instagram.com/casapalaciomarialuisa/",
+      "web": "https://www.casapalaciomarialuisa.com/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Hemos alojado recientemente a parte del equipo de \"El Joven Sherlock\" del director Guy Richie durante su grabación en Jerez de la Frontera con la productora ERIS Film a través de la agencia Bestour",
+        "tipo": "Serie",
+        "cargo": "Director Comercial corporativo",
+        "pais": "UK",
+        "anio": 2025,
+        "urlTrailer": "https://www.facebook.com/share/v/1X5qivp9oS/"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Jay García",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Jaime García Torres",
+      "email": "jaylatirana@gmail.com",
+      "direccion": "C/ sacramento 65 2°",
+      "poblacion": "Cádiz",
+      "telefonos": "600337288",
+      "redesSociales": "https://youtube.com/@jaygarciaactor?si=ej4H1eBx8v6CQsMy",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "La Maniobra de la tortuga",
+        "tipo": "Cine",
+        "cargo": "Actor",
+        "pais": "España",
+        "anio": 2021,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Autónoma",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Édith Ramos Sparrow",
+      "email": "edith.ramossparrow@gmail.com",
+      "direccion": "Calle Virgen de la Palma 6, 11002 Cádiz",
+      "poblacion": "Cádiz",
+      "telefonos": "+33762163731",
+      "redesSociales": "https://www.linkedin.com/in/edith-ramos-sparrow-1623a6197/",
+      "web": "https://www.ataa.fr/annuaire/EdithRamosSparrow"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Netflix",
+        "tipo": "Netflix",
+        "cargo": "Traductora voice-over",
+        "pais": "Estados Unidos",
+        "anio": 2023,
+        "urlTrailer": "https://www.youtube.com/watch?v=J5bobSHS2p0"
+      },
+      {
+        "titulo": "Agile Films",
+        "tipo": "",
+        "cargo": "Subtituladora",
+        "pais": "Inglaterra",
+        "anio": 2020,
+        "urlTrailer": "https://www.youtube.com/watch?v=Rlkcol3hg0U&list=RDRlkcol3hg0U&start_radio=1"
+      },
+      {
+        "titulo": "Anepos",
+        "tipo": "Licencia Creative Commons 3",
+        "cargo": "Subtituladora SPS",
+        "pais": "Francia",
+        "anio": 2024,
+        "urlTrailer": "https://www.youtube.com/watch?v=ha6Cnspn4_w"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "MAR SEVILLA",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "MARIA DEL MAR SEVILLA ALBARRAN",
+      "email": "m.sevilla.albarran@gmail.com",
+      "direccion": "CRUZ N13  1 IZQUIERDA",
+      "poblacion": "CADIZ",
+      "telefonos": "669510727",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "WOMACK",
+        "tipo": "DOCUSERIES",
+        "cargo": "MAQUIILADORA .VESTUARIO Y PELU DE CINE",
+        "pais": "ESPAÑA",
+        "anio": 2025,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "MÁGICO GONZÁLEZ",
+        "tipo": "DOCU-SERIE",
+        "cargo": "MAQUILLADORA ,VESTUARIO Y PELUQUERIA",
+        "pais": "ESPAÑA",
+        "anio": 2025,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "@niarosas",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección",
+      "Ayudante Dirección/Script"
+    ],
+    "contacto": {
+      "nombre": "Estefanía Mármol Rosas",
+      "email": "Info@niarosas.com",
+      "direccion": "11001",
+      "poblacion": "",
+      "telefonos": "600764909",
+      "redesSociales": "@niarosas en instagram",
+      "web": "Www.niarosas.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": ".",
+        "tipo": ".",
+        "cargo": ".",
+        "pais": "",
+        "anio": ".",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Particular",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Auxiliar Dirección",
+      "Ayudante Dirección/Script"
+    ],
+    "contacto": {
+      "nombre": "José Miguel Ortiz Guzmán",
+      "email": "josmigort@gmail.com",
+      "direccion": "11100",
+      "poblacion": "",
+      "telefonos": "655535625 - 653986374",
+      "redesSociales": "Instagram/Josemi_films",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Cuchillos",
+        "tipo": "Corto",
+        "cargo": "Director y realizador",
+        "pais": "España",
+        "anio": 2017,
+        "urlTrailer": "https://youtu.be/WbzkysH0qbg?si=fq9KOmVk9nn3X1zQ"
+      },
+      {
+        "titulo": "El encargo",
+        "tipo": "Corto",
+        "cargo": "Director, guión, montaje",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://youtu.be/CT5Zhlezc98?si=YyEKJwD1Sxx3gpEF"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "La Lectora CAFETERÍA-LIBRERÍA",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Loly Corral",
+      "email": "lalectoralibreria@gmail.com",
+      "direccion": "CALLE ANCHA, 32",
+      "poblacion": "",
+      "telefonos": "643319838",
+      "redesSociales": "https://www.instagram.com/lalectoracadiz/",
+      "web": "lalectora.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "NO HAY",
+        "tipo": "NO HAY",
+        "cargo": "NO HAY",
+        "pais": "",
+        "anio": "NO HAY",
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "AYUDANTE DE VESTUARIO EN CINE",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Mariela Guevara Romero",
+      "email": "marielagr8415@icloud.com",
+      "direccion": "Los Esteros número 60, Chiclana de la Frontera. Cádiz 11130",
+      "poblacion": "",
+      "telefonos": "619918746",
+      "redesSociales": "marielaa_guevara",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "El Zorro la serie",
+        "tipo": "Serie",
+        "cargo": "Ayudante de vestuario",
+        "pais": "España",
+        "anio": "2022/2023",
+        "urlTrailer": "https://youtu.be/IJQPis6Bg-s?si=GUjKsuYMkddFrdM3"
+      },
+      {
+        "titulo": "En Fin La serie",
+        "tipo": "Serie",
+        "cargo": "Ayudante de vestuario",
+        "pais": "España",
+        "anio": 2023,
+        "urlTrailer": "https://youtu.be/x1DVC8I_sxo?si=K6sMzr_uqd5AyTVs"
+      },
+      {
+        "titulo": "Instintos",
+        "tipo": "Película",
+        "cargo": "Ayudante de Vestuario",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://youtu.be/q_KLRCENnrM?si=oKQe6wrjQjDkZvLc"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Andrea Merino Vázquez",
+      "email": "mervazandrea@gmail.com",
+      "direccion": "11003",
+      "poblacion": "",
+      "telefonos": "601266355 - 956214551",
+      "redesSociales": "@andreumer",
+      "web": "https://es.linkedin.com/in/andrea-merino-v%C3%A1zquez-64a0832a3"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Apollo Has Fallen (HAS FALLEN 2)",
+        "tipo": "Serie internacional, coproducción",
+        "cargo": "Art Department PA",
+        "pais": "Inglaterra",
+        "anio": "2024 - actualidad",
+        "urlTrailer": "imdb.com/es/title/tt33184638/?reasonForLanguagePrompt=browser_header_mismatch"
+      },
+      {
+        "titulo": "Campamento Garra de Oso",
+        "tipo": "Largometraje, coproducción",
+        "cargo": "Auxiliar de producción",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": "https://www.imdb.com/es/title/tt32616813/?ref_=nv_sr_srsg_0_tt_5_nm_0_in_0_q_campamento%2520garr"
+      },
+      {
+        "titulo": "Los ojos de Giovanna",
+        "tipo": "Cortometraje",
+        "cargo": "Directora de arte",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": "https://www.imdb.com/es/title/tt37678292/?ref_=nm_ov_bio_lk"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Camerino de artes y horrores",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Jesús Belizón Zacarias",
+      "email": "jesusbelly@gmail.com",
+      "direccion": "Ana de viya 5, Edif. Nereida. Planta 2. Puerta  213",
+      "poblacion": "",
+      "telefonos": "601104458",
+      "redesSociales": "@camerinodeartesyhorrores",
+      "web": "camerinodeartesyhorrores.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Entre dos aguas",
+        "tipo": "Maquillaje FX",
+        "cargo": "Encargado de maquillaje FX",
+        "pais": "España",
+        "anio": 2018,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Sabatic Studio",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Azahara Rojas Sanchez",
+      "email": "we@sabatic.studio",
+      "direccion": "Calle Juan XXIII, 1, 2A",
+      "poblacion": "",
+      "telefonos": "655645885 - 626060260",
+      "redesSociales": "@sabatic.studio",
+      "web": "sabatic.studio"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Tosar Granados ( Retrato )",
+        "tipo": "Mini documental",
+        "cargo": "Direccion, guion y produccion",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": "https://youtu.be/lKVMXLVa8CU"
+      },
+      {
+        "titulo": "Parodia Potra Salvaje (Manu de Lola )",
+        "tipo": "Videoclip Instagram",
+        "cargo": "Dirección, produccion y marketing",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://www.instagram.com/reel/C9ziAu4oU7h/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      {
+        "titulo": "Pleamar de la palabra ( Almudena Grandes )",
+        "tipo": "Homenaje Documental",
+        "cargo": "Direcci-om, Guion y producción",
+        "pais": "España",
+        "anio": 2022,
+        "urlTrailer": "https://www.youtube.com/watch?v=yaMMORo0v2w"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Actriz",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Ana Salas",
+      "email": "anasalas86@gmail.com",
+      "direccion": "Costa del sol 5",
+      "poblacion": "",
+      "telefonos": "623406595",
+      "redesSociales": "@anasalasactriz",
+      "web": "Www.anasalasactriz.com"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Quejío de loba",
+        "tipo": "Cortometraje",
+        "cargo": "Actriz protagonista",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": "https://www.instagram.com/reel/DFTMY_gJOPY/?igsh=MXN1eHk3MWsyYjR4OA=="
+      },
+      {
+        "titulo": "Coraje",
+        "tipo": "Largometraje",
+        "cargo": "Actriz reparto",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://www.instagram.com/reel/DP6P8I_iEFD/?igsh=MW5qbGN3MG10ZXZhaQ=="
+      },
+      {
+        "titulo": "4 estrellas",
+        "tipo": "Serie",
+        "cargo": "Actriz reparto",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": "https://vimeo.com/1011240544?share=copy&turnstile=0.fwk9XpCIZj0C46V6DE4JPzLeZoQi7Q1wM70hsAsLdxwPnUcw-5b8OX8PqahUm_TD69ZGCc2iIBkW50EYBVzQWyvbOuprfN-hmW4FO3Ogkry1oJ8Iwk302ulCXL_y7LuqRvmeBn31svXq-8XLZS5gaFvmm_WEMJpnCPU8DQU9PWizRgLDIcKMhuEAZ7ThMEONZE247hnShwZ0TiAC7JxuqjEyx70pR-kjPfFEH9g9TKDBdPTYYMWj483Mw5QK9Kd1sUyYfSPiRhZIGsw2rQ_skS3bTLHrI-ZAMnSsiyfb7mdB3GItqecz1sTEVRxg9Ys0d3ZUNcKRfqzbBzITiL8AzYkiuCCS3ueHEcmIOVJ9XM6W3pVqqvgu2dDnqXpe10CYWVtpjf16Fd1dHGNtQ3TC-ZPF6ilxtXOEn-8FZX3wNxQBJJ9JjJ0E-Boss1x3E5Un3PRNJ83WsDwXRj5Ew6-ermRRalALHE-0vyzMlxrTsjzdmx7lnFk6NrWv-xf9L6nl6fRGzCnc3g4-bo_D-BIhASvR2ILG1VFIcWyKm89L5VVSwkNE5C6n3Pnvjb6ygaqKyU4SOiN5kk8g6asFy3CaiARscwNGwtiLmuzsSGHpUZy-l4XVdyjkTMNYIiTSpLCy30mpa1pmEGWGd9E1O6HHSMQYnaIz6Uw0ef6cTQ6ysYVjKvn5S9PltG2K0bU3oScrSFuhiZxIx6TZKtuiBSpJgXbb9FZ28c9tN7I817LzoPjGFDGIBy2Zm1NJR7v4m7YWhlULn6Ce-9JKVqSjDMnk70JY-GLwD4o60Qg1AChRS-r8PL0i9NLwuCHs_JVIHC-QD3DuP9Z72g3OXQSygnplhFW1etSP2y4KQQ3KIyft-EcPC1el9XXS6buzGB37vLkJJowDX92KxsyF01JJnNtO6E13mK0PL-2gfY1B8iwrWRpRJ7spSEgVMyiqfQTW_zNBDr4aqzYErPM2WOEjAVLwsA.il6qqs5mNmPQ7bV84Pp9zg.628e86b33b51ab919698ca7c51228ffc136bf6267cf79e54f89cb4c4b6a7072e"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Quejío de Loba Producciones SL",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Luís Rubén Romero Ramírez",
+      "email": "direccionejecutiva@quejioproducciones.com",
+      "direccion": "Avda. Chipiona PI Las Bodegas C/Crianza nº15. 11408 Jerez de la frontera",
+      "poblacion": "",
+      "telefonos": "629604444",
+      "redesSociales": "https://www.instagram.com/quejioproducciones/",
+      "web": "https://quejioproducciones.com/"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Quejío de Loba",
+        "tipo": "Cortometraje",
+        "cargo": "Productor",
+        "pais": "España",
+        "anio": 2024,
+        "urlTrailer": "https://www.instagram.com/p/DFTMY_gJOPY/"
+      },
+      {
+        "titulo": "Coraje",
+        "tipo": "Largometraje",
+        "cargo": "Productor",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": "https://www.instagram.com/p/DP6P8I_iEFD/"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Guionista/Adaptador",
+      "Dirección/Realización TV"
+    ],
+    "contacto": {
+      "nombre": "Andrea Ganfornina García",
+      "email": "andreaganforninaguion@gmail.com",
+      "direccion": "C/Joaquin Turina 1",
+      "poblacion": "",
+      "telefonos": "655072318",
+      "redesSociales": "@andreaganfornina",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Quejío de loba",
+        "tipo": "Cortometraje",
+        "cargo": "Guion y Dirección",
+        "pais": "",
+        "anio": 2025,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Mario Huerta - Actor",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Mario Huerta",
+      "email": "mario_hc89@hotmail.com",
+      "direccion": "Porvera, 11 1E, 11403 Jerez de la Frontera, Cádiz",
+      "poblacion": "",
+      "telefonos": "645982980",
+      "redesSociales": "https://instagram.com/mariooohuerta",
+      "web": "www.mariohuerta.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Magallanes de Lav Díaz",
+        "tipo": "Largometraje internacional",
+        "cargo": "Actor de reparto",
+        "pais": "Filipinas, España y Portugal",
+        "anio": 2025,
+        "urlTrailer": ""
+      },
+      {
+        "titulo": "Coraje",
+        "tipo": "Largometraje",
+        "cargo": "Actor",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Marisa Moreno Jiménez",
+      "email": "fionamj@hotmail.es",
+      "direccion": "Avda Vicente Aleixandre 36, Puerto Real, Cádiz",
+      "poblacion": "",
+      "telefonos": "663435195",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "TEDxCádizUniversity",
+        "tipo": "Conferencia",
+        "cargo": "Ayudante cámara",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": ""
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "",
+    "categoriaEmpresa": [
+      "Auxiliar Dirección"
+    ],
+    "contacto": {
+      "nombre": "Claudia López Castro",
+      "email": "byclaudialopez@gmail.com",
+      "direccion": "Estuario 40",
+      "poblacion": "",
+      "telefonos": "+34 637635793",
+      "redesSociales": "Instagram: @clau.lopezc",
+      "web": "www.claudialopez.es"
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Trabanten",
+        "tipo": "Cortometraje documental",
+        "cargo": "1ª Asistente de Dirección y Diseño de Sonido",
+        "pais": "Alemania",
+        "anio": 2024,
+        "urlTrailer": "https://youtu.be/dJc274iI7AQ?si=x8jxSzokt9_YF_bk"
+      },
+      {
+        "titulo": "Feeling Alive",
+        "tipo": "Cortometraje experimental",
+        "cargo": "Directora, Directora de Fotografía, Editora y etalonadora",
+        "pais": "Alemania",
+        "anio": 2024,
+        "urlTrailer": "https://youtu.be/LfgKoPmRcRE?si=JBa5CjR5fGdbVRj5"
+      },
+      {
+        "titulo": "1 AÑO DE GESTIÓN - Vicepresidenta tercera",
+        "tipo": "Vídeo para redes sociales del Ministerio de Transición Ecológica y el Reto Demográfico",
+        "cargo": "Operadora de cámara y editora",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": "https://x.com/mitecogob/status/1994074274915574171?s=20"
+      }
+    ]
+  },
+  {
+    "tipoRegistro": "PROFESIONALES",
+    "empresa": "Ulmetum",
+    "categoriaEmpresa": [],
+    "contacto": {
+      "nombre": "Víctor Olmedo",
+      "email": "pef.vtr@gmail.com",
+      "direccion": "11012",
+      "poblacion": "",
+      "telefonos": "634583094",
+      "redesSociales": "",
+      "web": ""
+    },
+    "trabajosDestacados": [
+      {
+        "titulo": "Tierra entre Dos Mares",
+        "tipo": "Cortometraje",
+        "cargo": "Editor de contenido",
+        "pais": "España",
+        "anio": 2025,
+        "urlTrailer": ""
+      }
+    ]
+  }
+]

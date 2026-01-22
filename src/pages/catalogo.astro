@@ -1,0 +1,328 @@
+---
+import XLSX from "xlsx";
+import fs from "fs";
+import path from "path";
+
+/* =========================
+   TIPOS
+========================= */
+interface Produccion {
+  titulo: string;
+  tipo: string;
+  cargo: string;
+  pais: string;
+  anio: string | number | null;
+  urlTrailer: string;
+}
+
+interface Contacto {
+  nombre: string;
+  email: string;
+  direccion: string;
+  poblacion: string;
+  telefonos: string;
+  redesSociales: string;
+  web: string;
+}
+
+interface PersonaCatalogo {
+  tipoRegistro: string; // "EMPRESAS" o "PROFESIONALES"
+  empresa: string;
+  categoriaEmpresa: string[];
+  contacto: Contacto;
+  trabajosDestacados: Produccion[];
+}
+
+type RowODS = Record<string, string | number | null>;
+
+/* =========================
+   LECTURA ODS
+========================= */
+const odsPath = path.resolve("src/data/datos-catalogo.ods");
+const workbook = XLSX.readFile(odsPath);
+const sheet = workbook.Sheets[workbook.SheetNames[0]];
+const rows: RowODS[] = XLSX.utils.sheet_to_json(sheet, { defval: null });
+
+/* =========================
+   CONFIGURACIÓN DE PRODUCCIONES
+========================= */
+const produccionesConfig = [
+  {
+    titulo: "TÍTULO DE LA PRODUCCIÓN",
+    tipo: "Tipo de producción",
+    cargo: "Cargo",
+    pais: "País de la producción",
+    anio: "Año",
+    trailer: "URL Trailer",
+  },
+  {
+    titulo: "TÍTULO DE LA PRODUCCIÓN 2",
+    tipo: "Tipo de producción_1",
+    cargo: "Cargo_1",
+    pais: "País de la producción_1",
+    anio: "Año_1",
+    trailer: "URL Trailer_1",
+  },
+  {
+    titulo: "TÍTULO DE LA PRODUCCIÓN 3",
+    tipo: "Tipo de producción_2",
+    cargo: "Cargo_2",
+    pais: "País de la producción_2",
+    anio: "Año_2",
+    trailer: "URL Trailer_2",
+  },
+];
+
+/* =========================
+   CATEGORÍAS DE SERVICIOS
+========================= */
+const categoriasConfig = {
+  produccion: [
+    "PRODUCCIÓN [Ayudante Producción]",
+    "PRODUCCIÓN [Coordinación/Dirección de producción]",
+    "PRODUCCIÓN [Localizador/a]",
+    "PRODUCCIÓN [Producción]",
+    "PRODUCCIÓN [Auxiliar Producción]",
+    "PRODUCCIÓN [Fila 6]",
+  ],
+  guionDireccion: [
+    "GUION Y DIRECCIÓN [Guionista/Adaptador]",
+    "GUION Y DIRECCIÓN [Auxiliar Dirección]",
+    "GUION Y DIRECCIÓN [Ayudante Dirección/Script]",
+    "GUION Y DIRECCIÓN [Ayudante de Realización TV]",
+    "GUION Y DIRECCIÓN [Dirección/Realización TV]",
+    "GUION Y DIRECCIÓN [Dirección de Casting]",
+  ],
+  fotografiaIluminacion: [
+    "FOTOGRAFÍA/ILUMINACIÓN/MAQUINARIA [Auxiliar Cámara Cine]",
+    "FOTOGRAFÍA/ILUMINACIÓN/MAQUINARIA [Ayudante Cámara Cine]",
+    "FOTOGRAFÍA/ILUMINACIÓN/MAQUINARIA [Cámara Cine]",
+    "FOTOGRAFÍA/ILUMINACIÓN/MAQUINARIA [Dirección Fotografía/Iluminador TV]",
+    "FOTOGRAFÍA/ILUMINACIÓN/MAQUINARIA [Operador/a Cámara TV]",
+    "FOTOGRAFÍA/ILUMINACIÓN/MAQUINARIA [Operador/a Cámaras especiales (Steady, dron, acuática)]",
+    "FOTOGRAFÍA/ILUMINACIÓN/MAQUINARIA [Foto-fija]",
+    "FOTOGRAFÍA/ILUMINACIÓN/MAQUINARIA [Eléctrico/Maquinista]",
+  ],
+  maquillajePeluqueria: [
+    "MAQUILLAJE/PELUQUERÍA [Maquillaje para Cine]",
+    "MAQUILLAJE/PELUQUERÍA [Peluquería para Cine]",
+    "MAQUILLAJE/PELUQUERÍA [Caracterización FX]",
+  ],
+  sonidoMusica: [
+    "SONIDO/MÚSICA [Ayudante de Sonido]",
+    "SONIDO/MÚSICA [Técnico Sonido Directo]",
+    "SONIDO/MÚSICA [Técnico Sonido Estudio]",
+    "SONIDO/MÚSICA [Mezclador/Editor Sonido]",
+    "SONIDO/MÚSICA [Doblaje/Dirección Doblaje]",
+    "SONIDO/MÚSICA [Compositor/a]",
+  ],
+  comunicacion: [
+    "COMUNICACIÓN [Fotografía]",
+    "COMUNICACIÓN [Redacción/Jefatura de Prensa]",
+    "COMUNICACIÓN [Diseño Gráfico]",
+    "COMUNICACIÓN [Community Manager]",
+    "COMUNICACIÓN [Making Off]",
+  ],
+  varios: [
+    "VARIOS [Actor/Actriz/Especialista]",
+    "VARIOS [Coreógrafía/Bailarin/a]",
+    "VARIOS [Documentalista]",
+    "VARIOS [Traducción/Interpretación]",
+    "VARIOS [Diseño Videojuegos]",
+    "VARIOS [Vestuario/Atrezzo]",
+    "VARIOS [Servicios Aéreos]",
+    "VARIOS [Efectos Especiales]",
+    "VARIOS [Filmmaker]",
+  ],
+  empresas: [
+    " [Agencias de Colocación]",
+    " [Alojamientos / Restauración]",
+    " [Animación / Modelado 3D]",
+    " [Asistencia Sanitaria / Seguros RC]",
+    " [Cámara / Grip]",
+    " [Catering]",
+    " [Distribución]",
+    " [Efectos Especiales]",
+    " [Escenografía / Decorados]",
+    " [Grúas / Plataformas]",
+    " [Laboratorios / Edición]",
+    " [Material de Producción]",
+    " [Película / Fotografía]",
+    " [Productora / Productora Asociada]",
+    " [Servicios de Localización]",
+    " [Transporte]",
+    " [Productora Visual]",
+    " [Animales]",
+    " [Asesoría / Contabilidad]",
+    " [Asociaciones]",
+    " [Casting]",
+    " [Centros de Formación]",
+    " [Eco-Friendly / Sostenible]",
+    " [Embarcaciones]",
+    " [Estudios / Platós]",
+    " [Iluminaciones / Grupos]",
+    " [Limpieza]",
+    " [Maquillaje / Peluquería]",
+    " [Post-Producción / VFX]",
+    " [Servicios Aéreos]",
+    " [Sonido]",
+    " [Vestuario / Atrezzo]",
+    " [Fila 33]",
+    " [Fila 34]",
+    " [Fila 33]_1",
+  ],
+};
+
+/* =========================
+   FUNCIÓN PARA EXTRAER CATEGORÍAS
+========================= */
+function extraerTodasCategorias(row: RowODS): string[] {
+  const categorias: string[] = [];
+
+  // Combinar todas las categorías
+  const todasLasCategorias = [
+    ...categoriasConfig.produccion,
+    ...categoriasConfig.guionDireccion,
+    ...categoriasConfig.fotografiaIluminacion,
+    ...categoriasConfig.maquillajePeluqueria,
+    ...categoriasConfig.sonidoMusica,
+    ...categoriasConfig.comunicacion,
+    ...categoriasConfig.varios,
+    ...categoriasConfig.empresas,
+  ];
+
+  todasLasCategorias.forEach((campo) => {
+    const valor = row[campo];
+    if (
+      valor &&
+      valor !== null &&
+      valor.toString().trim() !== "" &&
+      valor.toString().trim() !== "Elija una o varias opciones"
+    ) {
+      // Extraer el nombre de la categoría del campo entre corchetes
+      const match = campo.match(/\[([^\]]+)\]/);
+      if (match) {
+        categorias.push(match[1]);
+      }
+    }
+  });
+
+  return categorias;
+}
+
+/* =========================
+   NORMALIZACIÓN
+========================= */
+const catalogo: PersonaCatalogo[] = rows.map((row) => {
+  const trabajosDestacados: Produccion[] = [];
+
+  produccionesConfig.forEach((config) => {
+    const titulo = row[config.titulo]?.toString().trim() ?? "";
+    const tipo = row[config.tipo]?.toString().trim() ?? "";
+    const cargo = row[config.cargo]?.toString().trim() ?? "";
+    const pais = row[config.pais]?.toString().trim() ?? "";
+    const urlTrailer = row[config.trailer]?.toString().trim() ?? "";
+    const rawYear = row[config.anio];
+
+    // Manejar el año como string o número
+    let anio: string | number | null = null;
+    if (rawYear !== null && rawYear !== undefined) {
+      const yearStr = rawYear.toString().trim();
+      if (yearStr !== "") {
+        // Si es un número simple, convertir a número
+        if (/^\d{4}$/.test(yearStr)) {
+          anio = Number(yearStr);
+        } else {
+          // Si es un rango o texto, mantener como string
+          anio = yearStr;
+        }
+      }
+    }
+
+    // Solo agregamos producciones que tengan al menos el título
+    if (titulo) {
+      trabajosDestacados.push({
+        titulo,
+        tipo,
+        cargo,
+        pais,
+        anio,
+        urlTrailer,
+      });
+    }
+  });
+
+  // Construir teléfonos
+  const tel1 = row["Teléfono 1"]?.toString().trim() ?? "";
+  const tel2 = row["Teléfono 2"]?.toString().trim() ?? "";
+  const telefonos = [tel1, tel2].filter((t) => t !== "").join(" - ");
+
+  // Redes sociales y web separados
+  const redes = row["Redes Sociales"]?.toString().trim() ?? "";
+  const web = row["Web"]?.toString().trim() ?? "";
+
+  // Determinar tipo de registro (EMPRESAS o PROFESIONALES)
+  const tipoRegistroRaw = row["EMPRESAS"]?.toString().trim() ?? "";
+  const tipoRegistro =
+    tipoRegistroRaw === "EMPRESAS" ? "EMPRESAS" : "PROFESIONALES";
+
+  return {
+    tipoRegistro,
+    empresa: row["Nombre de la Empresa"]?.toString().trim() ?? "",
+    categoriaEmpresa: extraerTodasCategorias(row),
+    contacto: {
+      nombre: row["Nombre y apellidos"]?.toString().trim() ?? "",
+      email: row["E-mail"]?.toString().trim() ?? "",
+      direccion: row["Dirección Postal"]?.toString().trim() ?? "",
+      poblacion: row["Población"]?.toString().trim() ?? "",
+      telefonos,
+      redesSociales: redes,
+      web,
+    },
+    trabajosDestacados,
+  };
+});
+
+/* =========================
+   GUARDAR JSON
+========================= */
+fs.writeFileSync(
+  path.resolve("src/data/catalogo.json"),
+  JSON.stringify(catalogo, null, 2),
+  "utf-8",
+);
+
+console.log("\n✅ Archivo JSON generado correctamente");
+console.log(`📊 Total de registros: ${catalogo.length}`);
+
+const conTrabajos = catalogo.filter((p) => p.trabajosDestacados.length > 0);
+console.log(`🎬 Personas con trabajos destacados: ${conTrabajos.length}`);
+
+const empresas = catalogo.filter((p) => p.tipoRegistro === "EMPRESAS");
+const profesionales = catalogo.filter(
+  (p) => p.tipoRegistro === "PROFESIONALES",
+);
+console.log(`🏢 Empresas: ${empresas.length}`);
+console.log(`👤 Profesionales: ${profesionales.length}`);
+
+// Buscar a Mercedes Mayone
+const mercedes = catalogo.find((p) =>
+  p.contacto.nombre.toLowerCase().includes("mercedes mayone"),
+);
+if (mercedes) {
+  console.log("\n📋 Ejemplo de Mercedes Mayone Torbaño:");
+  console.log(JSON.stringify(mercedes, null, 2));
+}
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Catálogo completo</title>
+  </head>
+  <body>
+    <h1>Catálogo normalizado completo</h1>
+    <pre>{JSON.stringify(catalogo, null, 2)}</pre>
+  </body>
+</html>
