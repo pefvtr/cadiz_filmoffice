@@ -292,37 +292,13 @@ fs.writeFileSync(
   "utf-8",
 );
 
-console.log("\n✅ Archivo JSON generado correctamente");
-console.log(`📊 Total de registros: ${catalogo.length}`);
-
 const conTrabajos = catalogo.filter((p) => p.trabajosDestacados.length > 0);
-console.log(`🎬 Personas con trabajos destacados: ${conTrabajos.length}`);
 
 const empresas = catalogo.filter((p) => p.tipoRegistro === "EMPRESAS");
 const profesionales = catalogo.filter(
   (p) => p.tipoRegistro === "PROFESIONALES",
 );
-console.log(`🏢 Empresas: ${empresas.length}`);
-console.log(`👤 Profesionales: ${profesionales.length}`);
-
-// Buscar a Mercedes Mayone
-const mercedes = catalogo.find((p) =>
-  p.contacto.nombre.toLowerCase().includes("mercedes mayone"),
-);
-if (mercedes) {
-  console.log("\n📋 Ejemplo de Mercedes Mayone Torbaño:");
-  console.log(JSON.stringify(mercedes, null, 2));
-}
 ---
 
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Catálogo completo</title>
-  </head>
-  <body>
-    <h1>Catálogo normalizado completo</h1>
-    <pre>{JSON.stringify(catalogo, null, 2)}</pre>
-  </body>
-</html>
+<h1>Catálogo normalizado completo</h1>
+<pre>{JSON.stringify(catalogo, null, 2)}</pre>
