@@ -146,38 +146,64 @@ import Layout from "@/layouts/Layout.astro";
     align-items: center;
     text-align: center;
     transform: rotateY(180deg);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 3.59281% / 2.58621%;
+    color: black;
+    @media (width > 768px) {
+      padding: 2rem;
+    }
+    @media (width > 1000px) {
+      padding: 1.5rem;
+    }
   }
 
   .card-back span {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
-    opacity: 0.4;
+    top: 1.5rem;
+    left: 1.5rem;
+    opacity: 0.5;
     font-size: 2rem;
+    @media (width > 400px) {
+      font-size: 3rem;
+      top: 1.5rem;
+      left: 1.5rem;
+    }
+    @media (width > 768px) {
+      font-size: 4rem;
+      top: 2rem;
+      left: 2rem;
+    }
+
+    @media (width > 1000px) {
+      font-size: 2rem;
+      top: 1rem;
+      left: 1rem;
+    }
   }
 
   #card-1 .card-back {
     background: linear-gradient(
       165.825deg,
-      rgb(199, 199, 199) 0%,
-      rgb(131, 131, 131) 100%
+      color-mix(in srgb, var(--card-1) 90%, black) 0%,
+      color-mix(in srgb, var(--card-1) 60%, black) 100%
     );
-    color: var(--bg);
+    /* color: var(--bg); */
   }
 
   #card-2 .card-back {
     background: linear-gradient(
       177deg,
-      rgb(250, 76, 45) -18%,
-      rgb(191, 24, 21) 31%,
-      rgb(74, 10, 8) 100%
+      color-mix(in srgb, var(--card-2) 100%, white) -18%,
+      color-mix(in srgb, var(--card-2) 80%, black) 31%,
+      color-mix(in srgb, var(--card-2) 50%, black) 100%
     );
   }
 
   #card-3 .card-back {
-    background: linear-gradient(rgb(31, 31, 31) 0%, rgb(22, 22, 22) 100%);
+    background: linear-gradient(
+      color-mix(in srgb, var(--card-3) 100%, white) 0%,
+      color-mix(in srgb, var(--card-3) 60%, black) 100%
+    );
   }
 
   @media (max-width: 1000px) {

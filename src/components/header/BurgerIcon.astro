@@ -12,9 +12,11 @@ const { classNames } = Astro.props;
   ]}
 >
   <div class="text relative">
-    <div class="menu-text text-primary text-sm">Menu</div>
+    <div class="menu-text text-md font-headings text-black md:text-lg">
+      Menu
+    </div>
     <div
-      class="close-text invisible absolute top-0 left-0 translate-y-[25%] rotate-[7deg] text-sm opacity-0"
+      class="close-text text-md font-headings invisible absolute top-0 left-0 translate-y-[25%] rotate-[7deg] opacity-0 md:text-lg"
     >
       Cerrar
     </div>
@@ -41,17 +43,13 @@ const { classNames } = Astro.props;
       position: absolute;
       height: 1.71px; /* 3px * (20/35) ≈ 1.71px */
       width: 50%;
-      background: var(--color-primary);
+      background: var(--color-black);
       opacity: 1;
 
       transform: rotate(0deg);
 
       transition: 0.8s ease-in-out;
       border-radius: 0.86px; /* 1.5px * (20/35) ≈ 0.86px */
-    }
-
-    &:hover span {
-      background: var(--color-primary-dark);
     }
   }
 

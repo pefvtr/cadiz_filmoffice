@@ -166,7 +166,7 @@ const { classNames } = Astro.props;
         });
 
         gsap.fromTo(
-          ".menu-links h2",
+          ".parent-link-mobile-inner",
           {
             y: "120%",
             opacity: 0,
@@ -209,11 +209,11 @@ const { classNames } = Astro.props;
         animateMenuText(false);
 
         /* Animación para el texto del burger */
-        gsap.to(menuText, {
-          color: "var(--color-primary)",
-          duration: 0.8,
-          ease: "power4.inOut",
-        });
+        // gsap.to(menuText, {
+        //   color: "var(--color-primary)",
+        //   duration: 0.8,
+        //   ease: "power4.inOut",
+        // });
 
         /* Este es el contenido del menu */
         gsap.to(menuContent, {

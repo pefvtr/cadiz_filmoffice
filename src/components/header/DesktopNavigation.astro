@@ -22,13 +22,13 @@ const { classNames } = Astro.props;
         >
           <h2
             class:list={[
-              "text-primary clip font-headings relative z-10 px-2",
+              "text-primary clip relative z-10 text-xl",
               { "is-active pointer-events-none": currentPath === item.url },
             ]}
           >
             {item.label}
           </h2>
-          <h2 class="font-headings absolute top-0 left-0 h-full w-full px-2 text-black">
+          <h2 class="absolute top-0 left-0 h-full w-full text-xl text-black">
             {item.label}
           </h2>
         </a>

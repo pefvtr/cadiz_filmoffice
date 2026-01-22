@@ -33,24 +33,27 @@ const currentPath = Astro.url.pathname;
             menuItems.map((item) => (
               <a
                 class:list={[
-                  "parent-link-mobile menu-link-mobile relative overflow-hidden",
+                  "parent-link-mobile relative overflow-hidden",
                   { "pointer-events-none!": currentPath === item.url },
                 ]}
                 href={item.url}
               >
-                <h2
-                  class:list={[
-                    "text-primary clip font-headings relative z-10 px-2",
-                    {
-                      "is-active pointer-events-none": currentPath === item.url,
-                    },
-                  ]}
-                >
-                  {item.label}
-                </h2>
-                <h2 class="font-headings absolute top-0 left-0 px-2 text-white">
-                  {item.label}
-                </h2>
+                <div class="parent-link-mobile-inner">
+                  <h2
+                    class:list={[
+                      "text-primary clip font-headings relative z-10 px-2",
+                      {
+                        "is-active pointer-events-none":
+                          currentPath === item.url,
+                      },
+                    ]}
+                  >
+                    {item.label}
+                  </h2>
+                  <h2 class="font-headings absolute top-0 left-0 px-2 text-white">
+                    {item.label}
+                  </h2>
+                </div>
               </a>
             ))
           }
