@@ -22,6 +22,7 @@ const menuItems = [
   { label: "Inicio", url: "/" },
   { label: "¿Quiénes Somos?", url: "/quienes-somos" },
   { label: "Contacto", url: "/contacto" },
+  { label: "Catálogo", url: "/catalogo" },
 ];
 
 export { phrases, menuItems };
