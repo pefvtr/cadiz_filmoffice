@@ -1,0 +1,35 @@
+---
+import Catalogue from "@/components/Catalogue.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getPaginatedCatalog } from "@/lib/catalogue-pagination";
+
+// Export obligatorio para rutas dinámicas
+export async function getStaticPaths() {
+  // Obtener total de páginas según tu catálogo
+  const { totalPages } = getPaginatedCatalog(1, 10); // 10 items por página
+
+  // Generar un array con cada página
+  return Array.from({ length: totalPages }, (_, i) => ({
+    params: { page: String(i + 1) },
+  }));
+}
+
+// Recoger el parámetro de la URL
+const pageParam = Astro.params.page;
+const page = pageParam ? parseInt(pageParam) : 1;
+
+const perPage = 10;
+const { data, totalPages } = getPaginatedCatalog(page, perPage);
+---
+
+<Layout title="Catálogo">
+  <section class="mt-[calc(var(--header-height))] min-h-[400dvh] py-12">
+    <h1
+      class="text-film-dark pb-12 text-center text-3xl sm:text-4xl md:text-5xl"
+    >
+      Guía de Recursos <span class="text-ifef"> | </span>
+      <span class="text-primary-dark">Empresas</span>
+    </h1>
+    <Catalogue data={data} totalPages={totalPages} />
+  </section>
+</Layout>

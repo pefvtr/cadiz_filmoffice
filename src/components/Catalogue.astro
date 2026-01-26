@@ -1,0 +1,210 @@
+---
+import type { CatalogItem } from "@/types/catalogue-types";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  data: CatalogItem[];
+  totalPages: number;
+}
+
+const { data, totalPages } = Astro.props;
+---
+
+{
+  data.map((dataItemCatalog) => (
+    <div class="catalogue mx-auto mb-16 flex w-[min(95%,640px)] flex-col shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+      <div
+        style="
+    background-image: url('/svg/wave.svg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  "
+        class="space-y-4 rounded-t-lg bg-[#196A9D] py-10 text-center"
+      >
+        <h2 class="text-light px-4 capitalize">
+          {dataItemCatalog.empresa.toLowerCase() ||
+            dataItemCatalog.contacto.nombre}
+        </h2>
+        {/* <h3 class="text-light text-base">
+          Fotografía / Impresión gran formato
+        </h3> */}
+      </div>
+      <div class="border-primary flex flex-col border-t-6">
+        <div>
+          <div class="bg-ifef-dark text-light mt-1 rounded-t-md px-2 py-1">
+            Contacto
+          </div>
+          <div class="flex flex-col px-4 py-2">
+            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+              <>
+                <span>
+                  <Icon name="person" class="text-primary h-5 w-5" />{" "}
+                </span>
+                <p class="capitalize">
+                  {dataItemCatalog.contacto.nombre.toLowerCase()}
+                </p>
+              </>
+            </div>
+            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+              <>
+                <span>
+                  <Icon name="location" class="text-primary h-5 w-5" />
+                </span>
+                <p class="capitalize">
+                  {dataItemCatalog.contacto.direccion.toLowerCase()}
+                </p>
+              </>
+            </div>
+            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+              <>
+                <span>
+                  <Icon name="phone" class="text-primary h-5 w-5" />
+                </span>
+                <p>{dataItemCatalog.contacto.telefonos}</p>
+              </>
+            </div>
+            <div class="flex items-center gap-3 py-3">
+              <>
+                <span>
+                  <Icon name="mail" class="text-primary h-5 w-5" />
+                </span>
+                <p>{dataItemCatalog.contacto.email}</p>
+              </>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="bg-ifef-dark text-light mt-1 rounded-t-md px-2 py-1">
+            Trabajos destacados
+          </div>
+          {dataItemCatalog.trabajosDestacados.map((featuredWork) => (
+            <div class="project flex flex-col px-4 py-8">
+              <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+                <>
+                  <span>
+                    <Icon name="tag" class="text-primary h-5 w-5" />
+                  </span>
+                  <h4 class="font-medium">{featuredWork.titulo}</h4>
+                </>
+              </div>
+              <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+                <>
+                  <span>
+                    <Icon name="puzzle" class="text-primary h-5 w-5" />
+                  </span>
+                  <p>{featuredWork.tipo}</p>
+                </>
+              </div>
+              <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+                <>
+                  <span>
+                    <Icon name="globe" class="text-primary h-5 w-5" />
+                  </span>
+                  <p>{featuredWork.pais}</p>
+                </>
+              </div>
+              <div class="flex items-center gap-3 py-3">
+                <>
+                  <span>
+                    <Icon name="calendar" class="text-primary h-5 w-5" />
+                  </span>
+                  <p>{featuredWork.anio}</p>
+                </>
+              </div>
+            </div>
+          ))}
+          {/* <div class="project flex flex-col px-4 py-8">
+            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+              <>
+                <span>
+                  <Icon name="tag" class="text-primary h-5 w-5" />
+                </span>
+                <h4 class="font-medium">Rodajes a bordo</h4>
+              </>
+            </div>
+            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+              <>
+                <span>
+                  <Icon name="puzzle" class="text-primary h-5 w-5" />
+                </span>
+                <p>Cine, anuncios, etc</p>
+              </>
+            </div>
+            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+              <>
+                <span>
+                  <Icon name="globe" class="text-primary h-5 w-5" />
+                </span>
+                <p>España</p>
+              </>
+            </div>
+            <div class="flex items-center gap-3 py-3">
+              <>
+                <span>
+                  <Icon name="calendar" class="text-primary h-5 w-5" />
+                </span>
+                <p>2021</p>
+              </>
+            </div>
+          </div>
+          <div class="project flex flex-col px-4 py-8">
+            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+              <>
+                <span>
+                  <Icon name="tag" class="text-primary h-5 w-5" />
+                </span>
+                <h4 class="font-medium">
+                  Vestuario carnaval Cádiz coros, comparsas, etc
+                </h4>
+              </>
+            </div>
+            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+              <>
+                <span>
+                  <Icon name="puzzle" class="text-primary h-5 w-5" />
+                </span>
+                <p>Vestuario</p>
+              </>
+            </div>
+            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+              <>
+                <span>
+                  <Icon name="globe" class="text-primary h-5 w-5" />
+                </span>
+                <p>España</p>
+              </>
+            </div>
+            <div class="flex items-center gap-3 py-3">
+              <>
+                <span>
+                  <Icon name="calendar" class="text-primary h-5 w-5" />
+                </span>
+                <p>2010 al 2021</p>
+              </>
+            </div>
+          </div> */}
+        </div>
+        <div />
+      </div>
+    </div>
+  ))
+}
+
+<style>
+  .project {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 75%;
+      height: 2px;
+      background: var(--color-film);
+      bottom: 0;
+      left: 12.5%;
+    }
+  }
+  .project:last-child:before {
+    display: none;
+  }
+</style>
