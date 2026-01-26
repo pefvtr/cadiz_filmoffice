@@ -24,7 +24,7 @@ const {
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Cádiz FilmOffice</title>
     <Font cssVariable="--font-body" preload />
@@ -88,6 +88,8 @@ const {
         const position = e.animatedScroll;
         const direction = e.direction;
 
+        ScrollTrigger.update();
+
         gsap.killTweensOf(horizontalBarMenu);
 
         if (position > 0 && direction > 0) {
@@ -106,6 +108,13 @@ const {
           updateState("animate-down");
         }
       });
+
+      // Sincronizar con GSAP ticker
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+
+      gsap.ticker.lagSmoothing(0);
 
       function updateState(state: State) {
         const states = ["animate-up", "animate-down"] as const;
