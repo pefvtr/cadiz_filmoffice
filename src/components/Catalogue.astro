@@ -26,9 +26,13 @@ const { data, totalPages } = Astro.props;
           {dataItemCatalog.empresa.toLowerCase() ||
             dataItemCatalog.contacto.nombre}
         </h2>
-        {/* <h3 class="text-light text-base">
-          Fotografía / Impresión gran formato
-        </h3> */}
+        <div class="text-light text-base">
+          {
+            dataItemCatalog.categoriaEmpresa.map(category => (
+              <h4 class="capitalize">{category.toLowerCase()}</h4>
+            ))
+          }
+        </div>
       </div>
       <div class="border-primary flex flex-col border-t-6">
         <div>
