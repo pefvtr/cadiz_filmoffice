@@ -8,6 +8,8 @@ interface Props {
 }
 
 const { data, totalPages } = Astro.props;
+
+console.log({ data });
 ---
 
 {
@@ -26,13 +28,15 @@ const { data, totalPages } = Astro.props;
           {dataItemCatalog.empresa.toLowerCase() ||
             dataItemCatalog.contacto.nombre}
         </h2>
-        {/* <h3 class="text-light text-base">
-          Fotografía / Impresión gran formato
-        </h3> */}
+        <div class="text-light text-base">
+          {dataItemCatalog.categoriaEmpresa.map((category) => (
+            <p class="m-0">{category}</p>
+          ))}
+        </div>
       </div>
       <div class="border-primary flex flex-col border-t-6">
         <div>
-          <div class="bg-ifef-dark text-light mt-1 rounded-t-md px-2 py-1">
+          <div class="bg-ifef-dark text-light mt-1 rounded-md px-4 py-2 md:text-lg">
             Contacto
           </div>
           <div class="flex flex-col px-4 py-2">
@@ -75,7 +79,7 @@ const { data, totalPages } = Astro.props;
           </div>
         </div>
         <div>
-          <div class="bg-ifef-dark text-light mt-1 rounded-t-md px-2 py-1">
+          <div class="bg-ifef-dark text-light mt-1 rounded-md px-4 py-2 md:text-lg">
             Trabajos destacados
           </div>
           {dataItemCatalog.trabajosDestacados.map((featuredWork) => (
@@ -93,7 +97,7 @@ const { data, totalPages } = Astro.props;
                   <span>
                     <Icon name="puzzle" class="text-primary h-5 w-5" />
                   </span>
-                  <p>{featuredWork.tipo}</p>
+                  <p class="capitalize">{featuredWork.tipo.toLowerCase()}</p>
                 </>
               </div>
               <div class="border-primary/25 flex items-center gap-3 border-b py-3">

@@ -2,7 +2,15 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Olivaloló",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Dirección Fotografía/Iluminador TV",
+      "Operador/a Cámara TV",
+      "Foto-fija",
+      "Fotografía",
+      "Diseño Gráfico",
+      "Making Off",
+      "Documentalista"
+    ],
     "contacto": {
       "nombre": "María Oliva López",
       "email": "info@olivalolo.com",
@@ -26,7 +34,12 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Los padrinos classic",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Transporte",
+      "Asociaciones",
+      "Embarcaciones",
+      "Vestuario / Atrezzo"
+    ],
     "contacto": {
       "nombre": "Diego Saavedra Martín",
       "email": "clasicosenjerez@gmail.com",
@@ -82,7 +95,9 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "We Look, You Shoot. Locations & Permits Agency",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Localizador/a"
+    ],
     "contacto": {
       "nombre": "Constante Bueno",
       "email": "hello@welookyoushoot.com",
@@ -106,7 +121,9 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Dresses2Kill",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Vestuario / Atrezzo"
+    ],
     "contacto": {
       "nombre": "Floren Campos",
       "email": "floren@dresses2kill.com",
@@ -138,7 +155,11 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Dresses2Kill",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Auxiliar Producción",
+      "Vestuario/Atrezzo"
+    ],
     "contacto": {
       "nombre": "Floren Campos",
       "email": "camposm.floren@gmail.com",
@@ -194,7 +215,15 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Localizador/a",
+      "Producción",
+      "Ayudante de Sonido",
+      "Compositor/a",
+      "Diseño Gráfico"
+    ],
     "contacto": {
       "nombre": "Pablo Magallanes Camón",
       "email": "pablo.magallanescamon@gmail.com",
@@ -218,7 +247,10 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "SPOTCADIZ PRODUCCION AUDIOVISUAL",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Productora Visual",
+      "Sonido"
+    ],
     "contacto": {
       "nombre": "JOSE ANTONIO BARRO DAZA",
       "email": "spotcadiz@spotcadiz.es",
@@ -258,7 +290,15 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "La Fonda Film Service",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Alojamientos / Restauración",
+      "Material de Producción",
+      "Servicios de Localización",
+      "Transporte",
+      "Casting",
+      "Eco-Friendly / Sostenible",
+      "Servicios Aéreos"
+    ],
     "contacto": {
       "nombre": "Sergio Ceballos de la Torre",
       "email": "info@lafondaservice.com",
@@ -298,7 +338,11 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Innova Films",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Productora / Productora Asociada",
+      "Productora Visual",
+      "Servicios Aéreos"
+    ],
     "contacto": {
       "nombre": "Irene De Juan-Aracil Parra",
       "email": "info@innovafilms.com",
@@ -338,7 +382,11 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Sincro Media Music",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Técnico Sonido Estudio",
+      "Mezclador/Editor Sonido",
+      "Compositor/a"
+    ],
     "contacto": {
       "nombre": "DIego Gallego Pedreño",
       "email": "info@sincromediamusic.com",
@@ -364,7 +412,10 @@
     "empresa": "IntuitivoFilms",
     "categoriaEmpresa": [
       "Guionista/Adaptador",
-      "Dirección/Realización TV"
+      "Dirección/Realización TV",
+      "Foto-fija",
+      "Fotografía",
+      "Making Off"
     ],
     "contacto": {
       "nombre": "Silvestre García Ortega",
@@ -406,12 +457,24 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Localizador/a",
+      "Producción",
+      "Auxiliar Producción",
       "Guionista/Adaptador",
       "Auxiliar Dirección",
       "Ayudante Dirección/Script",
       "Ayudante de Realización TV",
       "Dirección/Realización TV",
-      "Dirección de Casting"
+      "Dirección de Casting",
+      "Auxiliar Cámara Cine",
+      "Operador/a Cámara TV",
+      "Foto-fija",
+      "Fotografía",
+      "Diseño Gráfico",
+      "Community Manager",
+      "Making Off"
     ],
     "contacto": {
       "nombre": "Ana Belén García Vaca",
@@ -453,7 +516,10 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
     "categoriaEmpresa": [
-      "Dirección/Realización TV"
+      "Producción",
+      "Dirección/Realización TV",
+      "Operador/a Cámara TV",
+      "Making Off"
     ],
     "contacto": {
       "nombre": "Francisco Rodríguez García",
@@ -494,7 +560,11 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Coordinación/Dirección de producción",
+      "Producción",
+      "Redacción/Jefatura de Prensa"
+    ],
     "contacto": {
       "nombre": "ROSA GARCÍA BELTRÁN",
       "email": "rosagbeltran@gmail.com",
@@ -534,7 +604,13 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Autonomo",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante Cámara Cine",
+      "Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Operador/a Cámara TV",
+      "Eléctrico/Maquinista"
+    ],
     "contacto": {
       "nombre": "Javier Céspedes Tobalina",
       "email": "javi.cespedes.tobalina@gmail.com",
@@ -575,7 +651,11 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "LA MAR DE VIDEOS",
     "categoriaEmpresa": [
-      "Ayudante de Realización TV"
+      "Ayudante de Realización TV",
+      "Operador/a Cámara TV",
+      "Redacción/Jefatura de Prensa",
+      "Diseño Gráfico",
+      "Documentalista"
     ],
     "contacto": {
       "nombre": "MAR ORTIZ SÁINZ",
@@ -617,8 +697,12 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Auxiliar Producción",
       "Guionista/Adaptador",
-      "Auxiliar Dirección"
+      "Auxiliar Dirección",
+      "Redacción/Jefatura de Prensa",
+      "Community Manager"
     ],
     "contacto": {
       "nombre": "Lucía Piñero",
@@ -659,7 +743,12 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Music Komite",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Técnico Sonido Estudio",
+      "Mezclador/Editor Sonido",
+      "Compositor/a",
+      "Making Off"
+    ],
     "contacto": {
       "nombre": "Francisco Ramírez Calderón",
       "email": "musickomite@gmail.com",
@@ -699,7 +788,23 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Romantic People",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Cámara / Grip",
+      "Catering",
+      "Efectos Especiales",
+      "Laboratorios / Edición",
+      "Material de Producción",
+      "Película / Fotografía",
+      "Productora / Productora Asociada",
+      "Servicios de Localización",
+      "Productora Visual",
+      "Casting",
+      "Eco-Friendly / Sostenible",
+      "Maquillaje / Peluquería",
+      "Post-Producción / VFX",
+      "Servicios Aéreos",
+      "Sonido"
+    ],
     "contacto": {
       "nombre": "Hugo Fernández",
       "email": "hugo@romanticpeople.es",
@@ -739,7 +844,10 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Foto-fija",
+      "Vestuario/Atrezzo"
+    ],
     "contacto": {
       "nombre": "Telma Host González",
       "email": "telmahgonz@gmail.com",
@@ -779,7 +887,13 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Romain Manteau",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante de Sonido",
+      "Técnico Sonido Directo",
+      "Técnico Sonido Estudio",
+      "Mezclador/Editor Sonido",
+      "Compositor/a"
+    ],
     "contacto": {
       "nombre": "Romain Manteau",
       "email": "romain.nuages@gmail.com",
@@ -819,7 +933,11 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje para Cine",
+      "Peluquería para Cine",
+      "Caracterización FX"
+    ],
     "contacto": {
       "nombre": "Maria del Rosario Ramirez Camas",
       "email": "marittaram@hotmail.com",
@@ -859,7 +977,11 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje para Cine",
+      "Peluquería para Cine",
+      "Caracterización FX"
+    ],
     "contacto": {
       "nombre": "isabel ramirez camas",
       "email": "isaramca@gmail.com",
@@ -884,7 +1006,14 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
     "categoriaEmpresa": [
-      "Ayudante Dirección/Script"
+      "Ayudante Producción",
+      "Ayudante Dirección/Script",
+      "Maquillaje para Cine",
+      "Peluquería para Cine",
+      "Caracterización FX",
+      "Redacción/Jefatura de Prensa",
+      "Vestuario/Atrezzo",
+      "Efectos Especiales"
     ],
     "contacto": {
       "nombre": "José Manuel Otero Ramírez",
@@ -917,7 +1046,12 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "TMK Estudios",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante de Sonido",
+      "Técnico Sonido Directo",
+      "Técnico Sonido Estudio",
+      "Mezclador/Editor Sonido"
+    ],
     "contacto": {
       "nombre": "Alejandro Junquero Castro",
       "email": "tmkrecords.info@gmail.com",
@@ -958,7 +1092,16 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "ElOjoFilms",
     "categoriaEmpresa": [
-      "Auxiliar Dirección"
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Localizador/a",
+      "Auxiliar Dirección",
+      "Auxiliar Cámara Cine",
+      "Foto-fija",
+      "Fotografía",
+      "Community Manager",
+      "Making Off",
+      "Documentalista"
     ],
     "contacto": {
       "nombre": "Javier Salazar Mateo",
@@ -1000,10 +1143,15 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "Profesional autónomo",
     "categoriaEmpresa": [
+      "Auxiliar Producción",
       "Guionista/Adaptador",
       "Auxiliar Dirección",
       "Ayudante de Realización TV",
-      "Dirección/Realización TV"
+      "Dirección/Realización TV",
+      "Auxiliar Cámara Cine",
+      "Operador/a Cámara TV",
+      "Eléctrico/Maquinista",
+      "Making Off"
     ],
     "contacto": {
       "nombre": "Gabriel Gascó Gavilán",
@@ -1044,7 +1192,10 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "LAS NIÑAS DE CÁDIZ SL",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Productora / Productora Asociada",
+      "Casting"
+    ],
     "contacto": {
       "nombre": "ALEJANDRA LÓPEZ SEGOVIA",
       "email": "lasninasdecadiz@gmail.com",
@@ -1068,7 +1219,9 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "CADIGRAFIA PUBLICIDAD Y COMUNICACIÓN S.L.",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Material de Producción"
+    ],
     "contacto": {
       "nombre": "Ignacio González Dorao",
       "email": "buzon@cadigrafia.com",
@@ -1109,9 +1262,12 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
     "categoriaEmpresa": [
+      "Localizador/a",
       "Guionista/Adaptador",
       "Dirección/Realización TV",
-      "Dirección de Casting"
+      "Dirección de Casting",
+      "Actor/Actriz/Especialista",
+      "Documentalista"
     ],
     "contacto": {
       "nombre": "Antonio Labajo Altamirano",
@@ -1152,7 +1308,9 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Vestuario/Atrezzo"
+    ],
     "contacto": {
       "nombre": "David Jiménez Díaz",
       "email": "escribe@davidjimenezdiaz.com",
@@ -1192,7 +1350,13 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Antonio Morenilla",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Operador/a Cámara TV",
+      "Foto-fija",
+      "Making Off"
+    ],
     "contacto": {
       "nombre": "Antonio Morenilla Diaz",
       "email": "moreh@byantoniomorenilla.com",
@@ -1267,7 +1431,10 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "MAR SEVILLA",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje para Cine",
+      "Caracterización FX"
+    ],
     "contacto": {
       "nombre": "Maria del Mar Sevilla Albarran",
       "email": "m.sevilla.albarran@gmail.com",
@@ -1307,7 +1474,11 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Warm Film Studio",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Cámara / Grip",
+      "Productora / Productora Asociada",
+      "Productora Visual"
+    ],
     "contacto": {
       "nombre": "Cristian López Fernández",
       "email": "warm.contacto@gmail.com",
@@ -1347,7 +1518,16 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Localizador/a",
+      "Auxiliar Producción",
+      "Foto-fija",
+      "Eléctrico/Maquinista",
+      "Fotografía",
+      "Diseño Gráfico",
+      "Making Off"
+    ],
     "contacto": {
       "nombre": "José María Piulestán Romero",
       "email": "josemaryapiulestan@gmail.com",
@@ -1371,7 +1551,18 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Imagenfactory",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Cámara / Grip",
+      "Efectos Especiales",
+      "Laboratorios / Edición",
+      "Material de Producción",
+      "Película / Fotografía",
+      "Productora / Productora Asociada",
+      "Productora Visual",
+      "Post-Producción / VFX",
+      "Servicios Aéreos",
+      "Sonido"
+    ],
     "contacto": {
       "nombre": "Wenceslao Scyzoryk",
       "email": "info@imagenfactory.es",
@@ -1412,10 +1603,14 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "CLAVE COMUNICACION Y PRODUCCIONES",
     "categoriaEmpresa": [
+      "Localizador/a",
+      "Producción",
       "Guionista/Adaptador",
       "Auxiliar Dirección",
       "Dirección/Realización TV",
-      "Dirección de Casting"
+      "Dirección de Casting",
+      "Making Off",
+      "Servicios Aéreos"
     ],
     "contacto": {
       "nombre": "JESUS MURCIANO",
@@ -1440,7 +1635,9 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Espectáculos Vértigo",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Agencias de Colocación"
+    ],
     "contacto": {
       "nombre": "Espectáculos Vértigo",
       "email": "contacto@espectaculosvertigo.com",
@@ -1465,7 +1662,18 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
     "categoriaEmpresa": [
-      "Ayudante Dirección/Script"
+      "Ayudante Dirección/Script",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Operador/a Cámara TV",
+      "Operador/a Cámaras especiales (Steady, dron, acuática)",
+      "Foto-fija",
+      "Eléctrico/Maquinista",
+      "Fotografía",
+      "Diseño Gráfico",
+      "Making Off"
     ],
     "contacto": {
       "nombre": "Isabel Chica Pérez",
@@ -1506,7 +1714,12 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Simprisa Producciones: Especialistas en Animación 2D",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Animación / Modelado 3D",
+      "Laboratorios / Edición",
+      "Productora Visual",
+      "Sonido"
+    ],
     "contacto": {
       "nombre": "David Ibernia Etayo",
       "email": "davidibernia@gmail.com",
@@ -1546,7 +1759,12 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "INMEDIATEC LIVE, SLU",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Película / Fotografía",
+      "Iluminaciones / Grupos",
+      "Limpieza",
+      "Sonido"
+    ],
     "contacto": {
       "nombre": "ALBERTO RUIZ CURRAL",
       "email": "comercial@inmediatec.com",
@@ -1586,7 +1804,13 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "D´ARTE GRUPO, EVENTOS Y AUDIOVISUALES, S.L",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Material de Producción",
+      "Película / Fotografía",
+      "Iluminaciones / Grupos",
+      "Limpieza",
+      "Sonido"
+    ],
     "contacto": {
       "nombre": "ALBERTO RUIZ CURRAL",
       "email": "produccion@d-arte.org",
@@ -1626,7 +1850,12 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Sala46 Films",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Distribución",
+      "Laboratorios / Edición",
+      "Productora / Productora Asociada",
+      "Servicios de Localización"
+    ],
     "contacto": {
       "nombre": "Alejandro Cano Escribano",
       "email": "films@sala46.com",
@@ -1666,7 +1895,12 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "AUDIOVISUALES El Sur",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Operador/a Cámara TV",
+      "Ayudante de Sonido",
+      "Técnico Sonido Directo",
+      "Mezclador/Editor Sonido"
+    ],
     "contacto": {
       "nombre": "Marcos Antonio Conde Ruiz",
       "email": "elsur@elsuraudiovisuales.es",
@@ -1730,7 +1964,12 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "PCM BROADCAST SERVICES",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Cámara / Grip",
+      "Grúas / Plataformas",
+      "Productora / Productora Asociada",
+      "Productora Visual"
+    ],
     "contacto": {
       "nombre": "Miguel Ángel Ramírez Tocón",
       "email": "produccion@pcmproducciones.com",
@@ -1770,7 +2009,11 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "MECANOGRAFICA GADITANA S.L.",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Distribución",
+      "Película / Fotografía",
+      "Sonido"
+    ],
     "contacto": {
       "nombre": "JESUS GARCIA BERMEJO",
       "email": "info@megasl.net",
@@ -1794,7 +2037,10 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "RAS ARTESANOS DE CÁDIZ,SL",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Escenografía / Decorados",
+      "Vestuario / Atrezzo"
+    ],
     "contacto": {
       "nombre": "Ricardo Lores Suárez",
       "email": "rasartesanos@gmail.com",
@@ -1819,7 +2065,14 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "JEDAL ALQUILERES SLU",
     "categoriaEmpresa": [
-      "Ayudante Producción"
+      "Ayudante Producción",
+      "Catering",
+      "Distribución",
+      "Material de Producción",
+      "Transporte",
+      "Iluminaciones / Grupos",
+      "Limpieza",
+      "Sonido"
     ],
     "contacto": {
       "nombre": "José Manuel Leira Domínguez",
@@ -1872,8 +2125,15 @@
     "tipoRegistro": "EMPRESAS",
     "empresa": "Horrorstudiofx",
     "categoriaEmpresa": [
+      "Coordinación/Dirección de producción",
+      "Producción",
       "Guionista/Adaptador",
-      "Dirección de Casting"
+      "Dirección de Casting",
+      "Maquillaje para Cine",
+      "Peluquería para Cine",
+      "Caracterización FX",
+      "Actor/Actriz/Especialista",
+      "Vestuario/Atrezzo"
     ],
     "contacto": {
       "nombre": "Joaquín lavilla",
@@ -1914,7 +2174,9 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Susana Rosado García",
       "email": "soyllorona@gmail.com",
@@ -1954,7 +2216,9 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "ROBOTS CAN CRY S.L",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Efectos Especiales"
+    ],
     "contacto": {
       "nombre": "Javier Coronilla Bohorquez",
       "email": "office@robotscancry.com",
@@ -1994,7 +2258,12 @@
   {
     "tipoRegistro": "EMPRESAS",
     "empresa": "Cruceros Sancti Petri,S.L. (albarco.com)",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Escenografía / Decorados",
+      "Servicios de Localización",
+      "Embarcaciones",
+      "Estudios / Platós"
+    ],
     "contacto": {
       "nombre": "Eva Burgos Muñoz",
       "email": "comercial@albarco.com",
@@ -2018,7 +2287,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "ACRON",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Película / Fotografía"
+    ],
     "contacto": {
       "nombre": "RAFAEL GONZALEZ TIERNO",
       "email": "info@acron.es",
@@ -2085,7 +2356,12 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Womackgroup",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Localizador/a",
+      "Auxiliar Producción",
+      "Making Off"
+    ],
     "contacto": {
       "nombre": "BORJA PÉREZ RODRÍGUEZ",
       "email": "loading.8119@gmail.com",
@@ -2110,7 +2386,22 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Bodasdream",
     "categoriaEmpresa": [
-      "Auxiliar Dirección"
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Localizador/a",
+      "Producción",
+      "Auxiliar Producción",
+      "Auxiliar Dirección",
+      "Auxiliar Cámara Cine",
+      "Operador/a Cámara TV",
+      "Operador/a Cámaras especiales (Steady, dron, acuática)",
+      "Fotografía",
+      "Redacción/Jefatura de Prensa",
+      "Diseño Gráfico",
+      "Community Manager",
+      "Making Off",
+      "Coreógrafía/Bailarin/a",
+      "Servicios Aéreos"
     ],
     "contacto": {
       "nombre": "Álvaro Manzano González",
@@ -2135,7 +2426,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Miguel Ángel Castaño Mateo",
       "email": "miguelangelcastanomateo@gmail.com",
@@ -2159,7 +2452,10 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Look Art Studio",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje / Peluquería",
+      "Vestuario / Atrezzo"
+    ],
     "contacto": {
       "nombre": "Francisco Martín San Sabas",
       "email": "lookartstudiocadiz@gmail.com",
@@ -2200,7 +2496,13 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Flowings",
     "categoriaEmpresa": [
-      "Dirección de Casting"
+      "Ayudante Producción",
+      "Localizador/a",
+      "Producción",
+      "Auxiliar Producción",
+      "Dirección de Casting",
+      "Making Off",
+      "Actor/Actriz/Especialista"
     ],
     "contacto": {
       "nombre": "Diego García Moreno",
@@ -2242,7 +2544,11 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Autonoma",
     "categoriaEmpresa": [
-      "Auxiliar Dirección"
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Producción",
+      "Auxiliar Dirección",
+      "Actor/Actriz/Especialista"
     ],
     "contacto": {
       "nombre": "Sarah Witt Garcia",
@@ -2268,9 +2574,19 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Localizador/a",
       "Ayudante Dirección/Script",
       "Ayudante de Realización TV",
-      "Dirección/Realización TV"
+      "Dirección/Realización TV",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Operador/a Cámara TV",
+      "Foto-fija",
+      "Fotografía",
+      "Community Manager",
+      "Making Off"
     ],
     "contacto": {
       "nombre": "Sofía Blanco Villén",
@@ -2295,7 +2611,11 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje para Cine",
+      "Caracterización FX",
+      "Vestuario/Atrezzo"
+    ],
     "contacto": {
       "nombre": "REBECA POQUET RAMIREZ",
       "email": "REBECAPOQUET.MAKEUP@GMAIL.COM",
@@ -2359,7 +2679,10 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Auxiliar Cámara Cine",
+      "Cámara Cine"
+    ],
     "contacto": {
       "nombre": "Pablo Moya",
       "email": "pablomoyacam@gmail.com",
@@ -2399,7 +2722,12 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "UNSHINY PICTURES",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Animación / Modelado 3D",
+      "Productora / Productora Asociada",
+      "Estudios / Platós",
+      "Iluminaciones / Grupos"
+    ],
     "contacto": {
       "nombre": "MARIA GARCIA GARCIA",
       "email": "financial@leonstudio.tv",
@@ -2432,10 +2760,15 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Localizador/a",
+      "Producción",
+      "Auxiliar Producción",
       "Auxiliar Dirección",
       "Ayudante Dirección/Script",
       "Ayudante de Realización TV",
-      "Dirección/Realización TV"
+      "Dirección/Realización TV",
+      "Operador/a Cámara TV"
     ],
     "contacto": {
       "nombre": "Mariló Capita Mengíbar",
@@ -2476,7 +2809,12 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante de Sonido",
+      "Técnico Sonido Directo",
+      "Técnico Sonido Estudio",
+      "Mezclador/Editor Sonido"
+    ],
     "contacto": {
       "nombre": "Elena Almaraz Ruiz",
       "email": "elenalmarr@gmail.com",
@@ -2500,7 +2838,11 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje para Cine",
+      "Peluquería para Cine",
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Juan Bautista Cuacarella Huerta",
       "email": "jbcucarella@hotmail.com",
@@ -2524,7 +2866,11 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "n/a",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Localizador/a",
+      "Community Manager"
+    ],
     "contacto": {
       "nombre": "Maria Alicia Moore (Mayorga)",
       "email": "mooremedinasidonia@gmail.com",
@@ -2549,9 +2895,16 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Localizador/a",
+      "Auxiliar Producción",
       "Guionista/Adaptador",
       "Auxiliar Dirección",
-      "Ayudante Dirección/Script"
+      "Ayudante Dirección/Script",
+      "Fotografía",
+      "Redacción/Jefatura de Prensa",
+      "Community Manager",
+      "Actor/Actriz/Especialista"
     ],
     "contacto": {
       "nombre": "Sofía Navarro",
@@ -2594,7 +2947,12 @@
     "empresa": "Profesional Autónomo",
     "categoriaEmpresa": [
       "Guionista/Adaptador",
-      "Dirección/Realización TV"
+      "Dirección/Realización TV",
+      "Fotografía",
+      "Redacción/Jefatura de Prensa",
+      "Diseño Gráfico",
+      "Community Manager",
+      "Making Off"
     ],
     "contacto": {
       "nombre": "Antonio Jesús García de Quirós Rodríguez",
@@ -2619,7 +2977,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Joaquín Pachón Sonido",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Técnico Sonido Directo"
+    ],
     "contacto": {
       "nombre": "Joaquín Pachón",
       "email": "info@joaquinpachon.com",
@@ -2659,7 +3019,11 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "ILUNION Hotels",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Alojamientos / Restauración",
+      "Servicios de Localización",
+      "Eco-Friendly / Sostenible"
+    ],
     "contacto": {
       "nombre": "Carmen García",
       "email": "cgarciaru@ilunionhotels.com",
@@ -2683,7 +3047,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Aida Santos-Allely Cía",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Aida Santos-Allely",
       "email": "infoaidas.a@gmail.com",
@@ -2724,8 +3090,17 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Localizador/a",
+      "Auxiliar Producción",
       "Auxiliar Dirección",
-      "Ayudante de Realización TV"
+      "Ayudante de Realización TV",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Ayudante de Sonido",
+      "Redacción/Jefatura de Prensa",
+      "Diseño Gráfico"
     ],
     "contacto": {
       "nombre": "Elena Gil Escudier",
@@ -2750,7 +3125,12 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Contacto Visual Films",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Cámara / Grip",
+      "Productora / Productora Asociada",
+      "Servicios de Localización",
+      "Productora Visual"
+    ],
     "contacto": {
       "nombre": "Javier Fénix Real",
       "email": "",
@@ -2822,7 +3202,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Arreglos y confección a medida Mercedes Mayone",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Vestuario / Atrezzo"
+    ],
     "contacto": {
       "nombre": "Mercedes Mayone Torbaño",
       "email": "Arreglosmayone@yahoo.es",
@@ -2854,7 +3236,12 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje para Cine",
+      "Peluquería para Cine",
+      "Caracterización FX",
+      "Vestuario/Atrezzo"
+    ],
     "contacto": {
       "nombre": "Sandra Pérez Aguilar",
       "email": "Sandra.ccca@gmail.com",
@@ -2879,9 +3266,18 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Olivaloló",
     "categoriaEmpresa": [
+      "Auxiliar Producción",
       "Ayudante de Realización TV",
       "Dirección/Realización TV",
-      "Dirección de Casting"
+      "Dirección de Casting",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Foto-fija",
+      "Fotografía",
+      "Redacción/Jefatura de Prensa",
+      "Diseño Gráfico",
+      "Making Off"
     ],
     "contacto": {
       "nombre": "María Oliva López López",
@@ -2907,11 +3303,31 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Localizador/a",
+      "Producción",
+      "Auxiliar Producción",
       "Guionista/Adaptador",
       "Auxiliar Dirección",
       "Ayudante Dirección/Script",
       "Ayudante de Realización TV",
-      "Dirección/Realización TV"
+      "Dirección/Realización TV",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Operador/a Cámara TV",
+      "Operador/a Cámaras especiales (Steady, dron, acuática)",
+      "Foto-fija",
+      "Ayudante de Sonido",
+      "Fotografía",
+      "Community Manager",
+      "Making Off",
+      "Actor/Actriz/Especialista",
+      "Documentalista",
+      "Diseño Videojuegos",
+      "Efectos Especiales"
     ],
     "contacto": {
       "nombre": "Adrián Prian Rueda",
@@ -2945,11 +3361,25 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Localizador/a",
+      "Producción",
+      "Auxiliar Producción",
       "Auxiliar Dirección",
       "Ayudante Dirección/Script",
       "Ayudante de Realización TV",
       "Dirección/Realización TV",
-      "Dirección de Casting"
+      "Dirección de Casting",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Foto-fija",
+      "Ayudante de Sonido",
+      "Fotografía",
+      "Redacción/Jefatura de Prensa",
+      "Community Manager",
+      "Making Off"
     ],
     "contacto": {
       "nombre": "Sara Fernández Lozano",
@@ -2982,7 +3412,15 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Paracon Producciones",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Distribución",
+      "Productora / Productora Asociada",
+      "Servicios de Localización",
+      "Productora Visual",
+      "Maquillaje / Peluquería",
+      "Servicios Aéreos",
+      "Sonido"
+    ],
     "contacto": {
       "nombre": "José Manuel Rebollo Preciados",
       "email": "produccionesparacon@gmail.com",
@@ -3049,7 +3487,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Producción"
+    ],
     "contacto": {
       "nombre": "Migue \"Melele\" Sánchez Gutiérrez",
       "email": "melelesanchez@gmail.com",
@@ -3105,7 +3545,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Faly Vila Trabajos Verticales",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Escenografía / Decorados"
+    ],
     "contacto": {
       "nombre": "Rafael Vila Naranjo",
       "email": "fv-47@hotmail.com",
@@ -3129,7 +3571,10 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "La Santa Streetwear S.L",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Escenografía / Decorados",
+      "Vestuario / Atrezzo"
+    ],
     "contacto": {
       "nombre": "David Freire González",
       "email": "Lasantasw@gmail.com",
@@ -3177,7 +3622,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Vestuario/Atrezzo"
+    ],
     "contacto": {
       "nombre": "Jose Cruz Guerrero",
       "email": "josecruzguererro@icloud.com",
@@ -3201,7 +3648,13 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "PEPA BANDERA",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Alojamientos / Restauración",
+      "Catering",
+      "Transporte",
+      "Asesoría / Contabilidad",
+      "Embarcaciones"
+    ],
     "contacto": {
       "nombre": "MARIA JOSE GRANDE BRIHUEGA",
       "email": "mariajose@pepabandera.es",
@@ -3225,7 +3678,11 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje para Cine",
+      "Caracterización FX",
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Alicia Monzo Romero",
       "email": "aliciamonzo14@gmail.com",
@@ -3250,10 +3707,17 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Producción",
+      "Auxiliar Producción",
       "Guionista/Adaptador",
       "Ayudante Dirección/Script",
       "Ayudante de Realización TV",
-      "Dirección/Realización TV"
+      "Dirección/Realización TV",
+      "Ayudante Cámara Cine",
+      "Cámara Cine",
+      "Operador/a Cámara TV",
+      "Ayudante de Sonido"
     ],
     "contacto": {
       "nombre": "Ezequiel González Macías",
@@ -3278,7 +3742,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Vestuario/Atrezzo"
+    ],
     "contacto": {
       "nombre": "Jose Cruz Guerrero",
       "email": "josecruzguerrero@icloud.com",
@@ -3302,7 +3768,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Catering Momento Andaluz",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Catering"
+    ],
     "contacto": {
       "nombre": "Augusto Martínez Ruiz",
       "email": "Info@momentoandaluz.com",
@@ -3326,7 +3794,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Ana Salas",
       "email": "Anasalas86@gmail.com",
@@ -3367,11 +3837,24 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Localizador/a",
+      "Producción",
+      "Auxiliar Producción",
       "Guionista/Adaptador",
       "Auxiliar Dirección",
       "Ayudante Dirección/Script",
       "Ayudante de Realización TV",
-      "Dirección/Realización TV"
+      "Dirección/Realización TV",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Operador/a Cámara TV",
+      "Foto-fija",
+      "Eléctrico/Maquinista",
+      "Vestuario/Atrezzo"
     ],
     "contacto": {
       "nombre": "Álvaro Aguilera Herrera",
@@ -3412,7 +3895,11 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Q Hotels",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Alojamientos / Restauración",
+      "Escenografía / Decorados",
+      "Estudios / Platós"
+    ],
     "contacto": {
       "nombre": "Juan Manuel Sánchez Velarde",
       "email": "jmsanchez@qhotels.es",
@@ -3452,7 +3939,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Autonomo",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Eléctrico/Maquinista"
+    ],
     "contacto": {
       "nombre": "León Sánchez Martín",
       "email": "leonsanchezmartin94@gmail.com",
@@ -3492,7 +3981,13 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "ANTONIO MORENILLA",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Producción",
+      "Operador/a Cámaras especiales (Steady, dron, acuática)",
+      "Foto-fija",
+      "Making Off",
+      "Documentalista"
+    ],
     "contacto": {
       "nombre": "ANTONIO FRANCISCO MORENILLA DIAZ",
       "email": "morehh@gmail.com",
@@ -3534,7 +4029,8 @@
     "empresa": "",
     "categoriaEmpresa": [
       "Guionista/Adaptador",
-      "Dirección/Realización TV"
+      "Dirección/Realización TV",
+      "Actor/Actriz/Especialista"
     ],
     "contacto": {
       "nombre": "Andrea Ganfornina García",
@@ -3575,7 +4071,11 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "BLUEDRONE",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Coordinación/Dirección de producción",
+      "Producción",
+      "Operador/a Cámara TV"
+    ],
     "contacto": {
       "nombre": "JOSE DIAZ OROZCO",
       "email": "info@grupobluedrone.com",
@@ -3591,8 +4091,21 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Producción",
       "Auxiliar Dirección",
-      "Ayudante de Realización TV"
+      "Ayudante de Realización TV",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Operador/a Cámara TV",
+      "Foto-fija",
+      "Maquillaje para Cine",
+      "Ayudante de Sonido",
+      "Fotografía",
+      "Diseño Gráfico",
+      "Vestuario/Atrezzo"
     ],
     "contacto": {
       "nombre": "Rosa Santander Pérez",
@@ -3617,7 +4130,15 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Localizador/a",
+      "Producción",
+      "Auxiliar Producción",
+      "Foto-fija",
+      "Fotografía"
+    ],
     "contacto": {
       "nombre": "María José Martín López",
       "email": "merijmartin@gmail.com",
@@ -3649,7 +4170,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Gadesdron",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Servicios Aéreos"
+    ],
     "contacto": {
       "nombre": "Jesús del Real Pasquin",
       "email": "contacto@gadesdron.es",
@@ -3673,7 +4196,10 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "MAPACHE PRODUCCIONES SL",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Productora / Productora Asociada",
+      "Servicios de Localización"
+    ],
     "contacto": {
       "nombre": "ANA MARIA GALLARDO VALLE",
       "email": "info@mapacheproductions.com",
@@ -3714,6 +4240,8 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Coordinación/Dirección de producción",
+      "Localizador/a",
       "Ayudante de Realización TV"
     ],
     "contacto": {
@@ -3756,7 +4284,11 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Macanaz joyeros artesanos y Antigüedades Macanaz",
     "categoriaEmpresa": [
-      "Ayudante Producción"
+      "Ayudante Producción",
+      "Escenografía / Decorados",
+      "Material de Producción",
+      "Película / Fotografía",
+      "Vestuario / Atrezzo"
     ],
     "contacto": {
       "nombre": "Maria Teresa Sanchez Duarte",
@@ -3790,9 +4322,22 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Producción",
+      "Auxiliar Producción",
       "Guionista/Adaptador",
       "Auxiliar Dirección",
-      "Ayudante Dirección/Script"
+      "Ayudante Dirección/Script",
+      "Eléctrico/Maquinista",
+      "Maquillaje para Cine",
+      "Ayudante de Sonido",
+      "Técnico Sonido Directo",
+      "Doblaje/Dirección Doblaje",
+      "Compositor/a",
+      "Redacción/Jefatura de Prensa",
+      "Actor/Actriz/Especialista",
+      "Vestuario/Atrezzo"
     ],
     "contacto": {
       "nombre": "Mesa de Teatro de participación ciudadana de Cádiz",
@@ -3817,7 +4362,12 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Cámara Cine",
+      "Operador/a Cámara TV"
+    ],
     "contacto": {
       "nombre": "Ana Oliva Ariza",
       "email": "aolivaariza@gmail.com",
@@ -3851,7 +4401,8 @@
     "empresa": "",
     "categoriaEmpresa": [
       "Guionista/Adaptador",
-      "Ayudante Dirección/Script"
+      "Ayudante Dirección/Script",
+      "Actor/Actriz/Especialista"
     ],
     "contacto": {
       "nombre": "Juan Antonio Polo Vallejo",
@@ -3876,7 +4427,17 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Elisa Cortés actriz",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Localizador/a",
+      "Producción",
+      "Auxiliar Producción",
+      "Community Manager",
+      "Actor/Actriz/Especialista",
+      "Coreógrafía/Bailarin/a",
+      "Traducción/Interpretación",
+      "Vestuario/Atrezzo"
+    ],
     "contacto": {
       "nombre": "Elisa Cortés",
       "email": "elisacortesactriz@gmail.com",
@@ -3900,7 +4461,12 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Autónoma",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Producción",
+      "Auxiliar Producción"
+    ],
     "contacto": {
       "nombre": "Anna Melià Zarroca",
       "email": "nana.melzar@gmail.com",
@@ -3941,8 +4507,13 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Iosune Onraita",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Localizador/a",
+      "Auxiliar Producción",
       "Guionista/Adaptador",
-      "Dirección de Casting"
+      "Dirección de Casting",
+      "Actor/Actriz/Especialista"
     ],
     "contacto": {
       "nombre": "Iosune Onraita",
@@ -3984,6 +4555,10 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Coordinación/Dirección de producción",
+      "Producción",
+      "Auxiliar Producción",
       "Auxiliar Dirección"
     ],
     "contacto": {
@@ -4026,8 +4601,14 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Auxiliar Producción",
       "Auxiliar Dirección",
-      "Ayudante de Realización TV"
+      "Ayudante de Realización TV",
+      "Fotografía",
+      "Redacción/Jefatura de Prensa",
+      "Community Manager",
+      "Actor/Actriz/Especialista"
     ],
     "contacto": {
       "nombre": "Ana Belén García Castro",
@@ -4068,7 +4649,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Particular (actriz)",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Susana Cruz Garcia",
       "email": "susanacr.g@hotmail.com",
@@ -4108,7 +4691,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "albarco.com",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Embarcaciones"
+    ],
     "contacto": {
       "nombre": "Javier Ramirez Guillon",
       "email": "info@albarco.com",
@@ -4132,7 +4717,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Jonatan Pantoja Garrido",
       "email": "johnpantoja.cdz@gmail.com",
@@ -4172,7 +4759,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Jonatan Pantoja Garrido",
       "email": "johnpantoja.cdz@gmail.com",
@@ -4212,7 +4801,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Jonatan Pantoja Garrido",
       "email": "johnpantoja.cdz@gmail.com",
@@ -4236,7 +4827,12 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje para Cine",
+      "Peluquería para Cine",
+      "Caracterización FX",
+      "Traducción/Interpretación"
+    ],
     "contacto": {
       "nombre": "Lisa Ann Hernandez",
       "email": "lisa@lisahernandez.com",
@@ -4277,7 +4873,13 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
-      "Guionista/Adaptador"
+      "Ayudante Producción",
+      "Localizador/a",
+      "Producción",
+      "Auxiliar Producción",
+      "Guionista/Adaptador",
+      "Redacción/Jefatura de Prensa",
+      "Vestuario/Atrezzo"
     ],
     "contacto": {
       "nombre": "Lucía Jiménez Moreno",
@@ -4361,7 +4963,26 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Guaino Produce SL",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Alojamientos / Restauración",
+      "Animación / Modelado 3D",
+      "Cámara / Grip",
+      "Catering",
+      "Efectos Especiales",
+      "Grúas / Plataformas",
+      "Material de Producción",
+      "Película / Fotografía",
+      "Productora / Productora Asociada",
+      "Servicios de Localización",
+      "Transporte",
+      "Productora Visual",
+      "Casting",
+      "Estudios / Platós",
+      "Iluminaciones / Grupos",
+      "Post-Producción / VFX",
+      "Sonido",
+      "Vestuario / Atrezzo"
+    ],
     "contacto": {
       "nombre": "Paco Sepúlveda",
       "email": "info@guainotproduce.com",
@@ -4394,9 +5015,13 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Producción",
       "Guionista/Adaptador",
       "Auxiliar Dirección",
-      "Ayudante Dirección/Script"
+      "Ayudante Dirección/Script",
+      "Redacción/Jefatura de Prensa",
+      "Community Manager"
     ],
     "contacto": {
       "nombre": "Guillermo Rodríguez Durán",
@@ -4439,7 +5064,8 @@
     "empresa": "",
     "categoriaEmpresa": [
       "Guionista/Adaptador",
-      "Dirección de Casting"
+      "Dirección de Casting",
+      "Actor/Actriz/Especialista"
     ],
     "contacto": {
       "nombre": "Mabel Carrión Roncero",
@@ -4481,7 +5107,11 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
-      "Ayudante de Realización TV"
+      "Ayudante Producción",
+      "Localizador/a",
+      "Auxiliar Producción",
+      "Ayudante de Realización TV",
+      "Ayudante de Sonido"
     ],
     "contacto": {
       "nombre": "Emilia Ortiz",
@@ -4522,7 +5152,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Jaime García Torres",
       "email": "jaylatirana@gmail.com",
@@ -4546,7 +5178,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Cosmicomicas Teatro",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Pilar García-Órihuel",
       "email": "pilargarciaorihuel@gmail.com",
@@ -4587,7 +5221,39 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Prime Colada Gades",
     "categoriaEmpresa": [
-      "Ayudante Producción"
+      "Ayudante Producción",
+      "Agencias de Colocación",
+      "Alojamientos / Restauración",
+      "Animación / Modelado 3D",
+      "Asistencia Sanitaria / Seguros RC",
+      "Cámara / Grip",
+      "Catering",
+      "Distribución",
+      "Efectos Especiales",
+      "Escenografía / Decorados",
+      "Grúas / Plataformas",
+      "Laboratorios / Edición",
+      "Material de Producción",
+      "Película / Fotografía",
+      "Productora / Productora Asociada",
+      "Servicios de Localización",
+      "Transporte",
+      "Productora Visual",
+      "Animales",
+      "Asesoría / Contabilidad",
+      "Asociaciones",
+      "Casting",
+      "Centros de Formación",
+      "Eco-Friendly / Sostenible",
+      "Embarcaciones",
+      "Estudios / Platós",
+      "Iluminaciones / Grupos",
+      "Limpieza",
+      "Maquillaje / Peluquería",
+      "Post-Producción / VFX",
+      "Servicios Aéreos",
+      "Sonido",
+      "Vestuario / Atrezzo"
     ],
     "contacto": {
       "nombre": "Vicente Jarana García",
@@ -4612,7 +5278,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Prime Colada Gades. Lavanderia autoservicio",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Limpieza"
+    ],
     "contacto": {
       "nombre": "Vicente Jarana García",
       "email": "primecoladagades@gmail.com",
@@ -4636,7 +5304,11 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Cádiz Time Apartments",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Alojamientos / Restauración",
+      "Eco-Friendly / Sostenible",
+      "Limpieza"
+    ],
     "contacto": {
       "nombre": "María Fernández",
       "email": "reservas@cadiztime.es",
@@ -4660,7 +5332,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "La Lectora",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Alojamientos / Restauración"
+    ],
     "contacto": {
       "nombre": "Loly Corral Pérez",
       "email": "Hola@lalectora.com",
@@ -4684,7 +5358,10 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Hotel Las Cortes de Cádiz",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Alojamientos / Restauración",
+      "Eco-Friendly / Sostenible"
+    ],
     "contacto": {
       "nombre": "Alberto Lozano Bernier",
       "email": "alberto@hotellascortes.com",
@@ -4708,7 +5385,10 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Look Art Studio SL",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje / Peluquería",
+      "Vestuario / Atrezzo"
+    ],
     "contacto": {
       "nombre": "Francisco Martín San Sabas",
       "email": "lookartstudiocadiz@gmail.com",
@@ -4748,7 +5428,10 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "The Talent Sea",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Casting",
+      "Centros de Formación"
+    ],
     "contacto": {
       "nombre": "marta Cejas Sánchez",
       "email": "info@thetalentsea.com",
@@ -4772,7 +5455,19 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Alba Lorenzo Boutique",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Escenografía / Decorados",
+      "Material de Producción",
+      "Película / Fotografía",
+      "Transporte",
+      "Productora Visual",
+      "Casting",
+      "Eco-Friendly / Sostenible",
+      "Embarcaciones",
+      "Estudios / Platós",
+      "Post-Producción / VFX",
+      "Vestuario / Atrezzo"
+    ],
     "contacto": {
       "nombre": "Alba María Lorenzo Dominguez",
       "email": "lorenzo89.ald@gmail.com",
@@ -4796,7 +5491,11 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "The Talent Sea",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Asociaciones",
+      "Casting",
+      "Centros de Formación"
+    ],
     "contacto": {
       "nombre": "marta Cejas Sánchez",
       "email": "info@thetalentsea.com",
@@ -4820,7 +5519,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Hotel Casa Palacio María Luisa ****GL",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Alojamientos / Restauración"
+    ],
     "contacto": {
       "nombre": "Cayetano Gómez Fernández",
       "email": "cayetano.gomez@kaizenhoteles.com",
@@ -4844,7 +5545,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Jay García",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Jaime García Torres",
       "email": "jaylatirana@gmail.com",
@@ -4868,7 +5571,10 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Autónoma",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Doblaje/Dirección Doblaje",
+      "Traducción/Interpretación"
+    ],
     "contacto": {
       "nombre": "Édith Ramos Sparrow",
       "email": "edith.ramossparrow@gmail.com",
@@ -4908,7 +5614,12 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "MAR SEVILLA",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje para Cine",
+      "Peluquería para Cine",
+      "Caracterización FX",
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "MARIA DEL MAR SEVILLA ALBARRAN",
       "email": "m.sevilla.albarran@gmail.com",
@@ -4941,8 +5652,24 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "@niarosas",
     "categoriaEmpresa": [
+      "Ayudante Producción",
+      "Producción",
+      "Auxiliar Producción",
       "Auxiliar Dirección",
-      "Ayudante Dirección/Script"
+      "Ayudante Dirección/Script",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Cámara Cine",
+      "Foto-fija",
+      "Compositor/a",
+      "Fotografía",
+      "Diseño Gráfico",
+      "Community Manager",
+      "Making Off",
+      "Actor/Actriz/Especialista",
+      "Coreógrafía/Bailarin/a",
+      "Documentalista",
+      "Filmmaker"
     ],
     "contacto": {
       "nombre": "Estefanía Mármol Rosas",
@@ -4968,9 +5695,20 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Particular",
     "categoriaEmpresa": [
+      "Localizador/a",
+      "Auxiliar Producción",
       "Guionista/Adaptador",
       "Auxiliar Dirección",
-      "Ayudante Dirección/Script"
+      "Ayudante Dirección/Script",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Ayudante de Sonido",
+      "Mezclador/Editor Sonido",
+      "Compositor/a",
+      "Fotografía",
+      "Diseño Gráfico",
+      "Actor/Actriz/Especialista",
+      "Filmmaker"
     ],
     "contacto": {
       "nombre": "José Miguel Ortiz Guzmán",
@@ -5003,7 +5741,10 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "La Lectora CAFETERÍA-LIBRERÍA",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Alojamientos / Restauración",
+      "Material de Producción"
+    ],
     "contacto": {
       "nombre": "Loly Corral",
       "email": "lalectoralibreria@gmail.com",
@@ -5027,7 +5768,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "AYUDANTE DE VESTUARIO EN CINE",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Vestuario/Atrezzo"
+    ],
     "contacto": {
       "nombre": "Mariela Guevara Romero",
       "email": "marielagr8415@icloud.com",
@@ -5067,7 +5810,10 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Auxiliar Producción",
+      "Vestuario/Atrezzo"
+    ],
     "contacto": {
       "nombre": "Andrea Merino Vázquez",
       "email": "mervazandrea@gmail.com",
@@ -5107,7 +5853,12 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Camerino de artes y horrores",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Maquillaje para Cine",
+      "Peluquería para Cine",
+      "Caracterización FX",
+      "Diseño Gráfico"
+    ],
     "contacto": {
       "nombre": "Jesús Belizón Zacarias",
       "email": "jesusbelly@gmail.com",
@@ -5131,7 +5882,13 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Sabatic Studio",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Cámara / Grip",
+      "Película / Fotografía",
+      "Servicios de Localización",
+      "Productora Visual",
+      "Eco-Friendly / Sostenible"
+    ],
     "contacto": {
       "nombre": "Azahara Rojas Sanchez",
       "email": "we@sabatic.studio",
@@ -5171,7 +5928,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Actriz",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Ana Salas",
       "email": "anasalas86@gmail.com",
@@ -5211,7 +5970,15 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Quejío de Loba Producciones SL",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Catering",
+      "Distribución",
+      "Material de Producción",
+      "Película / Fotografía",
+      "Productora / Productora Asociada",
+      "Servicios de Localización",
+      "Productora Visual"
+    ],
     "contacto": {
       "nombre": "Luís Rubén Romero Ramírez",
       "email": "direccionejecutiva@quejioproducciones.com",
@@ -5245,7 +6012,8 @@
     "empresa": "",
     "categoriaEmpresa": [
       "Guionista/Adaptador",
-      "Dirección/Realización TV"
+      "Dirección/Realización TV",
+      "Actor/Actriz/Especialista"
     ],
     "contacto": {
       "nombre": "Andrea Ganfornina García",
@@ -5270,7 +6038,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Mario Huerta - Actor",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Actor/Actriz/Especialista"
+    ],
     "contacto": {
       "nombre": "Mario Huerta",
       "email": "mario_hc89@hotmail.com",
@@ -5302,7 +6072,13 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Foto-fija",
+      "Fotografía",
+      "Filmmaker"
+    ],
     "contacto": {
       "nombre": "Marisa Moreno Jiménez",
       "email": "fionamj@hotmail.es",
@@ -5327,7 +6103,21 @@
     "tipoRegistro": "PROFESIONALES",
     "empresa": "",
     "categoriaEmpresa": [
-      "Auxiliar Dirección"
+      "Auxiliar Producción",
+      "Auxiliar Dirección",
+      "Auxiliar Cámara Cine",
+      "Ayudante Cámara Cine",
+      "Cámara Cine",
+      "Dirección Fotografía/Iluminador TV",
+      "Operador/a Cámara TV",
+      "Operador/a Cámaras especiales (Steady, dron, acuática)",
+      "Foto-fija",
+      "Ayudante de Sonido",
+      "Fotografía",
+      "Making Off",
+      "Coreógrafía/Bailarin/a",
+      "Servicios Aéreos",
+      "Filmmaker"
     ],
     "contacto": {
       "nombre": "Claudia López Castro",
@@ -5368,7 +6158,9 @@
   {
     "tipoRegistro": "PROFESIONALES",
     "empresa": "Ulmetum",
-    "categoriaEmpresa": [],
+    "categoriaEmpresa": [
+      "Animación / Modelado 3D"
+    ],
     "contacto": {
       "nombre": "Víctor Olmedo",
       "email": "pef.vtr@gmail.com",

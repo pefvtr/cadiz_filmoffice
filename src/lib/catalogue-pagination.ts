@@ -5,7 +5,12 @@ export function getPaginatedCatalog(
   page: number = 1,
   perPage: number = 20,
 ): PaginatedResult<CatalogItem> {
-  const total = catalogData.length;
+  const dataProfesionales = catalogData.filter(
+    (item) =>
+      item.tipoRegistro && item.tipoRegistro.toLowerCase() === "profesionales",
+  );
+
+  const total = dataProfesionales.length;
   const totalPages = Math.ceil(total / perPage);
 
   // Asegurarse de que la página esté dentro del rango
@@ -15,7 +20,7 @@ export function getPaginatedCatalog(
   const start = (page - 1) * perPage;
   const end = start + perPage;
 
-  const data = catalogData.slice(start, end) as CatalogItem[];
+  const data = dataProfesionales.slice(start, end) as CatalogItem[];
 
   return { page, perPage, total, totalPages, data };
 }

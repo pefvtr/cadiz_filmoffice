@@ -1,3 +1,4 @@
+
 import XLSX from "xlsx";
 import fs from "fs";
 import path from "path";
@@ -91,6 +92,7 @@ const CONFIG = {
       "FOTOGRAFÍA/ILUMINACIÓN/MAQUINARIA [Foto-fija]",
       "FOTOGRAFÍA/ILUMINACIÓN/MAQUINARIA [Eléctrico/Maquinista]",
     ],
+
     maquillajePeluqueria: [
       "MAQUILLAJE/PELUQUERÍA [Maquillaje para Cine]",
       "MAQUILLAJE/PELUQUERÍA [Peluquería para Cine]",
@@ -171,15 +173,27 @@ function extraerCategorias(row: RowODS): string[] {
 
   todas.forEach((campo) => {
     const valor = row[campo];
+
+    // Verificar si el valor existe y es válido
+    // El selector múltiple pone "Elija una o varias opciones" cuando está seleccionado
     if (
       valor &&
       valor.toString().trim() !== "" &&
-      valor.toString().trim() !== "Elija una o varias opciones"
+      (valor.toString().trim() === "Elija una o varias opciones" ||
+        valor.toString().trim() !== "Elija una o varias opciones")
     ) {
+      // Extraer el texto entre corchetes [...]
       const match = campo.match(/\[([^\]]+)\]/);
-      categorias.push(match ? match[1] : campo.trim());
+      if (match) {
+        const categoria = match[1].trim();
+        // Evitar duplicados
+        if (!categorias.includes(categoria)) {
+          categorias.push(categoria);
+        }
+      }
     }
   });
+
   return categorias;
 }
 
@@ -245,6 +259,16 @@ export function generarCatalogoJSON() {
     console.log(
       `✅ Catálogo generado con éxito: ${catalogo.length} registros.`,
     );
+    console.log(`📊 Estadísticas de categorías:`);
+
+    // Mostrar algunas estadísticas para verificar
+    const conCategorias = catalogo.filter(
+      (p) => p.categoriaEmpresa.length > 0,
+    ).length;
+    console.log(
+      `   - Registros con categorías: ${conCategorias}/${catalogo.length}`,
+    );
+
     return catalogo;
   } catch (error) {
     console.error("❌ Error generando el catálogo:", error);
