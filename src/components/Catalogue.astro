@@ -13,7 +13,7 @@ const { data, totalPages } = Astro.props;
 
 {
   data.map((dataItemCatalog) => (
-    <div class="catalogue lg:flex-row lg:gap-x-1 mx-auto mb-16 flex w-[min(95%,1024px)] lg:justify-center flex-col border-b-2 border-primary">
+    <div class="catalogue lg:flex-row lg:gap-x-1 mx-auto mb-16 pb-12 flex w-[min(95%,1024px)] lg:justify-center flex-col border-b-2 border-primary">
       <div
         
         class="space-y-4 rounded-t-lg text-center lg:w-1/2 border-r border-primary/25 lg:flex lg:flex-col "
@@ -27,7 +27,7 @@ const { data, totalPages } = Astro.props;
           {dataItemCatalog.empresa.toLowerCase() ||
             dataItemCatalog.contacto.nombre}
         </h2>
-        <div class="py-10 text-base border-primary border-t-3 max-lg:border-b-3 my-1 flex-1 lg:flex lg:items-center lg:justify-center lg:flex-col">
+        <div class=" text-base border-primary border-t-3 max-lg:border-b-3 my-1 flex-1 lg:flex lg:items-center lg:justify-center lg:flex-col">
           {dataItemCatalog.categoriaEmpresa.map((category) => (
             <p class="m-0">{category}</p>
           ))}
@@ -35,7 +35,7 @@ const { data, totalPages } = Astro.props;
       </div>
       <div class="lg:w-1/2  flex flex-col ">
         <div>
-          <div class="bg-ifef-dark text-light max-lg:rounded-md px-4 py-2 md:text-lg lg:m-0 lg:rounded-tr-lg py-6 border-primary border-b-3 uppercase">
+          <div class="bg-ifef-dark text-light max-lg:rounded-md px-4  md:text-lg lg:m-0 lg:rounded-tr-lg py-6 [box-shadow:0_4px_var(--color-white),0_7px_var(--color-primary)] uppercase">
             Contacto
           </div>
           <div class="flex flex-col p-4">
@@ -78,7 +78,7 @@ const { data, totalPages } = Astro.props;
           </div>
         </div>
         <div>
-          <div class="border-primary border-b-3 uppercase bg-ifef-dark text-light  py-6 max-lg:rounded-md px-4 py-2 md:text-lg">
+          <div class=" [box-shadow:0_4px_var(--color-white),0_7px_var(--color-primary)] uppercase bg-ifef-dark text-light  py-6 max-lg:rounded-md px-4  md:text-lg">
             Trabajos destacados
           </div>
           {dataItemCatalog.trabajosDestacados.map((featuredWork) => (
