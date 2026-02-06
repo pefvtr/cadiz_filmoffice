@@ -9,37 +9,36 @@ interface Props {
 
 const { data, totalPages } = Astro.props;
 
-console.log({ data });
 ---
 
 {
   data.map((dataItemCatalog) => (
-    <div class="catalogue mx-auto mb-16 flex w-[min(95%,640px)] flex-col shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+    <div class="catalogue lg:flex-row lg:gap-x-1 mx-auto mb-16 flex w-[min(95%,1024px)] lg:justify-center flex-col border-b-2 border-primary">
       <div
-        style="
+        
+        class="space-y-4 rounded-t-lg text-center lg:w-1/2 border-r border-primary/25 lg:flex lg:flex-col "
+      >
+        <h2 class="text-light px-4 capitalize py-14 m-0 lg:rounded-tl-lg" style="
     background-image: url('/svg/wave.svg');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-  "
-        class="space-y-4 rounded-t-lg bg-[#196A9D] py-10 text-center"
-      >
-        <h2 class="text-light px-4 capitalize">
+  ">
           {dataItemCatalog.empresa.toLowerCase() ||
             dataItemCatalog.contacto.nombre}
         </h2>
-        <div class="text-light text-base">
+        <div class="py-10 text-base border-primary border-t-3 max-lg:border-b-3 my-1 flex-1 lg:flex lg:items-center lg:justify-center lg:flex-col">
           {dataItemCatalog.categoriaEmpresa.map((category) => (
             <p class="m-0">{category}</p>
           ))}
         </div>
       </div>
-      <div class="border-primary flex flex-col border-t-6">
+      <div class="lg:w-1/2  flex flex-col ">
         <div>
-          <div class="bg-ifef-dark text-light mt-1 rounded-md px-4 py-2 md:text-lg">
+          <div class="bg-ifef-dark text-light max-lg:rounded-md px-4 py-2 md:text-lg lg:m-0 lg:rounded-tr-lg py-6 border-primary border-b-3 uppercase">
             Contacto
           </div>
-          <div class="flex flex-col px-4 py-2">
+          <div class="flex flex-col p-4">
             <div class="border-primary/25 flex items-center gap-3 border-b py-3">
               <>
                 <span>
@@ -79,11 +78,11 @@ console.log({ data });
           </div>
         </div>
         <div>
-          <div class="bg-ifef-dark text-light mt-1 rounded-md px-4 py-2 md:text-lg">
+          <div class="border-primary border-b-3 uppercase bg-ifef-dark text-light  py-6 max-lg:rounded-md px-4 py-2 md:text-lg">
             Trabajos destacados
           </div>
           {dataItemCatalog.trabajosDestacados.map((featuredWork) => (
-            <div class="project flex flex-col px-4 py-8">
+            <div class="project flex flex-col p-4">
               <div class="border-primary/25 flex items-center gap-3 border-b py-3">
                 <>
                   <span>
