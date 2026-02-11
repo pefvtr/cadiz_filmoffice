@@ -8,191 +8,47 @@ interface Props {
 }
 
 const { data, totalPages } = Astro.props;
-
 ---
 
-{
-  data.map((dataItemCatalog) => (
-    <div class="border-x-primary/25 border-x catalogue lg:flex-row lg:gap-x-1 mx-auto mb-16 pb-12 flex w-[min(95%,1024px)] lg:justify-center flex-col border-b-2 border-primary">
-
-      <div
-        class="space-y-4 rounded-t-lg text-center lg:w-1/2 border-r border-primary/25 lg:flex lg:flex-col "
-      >
-        <h2 class="text-light px-4 capitalize py-14 m-0 lg:rounded-tl-lg" style="
-    background-image: url('/svg/wave.svg');
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-  ">
-          {dataItemCatalog.empresa.toLowerCase() ||
-            dataItemCatalog.contacto.nombre}
-        </h2>
-        <div class=" text-base border-primary border-t-3 max-lg:border-b-3 my-1 flex-1 lg:flex lg:items-center lg:justify-center lg:flex-col">
-          {dataItemCatalog.categoriaEmpresa.map((category) => (
-            <p class="m-0">{category}</p>
-          ))}
-        </div>
-      </div>
-      <div class="lg:w-1/2  flex flex-col ">
-        <div>
-          <div class="bg-ifef-dark text-light max-lg:rounded-md px-4  md:text-lg lg:m-0 lg:rounded-tr-lg py-6 [box-shadow:0_4px_var(--color-white),0_7px_var(--color-primary)] uppercase">
-            Contacto
+<div
+  class="lg.grid-cols-2 w-[min(100%,480px)] gap-6 max-lg:m-auto max-lg:space-y-24 lg:grid"
+>
+  {
+    data.map((dataItemCatalog) => (
+      <div class="shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+        <div class="border-film-dark flex border-b pt-4">
+          <div class="text-light bg-film-dark flex flex-col p-3 leading-none font-bold uppercase">
+            <span>Robert</span> <span>Redford</span>
           </div>
-          <div class="flex flex-col p-4">
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="person" class="text-primary h-5 w-5" />{" "}
-                </span>
-                <p class="capitalize">
-                  {dataItemCatalog.contacto.nombre.toLowerCase()}
-                </p>
-              </>
-            </div>
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="location" class="text-primary h-5 w-5" />
-                </span>
-                <p class="capitalize">
-                  {dataItemCatalog.contacto.direccion.toLowerCase()}
-                </p>
-              </>
-            </div>
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="phone" class="text-primary h-5 w-5" />
-                </span>
-                <p>{dataItemCatalog.contacto.telefonos}</p>
-              </>
-            </div>
-            <div class="flex items-center gap-3 py-3">
-              <>
-                <span>
-                  <Icon name="mail" class="text-primary h-5 w-5" />
-                </span>
-                <p>{dataItemCatalog.contacto.email}</p>
-              </>
-            </div>
+          <div class="text-film-dark flex-1 self-end text-right">
+            Founder & CEO{" "}
           </div>
         </div>
         <div>
-          <div class=" [box-shadow:0_4px_var(--color-white),0_7px_var(--color-primary)] uppercase bg-ifef-dark text-light  py-6 max-lg:rounded-md px-4  md:text-lg">
-            Trabajos destacados
-          </div>
-          {dataItemCatalog.trabajosDestacados.map((featuredWork) => (
-            <div class="project flex flex-col p-4">
-              <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-                <>
-                  <span>
-                    <Icon name="tag" class="text-primary h-5 w-5" />
-                  </span>
-                  <h4 class="font-medium">{featuredWork.titulo}</h4>
-                </>
-              </div>
-              <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-                <>
-                  <span>
-                    <Icon name="puzzle" class="text-primary h-5 w-5" />
-                  </span>
-                  <p class="capitalize">{featuredWork.tipo.toLowerCase()}</p>
-                </>
-              </div>
-              <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-                <>
-                  <span>
-                    <Icon name="globe" class="text-primary h-5 w-5" />
-                  </span>
-                  <p>{featuredWork.pais}</p>
-                </>
-              </div>
-              <div class="flex items-center gap-3 py-3">
-                <>
-                  <span>
-                    <Icon name="calendar" class="text-primary h-5 w-5" />
-                  </span>
-                  <p>{featuredWork.anio}</p>
-                </>
-              </div>
-            </div>
-          ))}
-          {/* <div class="project flex flex-col px-4 py-8">
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="tag" class="text-primary h-5 w-5" />
-                </span>
-                <h4 class="font-medium">Rodajes a bordo</h4>
-              </>
-            </div>
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="puzzle" class="text-primary h-5 w-5" />
-                </span>
-                <p>Cine, anuncios, etc</p>
-              </>
-            </div>
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="globe" class="text-primary h-5 w-5" />
-                </span>
-                <p>España</p>
-              </>
-            </div>
-            <div class="flex items-center gap-3 py-3">
-              <>
-                <span>
-                  <Icon name="calendar" class="text-primary h-5 w-5" />
-                </span>
-                <p>2021</p>
-              </>
-            </div>
-          </div>
-          <div class="project flex flex-col px-4 py-8">
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="tag" class="text-primary h-5 w-5" />
-                </span>
-                <h4 class="font-medium">
-                  Vestuario carnaval Cádiz coros, comparsas, etc
-                </h4>
-              </>
-            </div>
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="puzzle" class="text-primary h-5 w-5" />
-                </span>
-                <p>Vestuario</p>
-              </>
-            </div>
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="globe" class="text-primary h-5 w-5" />
-                </span>
-                <p>España</p>
-              </>
-            </div>
-            <div class="flex items-center gap-3 py-3">
-              <>
-                <span>
-                  <Icon name="calendar" class="text-primary h-5 w-5" />
-                </span>
-                <p>2010 al 2021</p>
-              </>
-            </div>
-          </div> */}
+          <div>Logo</div>
+          <ul>
+            <li>
+              {" "}
+              <Icon name="person" class="text-primary h-5 w-5" />
+            </li>
+            <li>
+              {" "}
+              <Icon name="location" class="text-primary h-5 w-5" />
+            </li>
+            <li>
+              {" "}
+              <Icon name="phone" class="text-primary h-5 w-5" />
+            </li>
+            <li>
+              {" "}
+              <Icon name="mail" class="text-primary h-5 w-5" />
+            </li>
+          </ul>
         </div>
-        <div />
       </div>
-    </div>
-  ))
-}
+    ))
+  }
+</div>
 
 <style>
   .project {
@@ -211,3 +67,113 @@ const { data, totalPages } = Astro.props;
     display: none;
   }
 </style>
+
+<!-- <div class="border-x-primary/25 border-x catalogue lg:flex-row lg:gap-x-1 mx-auto mb-16 pb-12 flex w-[min(95%,1024px)] lg:justify-center flex-col border-b-2 border-primary">
+
+  <div
+    class="space-y-4 rounded-t-lg text-center lg:w-1/2 border-r border-primary/25 lg:flex lg:flex-col "
+  >
+    <h2 class="text-light px-4 capitalize py-14 m-0 lg:rounded-tl-lg" style="
+background-image: url('/svg/wave.svg');
+background-size: cover;
+background-position: bottom;
+background-repeat: no-repeat;
+">
+      {dataItemCatalog.empresa.toLowerCase() ||
+        dataItemCatalog.contacto.nombre}
+    </h2>
+    <div class=" text-base border-primary border-t-3 max-lg:border-b-3 my-1 flex-1 lg:flex lg:items-center lg:justify-center lg:flex-col">
+      {dataItemCatalog.categoriaEmpresa.map((category) => (
+        <p class="m-0">{category}</p>
+      ))}
+    </div>
+  </div>
+  <div class="lg:w-1/2  flex flex-col ">
+    <div>
+      <div class="bg-ifef-dark text-light max-lg:rounded-md px-4  md:text-lg lg:m-0 lg:rounded-tr-lg py-6 [box-shadow:0_4px_var(--color-white),0_7px_var(--color-primary)] uppercase">
+        Contacto
+      </div>
+      <div class="flex flex-col p-4">
+        <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+          <>
+            <span>
+              <Icon name="person" class="text-primary h-5 w-5" />{" "}
+            </span>
+            <p class="capitalize">
+              {dataItemCatalog.contacto.nombre.toLowerCase()}
+            </p>
+          </>
+        </div>
+        <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+          <>
+            <span>
+              <Icon name="location" class="text-primary h-5 w-5" />
+            </span>
+            <p class="capitalize">
+              {dataItemCatalog.contacto.direccion.toLowerCase()}
+            </p>
+          </>
+        </div>
+        <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+          <>
+            <span>
+              <Icon name="phone" class="text-primary h-5 w-5" />
+            </span>
+            <p>{dataItemCatalog.contacto.telefonos}</p>
+          </>
+        </div>
+        <div class="flex items-center gap-3 py-3">
+          <>
+            <span>
+              <Icon name="mail" class="text-primary h-5 w-5" />
+            </span>
+            <p>{dataItemCatalog.contacto.email}</p>
+          </>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class=" [box-shadow:0_4px_var(--color-white),0_7px_var(--color-primary)] uppercase bg-ifef-dark text-light  py-6 max-lg:rounded-md px-4  md:text-lg">
+        Trabajos destacados
+      </div>
+      {dataItemCatalog.trabajosDestacados.map((featuredWork) => (
+        <div class="project flex flex-col p-4">
+          <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+            <>
+              <span>
+                <Icon name="tag" class="text-primary h-5 w-5" />
+              </span>
+              <h4 class="font-medium">{featuredWork.titulo}</h4>
+            </>
+          </div>
+          <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+            <>
+              <span>
+                <Icon name="puzzle" class="text-primary h-5 w-5" />
+              </span>
+              <p class="capitalize">{featuredWork.tipo.toLowerCase()}</p>
+            </>
+          </div>
+          <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+            <>
+              <span>
+                <Icon name="globe" class="text-primary h-5 w-5" />
+              </span>
+              <p>{featuredWork.pais}</p>
+            </>
+          </div>
+          <div class="flex items-center gap-3 py-3">
+            <>
+              <span>
+                <Icon name="calendar" class="text-primary h-5 w-5" />
+              </span>
+              <p>{featuredWork.anio}</p>
+            </>
+          </div>
+        </div>
+           </div>
+        <div />
+      </div>
+    </div>
+      
+      -->
