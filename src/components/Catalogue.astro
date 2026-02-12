@@ -10,118 +10,15 @@ interface Props {
 const { data, totalPages } = Astro.props;
 ---
 
-{
-  data.map((dataItemCatalog) => (
-    <div class="border-x-primary/25 catalogue border-primary mx-auto mb-16 flex w-[min(95%,1024px)] flex-col border-x border-b-2 pb-12 lg:flex-row lg:justify-center lg:gap-x-1">
-      <div class="border-primary/25 space-y-4 rounded-t-lg border-r text-center lg:flex lg:w-1/2 lg:flex-col">
-        <h2
-          class="text-light m-0 px-4 py-14 capitalize lg:rounded-tl-lg"
-          style="
-    background-image: url('/svg/wave.svg');
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-  "
-        >
-          {dataItemCatalog.empresa.toLowerCase() ||
-            dataItemCatalog.contacto.nombre}
-        </h2>
-        <div class="border-primary my-1 flex-1 border-t-3 text-base max-lg:border-b-3 lg:flex lg:flex-col lg:items-center lg:justify-center">
-          {dataItemCatalog.categoriaEmpresa.map((category) => (
-            <p class="m-0">{category}</p>
-          ))}
-        </div>
+<div class="m-auto grid w-[min(100%,480px)] gap-10">
+  {
+    data.map((dataItemCatalog) => (
+      <div class="min-h-[30dvh] shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+        <div class=""></div>
       </div>
-      <div class="flex flex-col lg:w-1/2">
-        <div>
-          <div class="bg-ifef-dark text-light px-4 py-6 uppercase [box-shadow:0_4px_var(--color-white),0_7px_var(--color-primary)] max-lg:rounded-md md:text-lg lg:m-0 lg:rounded-tr-lg">
-            Contacto
-          </div>
-          <div class="flex flex-col p-4">
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="person" class="text-primary h-5 w-5" />{" "}
-                </span>
-                <p class="capitalize">
-                  {dataItemCatalog.contacto.nombre.toLowerCase()}
-                </p>
-              </>
-            </div>
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="location" class="text-primary h-5 w-5" />
-                </span>
-                <p class="capitalize">
-                  {dataItemCatalog.contacto.direccion.toLowerCase()}
-                </p>
-              </>
-            </div>
-            <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-              <>
-                <span>
-                  <Icon name="phone" class="text-primary h-5 w-5" />
-                </span>
-                <p>{dataItemCatalog.contacto.telefonos}</p>
-              </>
-            </div>
-            <div class="flex items-center gap-3 py-3">
-              <>
-                <span>
-                  <Icon name="mail" class="text-primary h-5 w-5" />
-                </span>
-                <p>{dataItemCatalog.contacto.email}</p>
-              </>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="bg-ifef-dark text-light px-4 py-6 uppercase [box-shadow:0_4px_var(--color-white),0_7px_var(--color-primary)] max-lg:rounded-md md:text-lg">
-            Trabajos destacados
-          </div>
-          {dataItemCatalog.trabajosDestacados.map((featuredWork) => (
-            <div class="project flex flex-col p-4">
-              <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-                <>
-                  <span>
-                    <Icon name="tag" class="text-primary h-5 w-5" />
-                  </span>
-                  <h4 class="font-medium">{featuredWork.titulo}</h4>
-                </>
-              </div>
-              <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-                <>
-                  <span>
-                    <Icon name="puzzle" class="text-primary h-5 w-5" />
-                  </span>
-                  <p class="capitalize">{featuredWork.tipo.toLowerCase()}</p>
-                </>
-              </div>
-              <div class="border-primary/25 flex items-center gap-3 border-b py-3">
-                <>
-                  <span>
-                    <Icon name="globe" class="text-primary h-5 w-5" />
-                  </span>
-                  <p>{featuredWork.pais}</p>
-                </>
-              </div>
-              <div class="flex items-center gap-3 py-3">
-                <>
-                  <span>
-                    <Icon name="calendar" class="text-primary h-5 w-5" />
-                  </span>
-                  <p>{featuredWork.anio}</p>
-                </>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div />
-      </div>
-    </div>
-  ))
-}
+    ))
+  }
+</div>
 
 <style>
   .project {
@@ -140,3 +37,113 @@ const { data, totalPages } = Astro.props;
     display: none;
   }
 </style>
+
+<!-- 
+<div class="border-x-primary/25 catalogue border-primary mx-auto mb-16 flex w-[min(95%,1024px)] flex-col border-x border-b-2 pb-12 lg:flex-row lg:justify-center lg:gap-x-1">
+  <div class="border-primary/25 space-y-4 rounded-t-lg border-r text-center lg:flex lg:w-1/2 lg:flex-col">
+    <h2
+      class="text-light m-0 px-4 py-14 capitalize lg:rounded-tl-lg"
+      style="
+background-image: url('/svg/wave.svg');
+background-size: cover;
+background-position: bottom;
+background-repeat: no-repeat;
+"
+    >
+      {dataItemCatalog.empresa.toLowerCase() ||
+        dataItemCatalog.contacto.nombre}
+    </h2>
+    <div class="border-primary my-1 flex-1 border-t-3 text-base max-lg:border-b-3 lg:flex lg:flex-col lg:items-center lg:justify-center">
+      {dataItemCatalog.categoriaEmpresa.map((category) => (
+        <p class="m-0">{category}</p>
+      ))}
+    </div>
+  </div>
+  <div class="flex flex-col lg:w-1/2">
+    <div>
+      <div class="bg-ifef-dark text-light px-4 py-6 uppercase [box-shadow:0_4px_var(--color-white),0_7px_var(--color-primary)] max-lg:rounded-md md:text-lg lg:m-0 lg:rounded-tr-lg">
+        Contacto
+      </div>
+      <div class="flex flex-col p-4">
+        <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+          <>
+            <span>
+              <Icon name="person" class="text-primary h-5 w-5" />{" "}
+            </span>
+            <p class="capitalize">
+              {dataItemCatalog.contacto.nombre.toLowerCase()}
+            </p>
+          </>
+        </div>
+        <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+          <>
+            <span>
+              <Icon name="location" class="text-primary h-5 w-5" />
+            </span>
+            <p class="capitalize">
+              {dataItemCatalog.contacto.direccion.toLowerCase()}
+            </p>
+          </>
+        </div>
+        <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+          <>
+            <span>
+              <Icon name="phone" class="text-primary h-5 w-5" />
+            </span>
+            <p>{dataItemCatalog.contacto.telefonos}</p>
+          </>
+        </div>
+        <div class="flex items-center gap-3 py-3">
+          <>
+            <span>
+              <Icon name="mail" class="text-primary h-5 w-5" />
+            </span>
+            <p>{dataItemCatalog.contacto.email}</p>
+          </>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="bg-ifef-dark text-light px-4 py-6 uppercase [box-shadow:0_4px_var(--color-white),0_7px_var(--color-primary)] max-lg:rounded-md md:text-lg">
+        Trabajos destacados
+      </div>
+      {dataItemCatalog.trabajosDestacados.map((featuredWork) => (
+        <div class="project flex flex-col p-4">
+          <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+            <>
+              <span>
+                <Icon name="tag" class="text-primary h-5 w-5" />
+              </span>
+              <h4 class="font-medium">{featuredWork.titulo}</h4>
+            </>
+          </div>
+          <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+            <>
+              <span>
+                <Icon name="puzzle" class="text-primary h-5 w-5" />
+              </span>
+              <p class="capitalize">{featuredWork.tipo.toLowerCase()}</p>
+            </>
+          </div>
+          <div class="border-primary/25 flex items-center gap-3 border-b py-3">
+            <>
+              <span>
+                <Icon name="globe" class="text-primary h-5 w-5" />
+              </span>
+              <p>{featuredWork.pais}</p>
+            </>
+          </div>
+          <div class="flex items-center gap-3 py-3">
+            <>
+              <span>
+                <Icon name="calendar" class="text-primary h-5 w-5" />
+              </span>
+              <p>{featuredWork.anio}</p>
+            </>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div />
+  </div>
+</div> -->
