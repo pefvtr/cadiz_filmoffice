@@ -1,6 +1,7 @@
 ---
 import type { CatalogItem } from "@/types/catalogue-types";
 import { Icon } from "astro-icon/components";
+import Wave from "@/assets/wave.svg";
 
 interface Props {
   data: CatalogItem[];
@@ -10,23 +11,68 @@ interface Props {
 const { data, totalPages } = Astro.props;
 ---
 
-<div class="m-auto grid w-[min(100%,480px)] gap-10">
+<div class="m-auto grid w-[min(100%,768px)] gap-10">
   {
     data.map((dataItemCatalog) => (
-      <div class="min-h-[30dvh] pt-4 shadow-[0px_4px_16px_rgba(17,17,26,0.1),0px_8px_24px_rgba(17,17,26,0.1),0px_16px_56px_rgba(17,17,26,0.1)]">
+      <div class="border-film-dark/25 flex min-h-[50dvh] flex-col border py-4 shadow-[0px_4px_16px_rgba(17,17,26,0.1),0px_8px_24px_rgba(17,17,26,0.1),0px_16px_56px_rgba(17,17,26,0.1)]">
         <div class="flex justify-between">
-          <div class="border-film-dark flex flex-1 items-end border-b">
-            <div class="font-headings bg-film-dark text-light flex w-[40%] justify-center px-4 py-2 font-extrabold uppercase">
+          <div class="border-film-dark flex w-[90%] flex-1 items-end border-b">
+            <div class="font-headings bg-film-dark text-light flex w-[35%] justify-center px-4 py-6 font-extrabold uppercase">
               {dataItemCatalog.contacto.nombre}
             </div>
-            <div class="font-headings text-film-dark flex-1 text-right">
+            <div class="font-headings text-primary-dark flex-1 text-right font-bold">
               {" "}
               Office & Red{" "}
             </div>
           </div>
-          <div class="w-10" />
+          <div class="w-[10%]" />
         </div>
-        <div class="" />
+        <div class="flex flex-1">
+          <div class="flex w-1/3 items-end">
+            <span class="bg-ifef-dark text-light font-headings hover:bg-ifef ml-4 cursor-pointer rounded-md px-4 py-2 font-bold transition duration-300">
+              Proyectos
+            </span>
+          </div>
+          <div class="flex w-2/3 items-end">
+            <ul>
+              <li class="flex items-center gap-x-2">
+                <span>
+                  <Icon name="person" class="text-primary-dark h-4 w-4" />{" "}
+                </span>
+                <span class="text-sm capitalize">
+                  {dataItemCatalog.contacto.nombre.toLowerCase()}
+                </span>
+              </li>
+              <li class="flex items-center gap-x-2">
+                <span>
+                  <Icon name="phone" class="text-primary-dark h-4 w-4" />{" "}
+                </span>
+                <span class="text-sm">
+                  {dataItemCatalog.contacto.telefonos.toLowerCase()}
+                </span>
+              </li>
+              <li class="flex items-center gap-x-2">
+                <span>
+                  <Icon
+                    name="location"
+                    class="text-primary-dark h-4 w-4"
+                  />{" "}
+                </span>
+                <span class="text-sm capitalize">
+                  {dataItemCatalog.contacto.direccion.toLowerCase()}
+                </span>
+              </li>
+              <li class="flex items-center gap-x-2">
+                <span>
+                  <Icon name="mail" class="text-primary-dark h-4 w-4" />{" "}
+                </span>
+                <span class="text-sm">
+                  {dataItemCatalog.contacto.email.toLowerCase()}
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     ))
   }
