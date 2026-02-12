@@ -88,6 +88,10 @@
 }
 
 @layer base {
+  body {
+    @apply antialiased;
+    text-wrap: pretty; /* CSS nativo, no es utilidad de Tailwind */
+  }
   h1,
   h2,
   h3,
