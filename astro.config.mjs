@@ -16,7 +16,7 @@ export default defineConfig({
         provider: fontProviders.fontsource(),
         name: "Urbanist",
         cssVariable: "--font-headings",
-        weights: [500, 700],
+        weights: [500, 700, 800],
       },
       {
         provider: fontProviders.fontsource(),
