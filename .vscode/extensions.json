@@ -4,7 +4,8 @@
     "bradlc.vscode-tailwindcss",
     // Aquí puedes seguir agregando más extensiones
     "esbenp.prettier-vscode",
-    "ms-vscode.vscode-typescript-next"
+    "ms-vscode.vscode-typescript-next",
+    "vincaslt.highlight-matching-tag"
   ],
   "unwantedRecommendations": []
 }
