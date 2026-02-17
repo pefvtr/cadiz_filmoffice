@@ -87,35 +87,15 @@ const { data, totalPages } = Astro.props;
             </div>
           </div>
         </div>
-        <div class="data-card bg-film-dark text-light absolute inset-0 z-20 -translate-y-full overflow-y-scroll">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, nobis
-          eligendi tempore sint ea quos nesciunt tenetur maiores veniam, labore
-          incidunt eaque tempora iste suscipit dignissimos asperiores
-          laboriosam. Magnam, quae! Officia asperiores neque fuga qui fugiat id
-          ullam accusamus fugit nemo, voluptates similique illo aut saepe magnam
-          esse sed. Consequatur perspiciatis quos consectetur pariatur incidunt.
-          Voluptatibus possimus quas molestiae sit! Autem repellendus excepturi
-          asperiores porro, aliquam consequatur nam mollitia qui eos cumque
-          minima voluptas blanditiis sapiente ipsum molestias doloremque
-          adipisci fuga nesciunt neque nulla deserunt quidem numquam. Omnis, id
-          sit. Similique consequuntur veritatis ad laudantium amet dolorem quas
-          quaerat sed error maiores! Aperiam, natus. Sapiente exercitationem
-          alias quo explicabo maiores consectetur sint placeat? Eum doloremque
-          doloribus, ratione nobis fugit pariatur? Delectus temporibus incidunt
-          corrupti beatae, doloribus, similique nostrum magnam necessitatibus
-          fuga tempora aut nisi est repellat sequi distinctio nemo earum maxime
-          possimus ipsum veniam mollitia eveniet reiciendis ducimus. Beatae,
-          quod. Doloremque assumenda tenetur iste exercitationem inventore
-          expedita, perspiciatis modi similique libero accusantium architecto
-          culpa, sed ipsa quisquam eveniet nemo. Nesciunt quibusdam quidem ipsam
-          vero fuga facere dignissimos, modi magnam alias. Explicabo, magni
-          pariatur sed dolore vel obcaecati, optio, quas modi ea distinctio
-          corrupti repellendus vitae atque quo tempora voluptas quod fuga
-          perferendis ducimus doloremque incidunt qui consectetur cupiditate
-          non. Inventore. Harum, atque? Molestiae autem, quasi asperiores ipsam
-          doloribus quaerat aliquam dolor repudiandae sequi in ratione, ad, nam
-          ullam minus enim vero laudantium nobis! Deleniti esse perferendis
-          temporibus cupiditate, modi in?
+        <div class="data-card bg-film-dark text-light fixed top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center">
+          {dataItemCatalog.trabajosDestacados.map((item) => (
+            <div>
+              <div class="text-light">{item.titulo}</div>
+              <div>{item.tipo}</div>
+              <div>{item.pais}</div>
+              <div>{item.anio}</div>
+            </div>
+          ))}
         </div>
       </div>
     ))
@@ -140,9 +120,8 @@ const { data, totalPages } = Astro.props;
   }
 </style>
 
-<script>
+<!-- <script>
   import gsap from "gsap";
-  import Lenis from "lenis";
 
   document.addEventListener("astro:page-load", () => {
     const containerCard = document.querySelectorAll(
@@ -154,17 +133,13 @@ const { data, totalPages } = Astro.props;
       const buttonCard = card.querySelector(".button-card") as HTMLDivElement;
 
       buttonCard.addEventListener("click", () => {
-        gsap.to(dataCard, { transform: "translateY(0)" });
+        gsap.to(dataCard, {
+          opacity: 1,
+          onComplete: () => {
+            gsap.set(dataCard, { pointerEvents: "auto" });
+          },
+        });
       });
-
-      // dataCard.addEventListener(
-      //   "wheel",
-      //   (e) => {
-      //     e.stopPropagation();
-      //     dataCard.scrollTop += e.deltaY;
-      //   },
-      //   { passive: true },
-      // );
     });
   });
-</script>
+</script> -->
