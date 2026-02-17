@@ -72,7 +72,9 @@ const {
         ".horizontal-bar-menu",
       ) as HTMLDivElement;
       type State = "animate-up" | "animate-down";
-      const lenis = new Lenis();
+      const lenis = new Lenis({
+        prevent: (node) => node.classList.contains("data-card"),
+      });
       // Guardar instancia en window para acceso global
       if (typeof window !== "undefined") {
         // Usar type assertion para evitar el error de TypeScript
