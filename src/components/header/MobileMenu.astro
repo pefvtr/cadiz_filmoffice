@@ -6,7 +6,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <div
-  class="menu-overlay fixed top-0 left-0 h-screen w-full overflow-hidden bg-[#0f0f0f] [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)]"
+  class="menu-overlay fixed top-0 left-0 h-screen w-full overflow-hidden bg-(--color-dark) [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)]"
 >
   <div
     class="menu-content transform:[translateX(-100px)] transform:[translateY(-100px)] relative flex h-full w-full origin-bottom-left scale-150 rotate-[-15deg] flex-col items-center justify-center"
@@ -15,12 +15,12 @@ const currentPath = Astro.url.pathname;
       class="menu-socials absolute top-9 left-2 flex -translate-y-[50%] gap-2 lg:left-4"
     >
       <div
-        class="social-icon hover:text-primary text-white opacity-0 transition-colors duration-300"
+        class="social-icon hover:text-primary text-light opacity-0 transition-colors duration-300"
       >
         <Icon name="in" class="h-6 w-6" />
       </div>
       <div
-        class="social-icon hover:text-primary text-white opacity-0 transition-colors duration-300"
+        class="social-icon hover:text-primary text-light opacity-0 transition-colors duration-300"
       >
         <Icon name="x" class="h-6 w-6" />
       </div>
@@ -50,7 +50,7 @@ const currentPath = Astro.url.pathname;
                   >
                     {item.label}
                   </h2>
-                  <h2 class="font-headings absolute top-0 left-0 px-2 text-white">
+                  <h2 class="font-headings text-light absolute top-0 left-0 px-2">
                     {item.label}
                   </h2>
                 </div>
@@ -67,7 +67,7 @@ const currentPath = Astro.url.pathname;
         phrases.map((phrase) => (
           <h3
             class:list={[
-              "text-center text-base text-white sm:text-lg",
+              "text-light text-center text-base sm:text-lg",
               {
                 "absolute top-0 left-0 w-full translate-y-[105%]":
                   phrase.id !== 1,
