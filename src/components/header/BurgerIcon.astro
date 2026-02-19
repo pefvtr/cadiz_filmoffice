@@ -12,9 +12,7 @@ const { classNames } = Astro.props;
   ]}
 >
   <div class="text relative">
-    <div class="menu-text text-md font-headings text-black md:text-lg">
-      Menu
-    </div>
+    <div class="menu-text text-md font-headings text-dark md:text-lg">Menu</div>
     <div
       class="close-text text-md font-headings invisible absolute top-0 left-0 translate-y-[25%] rotate-[7deg] opacity-0 md:text-lg"
     >
@@ -121,6 +119,6 @@ const { classNames } = Astro.props;
   }
 
   .burger-icon.open span {
-    background-color: white;
+    background-color: var(--color-light);
   }
 </style>

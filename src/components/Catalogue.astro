@@ -87,14 +87,17 @@ const { data, totalPages } = Astro.props;
             </div>
           </div>
         </div>
-        <div class="data-card bg-film-dark text-light fixed top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center">
+        <div class="data-card  bg-dark text-light fixed top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center">
+          <div class="space-y-16 ">
           {dataItemCatalog.trabajosDestacados.map((item) => (
-            <div>
-              <div class="text-light">{item.titulo}</div>
-              <div>{item.tipo}</div>
-              <div>{item.pais}</div>
+              <div class="card-inside">
+                <h3 class="leading-none  mb-4 text-light text-ne title-card">{item.titulo}</h3>
+                <div>{item.tipo}</div>
+                <div>{item.pais}</div>
+                <div>{item.anio}</div>
+              </div>
+            ))}
             </div>
-          ))}
         </div>
       </div>
     ))
@@ -116,6 +119,39 @@ const { data, totalPages } = Astro.props;
   }
   .project:last-child:before {
     display: none;
+  }
+
+
+  .title-card, .card-inside {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background-color: var(--color-light);
+    }
+  }
+
+
+  .title-card {
+    display: inline-block;
+    &:before {
+      width: 50%;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  
+  .card-inside  {
+    &:before {
+      width: 50%;
+      left: 50%;
+      opacity:.3;
+      transform: translateX(-50%);
+      bottom: -2rem;
+
+    }
   }
 </style>
 

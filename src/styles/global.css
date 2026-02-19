@@ -7,8 +7,8 @@
   --color-primary-dark: #ca6304;
   --color-primary-rgb: 246, 130, 20;
 
-  --color-dark: #0f0f0f;
-  --color-dark-rgb: 15, 15, 15;
+  --color-dark: #242424;
+  --color-dark-rgb: 36, 36, 36;
 
   --color-film: #0c3e6e;
   --color-film-dark: #092f54;
@@ -17,15 +17,15 @@
   --color-white: #ffffff;
   --color-white-rgb: 255, 255, 255;
 
-  --color-light: #f6f2ef;
+  --color-light: #d2d2d2;
   --color-light-dark: #e2ddd9;
-  --color-light-rgb: 246, 242, 239;
+  --color-light-rgb: 210, 210, 210;
 
   --color-ifef: #2dafe6;
   --color-ifef-dark: #1f8fbe;
   --color-ifef-rgb: 45, 175, 230;
 
-  --bg: #f6f2ef;
+  --bg: #d2d2d2;
   --card-1: #ffffff;
   --card-2: #f58113;
   --card-3: #0c3e6e;
@@ -58,8 +58,8 @@
   --color-primary-dark: #ca6304;
   --color-primary-rgb: 246, 130, 20;
 
-  --color-dark: #0f0f0f;
-  --color-dark-rgb: 15, 15, 15;
+  --color-dark: #242424;
+  --color-dark-rgb: 36, 36, 36;
 
   --color-film: #0c3e6e;
   --color-film-dark: #092f54;
@@ -68,9 +68,9 @@
   --color-white: #ffffff;
   --color-white-rgb: 255, 255, 255;
 
-  --color-light: #f6f2ef;
+  --color-light: #d2d2d2;
   --color-light-dark: #e2ddd9;
-  --color-light-rgb: 246, 242, 239;
+  --color-light-rgb: 210, 210, 210;
 
   --color-ifef: #2dafe6;
   --color-ifef-dark: #1f8fbe;
@@ -150,3 +150,5 @@
     overflow: hidden;
   }
 }
+
+@font-face {  font-family: 'neue graas';  font-style: normal;  font-weight: 200 700;  font-display: swap;  src: url("/fonts/neue-graas-grotesk.woff2") format("woff2");}
