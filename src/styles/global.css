@@ -85,6 +85,24 @@
   --fs-500: clamp(1.94rem, calc(1.39rem + 2.77vw), 3.53rem);
   --fs-600: clamp(2.33rem, calc(1.41rem + 4.63vw), 5rem);
   --fs-700: clamp(3rem, calc(2rem + 5vw), 5.6rem);
+
+  --wobble: wobble 1s infinite;
+
+  @keyframes wobble {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+  }
 }
 
 @layer base {
@@ -151,4 +169,10 @@
   }
 }
 
-@font-face {  font-family: 'neue graas';  font-style: normal;  font-weight: 200 700;  font-display: swap;  src: url("/fonts/neue-graas-grotesk.woff2") format("woff2");}
+@font-face {
+  font-family: "neue graas";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/fonts/neue-graas-grotesk.woff2") format("woff2");
+}

@@ -1,7 +1,6 @@
 ---
 import type { CatalogItem } from "@/types/catalogue-types";
 import { Icon } from "astro-icon/components";
-import Wave from "@/assets/wave.svg";
 
 interface Props {
   data: CatalogItem[];
@@ -87,17 +86,24 @@ const { data, totalPages } = Astro.props;
             </div>
           </div>
         </div>
-        <div class="data-card  bg-dark text-light fixed top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center">
-          <div class="space-y-16 ">
-          {dataItemCatalog.trabajosDestacados.map((item) => (
-              <div class="card-inside">
-                <h3 class="leading-none  mb-4 text-light text-ne title-card">{item.titulo}</h3>
-                <div>{item.tipo}</div>
-                <div>{item.pais}</div>
-                <div>{item.anio}</div>
+        <div class="data-card bg-dark text-light fixed top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center">
+          <div class="space-y-16">
+            {/* <Image src={Claqueta} alt="claqueta" /> */}
+            {dataItemCatalog.trabajosDestacados.map((item) => (
+              <div class="card-inside group relative">
+                <Icon
+                  name="clapper"
+                  class="text-light-dark/10 group-hover:animate-wobble absolute right-0 bottom-0 h-[50px] w-[50px] rotate-18 duration-300"
+                />
+                <h3 class="text-primary-dark text-ne title-card mb-4 leading-none">
+                  {item.titulo}
+                </h3>
+                <div class="capitalize">{item.tipo.toLowerCase()}</div>
+                <div class="capitalize">{item.pais.toLowerCase()}</div>
+                <div class="capitalize">{item.anio}</div>
               </div>
             ))}
-            </div>
+          </div>
         </div>
       </div>
     ))
@@ -121,8 +127,7 @@ const { data, totalPages } = Astro.props;
     display: none;
   }
 
-
-  .title-card, .card-inside {
+  .card-inside {
     position: relative;
     &:before {
       content: "";
@@ -132,25 +137,13 @@ const { data, totalPages } = Astro.props;
     }
   }
 
-
-  .title-card {
-    display: inline-block;
-    &:before {
-      width: 50%;
-      right: 0;
-      bottom: 0;
-    }
-  }
-
-  
-  .card-inside  {
+  .card-inside {
     &:before {
       width: 50%;
       left: 50%;
-      opacity:.3;
+      opacity: 0.3;
       transform: translateX(-50%);
       bottom: -2rem;
-
     }
   }
 </style>
