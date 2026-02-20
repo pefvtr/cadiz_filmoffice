@@ -13,7 +13,7 @@ const { data, totalPages } = Astro.props;
 <div class="m-auto grid w-[min(100%,900px)] gap-10">
   {
     data.map((dataItemCatalog) => (
-      <div class="container-card border-film-dark/25 relative flex min-h-[50dvh] w-full flex-col overflow-hidden border py-4 shadow-[0px_4px_16px_rgba(17,17,26,0.1),0px_8px_24px_rgba(17,17,26,0.1),0px_16px_56px_rgba(17,17,26,0.1)]">
+      <div class="container-card border-film-dark/25 relative flex min-h-[50dvh] w-full flex-col overflow-hidden border bg-white py-4 shadow-[0px_4px_16px_rgba(17,17,26,0.1),0px_8px_24px_rgba(17,17,26,0.1),0px_16px_56px_rgba(17,17,26,0.1)]">
         <div class="flex justify-between">
           <div class="border-film-dark flex w-[90%] flex-1 items-end border-b">
             <div class="font-headings bg-film-dark text-light flex w-[35%] justify-center px-4 py-6 font-extrabold uppercase">
@@ -86,15 +86,15 @@ const { data, totalPages } = Astro.props;
             </div>
           </div>
         </div>
-        <div class="data-card bg-dark text-light fixed top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center">
-          <div class="space-y-16">
+        <div class="data-card bg-dark text-light fixed top-0 left-0 z-20 flex h-full min-h-screen w-full flex-col items-center justify-center px-4 py-[calc(var(--header-height)+2rem)]">
+          <div class="h-full space-y-16">
             {dataItemCatalog.trabajosDestacados.map((item) => (
               <div class="card-inside relative">
                 <Icon
                   name="clapper"
-                  class="clapper text-light-dark/10 absolute right-0 bottom-0 h-[75px] w-[75px]"
+                  class="clapper text-light-dark/10 absolute right-4 bottom-0 h-[75px] w-[75px]"
                 />
-                <h3 class="text-primary-dark text-ne title-card mb-4 leading-none">
+                <h3 class="title-card text-primary-dark text-ne title-card mb-4 leading-none">
                   {item.titulo}
                 </h3>
                 <div class="capitalize">{item.tipo.toLowerCase()}</div>
@@ -128,22 +128,6 @@ const { data, totalPages } = Astro.props;
 
   .card-inside {
     position: relative;
-    &:before {
-      content: "";
-      width: 50%;
-      left: 50%;
-      opacity: 0.3;
-      transform: translateX(-50%);
-      bottom: -2rem;
-      position: absolute;
-      height: 1px;
-      background-color: var(--color-light);
-      transition: opacity 0.35s;
-    }
-    &:hover:before {
-      background-color: var(--color-primary-dark);
-      opacity: 1;
-    }
   }
 </style>
 
@@ -158,8 +142,6 @@ const { data, totalPages } = Astro.props;
     const cardInside = document.querySelectorAll(
       ".card-inside",
     ) as NodeListOf<HTMLDivElement>;
-
-    console.log({ cardInside });
 
     containerCard.forEach((card) => {
       const dataCard = card.querySelector(".data-card") as HTMLDivElement;
@@ -177,12 +159,21 @@ const { data, totalPages } = Astro.props;
 
     cardInside.forEach((element) => {
       const clapper = element.querySelector(".clapper") as HTMLDivElement;
-      gsap.set(clapper, { rotation: 25 });
+      gsap.set(clapper, {
+        rotation: 25,
+        opacity: 0.1,
+        color: "var(--color-light)",
+      });
       element.addEventListener("mouseenter", () => {
         gsap.to(clapper, {
           rotation: 0,
           duration: 1.5,
           ease: "elastic.out(1, 0.3)",
+        });
+        gsap.to(clapper, {
+          opacity: 1,
+          color: "var(--color-primary-dark)",
+          duration: 1.5, // más rápido que la rotación
         });
       });
 
@@ -191,6 +182,11 @@ const { data, totalPages } = Astro.props;
           rotation: 25,
           duration: 1.5,
           ease: "elastic.out(1, 0.3)",
+        });
+        gsap.to(clapper, {
+          opacity: 0.1,
+          color: "var(--color-light)",
+          duration: 1.5,
         });
       });
     });
