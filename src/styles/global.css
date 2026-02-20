@@ -151,4 +151,10 @@
   }
 }
 
-@font-face {  font-family: 'neue graas';  font-style: normal;  font-weight: 200 700;  font-display: swap;  src: url("/fonts/neue-graas-grotesk.woff2") format("woff2");}
+@font-face {
+  font-family: "neue graas";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/fonts/neue-graas-grotesk.woff2") format("woff2");
+}

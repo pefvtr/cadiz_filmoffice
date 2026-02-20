@@ -1,7 +1,6 @@
 ---
 import type { CatalogItem } from "@/types/catalogue-types";
 import { Icon } from "astro-icon/components";
-import Wave from "@/assets/wave.svg";
 
 interface Props {
   data: CatalogItem[];
@@ -87,17 +86,23 @@ const { data, totalPages } = Astro.props;
             </div>
           </div>
         </div>
-        <div class="data-card  bg-dark text-light fixed top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center">
-          <div class="space-y-16 ">
-          {dataItemCatalog.trabajosDestacados.map((item) => (
-              <div class="card-inside">
-                <h3 class="leading-none  mb-4 text-light text-ne title-card">{item.titulo}</h3>
-                <div>{item.tipo}</div>
-                <div>{item.pais}</div>
-                <div>{item.anio}</div>
+        <div class="data-card bg-dark text-light fixed top-0 left-0 z-20 flex h-full w-full flex-col items-center justify-center">
+          <div class="space-y-16">
+            {dataItemCatalog.trabajosDestacados.map((item) => (
+              <div class="card-inside relative">
+                <Icon
+                  name="clapper"
+                  class="clapper text-light-dark/10 absolute right-0 bottom-0 h-[75px] w-[75px]"
+                />
+                <h3 class="text-primary-dark text-ne title-card mb-4 leading-none">
+                  {item.titulo}
+                </h3>
+                <div class="capitalize">{item.tipo.toLowerCase()}</div>
+                <div class="capitalize">{item.pais.toLowerCase()}</div>
+                <div class="capitalize">{item.anio}</div>
               </div>
             ))}
-            </div>
+          </div>
         </div>
       </div>
     ))
@@ -121,47 +126,40 @@ const { data, totalPages } = Astro.props;
     display: none;
   }
 
-
-  .title-card, .card-inside {
+  .card-inside {
     position: relative;
     &:before {
       content: "";
+      width: 50%;
+      left: 50%;
+      opacity: 0.3;
+      transform: translateX(-50%);
+      bottom: -2rem;
       position: absolute;
       height: 1px;
       background-color: var(--color-light);
+      transition: opacity 0.35s;
     }
-  }
-
-
-  .title-card {
-    display: inline-block;
-    &:before {
-      width: 50%;
-      right: 0;
-      bottom: 0;
-    }
-  }
-
-  
-  .card-inside  {
-    &:before {
-      width: 50%;
-      left: 50%;
-      opacity:.3;
-      transform: translateX(-50%);
-      bottom: -2rem;
-
+    &:hover:before {
+      background-color: var(--color-primary-dark);
+      opacity: 1;
     }
   }
 </style>
 
-<!-- <script>
+<script>
   import gsap from "gsap";
 
   document.addEventListener("astro:page-load", () => {
     const containerCard = document.querySelectorAll(
       ".container-card",
     ) as NodeListOf<HTMLDivElement>;
+
+    const cardInside = document.querySelectorAll(
+      ".card-inside",
+    ) as NodeListOf<HTMLDivElement>;
+
+    console.log({ cardInside });
 
     containerCard.forEach((card) => {
       const dataCard = card.querySelector(".data-card") as HTMLDivElement;
@@ -176,5 +174,25 @@ const { data, totalPages } = Astro.props;
         });
       });
     });
+
+    cardInside.forEach((element) => {
+      const clapper = element.querySelector(".clapper") as HTMLDivElement;
+      gsap.set(clapper, { rotation: 25 });
+      element.addEventListener("mouseenter", () => {
+        gsap.to(clapper, {
+          rotation: 0,
+          duration: 1.5,
+          ease: "elastic.out(1, 0.3)",
+        });
+      });
+
+      element.addEventListener("mouseleave", () => {
+        gsap.to(clapper, {
+          rotation: 25,
+          duration: 1.5,
+          ease: "elastic.out(1, 0.3)",
+        });
+      });
+    });
   });
-</script> -->
+</script>
