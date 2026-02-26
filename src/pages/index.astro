@@ -5,61 +5,57 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout title="Inicio">
   <Slider />
-  <section class="intro">
-    Hóoooooola amígos ñññ
-    <h1>Every idea begins as a single image</h1>
-  </section>
-
-  <section class="sticky" id="sticky">
-    <div class="sticky-header">
-      <h1>Three pillars with one purpose</h1>
-    </div>
-
-    <div class="card-container max-[1000px]:space-y-4">
-      <div class="card" id="card-1">
-        <div class="card-front">
-          <img
-            src="https://i.ibb.co/4wShfg0B/image-part-001.jpg"
-            alt="image part 001"
-          />
+  <div class="container-cards">
+    <section class="intro">
+      <h1 class="text-dark">Every idea begins as a single image</h1>
+    </section>
+    <section class="sticky" id="sticky">
+      <div class="sticky-header">
+        <h1>Three pillars with one purpose</h1>
+      </div>
+      <div class="card-container max-[1000px]:space-y-4">
+        <div class="card" id="card-1">
+          <div class="card-front">
+            <img
+              src="https://i.ibb.co/4wShfg0B/image-part-001.jpg"
+              alt="image part 001"
+            />
+          </div>
+          <div class="card-back">
+            <span>01</span>
+            <p>Interactive Web Experiences</p>
+          </div>
         </div>
-        <div class="card-back">
-          <span>01</span>
-          <p>Interactive Web Experiences</p>
+        <div class="card" id="card-2">
+          <div class="card-front">
+            <img
+              src="https://i.ibb.co/Y4MSmLXB/image-part-002.jpg"
+              alt="image part 002"
+            />
+          </div>
+          <div class="card-back">
+            <span>02</span>
+            <p>Thoughtful Design Language</p>
+          </div>
+        </div>
+        <div class="card" id="card-3">
+          <div class="card-front">
+            <img
+              src="https://i.ibb.co/NkrBdsq/image-part-003.jpg"
+              alt="image part 003"
+            />
+          </div>
+          <div class="card-back">
+            <span>03</span>
+            <p>Visual Design Systems</p>
+          </div>
         </div>
       </div>
-
-      <div class="card" id="card-2">
-        <div class="card-front">
-          <img
-            src="https://i.ibb.co/Y4MSmLXB/image-part-002.jpg"
-            alt="image part 002"
-          />
-        </div>
-        <div class="card-back">
-          <span>02</span>
-          <p>Thoughtful Design Language</p>
-        </div>
-      </div>
-
-      <div class="card" id="card-3">
-        <div class="card-front">
-          <img
-            src="https://i.ibb.co/NkrBdsq/image-part-003.jpg"
-            alt="image part 003"
-          />
-        </div>
-        <div class="card-back">
-          <span>03</span>
-          <p>Visual Design Systems</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="outro">
-    <h1>Every transition leaves a trace</h1>
-  </section>
+    </section>
+    <section class="outro">
+      <h1>Every transition leaves a trace</h1>
+    </section>
+  </div>
 </Layout>
 
 <style>
@@ -74,7 +70,6 @@ import Layout from "@/layouts/Layout.astro";
     width: 100%;
     height: 100svh;
     padding: 2rem;
-    background: var(--bg);
     color: var(--fg);
   }
 
@@ -188,7 +183,6 @@ import Layout from "@/layouts/Layout.astro";
       color-mix(in srgb, var(--card-1) 90%, black) 0%,
       color-mix(in srgb, var(--card-1) 60%, black) 100%
     );
-    /* color: var(--bg); */
   }
 
   #card-2 .card-back {
@@ -253,6 +247,18 @@ import Layout from "@/layouts/Layout.astro";
     #card-3,
     .card-back {
       transform: none;
+    }
+  }
+  .container-cards {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 20%;
+      height: 1px;
+      width: 60%;
+      background-color: rgba(var(--color-dark-rgb), .25);
     }
   }
 </style>

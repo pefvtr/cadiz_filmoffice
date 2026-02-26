@@ -11,8 +11,8 @@ import { dataCarousel } from "./data.ts";
           <div class="carousel-slide relative">
             <div class="carousel-slide-overlay bg-opacity-50 absolute -top-[10%] -left-[10%] z-30 h-[120%] w-[120%] bg-black" />
             <img src={item.imgSrc} />
-            <h2>{item.title}</h2>
-            <h5>{item.subtitle}</h5>
+            <h2 class="text-light">{item.title}</h2>
+            <h5 class="text-light">{item.subtitle}</h5>
           </div>
         ))
       }
@@ -21,7 +21,7 @@ import { dataCarousel } from "./data.ts";
     <nav class="carousel-nav">
       <button class="prev" tabindex="0" aria-label="Previous Slide"></button>
       <button class="next" tabindex="0" aria-label="Next Slide"></button>
-      <div>1/8</div>
+      <div class="counter">1/8</div>
     </nav>
   </div>
 </section>
@@ -35,7 +35,6 @@ import { dataCarousel } from "./data.ts";
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: var(--bg);
   }
 
   .container-carousel {
@@ -172,9 +171,11 @@ import { dataCarousel } from "./data.ts";
   import gsap from "gsap";
   import { Draggable } from "gsap/Draggable";
   import { InertiaPlugin } from "gsap/InertiaPlugin";
+  import { CustomEase } from "gsap/CustomEase";
 
-  gsap.registerPlugin(Draggable, InertiaPlugin);
+  gsap.registerPlugin(Draggable, InertiaPlugin, CustomEase);
 
+  CustomEase.create("smoothAnimation", "0.25, 0.1, 0.25, 1");
   interface CustomTimeline extends gsap.core.Timeline {
     toIndex: (
       index: number,
@@ -210,7 +211,7 @@ import { dataCarousel } from "./data.ts";
     carouselSlideOverlays.forEach((overlay, i) => {
       gsap.to(overlay, {
         duration: 1.25,
-        ease: "expo.out",
+        ease: "smoothAnimation.out",
         scaleY: 0,
         delay: i * 0.2 + 0.5,
       });
@@ -569,72 +570,113 @@ import { dataCarousel } from "./data.ts";
       center: true,
       draggable: true,
       onChange: (slide, index) => {
-        if (activeSlide) {
-          gsap.to(".carousel h2, .carousel h5", {
-            overwrite: true,
-            opacity: 0,
-            ease: "power3",
-          });
-          gsap.to(".active", { opacity: 0.3 });
-          activeSlide.classList.remove("active");
-        }
+        // 🔴 Animar TODOS los slides a estado inactivo
+        slides.forEach((s) => {
+          if (s !== slide) {
+            gsap.to(s, {
+              opacity: 0.3,
+              scale: 0.9,
+              duration: 1,
+              ease: "",
+              overwrite: "auto",
+            });
+
+            gsap.to(s.querySelectorAll("h2, h5"), {
+              opacity: 0,
+              y: 50,
+              duration: 0.4,
+              ease: "power2.out",
+              overwrite: "auto",
+            });
+
+            s.classList.remove("active");
+          }
+        });
+
+        // 🟢 Activar nuevo slide
         slide.classList.add("active");
         activeSlide = slide;
 
-        // Intro animation for new active slide
+        const texts = slide.querySelectorAll("h2, h5");
+
         gsap
-          .timeline({ defaults: { ease: "power1.inOut" } })
-          .to(".active", { opacity: 1, ease: "power2.inOut" }, 0)
+          .timeline()
+          // Contador
           .to(
             ".carousel-nav div",
-            { duration: 0.2, opacity: 0, ease: "power1.in" },
+            {
+              opacity: 0,
+              duration: 0.2,
+              overwrite: "auto",
+            },
             0,
           )
-          .set(
-            ".carousel-nav div",
-            { innerText: `${index + 1}/${slides.length}` },
-            0.2,
-          )
+          .set(".carousel-nav div", {
+            innerText: `${index + 1}/${slides.length}`,
+          })
+          .to(".carousel-nav div", {
+            opacity: 1,
+            duration: 0.4,
+            overwrite: "auto",
+          })
+
+          // Slide activo
           .to(
-            ".carousel-nav div",
-            { duration: 0.4, opacity: 0.5, ease: "power1.inOut" },
-            0.2,
+            slide,
+            {
+              opacity: 1,
+              scale: 1.2,
+              duration: 1,
+              ease: "smoothAnimation", // 🔥 SOLO CAMBIO AQUÍ
+              overwrite: "auto",
+            },
+            0,
           )
-          .to(
-            ".active h2, .active h5",
-            { opacity: 1, ease: "power1.inOut" },
-            0.3,
-          )
+
+          // Textos desde abajo + stagger
           .fromTo(
-            ".active h2, .active h5",
-            { y: (i: number) => [40, 60][i] },
-            { duration: 1.5, y: 0, ease: "expo" },
-            0.3,
-          )
-          .progress(firstRun ? 1 : 0);
+            texts,
+            {
+              opacity: 0,
+              y: 60,
+            },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "smoothAnimation.out",
+              stagger: 0.15,
+              overwrite: "auto",
+            },
+            0.2,
+          );
       },
     });
 
     next.addEventListener("pointerover", arrowBtnOver);
     next.addEventListener("pointerout", arrowBtnOut);
     next.addEventListener("click", () =>
-      loop.next({ duration: 1, ease: "expo" }),
+      loop.next({ duration: 1, ease: "smoothAnimation" }),
     );
 
     prev.addEventListener("pointerover", arrowBtnOver);
     prev.addEventListener("pointerout", arrowBtnOut);
     prev.addEventListener("click", () =>
-      loop.previous({ duration: 1, ease: "expo" }),
+      loop.previous({ duration: 1, ease: "smoothAnimation" }),
     );
 
     slides.forEach((slide, i) => {
       slide.addEventListener("click", () =>
-        loop.toIndex(i, { duration: 1, ease: "expo" }),
+        loop.toIndex(i, { duration: 1, ease: "smoothAnimation" }),
       );
     });
 
     // Set initial opacity for slides
-    gsap.set(".carousel-slide", { opacity: (i) => (i === 0 ? 1 : 0.3) });
+    // gsap.set(".carousel-slide", { opacity: (i) => (i === 0 ? 1 : 0.3) });
+    gsap.set(".carousel-slide", {
+      opacity: (i) => (i === 0 ? 1 : 0.3),
+      scale: (i) => (i === 0 ? 1 : 0.9),
+    });
     gsap.set(".carousel-slide h2", { opacity: (i) => (i === 0 ? 1 : 0) });
     gsap.set(".carousel-slide h5", { opacity: (i) => (i === 0 ? 1 : 0) });
 
