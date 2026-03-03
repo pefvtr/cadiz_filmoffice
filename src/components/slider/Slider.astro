@@ -56,7 +56,7 @@ import { dataCarousel } from "./data.ts";
   }
 
   .active {
-    z-index: 3000;
+    z-index: 300;
   }
 
   .container-carousel {
@@ -133,13 +133,12 @@ import { dataCarousel } from "./data.ts";
   .carousel-nav {
     position: absolute;
     width: 95%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 3010;
+    z-index: 310;
     @media (width >= 678px) {
-      width: 70%;
+      width: 65%;
     }
   }
 
@@ -464,7 +463,28 @@ import { dataCarousel } from "./data.ts";
         }
       };
 
-      const onResize = () => refresh(true);
+      // const onResize = () => refresh(true);
+
+      let resizeTimer: ReturnType<typeof setTimeout>;
+      const onResize = () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          // 1. Quitar el scale del slide activo para que populateWidths lea bien
+          gsap.set(items, { scale: 1 });
+
+          // 2. Recalcular todo
+          tl.progress(0, true);
+          populateWidths();
+          populateTimeline();
+          populateOffsets();
+
+          // 3. Saltar al índice actual sin animación
+          tl.toIndex(curIndex, { duration: 0 });
+
+          // 4. Restaurar el scale del slide activo
+          gsap.set(items[curIndex], { scale: 1.2 });
+        }, 150);
+      };
 
       gsap.set(items, { x: 0 });
       populateWidths();
