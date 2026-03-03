@@ -10,25 +10,30 @@ import { dataCarousel } from "./data.ts";
       {
         dataCarousel.map((item) => (
           <div class="carousel-slide relative">
-            <div class="carousel-slide-overlay bg-opacity-50 absolute -top-[10%] -left-[10%] z-30 h-[120%] w-[120%] bg-black" />
+            <div class="carousel-slide-overlay absolute -top-[10%] -left-[10%] z-30 h-[120%] w-[120%] bg-black" />
             <img src={item.imgSrc} />
             <h2 class="text-white">{item.title}</h2>
             <h5 class="text-white">{item.subtitle}</h5>
           </div>
+          //   <div class="carousel-slide-overlay bg-opacity-1 absolute -top-[10%] -left-[10%] z-30 h-[120%] w-[120%] bg-black scale-y-50" />
+          //   <img src={item.imgSrc} />
+          //   <h2 class="text-white">{item.title}</h2>
+          //   <h5 class="text-white">{item.subtitle}</h5>
+          // </div>
         ))
       }
     </div>
 
-    <nav class="carousel-nav">
+    <nav class="carousel-nav absolute bottom-4">
       <button
         class="prev inline-block"
         tabindex="0"
         aria-label="Previous Slide"
       >
-        <Icon name="left" class="h-32 w-32 rotate-90 text-white" />
+        <Icon name="left" class="h-16 w-16 rotate-90 text-white" />
       </button>
       <button class="next inline-block" tabindex="0" aria-label="Next Slide">
-        <Icon name="right" class="h-32 w-32 -rotate-90 text-white" />
+        <Icon name="right" class="h-16 w-16 -rotate-90 text-white" />
       </button>
       <div>1/8</div>
     </nav>
@@ -44,6 +49,14 @@ import { dataCarousel } from "./data.ts";
     align-items: center;
     justify-content: center;
     overflow: hidden;
+  }
+
+  .inactive {
+    pointer-events: none;
+  }
+
+  .active {
+    z-index: 3000;
   }
 
   .container-carousel {
@@ -72,7 +85,9 @@ import { dataCarousel } from "./data.ts";
     align-items: center;
     color: white;
     scroll-snap-align: center;
-    overflow: hidden;
+    clip-path: inset(0);
+    contain: paint;
+
     @media (width > 768px) {
       flex: 0 0 55%;
     }
@@ -81,7 +96,8 @@ import { dataCarousel } from "./data.ts";
   .carousel-slide-overlay {
     pointer-events: none;
     transform-origin: top;
-    transform: scaleY(1);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .carousel-slide img {
@@ -116,29 +132,34 @@ import { dataCarousel } from "./data.ts";
 
   .carousel-nav {
     position: absolute;
-    width: 100%;
+    width: 95%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 3010;
+    @media (width >= 678px) {
+      width: 70%;
+    }
   }
 
   .prev {
-    transform: translateY(-50%) rotate(-90deg);
+    transform: rotate(-90deg);
   }
 
   .next {
-    transform: translateY(-50%) rotate(90deg);
-    right: 0;
+    transform: rotate(90deg);
   }
 
   .carousel-nav div {
     position: absolute;
-    top: 30vh;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     color: #fff;
     font-weight: 200;
     opacity: 0.5;
+    pointer-events: none;
     letter-spacing: 0.25rem;
     font-size: clamp(22px, 3.9vw, 44px);
   }
@@ -159,6 +180,19 @@ import { dataCarousel } from "./data.ts";
 
   ::-webkit-scrollbar-thumb:hover {
     background: #bbb;
+  }
+
+  .carousel-nav button {
+    transition: opacity 0.3s ease;
+  }
+
+  .carousel-nav button:hover {
+    opacity: 0.4;
+  }
+
+  ..carousel-nav button svg,
+  .carousel-nav button svg * {
+    pointer-events: none;
   }
 </style>
 
@@ -197,6 +231,8 @@ import { dataCarousel } from "./data.ts";
     let activeSlide: HTMLElement | null = null;
     let firstRun = true;
 
+    let isAnimating = false;
+
     gsap.to(containerCarousel, {
       duration: 1,
       ease: "power2.out",
@@ -206,8 +242,8 @@ import { dataCarousel } from "./data.ts";
     carouselSlideOverlays.forEach((overlay, i) => {
       gsap.to(overlay, {
         duration: 1.25,
-        ease: "smoothAnimation.out",
-        scaleY: 0,
+        ease: "power2.inOut",
+        yPercent: -100,
         delay: i * 0.2 + 0.5,
       });
     });
@@ -216,7 +252,7 @@ import { dataCarousel } from "./data.ts";
     gsap.set(".carousel", { overflow: "visible", scrollSnapType: "none" });
 
     // Display the prev/next buttons
-    gsap.set(".carousel-nav", { display: "block" });
+    // gsap.set(".carousel-nav", { display: "block" });
 
     // Image parallax helper
     function slideImgUpdate() {
@@ -570,7 +606,7 @@ import { dataCarousel } from "./data.ts";
           if (s !== slide) {
             gsap.to(s, {
               opacity: 0.3,
-              scale: 0.9,
+              scale: 1,
               duration: 1,
               ease: "",
               overwrite: "auto",
@@ -623,6 +659,9 @@ import { dataCarousel } from "./data.ts";
               duration: 1,
               ease: "smoothAnimation", // 🔥 SOLO CAMBIO AQUÍ
               overwrite: "auto",
+              onComplete: () => {
+                isAnimating = false; // ← liberar aquí, cuando termina la animación principal
+              },
             },
             0,
           )
@@ -647,17 +686,30 @@ import { dataCarousel } from "./data.ts";
       },
     });
 
-    next.addEventListener("pointerover", arrowBtnOver);
-    next.addEventListener("pointerout", arrowBtnOut);
-    next.addEventListener("click", () =>
-      loop.next({ duration: 1, ease: "smoothAnimation" }),
-    );
+    const lockButtons = () => {
+      next.classList.add("inactive");
+      prev.classList.add("inactive");
+      setTimeout(() => {
+        next.classList.remove("inactive");
+        prev.classList.remove("inactive");
+      }, 1000);
+    };
 
-    prev.addEventListener("pointerover", arrowBtnOver);
-    prev.addEventListener("pointerout", arrowBtnOut);
-    prev.addEventListener("click", () =>
-      loop.previous({ duration: 1, ease: "smoothAnimation" }),
-    );
+    // next.addEventListener("pointerover", arrowBtnOver);
+    // next.addEventListener("pointerout", arrowBtnOut);
+    next.addEventListener("click", () => {
+      if (next.classList.contains("inactive")) return;
+      lockButtons();
+      loop.next({ duration: 1, ease: "smoothAnimation" });
+    });
+
+    // prev.addEventListener("pointerover", arrowBtnOver);
+    // prev.addEventListener("pointerout", arrowBtnOut);
+    prev.addEventListener("click", () => {
+      if (prev.classList.contains("inactive")) return;
+      lockButtons();
+      loop.previous({ duration: 1, ease: "smoothAnimation" });
+    });
 
     slides.forEach((slide, i) => {
       slide.addEventListener("click", () =>
@@ -669,7 +721,7 @@ import { dataCarousel } from "./data.ts";
     // gsap.set(".carousel-slide", { opacity: (i) => (i === 0 ? 1 : 0.3) });
     gsap.set(".carousel-slide", {
       opacity: (i) => (i === 0 ? 1 : 0.3),
-      scale: (i) => (i === 0 ? 1 : 0.9),
+      scale: (i) => (i === 0 ? 1 : 1),
     });
     gsap.set(".carousel-slide h2", { opacity: (i) => (i === 0 ? 1 : 0) });
     gsap.set(".carousel-slide h5", { opacity: (i) => (i === 0 ? 1 : 0) });
