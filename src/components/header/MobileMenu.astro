@@ -6,7 +6,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <div
-  class="menu-overlay fixed top-0 left-0 h-screen w-full overflow-hidden bg-(--color-dark) [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)]"
+  class="menu-overlay z-[400] fixed top-0 left-0 h-screen w-full overflow-hidden bg-(--color-dark) [clip-path:polygon(0%_0%,100%_0%,100%_0%,0%_0%)]"
 >
   <div
     class="menu-content transform:[translateX(-100px)] transform:[translateY(-100px)] relative flex h-full w-full origin-bottom-left scale-150 rotate-[-15deg] flex-col items-center justify-center"
