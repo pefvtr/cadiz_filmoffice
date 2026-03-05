@@ -20,7 +20,6 @@ const { data, totalPages } = Astro.props;
               {dataItemCatalog.contacto.nombre}
             </div>
             <div class="font-headings text-primary-dark flex-1 text-right font-bold">
-              {/* 1. Slice the array to get only the first 3 items */}
               {dataItemCatalog.categoriaEmpresa
                 .slice(0, 2)
                 .map((item, index) => (
@@ -46,10 +45,7 @@ const { data, totalPages } = Astro.props;
               <ul class="ml-4">
                 <li class="flex items-center gap-x-2">
                   <span>
-                    <Icon
-                      name="person"
-                      class="text-primary-dark h-4 w-4"
-                    />{" "}
+                    <Icon name="person" class="text-primary-dark h-4 w-4" />
                   </span>
                   <span class="text-sm capitalize">
                     {dataItemCatalog.contacto.nombre.toLowerCase()}
@@ -57,7 +53,7 @@ const { data, totalPages } = Astro.props;
                 </li>
                 <li class="flex items-center gap-x-2">
                   <span>
-                    <Icon name="phone" class="text-primary-dark h-4 w-4" />{" "}
+                    <Icon name="phone" class="text-primary-dark h-4 w-4" />
                   </span>
                   <span class="text-sm">
                     {dataItemCatalog.contacto.telefonos.toLowerCase()}
@@ -65,10 +61,7 @@ const { data, totalPages } = Astro.props;
                 </li>
                 <li class="flex items-center gap-x-2">
                   <span>
-                    <Icon
-                      name="location"
-                      class="text-primary-dark h-4 w-4"
-                    />{" "}
+                    <Icon name="location" class="text-primary-dark h-4 w-4" />
                   </span>
                   <span class="text-sm capitalize">
                     {dataItemCatalog.contacto.direccion.toLowerCase()}
@@ -76,7 +69,7 @@ const { data, totalPages } = Astro.props;
                 </li>
                 <li class="flex items-center gap-x-2">
                   <span>
-                    <Icon name="mail" class="text-primary-dark h-4 w-4" />{" "}
+                    <Icon name="mail" class="text-primary-dark h-4 w-4" />
                   </span>
                   <span class="text-sm">
                     {dataItemCatalog.contacto.email.toLowerCase()}
@@ -86,15 +79,16 @@ const { data, totalPages } = Astro.props;
             </div>
           </div>
         </div>
-        <div class="data-card bg-dark text-light fixed top-0 left-0 z-20 flex h-full min-h-screen w-full flex-col items-center justify-center px-4 py-[calc(var(--header-height)+2rem)]">
-          <div class="h-full space-y-16">
+        <div class="data-card bg-dark text-light fixed top-0 left-0 z-20 flex h-full min-h-screen w-full flex-col overflow-y-auto px-4 py-[calc(var(--header-height)+2rem)]">
+          <div class="cards-wrapper relative mx-auto space-y-16">
+            <div class="highlight bg-light/15 absolute top-0 left-0 rounded-lg" />
             {dataItemCatalog.trabajosDestacados.map((item) => (
-              <div class="card-inside group relative">
+              <div class="card-inside relative rounded-lg px-4 py-8">
                 <Icon
                   name="clapper"
-                  class="group-hover:text-primary-dark clapper text-light/15 pointer-events-none absolute right-0 bottom-0 h-[45px] w-[45px]"
+                  class="clapper text-light pointer-events-none absolute right-6 bottom-6 h-[45px] w-[45px]"
                 />
-                <h3 class="title-card text-primary-dark text-ne title-card mb-4 leading-none">
+                <h3 class="title-card text-primary-dark title-card mb-4 leading-none">
                   {item.titulo}
                 </h3>
                 <div class="capitalize">{item.tipo.toLowerCase()}</div>
@@ -129,6 +123,14 @@ const { data, totalPages } = Astro.props;
   .card-inside {
     position: relative;
   }
+
+  .clapper {
+    transition: color 0.2s linear;
+  }
+
+  .clapper.is-hovered {
+    color: var(--color-primary);
+  }
 </style>
 
 <script>
@@ -138,9 +140,11 @@ const { data, totalPages } = Astro.props;
     const containerCards =
       document.querySelectorAll<HTMLDivElement>(".container-card");
 
-    containerCards.forEach((card) => {
-      const dataCard = card.querySelector<HTMLDivElement>(".data-card");
-      const buttonCard = card.querySelector<HTMLDivElement>(".button-card");
+    containerCards.forEach((containerCard) => {
+      const dataCard =
+        containerCard.querySelector<HTMLDivElement>(".data-card");
+      const buttonCard =
+        containerCard.querySelector<HTMLDivElement>(".button-card");
 
       if (!dataCard || !buttonCard) return;
 
@@ -153,45 +157,66 @@ const { data, totalPages } = Astro.props;
         });
       });
 
-      const cards = card.querySelectorAll<HTMLElement>(".card-inside");
+      const highlight = dataCard.querySelector<HTMLDivElement>(".highlight");
 
-      cards.forEach((card) => {
-        if (!card) return;
+      console.log({ highlight });
 
-        const clapper = card.querySelector<HTMLElement>(".clapper");
+      const cardsWrapper =
+        dataCard.querySelector<HTMLElement>(".cards-wrapper");
+      if (!cardsWrapper) return;
+
+      const cards = dataCard.querySelectorAll<HTMLElement>(".card-inside");
+
+      cards.forEach((cardInside) => {
+        const clapper = cardInside.querySelector<HTMLElement>(".clapper");
+        if (!clapper) return;
 
         gsap.set(clapper, {
           rotation: 30,
-          opacity: 1,
           transformOrigin: "top left",
         });
 
-        // Al hacer hover: rota y vuelve con bounce, cambia a naranja
-
-        card.addEventListener("mouseenter", () => {
-          // tl.play(); // restart en vez de play, para que funcione bien en hovers rápidos
-
+        cardInside.addEventListener("mouseenter", () => {
+          // Animación claqueta
           gsap.fromTo(
             clapper,
             { rotation: 30 },
-            {
-              rotation: 0,
-              duration: 1,
-              ease: "elastic.out(1, 0.4)",
-            },
+            { rotation: 0, duration: 1, ease: "elastic.out(1, 0.4)" },
           );
+          clapper.classList.add("is-hovered");
+
+          // Mover highlight a este card
+          const rect = cardInside.getBoundingClientRect();
+          const wrapperRect = cardsWrapper.getBoundingClientRect();
+
+          gsap.to(highlight, {
+            opacity: 1,
+            width: rect.width,
+            height: rect.height,
+            x: rect.left - wrapperRect.left,
+            y: rect.top - wrapperRect.top,
+            duration: 0.35,
+            ease: "power2.out",
+          });
         });
 
-        card.addEventListener("mouseleave", () => {
+        cardInside.addEventListener("mouseleave", () => {
+          // Animación claqueta de vuelta
           gsap.fromTo(
             clapper,
             { rotation: 0 },
-            {
-              rotation: 30,
-              duration: 1,
-              ease: "elastic.out(1, 0.4)",
-            },
+            { rotation: 30, duration: 1, ease: "elastic.out(1, 0.4)" },
           );
+          clapper.classList.remove("is-hovered");
+        });
+      });
+
+      // Ocultar highlight cuando el ratón sale del contenedor completo
+      dataCard.addEventListener("mouseleave", () => {
+        gsap.to(highlight, {
+          opacity: 0,
+          duration: 0.25,
+          ease: "power2.out",
         });
       });
     });
