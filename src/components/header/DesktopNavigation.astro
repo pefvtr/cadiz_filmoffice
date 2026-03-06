@@ -12,6 +12,195 @@ const { classNames } = Astro.props;
 <div class:list={["main-menu block", classNames]}>
   <nav class="main-nav flex items-center gap-3">
     {
+      menuItems.map((item, index) => (
+        <a
+          class:list={[
+            "parent-link-desktop relative block overflow-hidden text-sm",
+            { "pointer-events-none": currentPath === item.url },
+          ]}
+          href={item.url}
+          data-index={index}
+        >
+          <h2
+            class:list={[
+              "text-primary clip relative z-10 text-xl",
+              { "is-active pointer-events-none": currentPath === item.url },
+            ]}
+          >
+            {item.label}
+          </h2>
+          <h2 class="absolute top-0 left-0 h-full w-full text-xl text-black">
+            {item.label}
+          </h2>
+        </a>
+      ))
+    }
+  </nav>
+</div>
+
+<style>
+  .clip {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    will-change: clip-path;
+    pointer-events: none;
+  }
+  .is-active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+</style>
+
+
+<script>
+  import gsap from "gsap";
+
+  document.addEventListener("astro:page-load", () => {
+    const parents = document.querySelectorAll(".parent-link-desktop") as NodeListOf<HTMLElement>;
+    
+    // Estado global del menú
+    let menuState = {
+      lastIndex: -1,
+      currentIndex: -1
+    };
+
+    parents.forEach((parent) => {
+      const clip = parent.querySelector(".clip") as HTMLElement;
+      const index = parseInt(parent.dataset.index || "0");
+
+      parent.addEventListener("mouseenter", () => {
+        menuState.currentIndex = index;
+
+        // Determinar dirección de entrada
+        // Si no hay rastro previo o vamos a un índice mayor -> Entra desde la Izquierda
+        // Si venimos de un índice mayor -> Entra desde la Derecha
+        const comingFromLeft = menuState.lastIndex === -1 || index > menuState.lastIndex;
+
+        const leftEmpty = "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)";
+        const rightEmpty = "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)";
+        const full = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
+
+        gsap.killTweensOf(clip);
+        
+        // Forzamos el inicio según la dirección
+        gsap.set(clip, {
+          clipPath: comingFromLeft ? leftEmpty : rightEmpty
+        });
+
+        gsap.to(clip, {
+          clipPath: full,
+          duration: 0.4,
+          ease: "power2.out"
+        });
+
+        menuState.lastIndex = index;
+      });
+
+      parent.addEventListener("mouseleave", (e) => {
+        // Para la salida, necesitamos saber hacia dónde se mueve el ratón.
+        // Usamos la posición X del ratón respecto al elemento para saber si salió por la izquierda o derecha
+        const rect = parent.getBoundingClientRect();
+        const mouseX = (e as MouseEvent).clientX;
+        
+        // Si la posición X del ratón es menor al inicio del elemento, salió por la izquierda
+        const exitedToLeft = mouseX <= rect.left;
+
+        const leftEmpty = "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)";
+        const rightEmpty = "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)";
+
+        gsap.killTweensOf(clip);
+
+        gsap.to(clip, {
+          // Si sale por la izquierda, el clip se encoge hacia la izquierda (leftEmpty)
+          // Si sale por la derecha, el clip se encoge hacia la derecha (rightEmpty)
+          clipPath: exitedToLeft ? leftEmpty : rightEmpty,
+          duration: 0.3,
+          ease: "power2.in"
+        });
+      });
+    });
+
+    // Resetear el rastro si el ratón sale de toda la navegación
+    const nav = document.querySelector(".main-nav");
+    nav?.addEventListener("mouseleave", () => {
+      menuState.lastIndex = -1;
+    });
+  });
+</script>
+
+<!-- <script>
+  import gsap from "gsap";
+
+  document.addEventListener("astro:page-load", () => {
+    const parents = document.querySelectorAll(".parent-link-desktop") as NodeListOf<HTMLElement>;
+    
+    // Variable para rastrear el índice del elemento anterior
+    let previousIndex = -1;
+
+    parents.forEach((parent) => {
+      const clip = parent.querySelector(".clip") as HTMLElement;
+      const currentIndex = parseInt(parent.dataset.index || "0");
+
+      parent.addEventListener("mouseenter", () => {
+        // Si es el primer hover, por defecto de izquierda a derecha
+        // Si el actual es mayor que el anterior, venimos de la izquierda -> animamos LTR
+        // Si el actual es menor que el anterior, venimos de la derecha -> animamos RTL
+        const isComingFromLeft = previousIndex === -1 || currentIndex > previousIndex;
+
+        const startState = isComingFromLeft 
+          ? "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"   // Empieza en la izquierda
+          : "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"; // Empieza en la derecha
+
+        const endState = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"; // Lleno
+
+        gsap.fromTo(clip, 
+          { clipPath: startState },
+          {
+            clipPath: endState,
+            duration: 0.4,
+            ease: "power2.out",
+            overwrite: true
+          }
+        );
+
+        previousIndex = currentIndex;
+      });
+
+      parent.addEventListener("mouseleave", () => {
+        // Para el mouseleave, queremos que el color "siga" la dirección del ratón.
+        // Si el ratón sigue moviéndose a la derecha, el clip debe desaparecer hacia la derecha.
+        // Usamos una lógica similar pero inversa para el estado final.
+        
+        // Nota: No actualizamos previousIndex aquí para que el siguiente mouseenter sepa de dónde venimos.
+        
+        // Esta lógica asume que si sales y entras en otro, el mouseenter mandará, 
+        // pero para una salida limpia:
+        const isMovingRight = true; // Podrías refinar esto con la posición del mouse si fuera necesario
+
+        gsap.to(clip, {
+          clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)",
+          duration: 0.4,
+          ease: "power2.in",
+          overwrite: true
+        });
+      });
+    });
+  });
+</script> -->
+
+
+<!-- ---
+import { menuItems } from "@/components/header/data";
+
+const currentPath = Astro.url.pathname;
+
+interface Props {
+  classNames?: string;
+}
+const { classNames } = Astro.props;
+---
+
+<div class:list={["main-menu block", classNames]}>
+  <nav class="main-nav flex items-center gap-3">
+    {
       menuItems.map((item) => (
         <a
           class:list={[
@@ -91,4 +280,4 @@ const { classNames } = Astro.props;
       });
     });
   });
-</script>
+</script> -->
