@@ -43,6 +43,11 @@ const {
   <script>
     import Lenis from "lenis";
     import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    let lenisTickerCb: ((time: number) => void) | null = null;
 
     declare global {
       interface Window {
@@ -51,20 +56,24 @@ const {
     }
 
     document.addEventListener("astro:page-load", () => {
+      if (window.lenis) {
+        window.lenis.destroy();
+        window.lenis = undefined;
+      }
+
       let isHeaderHovered = false;
 
       const horizontalBarMenu = document.querySelector(
         ".horizontal-bar-menu",
       ) as HTMLDivElement;
+
       type State = "animate-up" | "animate-down";
+
       const lenis = new Lenis({
         prevent: (node) => node.classList.contains("data-card"),
       });
-      // Guardar instancia en window para acceso global
-      if (typeof window !== "undefined") {
-        // Usar type assertion para evitar el error de TypeScript
-        window.lenis = lenis;
-      }
+
+      window.lenis = lenis;
 
       const header = document.querySelector("#main-header");
 
@@ -87,7 +96,6 @@ const {
           updateState("animate-up");
         } else {
           const targetWidth = Math.min(window.innerWidth * 0.35, 200);
-
           gsap.to(horizontalBarMenu, {
             width: targetWidth,
             duration: 0.5,
@@ -96,10 +104,9 @@ const {
         }
       });
 
-      // Sincronizar con GSAP ticker
-      gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
-      });
+      if (lenisTickerCb) gsap.ticker.remove(lenisTickerCb);
+      lenisTickerCb = (time: number) => lenis.raf(time * 1000);
+      gsap.ticker.add(lenisTickerCb);
 
       gsap.ticker.lagSmoothing(0);
 
@@ -111,12 +118,9 @@ const {
 
       header?.addEventListener("mouseenter", () => {
         isHeaderHovered = true;
-
         gsap.killTweensOf(horizontalBarMenu);
-
         updateState("animate-down");
         const targetWidth = Math.min(window.innerWidth * 0.35, 200);
-
         gsap.to(horizontalBarMenu, {
           width: targetWidth,
           duration: 0.5,
@@ -126,13 +130,6 @@ const {
       header?.addEventListener("mouseleave", () => {
         isHeaderHovered = false;
       });
-
-      function raf(time: number) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
     });
   </script>
 </html>

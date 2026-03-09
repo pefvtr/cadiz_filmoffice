@@ -281,7 +281,7 @@ import Layout from "@/layouts/Layout.astro";
     const mm = gsap.matchMedia();
 
     mm.add("(min-width: 1000px)", () => {
-      // Una sola timeline maestra que controla todo
+      /* Una sola timeline maestra que controla todo */
       const masterTl = gsap.timeline({
         scrollTrigger: {
           trigger: ".sticky",
@@ -293,9 +293,9 @@ import Layout from "@/layouts/Layout.astro";
         },
       });
 
-      // Secuencia completa de animaciones
+      /* Secuencia completa de animaciones */
       masterTl
-        // Fase 1: Aparecer título y reducir ancho (0-35%)
+        /* Fase 1: Aparecer título y reducir ancho (0-35%) */
         .fromTo(
           ".sticky-header h1",
           { y: 40, opacity: 0 },
@@ -304,13 +304,13 @@ import Layout from "@/layouts/Layout.astro";
         )
         .to(".card-container", { width: "60%", duration: 0.35 }, 0)
 
-        // Fase 2: Separar tarjetas (45%)
+        /* Fase 2: Separar tarjetas (45%) */
         .to(".card-container", { gap: 30, duration: 0.1 }, 0.45)
         .to("#card-1", { x: -30, borderRadius: "20px", duration: 0.1 }, 0.45)
         .to("#card-3", { x: 30, borderRadius: "20px", duration: 0.1 }, 0.45)
         .to("#card-2", { borderRadius: "20px", duration: 0.1 }, 0.45)
 
-        // Fase 3: Voltear tarjetas (70%)
+        /* Fase 3: Voltear tarjetas (70%) */
         .to(
           ".card",
           {
@@ -333,7 +333,7 @@ import Layout from "@/layouts/Layout.astro";
         );
     });
 
-    // Reiniciar en resize (debounced)
+    /* Reiniciar en resize (debounced) */
     let resizeTimer: number;
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimer);
