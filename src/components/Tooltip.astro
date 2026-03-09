@@ -19,7 +19,7 @@ const {
 <span class="tooltip-wrapper relative inline-block">
   <slot />
   <span
-    class={`tooltip pointer-events-none absolute opacity-0 ${tooltipClass}`}
+    class={`tooltip pointer-events-none absolute z-50 text-justify opacity-0 ${tooltipClass}`}
     data-placement={placement}
     data-offset={offset}
   >
@@ -42,77 +42,110 @@ const {
   } from "@floating-ui/dom";
   import gsap from "gsap";
 
-  // Seleccionamos todos los tooltips
-  const wrappers = document.querySelectorAll<HTMLElement>(".tooltip-wrapper");
+  function initTooltips() {
+    const wrappers = document.querySelectorAll<HTMLElement>(".tooltip-wrapper");
 
-  wrappers.forEach((wrapper) => {
-    // Trigger y elementos del tooltip
-    const trigger = wrapper.firstElementChild;
-    const tooltip = wrapper.querySelector<HTMLElement>(".tooltip");
-    const arrowElement = wrapper.querySelector<HTMLElement>(".tooltip-arrow");
+    wrappers.forEach((wrapper) => {
+      // Evitar doble inicialización
+      if (wrapper.dataset.tooltipInit === "true") return;
+      wrapper.dataset.tooltipInit = "true";
 
-    // Validación estricta de que existan y sean HTMLElements
-    if (!(trigger instanceof HTMLElement) || !tooltip || !arrowElement) return;
+      // El trigger es el primer hijo directo (el <slot>)
+      const trigger = wrapper.firstElementChild as HTMLElement | null;
+      const tooltip = wrapper.querySelector<HTMLElement>(".tooltip");
+      const arrowElement = wrapper.querySelector<HTMLElement>(".tooltip-arrow");
 
-    // Props del tooltip
-    const placement = (tooltip.dataset.placement ?? "top") as Placement;
-    const offsetValue = Number(tooltip.dataset.offset ?? 8);
+      if (!trigger || !tooltip || !arrowElement) return;
 
-    // Función para actualizar la posición
-    function updatePosition() {
-      if (!(trigger instanceof HTMLElement) || !tooltip || !arrowElement)
-        return;
+      const placement = (tooltip.dataset.placement ?? "top") as Placement;
+      const offsetValue = Number(tooltip.dataset.offset ?? 8);
 
-      computePosition(trigger, tooltip, {
-        placement,
-        middleware: [
-          offsetMiddleware(offsetValue),
-          flip(),
-          shift({ padding: 8 }),
-          arrow({ element: arrowElement }),
-        ],
-      }).then(({ x, y, placement, middlewareData }) => {
-        tooltip.style.left = `${x}px`;
-        tooltip.style.top = `${y}px`;
+      const transformOffset = { x: 0, y: 0 };
 
-        const arrowData = middlewareData.arrow;
-        if (arrowData) {
-          const { x: arrowX, y: arrowY } = arrowData;
-          if (arrowX != null) arrowElement.style.left = `${arrowX}px`;
-          if (arrowY != null) arrowElement.style.top = `${arrowY}px`;
-        }
+      function updatePosition() {
+        if (!trigger || !tooltip || !arrowElement) return;
 
-        const basePlacement = placement.split("-")[0] as
-          | "top"
-          | "bottom"
-          | "left"
-          | "right";
-        const staticSide = {
-          top: "bottom",
-          bottom: "top",
-          left: "right",
-          right: "left",
-        }[basePlacement];
-        (arrowElement.style as any)[staticSide] = "-4px";
+        computePosition(trigger, tooltip, {
+          placement,
+          middleware: [
+            offsetMiddleware(offsetValue),
+            flip(),
+            shift({ padding: 8 }),
+            arrow({ element: arrowElement }),
+          ],
+        }).then(({ x, y, placement: resolvedPlacement, middlewareData }) => {
+          Object.assign(tooltip.style, {
+            left: `${x}px`,
+            top: `${y}px`,
+          });
+
+          const arrowData = middlewareData.arrow;
+          if (arrowData) {
+            if (arrowData.x != null)
+              arrowElement.style.left = `${arrowData.x}px`;
+            if (arrowData.y != null)
+              arrowElement.style.top = `${arrowData.y}px`;
+          }
+
+          const basePlacement = resolvedPlacement.split("-")[0] as
+            | "top"
+            | "bottom"
+            | "left"
+            | "right";
+
+          const sides = {
+            top: "bottom",
+            bottom: "top",
+            left: "right",
+            right: "left",
+          };
+          // Reset all sides first
+          (["top", "bottom", "left", "right"] as const).forEach((s) => {
+            arrowElement.style[s] = "";
+          });
+          (arrowElement.style as any)[sides[basePlacement]] = "-4px";
+        });
+      }
+
+      function showTooltip() {
+        updatePosition();
+        gsap.killTweensOf(tooltip);
+        gsap.to(tooltip, {
+          opacity: 1,
+          y: 0,
+          duration: 0.2,
+          ease: "power2.out",
+        });
+      }
+
+      function hideTooltip() {
+        gsap.killTweensOf(tooltip);
+        gsap.to(tooltip, { opacity: 0, y: -4, duration: 0.15 });
+      }
+
+      trigger.addEventListener("mouseenter", showTooltip);
+      trigger.addEventListener("mouseleave", hideTooltip);
+
+      trigger.addEventListener("mousemove", (event: MouseEvent) => {
+        const rect = trigger.getBoundingClientRect();
+        const mouseX = event.clientX - rect.left - rect.width / 2;
+        const mouseY = event.clientY - rect.top - rect.height / 2;
+
+        gsap.to(transformOffset, {
+          x: mouseX * 0.3,
+          y: mouseY * 0.3,
+          duration: 0.3,
+          ease: "power2.out",
+          onUpdate: () => {
+            gsap.set(tooltip, { x: transformOffset.x, y: transformOffset.y });
+          },
+        });
       });
-    }
 
-    // Mostrar tooltip
-    function showTooltip() {
-      updatePosition();
-      gsap.to(tooltip, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
-    }
+      autoUpdate(trigger, tooltip, updatePosition);
+    });
+  }
 
-    // Ocultar tooltip
-    function hideTooltip() {
-      gsap.to(tooltip, { opacity: 0, y: -4, duration: 0.15 });
-    }
-
-    // Eventos de hover
-    trigger.addEventListener("mouseenter", showTooltip);
-    trigger.addEventListener("mouseleave", hideTooltip);
-
-    // Auto-reposicionamiento al hacer scroll/resize
-    autoUpdate(trigger, tooltip, updatePosition);
-  });
+  // Inicializar en carga normal y tras navegación con View Transitions
+  document.addEventListener("astro:page-load", initTooltips);
 </script>
