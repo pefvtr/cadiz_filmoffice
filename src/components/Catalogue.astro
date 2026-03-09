@@ -21,24 +21,30 @@ const { data, totalPages } = Astro.props;
               {dataItemCatalog.contacto.nombre}
             </div>
 
-            <div class="font-headings text-primary-dark flex-1 text-right font-bold">
-              {dataItemCatalog.categoriaEmpresa.slice(0, 2).map((item) => (
-                <div class="text-right">
-                  <span class="block">{item}</span>
-                </div>
-              ))}
+            <div class="categoria-wrapper font-headings text-primary-dark relative flex-1 text-right font-bold">
+              {dataItemCatalog.categoriaEmpresa
+                .slice(0, 2)
+                .map((item, index) => (
+                  <div class="text-right">
+                    <span class="block">
+                      {item}
+                      {index === 1 &&
+                        dataItemCatalog.categoriaEmpresa.length > 2 && (
+                          <span class="text-primary-dark/50 cursor-default text-sm tracking-widest select-none">
+                            {" "}
+                            ...
+                          </span>
+                        )}
+                    </span>
+                  </div>
+                ))}
 
               {dataItemCatalog.categoriaEmpresa.length > 2 && (
-                <div class="relative inline-block">
-                  <span class="categoria-trigger cursor-pointer select-none">
-                    ...
-                  </span>
-                  <div class="categoria-tooltip pointer-events-none absolute right-0 bottom-full z-50 mb-2 min-w-max rounded bg-black px-3 py-2 text-left text-xs text-white opacity-0 shadow-lg">
-                    {dataItemCatalog.categoriaEmpresa.slice(2).map((item) => (
-                      <div class="py-0.5">• {item}</div>
-                    ))}
-                    <span class="absolute right-3 -bottom-1 h-2 w-2 rotate-45 bg-black" />
-                  </div>
+                <div class="categoria-tooltip pointer-events-none absolute right-0 bottom-full z-50 mb-2 min-w-max rounded bg-black px-3 py-2 text-left text-xs text-white opacity-0 shadow-lg">
+                  {dataItemCatalog.categoriaEmpresa.slice(2).map((item) => (
+                    <div class="py-0.5">• {item}</div>
+                  ))}
+                  <span class="absolute right-3 -bottom-1 h-2 w-2 rotate-45 bg-black" />
                 </div>
               )}
             </div>
@@ -93,13 +99,9 @@ const { data, totalPages } = Astro.props;
           </div>
         </div>
 
-        {/* ── Panel de proyectos (data-card) ──
-            Arranca con overflow-hidden y pointer-events-none para NO interferir con Lenis.
-            Al abrirse se mueve al <body> via JS (portal pattern).
-        */}
-        <div class="data-card bg-dark text-light pointer-events-none fixed top-0 left-0 z-50 flex h-screen w-full flex-col overflow-hidden px-4 py-[calc(var(--header-height)+2rem)] opacity-0">
-          {/* Botón cerrar — X sin icono externo */}
-          <div class="close-data-card fixed top-[calc(var(--header-height)+1rem)] right-8 z-[60] flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all hover:bg-white/30">
+        {/* ── Panel de proyectos (data-card) ── */}
+        <div class="data-card bg-dark text-light pointer-events-none fixed top-0 left-0 z-[1100] flex h-screen w-full flex-col overflow-hidden px-4 py-[calc(var(--header-height)+2rem)] opacity-0">
+          <div class="close-data-card fixed top-6 right-6 z-[1200] flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all hover:bg-white/30">
             <span class="pointer-events-none text-2xl leading-none font-light">
               &times;
             </span>
@@ -145,36 +147,30 @@ const { data, totalPages } = Astro.props;
 <script>
   import gsap from "gsap";
 
-  // ── Cierra el panel y restaura Lenis ──────────────────────────────
   function closeDataCard(dataCard: HTMLDivElement) {
     gsap.to(dataCard, {
       opacity: 0,
       duration: 0.3,
       ease: "power2.inOut",
       onComplete: () => {
-        // 1. Desactivar scroll interno
         dataCard.classList.remove("overflow-y-auto");
         dataCard.classList.add("overflow-hidden");
-
-        // 2. Quitar interacción
         gsap.set(dataCard, { pointerEvents: "none" });
 
-        // 3. Devolver al container-card original (cleanup del portal)
         const originalParent = (dataCard as any)._originalParent as HTMLElement;
         if (originalParent && dataCard.parentElement === document.body) {
           originalParent.appendChild(dataCard);
         }
 
-        // 4. Resetear scroll interno para la próxima apertura
         dataCard.scrollTop = 0;
 
-        // 5. Reanudar Lenis
+        // Restaurar scroll de la página
+        document.body.style.overflow = "";
         window.lenis?.start();
       },
     });
   }
 
-  // ── Registra interacciones dentro del panel abierto ──────────────
   function setupDataCardInteractions(dataCard: HTMLDivElement) {
     const highlight = dataCard.querySelector<HTMLDivElement>(".highlight");
     const cardsWrapper = dataCard.querySelector<HTMLElement>(".cards-wrapper");
@@ -182,13 +178,11 @@ const { data, totalPages } = Astro.props;
 
     if (!cardsWrapper || !highlight) return;
 
-    // Cerrar con botón X
     closeBtn?.addEventListener("click", (e) => {
       e.stopPropagation();
       closeDataCard(dataCard);
     });
 
-    // Cerrar con tecla Escape
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         closeDataCard(dataCard);
@@ -197,7 +191,6 @@ const { data, totalPages } = Astro.props;
     };
     document.addEventListener("keydown", handleEscape);
 
-    // Interacciones de las cards internas
     const cards = dataCard.querySelectorAll<HTMLElement>(".card-inside");
 
     cards.forEach((cardInside) => {
@@ -250,9 +243,7 @@ const { data, totalPages } = Astro.props;
     });
   }
 
-  // ── Inicialización en cada carga de página (Astro View Transitions) ──
   document.addEventListener("astro:page-load", () => {
-    // Cards principales
     const containerCards =
       document.querySelectorAll<HTMLDivElement>(".container-card");
 
@@ -264,21 +255,17 @@ const { data, totalPages } = Astro.props;
 
       if (!dataCard || !buttonCard) return;
 
-      // Guardar referencia al padre original para el cleanup del portal
       (dataCard as any)._originalParent = containerCard;
 
       buttonCard.addEventListener("click", () => {
-        // 1. Portal: mover al <body> para sacarlo del contexto de Lenis
         document.body.appendChild(dataCard);
-
-        // 2. Activar scroll nativo del panel
         dataCard.classList.remove("overflow-hidden");
         dataCard.classList.add("overflow-y-auto");
 
-        // 3. Detener Lenis mientras el panel está abierto
+        // Bloquear scroll de la página
+        document.body.style.overflow = "hidden";
         window.lenis?.stop();
 
-        // 4. Animar apertura
         gsap.to(dataCard, {
           opacity: 1,
           duration: 0.4,
@@ -289,17 +276,17 @@ const { data, totalPages } = Astro.props;
           },
         });
       });
-    });
 
-    // Tooltips de categorías
-    document
-      .querySelectorAll<HTMLElement>(".categoria-trigger")
-      .forEach((trigger) => {
-        const tooltip = trigger.nextElementSibling as HTMLElement;
-        if (!tooltip) return;
+      // ── Tooltip de categorías al hacer hover sobre el wrapper ──
+      const categoriaWrapper =
+        containerCard.querySelector<HTMLElement>(".categoria-wrapper");
+      const tooltip =
+        categoriaWrapper?.querySelector<HTMLElement>(".categoria-tooltip");
 
-        trigger.addEventListener("mouseenter", () => {
+      if (categoriaWrapper && tooltip) {
+        categoriaWrapper.addEventListener("mouseenter", () => {
           gsap.killTweensOf(tooltip);
+          tooltip.classList.remove("pointer-events-none");
           gsap.fromTo(
             tooltip,
             { opacity: 0, y: 6 },
@@ -307,10 +294,16 @@ const { data, totalPages } = Astro.props;
           );
         });
 
-        trigger.addEventListener("mouseleave", () => {
+        categoriaWrapper.addEventListener("mouseleave", () => {
           gsap.killTweensOf(tooltip);
-          gsap.to(tooltip, { opacity: 0, y: 6, duration: 0.15 });
+          gsap.to(tooltip, {
+            opacity: 0,
+            y: 6,
+            duration: 0.15,
+            onComplete: () => tooltip.classList.add("pointer-events-none"),
+          });
         });
-      });
+      }
+    });
   });
 </script>
