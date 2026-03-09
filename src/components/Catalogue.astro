@@ -1,6 +1,7 @@
 ---
 import type { CatalogItem } from "@/types/catalogue-types";
 import { Icon } from "astro-icon/components";
+import { DevToolbarTooltip } from "astro/runtime/client/dev-toolbar/ui-library/tooltip.js";
 
 interface Props {
   data: CatalogItem[];
@@ -79,7 +80,7 @@ const { data, totalPages } = Astro.props;
             </div>
           </div>
         </div>
-        <div class="data-card bg-dark text-light fixed top-0 left-0 z-20 flex h-full min-h-screen w-full flex-col overflow-y-auto px-4 py-[calc(var(--header-height)+2rem)]">
+        <div class="data-card bg-dark text-light fixed top-0 left-0 z-20 flex h-full min-h-screen w-full flex-col overflow-y-auto px-4 py-[calc(var(--header-height)+2rem)] opacity-0">
           <div class="cards-wrapper relative mx-auto space-y-16">
             <div class="highlight bg-light/15 absolute top-0 left-0 rounded-lg" />
             {dataItemCatalog.trabajosDestacados.map((item) => (
@@ -125,7 +126,7 @@ const { data, totalPages } = Astro.props;
   }
 
   .clapper {
-    transition: color 0.2s linear;
+    transition: color 0.35s linear;
   }
 
   .clapper.is-hovered {
@@ -181,7 +182,7 @@ const { data, totalPages } = Astro.props;
           gsap.fromTo(
             clapper,
             { rotation: 30 },
-            { rotation: 0, duration: 1, ease: "elastic.out(1, 0.4)" },
+            { rotation: 0, duration: 1.25, ease: "elastic.out(1, 0.4)" },
           );
           clapper.classList.add("is-hovered");
 
