@@ -1,0 +1,118 @@
+---
+import type { Placement } from "@floating-ui/dom";
+
+interface Props {
+  text?: string;
+  placement?: Placement;
+  offset?: number;
+  tooltipClass?: string;
+}
+
+const {
+  text = "",
+  placement = "top",
+  offset = 8,
+  tooltipClass = "",
+} = Astro.props;
+---
+
+<span class="tooltip-wrapper relative inline-block">
+  <slot />
+  <span
+    class={`tooltip pointer-events-none absolute opacity-0 ${tooltipClass}`}
+    data-placement={placement}
+    data-offset={offset}
+  >
+    {text}
+    <span
+      class="tooltip-arrow absolute h-2 w-2 rotate-45 border-r border-b bg-inherit"
+    ></span>
+  </span>
+</span>
+
+<script>
+  import {
+    computePosition,
+    offset as offsetMiddleware,
+    flip,
+    shift,
+    arrow,
+    autoUpdate,
+    type Placement,
+  } from "@floating-ui/dom";
+  import gsap from "gsap";
+
+  // Seleccionamos todos los tooltips
+  const wrappers = document.querySelectorAll<HTMLElement>(".tooltip-wrapper");
+
+  wrappers.forEach((wrapper) => {
+    // Trigger y elementos del tooltip
+    const trigger = wrapper.firstElementChild;
+    const tooltip = wrapper.querySelector<HTMLElement>(".tooltip");
+    const arrowElement = wrapper.querySelector<HTMLElement>(".tooltip-arrow");
+
+    // Validación estricta de que existan y sean HTMLElements
+    if (!(trigger instanceof HTMLElement) || !tooltip || !arrowElement) return;
+
+    // Props del tooltip
+    const placement = (tooltip.dataset.placement ?? "top") as Placement;
+    const offsetValue = Number(tooltip.dataset.offset ?? 8);
+
+    // Función para actualizar la posición
+    function updatePosition() {
+      if (!(trigger instanceof HTMLElement) || !tooltip || !arrowElement)
+        return;
+
+      computePosition(trigger, tooltip, {
+        placement,
+        middleware: [
+          offsetMiddleware(offsetValue),
+          flip(),
+          shift({ padding: 8 }),
+          arrow({ element: arrowElement }),
+        ],
+      }).then(({ x, y, placement, middlewareData }) => {
+        tooltip.style.left = `${x}px`;
+        tooltip.style.top = `${y}px`;
+
+        const arrowData = middlewareData.arrow;
+        if (arrowData) {
+          const { x: arrowX, y: arrowY } = arrowData;
+          if (arrowX != null) arrowElement.style.left = `${arrowX}px`;
+          if (arrowY != null) arrowElement.style.top = `${arrowY}px`;
+        }
+
+        const basePlacement = placement.split("-")[0] as
+          | "top"
+          | "bottom"
+          | "left"
+          | "right";
+        const staticSide = {
+          top: "bottom",
+          bottom: "top",
+          left: "right",
+          right: "left",
+        }[basePlacement];
+        (arrowElement.style as any)[staticSide] = "-4px";
+      });
+    }
+
+    // Mostrar tooltip
+    function showTooltip() {
+      updatePosition();
+      gsap.to(tooltip, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" });
+    }
+
+    // Ocultar tooltip
+    function hideTooltip() {
+      gsap.to(tooltip, { opacity: 0, y: -4, duration: 0.15 });
+    }
+
+    // Eventos de hover
+    trigger.addEventListener("mouseenter", showTooltip);
+    trigger.addEventListener("mouseleave", hideTooltip);
+
+    // Auto-reposicionamiento al hacer scroll/resize
+    autoUpdate(trigger, tooltip, updatePosition);
+  });
+</script>
