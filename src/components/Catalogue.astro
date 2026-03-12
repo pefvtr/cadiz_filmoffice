@@ -100,8 +100,8 @@ const { data, totalPages } = Astro.props;
         </div>
 
         {/* ── Panel de proyectos (data-card) ── */}
-        <div class="data-card bg-dark text-light pointer-events-none fixed top-0 left-0 z-[1100] flex h-screen w-full flex-col overflow-hidden px-4 py-[calc(var(--header-height)+2rem)] opacity-0">
-          <div class="close-data-card fixed top-6 right-6 z-[1200] flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all hover:bg-white/30">
+        <div class="data-card bg-dark text-light pointer-events-none fixed top-0 left-0 z-1100 flex h-screen w-full flex-col overflow-hidden px-4 py-[calc(var(--header-height)+2rem)] opacity-0">
+          <div class="close-data-card fixed top-6 right-6 z-1200 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all hover:bg-white/30">
             <span class="pointer-events-none text-2xl leading-none font-light">
               &times;
             </span>
@@ -219,7 +219,7 @@ const { data, totalPages } = Astro.props;
           height: rect.height,
           x: rect.left - wrapperRect.left,
           y: rect.top - wrapperRect.top,
-          duration: 0.35,
+          duration: 0.3,
           ease: "power2.out",
         });
       });
@@ -237,7 +237,7 @@ const { data, totalPages } = Astro.props;
     dataCard.addEventListener("mouseleave", () => {
       gsap.to(highlight, {
         opacity: 0,
-        duration: 0.25,
+        duration: 0.3,
         ease: "power2.out",
       });
     });
@@ -268,7 +268,7 @@ const { data, totalPages } = Astro.props;
 
         gsap.to(dataCard, {
           opacity: 1,
-          duration: 0.4,
+          duration: 0.3,
           ease: "power2.out",
           onComplete: () => {
             gsap.set(dataCard, { pointerEvents: "auto" });
@@ -290,7 +290,7 @@ const { data, totalPages } = Astro.props;
           gsap.fromTo(
             tooltip,
             { opacity: 0, y: 6 },
-            { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" },
+            { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" },
           );
         });
 
