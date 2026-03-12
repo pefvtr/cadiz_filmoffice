@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
 import Header from "@/components/header/Header.astro";
-import MobileMenu from "@/components/header/MobileMenu.astro";
 import { Font } from "astro:assets";
 import { ClientRouter, slide } from "astro:transitions";
 
@@ -19,7 +18,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" transition:animate="none">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -29,10 +28,36 @@ const {
     <title>{title} | Cádiz FilmOffice</title>
     <Font cssVariable="--font-body" preload />
     <Font cssVariable="--font-headings" preload />
+
+    <!-- Escudo contra el script de CodeSandbox -->
+    <script is:inline>
+      try {
+        if (!Object.prototype.hasOwnProperty.call(window, "isIFramePreview")) {
+          Object.defineProperty(window, "isIFramePreview", {
+            get: () => true,
+            configurable: false,
+          });
+        }
+      } catch (e) {}
+      window.addEventListener(
+        "error",
+        function (e) {
+          if (
+            e.message &&
+            e.message.toLowerCase().includes("isiframepreview")
+          ) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+          }
+        },
+        true,
+      );
+    </script>
+
     <ClientRouter />
   </head>
   <body>
-    <Header />
+    <Header transition:persist />
     <div id="visual-layer">
       <main
         transition:name="main-content"
@@ -47,7 +72,7 @@ const {
 
 <style>
   #visual-layer {
-    overflow-x: clip; /* permite el slide sin scrollbar horizontal */
+    overflow-x: clip;
   }
 </style>
 
@@ -60,16 +85,104 @@ const {
 
   let lenisTickerCb: ((time: number) => void) | null = null;
 
-  declare global {
-    interface Window {
-      lenis?: Lenis;
-    }
+  // Helper para leer/escribir sin tocar window.lenis
+  function getLenis(): Lenis | undefined {
+    return (globalThis as any).__lenis__ as Lenis | undefined;
   }
 
   document.addEventListener("astro:page-load", () => {
+    // Destruir instancia anterior
+    const prev = getLenis();
+    if (prev) {
+      prev.destroy();
+      (globalThis as any).__lenis__ = undefined; // ✅ escritura
+    }
+
+    if (lenisTickerCb) {
+      gsap.ticker.remove(lenisTickerCb);
+      lenisTickerCb = null;
+    }
+
+    let isHeaderHovered = false;
+
+    const horizontalBarMenu = document.querySelector(
+      ".horizontal-bar-menu",
+    ) as HTMLDivElement;
+
+    type State = "animate-up" | "animate-down";
+
+    const lenis = new Lenis({
+      prevent: (node) => node.classList.contains("data-card"),
+    });
+
+    (globalThis as any).__lenis__ = lenis; // ✅ escritura
+
+    const header = document.querySelector("#main-header");
+
+    lenis.on("scroll", (e) => {
+      if (!header) return;
+      if (isHeaderHovered) return;
+
+      const position = e.animatedScroll;
+      const direction = e.direction;
+
+      ScrollTrigger.update();
+
+      gsap.killTweensOf(horizontalBarMenu);
+
+      if (position > 0 && direction > 0) {
+        gsap.to(horizontalBarMenu, { width: 80, duration: 0.5 });
+        updateState("animate-up");
+      } else {
+        const targetWidth = Math.min(window.innerWidth * 0.35, 200);
+        gsap.to(horizontalBarMenu, { width: targetWidth, duration: 0.5 });
+        updateState("animate-down");
+      }
+    });
+
+    lenisTickerCb = (time: number) => lenis.raf(time * 1000);
+    gsap.ticker.add(lenisTickerCb);
+    gsap.ticker.lagSmoothing(0);
+
+    function updateState(state: State) {
+      const states: State[] = ["animate-up", "animate-down"];
+      states.forEach((s) => header?.classList.remove(s));
+      header?.classList.add(state);
+    }
+
+    header?.addEventListener("mouseenter", () => {
+      isHeaderHovered = true;
+      gsap.killTweensOf(horizontalBarMenu);
+      updateState("animate-down");
+      const targetWidth = Math.min(window.innerWidth * 0.35, 200);
+      gsap.to(horizontalBarMenu, { width: targetWidth, duration: 0.5 });
+    });
+
+    header?.addEventListener("mouseleave", () => {
+      isHeaderHovered = false;
+    });
+  });
+</script>
+
+<!-- <script>
+  import Lenis from "lenis";
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  let lenisTickerCb: ((time: number) => void) | null = null;
+
+  document.addEventListener("astro:page-load", () => {
+    // Destruir instancia anterior
     if (window.lenis) {
       window.lenis.destroy();
       window.lenis = undefined;
+    }
+
+    if (lenisTickerCb) {
+      gsap.ticker.remove(lenisTickerCb);
+      lenisTickerCb = null;
     }
 
     let isHeaderHovered = false;
@@ -100,30 +213,22 @@ const {
       gsap.killTweensOf(horizontalBarMenu);
 
       if (position > 0 && direction > 0) {
-        gsap.to(horizontalBarMenu, {
-          width: 80,
-          duration: 0.5,
-        });
+        gsap.to(horizontalBarMenu, { width: 80, duration: 0.5 });
         updateState("animate-up");
       } else {
         const targetWidth = Math.min(window.innerWidth * 0.35, 200);
-        gsap.to(horizontalBarMenu, {
-          width: targetWidth,
-          duration: 0.5,
-        });
+        gsap.to(horizontalBarMenu, { width: targetWidth, duration: 0.5 });
         updateState("animate-down");
       }
     });
 
-    if (lenisTickerCb) gsap.ticker.remove(lenisTickerCb);
     lenisTickerCb = (time: number) => lenis.raf(time * 1000);
     gsap.ticker.add(lenisTickerCb);
-
     gsap.ticker.lagSmoothing(0);
 
     function updateState(state: State) {
-      const states = ["animate-up", "animate-down"] as const;
-      states.forEach((stateClass) => header?.classList.remove(stateClass));
+      const states: State[] = ["animate-up", "animate-down"];
+      states.forEach((s) => header?.classList.remove(s));
       header?.classList.add(state);
     }
 
@@ -132,14 +237,11 @@ const {
       gsap.killTweensOf(horizontalBarMenu);
       updateState("animate-down");
       const targetWidth = Math.min(window.innerWidth * 0.35, 200);
-      gsap.to(horizontalBarMenu, {
-        width: targetWidth,
-        duration: 0.5,
-      });
+      gsap.to(horizontalBarMenu, { width: targetWidth, duration: 0.5 });
     });
 
     header?.addEventListener("mouseleave", () => {
       isHeaderHovered = false;
     });
   });
-</script>
+</script> -->

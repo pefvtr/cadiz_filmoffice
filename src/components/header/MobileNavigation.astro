@@ -16,6 +16,12 @@ const { classNames } = Astro.props;
 <script>
   import { isMenuOpenStore } from "@/stores/menu";
   import { gsap } from "gsap";
+  import type Lenis from "lenis";
+
+  // Helper para leer sin tocar window.lenis
+  function getLenis(): Lenis | undefined {
+    return (globalThis as any).__lenis__ as Lenis | undefined;
+  }
 
   document.addEventListener("astro:page-load", () => {
     const burgerIcon = document.querySelector(".burger-icon") as HTMLDivElement;
@@ -39,13 +45,11 @@ const { classNames } = Astro.props;
     let isAnimating = false;
     let tl: gsap.core.Timeline | null = null;
 
-    // Detector de cambio de tamaño de ventana
     let resizeTimer: ReturnType<typeof setTimeout>;
     window.addEventListener("resize", () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
         if (window.innerWidth >= 768 && isOpen) {
-          // Resetear todo sin animaciones
           gsap.killTweensOf("*");
           tl?.kill();
 
@@ -54,13 +58,13 @@ const { classNames } = Astro.props;
           isOpen = false;
           isAnimating = false;
 
-          if (window.lenis) window.lenis.start();
+          getLenis()?.start(); // ✅ lectura
         }
       }, 250);
     });
 
     burgerIcon.addEventListener("click", (e) => {
-      const lenis = window.lenis;
+      const lenis = getLenis(); // ✅ lectura
 
       const target = e.currentTarget as HTMLDivElement;
 
@@ -147,7 +151,6 @@ const { classNames } = Astro.props;
 
         animateMenuText(true);
 
-        /* Este es el contenido del menu */
         gsap.to(menuContent, {
           x: 0,
           y: 0,
@@ -158,7 +161,6 @@ const { classNames } = Astro.props;
           ease: "power4.inOut",
         });
 
-        /* Animación para el texto del burger */
         gsap.to(closeText, {
           color: "var(--color-light)",
           duration: 0.8,
@@ -183,7 +185,6 @@ const { classNames } = Astro.props;
           },
         );
 
-        /* Animación para el overlay del menú principal */
         gsap.to(".menu-overlay", {
           clipPath: "polygon(0% 0%, 100% 0%, 100% 115%, 0% 100%)",
           duration: 1.25,
@@ -202,20 +203,10 @@ const { classNames } = Astro.props;
 
         horizontalBarMenu.classList.remove("hidden");
 
-        // Limpiamos la animación
         tl?.kill();
 
-        // Aquí puedes agregar la lógica para cerrar el menú
         animateMenuText(false);
 
-        /* Animación para el texto del burger */
-        // gsap.to(menuText, {
-        //   color: "var(--color-primary)",
-        //   duration: 0.8,
-        //   ease: "power4.inOut",
-        // });
-
-        /* Este es el contenido del menu */
         gsap.to(menuContent, {
           x: -100,
           y: -100,
@@ -231,14 +222,12 @@ const { classNames } = Astro.props;
           ease: "power4.inOut",
         });
 
-        /* Animación para los enlaces del menu principal */
         gsap.to(".menu-links h2", {
           opacity: 0,
           duration: 2,
           ease: "power4.inOut",
         });
 
-        /* Animación para el overlay del menú principal */
         gsap.to(".menu-overlay", {
           clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
           duration: 1.25,
