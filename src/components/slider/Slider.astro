@@ -12,8 +12,8 @@ import { dataCarousel } from "./data.ts";
           <div class="carousel-slide relative">
             <div class="carousel-slide-overlay absolute -top-[10%] -left-[10%] z-30 h-[120%] w-[120%] bg-black" />
             <img src={item.imgSrc} />
-            <h2 class="text-white text-center">{item.title}</h2>
-            <h5 class="text-white text-center">{item.subtitle}</h5>
+            <h2 class="text-center text-white">{item.title}</h2>
+            <h5 class="text-center text-white">{item.subtitle}</h5>
           </div>
         ))
       }
@@ -27,7 +27,11 @@ import { dataCarousel } from "./data.ts";
       >
         <Icon name="left" class="h-16 w-16 rotate-90 text-white" />
       </button>
-      <button class="next inline-block cursor-pointer" tabindex="0" aria-label="Next Slide">
+      <button
+        class="next inline-block cursor-pointer"
+        tabindex="0"
+        aria-label="Next Slide"
+      >
         <Icon name="right" class="h-16 w-16 -rotate-90 text-white" />
       </button>
       <div>1/8</div>
@@ -231,6 +235,8 @@ import { dataCarousel } from "./data.ts";
     const containerCarousel = document.querySelector(
       ".container-carousel",
     ) as HTMLDivElement;
+
+    if (!slides.length) return;
 
     // FIX: índice del slide anterior para animar solo ese, en lugar de iterar todos
     let prevIndex = 0;
@@ -629,7 +635,8 @@ import { dataCarousel } from "./data.ts";
         slide.classList.add("active");
 
         const texts = slide.querySelectorAll("h2, h5");
-        const counter = document.querySelector<HTMLElement>(".carousel-nav div");
+        const counter =
+          document.querySelector<HTMLElement>(".carousel-nav div");
 
         // FIX: timeline del contador simplificado con .add() para cambiar el texto
         gsap
