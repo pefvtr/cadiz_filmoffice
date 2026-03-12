@@ -188,7 +188,6 @@ import { dataCarousel } from "./data.ts";
     opacity: 0.4;
   }
 
-  /* FIX: typo corregido — doble punto eliminado */
   .carousel-nav button svg,
   .carousel-nav button svg * {
     pointer-events: none;
@@ -219,11 +218,9 @@ import { dataCarousel } from "./data.ts";
     _removeResize: () => void;
   }
 
-  // FIX: referencia al cleanup para evitar memory leaks con View Transitions
   let cleanup: (() => void) | null = null;
 
   function init() {
-    // Si ya había una instancia previa, limpiarla antes de crear una nueva
     if (cleanup) cleanup();
 
     const slides = gsap.utils.toArray<HTMLElement>(".carousel-slide");
@@ -238,7 +235,6 @@ import { dataCarousel } from "./data.ts";
 
     if (!slides.length) return;
 
-    // FIX: índice del slide anterior para animar solo ese, en lugar de iterar todos
     let prevIndex = 0;
 
     gsap.to(containerCarousel, {
@@ -256,10 +252,8 @@ import { dataCarousel } from "./data.ts";
       });
     });
 
-    // Override CSS to prevent native scrolling
     gsap.set(".carousel", { overflow: "visible", scrollSnapType: "none" });
 
-    // Image parallax helper
     function slideImgUpdate() {
       slides.forEach((slide) => {
         const rect = slide.getBoundingClientRect();
@@ -377,7 +371,6 @@ import { dataCarousel } from "./data.ts";
         timeOffset = center
           ? (duration * (container.offsetWidth / 2)) / totalWidth
           : 0;
-        // FIX: guard redundante eliminado — times ya tiene contenido al llamarse tras populateTimeline
         times.forEach((t, i) => {
           times[i] = timeWrap(
             (tl.labels["label" + i] as number) +
@@ -459,7 +452,6 @@ import { dataCarousel } from "./data.ts";
         }
       };
 
-      // FIX: versión antigua comentada eliminada
       let resizeTimer: ReturnType<typeof setTimeout>;
       const onResize = () => {
         clearTimeout(resizeTimer);
@@ -599,20 +591,17 @@ import { dataCarousel } from "./data.ts";
       lastIndex = curIndex;
       if (onChange) onChange(items[curIndex], curIndex);
 
-      // Exponemos la función de limpieza del resize desde el timeline
       tl._removeResize = () => window.removeEventListener("resize", onResize);
 
       return tl;
     }
 
-    // Create seamless horizontal loop
     const loop = horizontalLoop(slides, {
       paused: true,
       paddingRight: 5,
       center: true,
       draggable: true,
       onChange: (slide, index) => {
-        // FIX: animamos solo el slide anterior en lugar de iterar todos
         const previousSlide = slides[prevIndex];
         if (previousSlide && previousSlide !== slide) {
           gsap.to(previousSlide, {
@@ -638,7 +627,6 @@ import { dataCarousel } from "./data.ts";
         const counter =
           document.querySelector<HTMLElement>(".carousel-nav div");
 
-        // FIX: timeline del contador simplificado con .add() para cambiar el texto
         gsap
           .timeline()
           .to(counter, { opacity: 0, duration: 0.2, overwrite: "auto" })
@@ -646,7 +634,6 @@ import { dataCarousel } from "./data.ts";
             if (counter) counter.textContent = `${index + 1}/${slides.length}`;
           })
           .to(counter, { opacity: 1, duration: 0.4, overwrite: "auto" })
-          // Slide activo
           .to(
             slide,
             {
@@ -658,7 +645,6 @@ import { dataCarousel } from "./data.ts";
             },
             0,
           )
-          // FIX: "smoothAnimation.out" no es válido → sustituido por "power2.out"
           .fromTo(
             texts,
             { opacity: 0, y: 25 },
@@ -684,7 +670,6 @@ import { dataCarousel } from "./data.ts";
       }, 1000);
     };
 
-    // FIX: handlers extraídos a variables para poder eliminarlos en cleanup
     const onNext = () => {
       if (next.classList.contains("inactive")) return;
       lockButtons();
@@ -715,7 +700,6 @@ import { dataCarousel } from "./data.ts";
 
     loop.toIndex(0, { duration: 0 });
 
-    // FIX: cleanup completo — listeners de botones + resize + tweens activos
     cleanup = () => {
       next.removeEventListener("click", onNext);
       prev.removeEventListener("click", onPrev);
@@ -729,9 +713,19 @@ import { dataCarousel } from "./data.ts";
     };
   }
 
-  // FIX: init solo una vez por navegación; cleanup antes de cada swap de página
-  document.addEventListener("astro:page-load", init);
+  // ✅ CAMBIO CLAVE: esperamos 400ms tras page-load para que el slide de Astro termine
   document.addEventListener("astro:before-swap", () => {
     if (cleanup) cleanup();
+  });
+
+  document.addEventListener("astro:page-load", () => {
+    const slides = document.querySelectorAll(".carousel-slide");
+    if (!slides.length) return;
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setTimeout(init, 400);
+      });
+    });
   });
 </script>
