@@ -23,6 +23,7 @@ const menuItems = [
   { label: "¿Quiénes Somos?", url: "/quienes-somos" },
   { label: "Contacto", url: "/contacto" },
   { label: "Catálogo", url: "/catalogo/1" },
+  { label: "Test", url: "/test" },
 ];
 
 export { phrases, menuItems };
