@@ -15,6 +15,12 @@ const {
   description = "Cádiz Film Office: Tu puerta de entrada para rodar en la provincia gaditana. Gestionamos permisos, localizaciones y logística para producciones audiovisuales en playas, pueblos blancos y ciudades históricas",
   image = "",
 } = Astro.props;
+
+
+const currentPath = Astro.url.pathname
+
+const isHome = currentPath === "/" || currentPath === ""
+const isCatalogue = currentPath.startsWith('/catalogo');
 ---
 
 <!doctype html>
@@ -60,6 +66,7 @@ const {
     <Header transition:persist />
     <div id="visual-layer">
       <main
+        class:list={["", {'pt-[calc(var(--header-height)+2rem)]':!isHome && !isCatalogue}]}
         transition:name="main-content"
         id="page-content"
         transition:animate={slide({ duration: "0.35s" })}
