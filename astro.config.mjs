@@ -6,8 +6,25 @@ import icon from "astro-icon";
 export default defineConfig({
   devToolbar: { enabled: false },
   integrations: [icon()],
+  server: {
+    host: "0.0.0.0",
+    port: 5000,
+    allowedHosts: true,
+  },
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      host: "0.0.0.0",
+      port: 5000,
+      strictPort: true,
+      allowedHosts: true,
+      hmr: {
+        clientPort: 443,
+      },
+      watch: {
+        ignored: ["**/.local/**", "**/.cache/**", "**/.git/**"],
+      },
+    },
   },
 
   // ✅ Astro 6: fonts en raíz (estable), no en experimental
