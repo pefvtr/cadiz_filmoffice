@@ -30,3 +30,6 @@ An Astro 6 website for the Cádiz Film Office. Static site built with Astro, Tai
 Configured as a **static** deployment:
 - Build: `pnpm run build`
 - Public dir: `dist`
+
+## Documentation
+- `docs/gsap-skills/` – Official GSAP skills (8 SKILL.md files from greensock/gsap-skills) used as reference for animation work. Versioned in git so they survive checkpoints/resets.
