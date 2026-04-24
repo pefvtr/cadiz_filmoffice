@@ -277,56 +277,74 @@ import Layout from "@/layouts/Layout.astro";
 
     const mm = gsap.matchMedia();
 
-    mm.add("(min-width: 1000px)", () => {
-      const masterTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".sticky",
-          start: "top top",
-          end: "+=400%",
-          scrub: 1,
-          pin: true,
-          markers: false,
-        },
-      });
+    mm.add(
+      {
+        isDesktop: "(min-width: 1000px)",
+        reduceMotion: "(prefers-reduced-motion: reduce)",
+      },
+      (context) => {
+        const conditions = context.conditions as {
+          isDesktop: boolean;
+          reduceMotion: boolean;
+        };
+        const { isDesktop, reduceMotion } = conditions;
 
-      masterTl
-        .fromTo(
-          ".sticky-header h1",
-          { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.25 },
-          0.1,
-        )
-        .to(".card-container", { width: "60%", duration: 0.35 }, 0)
-        .to(".card-container", { gap: 30, duration: 0.1 }, 0.45)
-        .to("#card-1", { x: -30, borderRadius: "20px", duration: 0.1 }, 0.45)
-        .to("#card-3", { x: 30, borderRadius: "20px", duration: 0.1 }, 0.45)
-        .to("#card-2", { borderRadius: "20px", duration: 0.1 }, 0.45)
-        .to(
-          ".card",
-          {
-            rotationY: 180,
-            duration: 0.15,
-            stagger: 0.03,
-            ease: "power2.inOut",
-          },
-          0.7,
-        )
-        .to(
-          ["#card-1", "#card-3"],
-          {
-            y: 30,
-            rotationZ: (i: number) => (i === 0 ? -15 : 15),
-            duration: 0.15,
-            ease: "power2.inOut",
-          },
-          0.7,
-        );
+        // Solo construimos la animación pesada de scroll en desktop
+        // y cuando el usuario NO ha pedido reducir movimiento (accesibilidad).
+        if (!isDesktop || reduceMotion) {
+          return;
+        }
 
-      // ✅ Devolvemos la función de cleanup para cuando Astro desmonte la página
-      return () => {
-        mm.revert();
-      };
-    });
+        const masterTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".sticky",
+            start: "top top",
+            end: "+=400%",
+            scrub: 1,
+            pin: true,
+            markers: false,
+          },
+        });
+
+        masterTl
+          .fromTo(
+            ".sticky-header h1",
+            { y: 40, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.25 },
+            0.1,
+          )
+          .to(".card-container", { width: "60%", duration: 0.35 }, 0)
+          .to(".card-container", { gap: 30, duration: 0.1 }, 0.45)
+          .to("#card-1", { x: -30, borderRadius: "20px", duration: 0.1 }, 0.45)
+          .to("#card-3", { x: 30, borderRadius: "20px", duration: 0.1 }, 0.45)
+          .to("#card-2", { borderRadius: "20px", duration: 0.1 }, 0.45)
+          .to(
+            ".card",
+            {
+              rotationY: 180,
+              duration: 0.15,
+              stagger: 0.03,
+              ease: "power2.inOut",
+            },
+            0.7,
+          )
+          .to(
+            ["#card-1", "#card-3"],
+            {
+              y: 30,
+              rotationZ: (i: number) => (i === 0 ? -15 : 15),
+              duration: 0.15,
+              ease: "power2.inOut",
+            },
+            0.7,
+          );
+
+        // ✅ Devolvemos la función de cleanup para cuando Astro desmonte la página
+        return () => {
+          mm.revert();
+        };
+      },
+    );
 
     let resizeTimer: number;
     window.addEventListener("resize", () => {
