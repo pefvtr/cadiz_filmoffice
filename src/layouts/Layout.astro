@@ -18,7 +18,6 @@ const {
 
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === "/" || currentPath === "";
-const isCatalogue = currentPath.startsWith("/catalogo");
 ---
 
 <!doctype html>
@@ -26,14 +25,13 @@ const isCatalogue = currentPath.startsWith("/catalogo");
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Cádiz FilmOffice</title>
     <Font cssVariable="--font-body" preload />
     <Font cssVariable="--font-headings" preload />
 
-    <!-- Escudo contra el script de CodeSandbox -->
     <script is:inline>
       try {
         if (!Object.prototype.hasOwnProperty.call(window, "isIFramePreview")) {
@@ -65,9 +63,7 @@ const isCatalogue = currentPath.startsWith("/catalogo");
     <div id="visual-layer">
       <main
         data-page={isHome ? "home" : "default"}
-        transition:name="main-content"
         id="page-content"
-        transition:animate={fade({ duration: "1.35s" })}
       >
         <slot />
       </main>
@@ -106,13 +102,15 @@ const isCatalogue = currentPath.startsWith("/catalogo");
     }
   }
 
-  // ✅ NUEVO: destruir Lenis antes del swap para evitar conflictos con la animación
+  // ✅ CLAVE: antes del swap, matamos ScrollTrigger y Lenis
+  // para que no queden estilos inline de GSAP en el snapshot de la transición
   document.addEventListener("astro:before-swap", () => {
+    ScrollTrigger.getAll().forEach((st) => st.kill());
+    ScrollTrigger.clearScrollMemory();
     destroyLenis();
   });
 
   document.addEventListener("astro:page-load", () => {
-    // Destruir instancia anterior por si acaso (primera carga no dispara before-swap)
     destroyLenis();
 
     let isHeaderHovered = false;
